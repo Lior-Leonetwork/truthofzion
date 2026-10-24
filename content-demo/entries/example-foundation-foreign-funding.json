@@ -1,0 +1,39 @@
+{
+  "slug": "example-foundation-foreign-funding",
+  "entity": "example-foundation",
+  "category": "foreign_influence",
+  "status": "documented",
+  "date": "2026-08-01",
+  "title": {
+    "he": "87% מתקציב העמותה מממשלות זרות",
+    "en": "87% of the foundation's budget came from foreign governments"
+  },
+  "summary": {
+    "he": "לפי הדיווח הרשמי לרשם העמותות, רוב תקציב הקרן מומן בידי שלוש ממשלות זרות, בעוד היא מציגה עצמה כארגון אזרחי מקומי.",
+    "en": "Per its official filing with the registrar, most of the foundation's budget was funded by three foreign governments, while it presents itself as a local civic group."
+  },
+  "sources": [
+    {
+      "id": "registrar-2026",
+      "type": "official_filing",
+      "publisher": "Example Registrar of Associations",
+      "title": "Foreign government funding report, H1 2026",
+      "date": "2026-08-01",
+      "url": "https://example.org/registrar-2026",
+      "archivedUrl": "https://web.archive.org/web/2025/https://example.org/registrar-2026"
+    }
+  ],
+  "response": {
+    "status": "declined",
+    "requestedOn": "2026-08-03"
+  },
+  "editorial": {
+    "state": "published",
+    "createdBy": "demo-a",
+    "reviewedBy": "demo-b",
+    "publishedOn": "2026-08-10"
+  },
+  "body": [],
+  "timeline": [],
+  "corrections": []
+}

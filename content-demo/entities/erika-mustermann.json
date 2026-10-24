@@ -1,0 +1,27 @@
+{
+  "slug": "erika-mustermann",
+  "kind": "public_official",
+  "position": "head_of_government",
+  "country": "DE",
+  "name": {
+    "he": "אריקה מוסטרמן",
+    "en": "Erika Mustermann"
+  },
+  "role": {
+    "he": "ראשת ממשלת מדינה (דמות בדויה)",
+    "en": "State premier (fictional)"
+  },
+  "description": {
+    "he": "דמות בדויה לצורכי הדגמה בלבד.",
+    "en": "A fictional subject for demonstration only."
+  },
+  "links": [
+    {
+      "label": {
+        "he": "דף רשמי",
+        "en": "Official page"
+      },
+      "url": "https://example.org/erika-mustermann"
+    }
+  ]
+}

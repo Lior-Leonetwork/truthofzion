@@ -1,0 +1,57 @@
+{
+  "slug": "almonit-plonit-land-deal",
+  "entity": "almonit-plonit",
+  "category": "corruption",
+  "status": "allegation",
+  "date": "2026-01-11",
+  "title": {
+    "he": "נטען: מעורבות בעסקת קרקע",
+    "en": "Alleged: involvement in a land deal"
+  },
+  "summary": {
+    "he": "התיק נמשך.",
+    "en": "This case was retracted."
+  },
+  "sources": [
+    {
+      "id": "land-a",
+      "type": "news_report",
+      "publisher": "Example Times",
+      "title": "Land deal report",
+      "date": "2026-01-11",
+      "url": "https://example.org/land-a",
+      "archivedUrl": "https://web.archive.org/web/2025/https://example.org/land-a"
+    },
+    {
+      "id": "land-b",
+      "type": "news_report",
+      "publisher": "Example Post",
+      "title": "Land deal follow-up",
+      "date": "2026-01-12",
+      "url": "https://example.org/land-b",
+      "archivedUrl": "https://web.archive.org/web/2025/https://example.org/land-b"
+    }
+  ],
+  "response": {
+    "status": "responded",
+    "requestedOn": "2026-01-12",
+    "text": {
+      "he": "״הדיווח שגוי.״",
+      "en": "“The report is false.”"
+    }
+  },
+  "editorial": {
+    "state": "retracted",
+    "createdBy": "demo-a",
+    "reviewedBy": "demo-b",
+    "publishedOn": "2026-01-15",
+    "retractedOn": "2026-01-29",
+    "retractionReason": {
+      "he": "שני המקורות חזרו בהם לאחר שהתברר כי מדובר באדם אחר בעל שם דומה. אנו מתנצלים.",
+      "en": "Both sources retracted after it emerged they had confused her with another person of a similar name. We apologise."
+    }
+  },
+  "body": [],
+  "timeline": [],
+  "corrections": []
+}

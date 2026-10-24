@@ -1,0 +1,48 @@
+{
+  "slug": "erika-mustermann-bribery-conviction",
+  "entity": "erika-mustermann",
+  "category": "corruption",
+  "status": "convicted",
+  "date": "2026-06-30",
+  "title": {
+    "he": "הורשעה בקבלת שוחד מחברת נשק זרה",
+    "en": "Convicted of taking bribes from a foreign arms firm"
+  },
+  "summary": {
+    "he": "בית המשפט קבע כי ראשת הממשלה קיבלה תשלומים בתמורה לחסימת עסקת רכש עם ישראל.",
+    "en": "The court found the premier accepted payments in exchange for blocking a procurement deal with Israel."
+  },
+  "sources": [
+    {
+      "id": "verdict-2026",
+      "type": "court_ruling",
+      "publisher": "Example Regional Court",
+      "title": "Verdict",
+      "date": "2026-06-30",
+      "url": "https://example.org/verdict-2026",
+      "archivedUrl": "https://web.archive.org/web/2025/https://example.org/verdict-2026"
+    }
+  ],
+  "response": {
+    "status": "declined",
+    "requestedOn": "2026-07-01"
+  },
+  "corrections": [
+    {
+      "date": "2026-07-03",
+      "text": {
+        "he": "תוקן סכום השוחד מ־2 ל־1.2 מיליון, בהתאם לנוסח הסופי של פסק הדין.",
+        "en": "Corrected the bribe amount from 2 to 1.2 million, per the final text of the verdict."
+      }
+    }
+  ],
+  "editorial": {
+    "state": "published",
+    "createdBy": "demo-a",
+    "reviewedBy": "demo-b",
+    "publishedOn": "2026-07-02",
+    "updatedOn": "2026-07-03"
+  },
+  "body": [],
+  "timeline": []
+}

@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { L } from "@/components/localized-text";
+import { PageHeader } from "@/components/page-header";
 import { getContent } from "@/lib/content/load";
-import { formatDate, getDict, type Locale } from "@/lib/i18n";
 import type { Localized } from "@/lib/content/schema";
+import { formatDate, getDict, type Locale } from "@/lib/i18n";
 
 export async function generateMetadata({ params }: PageProps<"/[lang]/corrections">): Promise<Metadata> {
   return { title: getDict((await params).lang as Locale).nav.corrections };
@@ -22,27 +23,29 @@ export default async function Corrections({ params }: PageProps<"/[lang]/correct
   log.sort((a, b) => b.date.localeCompare(a.date));
 
   return (
-    <article className="max-w-3xl space-y-6">
-      <h1 className="font-serif text-4xl font-bold">{d.corrections.heading}</h1>
-      <p className="text-muted">{d.corrections.intro}</p>
-      {log.length === 0 ? (
-        <p className="rounded-xl border border-dashed border-border p-8 text-center text-muted">{d.corrections.empty}</p>
-      ) : (
-        <ul className="divide-y divide-border rounded-xl border border-border bg-surface">
-          {log.map((c, i) => (
-            <li key={i} className="space-y-1 p-5 text-sm">
-              <p className="text-muted">
-                {formatDate(c.date, locale)}
-                {c.retraction && <span className="ms-2 font-semibold text-status-convicted">{d.corrections.retraction}</span>}
-              </p>
-              <Link href={`/${locale}/entries/${c.slug}`} className="font-semibold text-brand underline">
-                <L text={c.title} locale={locale} />
-              </Link>
-              <L as="p" text={c.text} locale={locale} />
-            </li>
-          ))}
-        </ul>
-      )}
-    </article>
+    <>
+      <PageHeader eyebrow={d.nav.corrections} title={d.corrections.heading} intro={d.corrections.intro} />
+      <div className="mx-auto max-w-3xl px-4 py-12">
+        {log.length === 0 ? (
+          <p className="rounded-2xl border border-dashed border-border p-10 text-center text-muted">{d.corrections.empty}</p>
+        ) : (
+          <ol className="relative space-y-6 border-s-2 border-border ps-6">
+            {log.map((c, i) => (
+              <li key={i} className="relative space-y-1">
+                <span className={`absolute -start-[31px] top-1.5 h-3 w-3 rounded-full border-2 border-background ${c.retraction ? "bg-status-convicted" : "bg-accent"}`} />
+                <p className="text-sm text-muted">
+                  {formatDate(c.date, locale)}
+                  {c.retraction && <span className="ms-2 font-semibold text-status-convicted">{d.corrections.retraction}</span>}
+                </p>
+                <Link href={`/${locale}/entries/${c.slug}`} className="font-serif text-lg font-bold hover:text-brand">
+                  <L text={c.title} locale={locale} />
+                </Link>
+                <L as="p" text={c.text} locale={locale} className="text-muted" />
+              </li>
+            ))}
+          </ol>
+        )}
+      </div>
+    </>
   );
 }

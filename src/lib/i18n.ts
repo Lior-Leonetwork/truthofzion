@@ -1,4 +1,4 @@
-import type { Category, Localized, Status } from "./content/schema";
+import type { Category, Localized, Position, Status } from "./content/schema";
 
 export const LOCALES = ["he", "en"] as const;
 export type Locale = (typeof LOCALES)[number];
@@ -16,6 +16,14 @@ export function t(text: Localized | undefined, locale: Locale) {
   return { value, fallback: !text[locale], lang: text[locale] ? locale : other };
 }
 
+export function countryName(code: string, locale: Locale) {
+  try {
+    return new Intl.DisplayNames([locale], { type: "region" }).of(code) ?? code;
+  } catch {
+    return code;
+  }
+}
+
 export function formatDate(iso: string, locale: Locale) {
   return new Intl.DateTimeFormat(locale === "he" ? "he-IL" : "en-GB", {
     year: "numeric",
@@ -28,19 +36,36 @@ export function formatDate(iso: string, locale: Locale) {
 type Dict = {
   siteName: string;
   tagline: string;
-  nav: { entries: string; methodology: string; corrections: string; reply: string };
+  demo: string;
+  nav: { investigations: string; people: string; countries: string; methodology: string; corrections: string; reply: string };
   home: {
+    eyebrow: string;
     heading: string;
     intro: string;
-    pillars: string[];
-    browse: string;
+    ctaPrimary: string;
+    ctaSecondary: string;
+    stats: { cases: string; people: string; countries: string; sources: string };
+    latest: string;
+    viewAll: string;
+    topRoles: string;
+    allPeople: string;
+    byCountry: string;
+    byArea: string;
+    how: { title: string; steps: { title: string; body: string }[] };
     empty: string;
     emptyDetail: string;
   };
-  filters: { all: string; category: string; status: string; search: string; none: string };
+  cases: (n: number) => string;
+  investigations: { heading: string; intro: string };
+  people: { heading: string; intro: string; search: string; allCountries: string; none: string };
+  countries: { heading: string; intro: string; people: string; cases: string; none: string };
+  positions: Record<Position, string>;
+  filters: { all: string; category: string; status: string; country: string; search: string; none: string };
   categories: Record<Category, { name: string; blurb: string }>;
   statuses: Record<Status, { name: string; note: string }>;
+  progress: { label: string; publicRecord: string };
   entry: {
+    caseFile: string;
     summary: string;
     details: string;
     timeline: string;
@@ -55,60 +80,97 @@ type Dict = {
     published: string;
     updated: string;
     profile: string;
-    otherLanguage: string;
+    subject: string;
+    facts: string;
+    category: string;
+    date: string;
+    sourcesCount: string;
     reviewedBy: string;
     reportError: string;
+    related: string;
   };
-  profile: { entries: string; links: string };
+  profile: { dossier: string; cases: string; links: string; highest: string };
   sourceTypes: Record<string, string>;
   corrections: { heading: string; intro: string; empty: string; retraction: string };
   reply: { heading: string; paragraphs: string[]; contact: string };
-  methodology: { heading: string; sections: { title: string; body: string[] }[] };
-  footer: string;
+  methodology: { heading: string; intro: string; sections: { title: string; body: string[] }[] };
+  footer: { about: string; legal: string };
   langSwitch: string;
 };
 
 const he: Dict = {
   siteName: "אמת מציון",
-  tagline: "מי פועל נגד ישראל — מתועד, ממוקר, ניתן לבדיקה",
-  nav: { entries: "תיקים", methodology: "מתודולוגיה", corrections: "תיקונים", reply: "זכות תגובה" },
+  tagline: "תחקירים עצמאיים · מבוססי מקורות",
+  demo: "מצב הדגמה — כל השמות, התפקידים והתיקים באתר בדויים.",
+  nav: { investigations: "תחקירים", people: "אישים", countries: "מדינות", methodology: "מתודולוגיה", corrections: "תיקונים", reply: "זכות תגובה" },
   home: {
-    heading: "אור על מה שקורה באמת",
+    eyebrow: "תחקירים עצמאיים · מבוססי מקורות",
+    heading: "שופכים אור על מי שפועל נגד ישראל",
     intro:
-      "אמת מציון מתעדת שחיתות ציבורית, השפעה ומימון זרים, הסתה, ואת הרשומה הציבורית של נבחרי ציבור — כל טענה עם מקורות, וכל תיק עם מעמדו המשפטי המדויק.",
-    pillars: [
-      "כל טענה מקושרת למקור: פסק דין, כתב אישום, דוח מבקר המדינה, פרוטוקול כנסת או דיווח מהימן.",
-      "הרשעה, כתב אישום, חקירה וטענה — לעולם לא מוצגים כאותו דבר.",
-      "כל תיק נבדק בידי שני עורכים לפני פרסום, ומושא התיק מקבל הזדמנות להגיב.",
-    ],
-    browse: "כל התיקים",
-    empty: "עדיין לא פורסמו תיקים.",
-    emptyDetail: "תיקים מתפרסמים רק לאחר אימות מקורות, פנייה לתגובה ואישור של עורך שני.",
+      "אנו חוקרים בעלי תפקידים בכירים בישראל ובעולם: שחיתות, מימון והשפעה זרים, הסתה, והפער בין מה שהבטיחו למה שעשו. כל טענה מגובה במסמך, וכל תיק מוצג עם מעמדו המשפטי המדויק.",
+    ctaPrimary: "לתחקירים",
+    ctaSecondary: "איך אנחנו חוקרים",
+    stats: { cases: "תיקים", people: "אישים וגופים", countries: "מדינות", sources: "מקורות מתועדים" },
+    latest: "תחקירים אחרונים",
+    viewAll: "לכל התחקירים",
+    topRoles: "בכירים תחת הזרקור",
+    allPeople: "לכל האישים",
+    byCountry: "לפי מדינה",
+    byArea: "תחומי חקירה",
+    how: {
+      title: "איך אנחנו חוקרים",
+      steps: [
+        { title: "ניטור", body: "מעקב רציף אחר פסקי דין, כתבי אישום, דוחות מבקר המדינה, הצבעות בכנסת ודיווחי מימון זר." },
+        { title: "אימות", body: "כל ציטוט נבדק מול המקור ונשמר בארכיון. מה שלא ניתן לאמת לא מתפרסם." },
+        { title: "זכות תגובה", body: "לפני פרסום אנו פונים למושא התחקיר ומפרסמים את תגובתו במלואה." },
+        { title: "עורך שני", body: "כל תיק מאושר בידי עורך נוסף שאינו הכותב." },
+      ],
+    },
+    empty: "התחקירים הראשונים בדרך.",
+    emptyDetail: "תיק מתפרסם רק לאחר אימות מקורות, פנייה לתגובה ואישור של עורך שני.",
   },
-  filters: { all: "הכול", category: "קטגוריה", status: "מעמד", search: "חיפוש שם או נושא", none: "אין תיקים שתואמים לסינון." },
+  cases: (n) => (n === 1 ? "תיק אחד" : `${n} תיקים`),
+  investigations: { heading: "תחקירים", intro: "כל התיקים שפורסמו, עם מעמדם המשפטי ומקורותיהם." },
+  people: { heading: "אישים וגופים", intro: "בעלי תפקידים בכירים וגופים שנחקרו, מסודרים לפי בכירות.", search: "חיפוש שם או תפקיד", allCountries: "כל המדינות", none: "לא נמצאו אישים." },
+  countries: { heading: "מדינות", intro: "תחקירים לפי המדינה שבה מכהן מושא התחקיר.", people: "אישים", cases: "תיקים", none: "אין עדיין תחקירים." },
+  positions: {
+    head_of_state: "ראש מדינה",
+    head_of_government: "ראש ממשלה",
+    minister: "שר/ה",
+    security: "מערכת הביטחון",
+    judiciary: "מערכת המשפט",
+    legislator: "חבר/ת פרלמנט",
+    party_leader: "ראש מפלגה",
+    diplomat: "דיפלומט/ית",
+    senior_official: "בכיר/ה בשירות הציבורי",
+    org_leader: "ארגון",
+  },
+  filters: { all: "הכול", category: "תחום", status: "מעמד", country: "מדינה", search: "חיפוש שם או נושא", none: "אין תיקים שתואמים לסינון." },
   categories: {
     corruption: { name: "שחיתות", blurb: "שוחד, מרמה והפרת אמונים של נושאי משרה." },
     foreign_influence: { name: "השפעה ומימון זרים", blurb: "גופים ומסעות הממומנים או מכוונים מחו״ל, לפי דיווחים רשמיים." },
-    public_record: { name: "הצבעות ורשומה ציבורית", blurb: "איך הצביעו ומה אמרו — מול מה שהבטיחו." },
+    public_record: { name: "הצבעות ורשומה ציבורית", blurb: "איך הצביעו ומה אמרו, מול מה שהבטיחו." },
     incitement: { name: "הסתה ופעולות עוינות", blurb: "התבטאויות ומעשים מתועדים נגד ישראל ואזרחיה." },
   },
   statuses: {
     convicted: { name: "הורשע", note: "פסק דין מרשיע." },
-    indicted: { name: "הוגש כתב אישום", note: "חזקת החפות עומדת בתוקף עד להכרעת דין." },
+    indicted: { name: "כתב אישום", note: "חזקת החפות עומדת בתוקף עד להכרעת דין." },
     under_investigation: { name: "בחקירה", note: "לא הוגשו אישומים. חקירה אינה קביעת אשמה." },
-    allegation: { name: "טענה", note: "טענה שדווחה בידי שני גורמים בלתי תלויים לפחות. לא הוכחה." },
+    allegation: { name: "טענה", note: "דווחה בידי שני גורמים בלתי תלויים לפחות. לא הוכחה." },
     documented: { name: "רשומה ציבורית", note: "עובדה מתועדת ברשומה רשמית או בהקלטה מקורית." },
   },
+  progress: { label: "מעמד משפטי", publicRecord: "מתועד ברשומה ציבורית" },
   entry: {
+    caseFile: "תיק",
     summary: "תקציר",
     details: "פירוט",
     timeline: "ציר זמן",
     sources: "מקורות",
     archived: "עותק בארכיון",
-    response: "תגובת מושא התיק",
+    response: "תגובת מושא התחקיר",
     responseStatus: {
       requested: "נשלחה פנייה לתגובה; ממתינים למענה.",
-      responded: "התקבלה תגובה:",
+      responded: "התקבלה תגובה",
       declined: "סירב/ה להגיב.",
       no_response: "לא התקבלה תגובה עד למועד הפרסום.",
     },
@@ -118,12 +180,17 @@ const he: Dict = {
     retracted: "התיק נמשך",
     published: "פורסם",
     updated: "עודכן",
-    profile: "לפרופיל",
-    otherLanguage: "טקסט זה זמין באנגלית בלבד.",
+    profile: "לתיק האישי",
+    subject: "מושא התחקיר",
+    facts: "פרטי התיק",
+    category: "תחום",
+    date: "מועד האירוע",
+    sourcesCount: "מקורות",
     reviewedBy: "נבדק בידי שני עורכים",
     reportError: "מצאתם טעות? דווחו לנו",
+    related: "תיקים נוספים",
   },
-  profile: { entries: "תיקים", links: "קישורים רשמיים" },
+  profile: { dossier: "תיק אישי", cases: "תיקים", links: "קישורים רשמיים", highest: "המעמד החמור ביותר" },
   sourceTypes: {
     court_ruling: "פסק דין",
     indictment: "כתב אישום",
@@ -145,82 +212,110 @@ const he: Dict = {
   reply: {
     heading: "זכות תגובה",
     paragraphs: [
-      "אם שמכם או שם הארגון שלכם מופיע באתר, יש לכם זכות להגיב. לפני כל פרסום אנו פונים למושא התיק ומפרסמים את תגובתו במלואה לצד התיק.",
-      "אם לדעתכם תיק כלשהו שגוי, חסר או לא מעודכן — למשל זיכוי, סגירת תיק או ביטול כתב אישום — שלחו לנו את הפרטים והמקורות. כל תיקון מתועד בפומבי בעמוד התיקונים.",
+      "אם שמכם או שם הארגון שלכם מופיע באתר, יש לכם זכות להגיב. לפני כל פרסום אנו פונים למושא התחקיר ומפרסמים את תגובתו במלואה לצד התיק.",
+      "אם לדעתכם תיק שגוי, חסר או לא מעודכן (למשל זיכוי, סגירת תיק או ביטול כתב אישום), שלחו לנו את הפרטים והמקורות. כל תיקון מתועד בפומבי בעמוד התיקונים.",
     ],
     contact: "כתובת לפניות:",
   },
   methodology: {
-    heading: "מתודולוגיה וסטנדרט עריכה",
+    heading: "איך אנחנו חוקרים",
+    intro: "הכללים כאן אינם הצהרת כוונות: הם כתובים בקוד, ותיק שאינו עומד בהם אינו יכול להתפרסם.",
     sections: [
       {
-        title: "מה אנחנו מתעדים",
+        title: "את מי אנחנו חוקרים",
         body: [
-          "נושאי משרה, מועמדים, דמויות ציבוריות, ארגונים, כלי תקשורת וממשלות זרות — רק בפעולתם הציבורית. איננו מתעדים אנשים פרטיים.",
-          "ארבעה תחומים: שחיתות; השפעה ומימון זרים; הצבעות ורשומה ציבורית; הסתה ופעולות עוינות.",
+          "בעלי תפקידים בכירים בישראל ובעולם: ראשי מדינות וממשלות, שרים, חברי פרלמנט, בכירים במערכות הביטחון והמשפט, דיפלומטים, ראשי מפלגות וארגונים. רק בפעולתם הציבורית. איננו חוקרים אנשים פרטיים.",
         ],
       },
       {
         title: "דרישות ראיה",
         body: [
-          "״הורשע״ דורש פסק דין. ״הוגש כתב אישום״ דורש את כתב האישום או הודעת הפרקליטות. ״בחקירה״ דורש הודעה רשמית של המשטרה, הפרקליטות או מבקר המדינה.",
-          "״טענה״ דורשת לפחות שני מקורות עיתונאיים בלתי תלויים, ומוצגת תמיד כטענה בלבד.",
+          "״הורשע״ דורש פסק דין. ״כתב אישום״ דורש את כתב האישום או הודעת הפרקליטות. ״בחקירה״ דורש הודעה רשמית של המשטרה, הפרקליטות או מבקר המדינה.",
+          "״טענה״ דורשת לפחות שני מקורות בלתי תלויים, ומוצגת תמיד כטענה בלבד.",
           "טענות על מימון זר נשענות על הדיווח הרשמי עצמו. טענות על הצבעה או התבטאות נשענות על הרשומה או ההקלטה המקורית.",
-          "הכללים האלה נאכפים בקוד: תיק שאינו עומד בהם אינו יכול להתפרסם.",
         ],
       },
-      {
-        title: "שני עורכים, תמיד",
-        body: [
-          "כל תיק נכתב בידי עורך אחד ונבדק ומאושר בידי עורך אחר. מי שכתב אינו מאשר.",
-        ],
-      },
+      { title: "שני עורכים, תמיד", body: ["כל תיק נכתב בידי עורך אחד ומאושר בידי עורך אחר. מי שכתב אינו מאשר."] },
       {
         title: "זכות תגובה ותיקונים",
         body: [
-          "לפני פרסום אנו פונים למושא התיק. תגובה שהתקבלה מתפרסמת לצד התיק.",
-          "כשמשהו משתנה — זיכוי, סגירת תיק, טעות — אנו מעדכנים ורושמים את התיקון בפומבי. תיק שנמשך נשאר עם הודעת משיכה והסבר.",
+          "לפני פרסום אנו פונים למושא התחקיר. תגובה שהתקבלה מתפרסמת לצד התיק.",
+          "כשמשהו משתנה (זיכוי, סגירת תיק, טעות) אנו מעדכנים ורושמים את התיקון בפומבי. תיק שנמשך נשאר באתר עם הודעת משיכה והסבר.",
         ],
       },
     ],
   },
-  footer:
-    "אמת מציון מבוססת על מקורות ציבוריים. כל אדם בחזקת חף מפשע עד שהורשע בדין. מצאתם טעות? כתבו לנו.",
+  footer: {
+    about: "אמת מציון היא מערכת תחקירים עצמאית המבוססת על מקורות ציבוריים ומסמכים רשמיים.",
+    legal: "כל אדם בחזקת חף מפשע עד שהורשע בדין.",
+  },
   langSwitch: "English",
 };
 
 const en: Dict = {
   siteName: "Truth of Zion",
-  tagline: "Who acts against Israel — documented, sourced, checkable",
-  nav: { entries: "Cases", methodology: "Methodology", corrections: "Corrections", reply: "Right of reply" },
+  tagline: "Independent, source-based investigations",
+  demo: "Demo mode: every name, role and case on this site is fictional.",
+  nav: { investigations: "Investigations", people: "People", countries: "Countries", methodology: "Methodology", corrections: "Corrections", reply: "Right of reply" },
   home: {
-    heading: "Shining light on what really happens",
+    eyebrow: "Independent, source-based investigations",
+    heading: "Shining light on those who act against Israel",
     intro:
-      "Truth of Zion documents public corruption, foreign influence and funding, incitement, and the public record of officials — every claim sourced, every case labelled with its exact legal status.",
-    pillars: [
-      "Every claim links to its source: a court ruling, an indictment, a State Comptroller report, a Knesset record, or credible reporting.",
-      "Convicted, indicted, under investigation and alleged are never presented as the same thing.",
-      "Every case is checked by two editors before publication, and its subject is given the chance to respond.",
-    ],
-    browse: "All cases",
-    empty: "No cases published yet.",
-    emptyDetail: "Cases are published only after sources are verified, the subject is asked to respond, and a second editor approves.",
+      "We investigate people in top roles in Israel and around the world: corruption, foreign funding and influence, incitement, and the gap between what they promised and what they did. Every claim is backed by a document, and every case shows its exact legal status.",
+    ctaPrimary: "Investigations",
+    ctaSecondary: "How we investigate",
+    stats: { cases: "Cases", people: "People & bodies", countries: "Countries", sources: "Documented sources" },
+    latest: "Latest investigations",
+    viewAll: "All investigations",
+    topRoles: "Top roles under scrutiny",
+    allPeople: "All people",
+    byCountry: "By country",
+    byArea: "Areas of investigation",
+    how: {
+      title: "How we investigate",
+      steps: [
+        { title: "Monitor", body: "Continuous tracking of court rulings, indictments, State Comptroller reports, parliamentary votes and foreign-funding filings." },
+        { title: "Verify", body: "Every quote is checked against its source and archived. What can't be verified isn't published." },
+        { title: "Right of reply", body: "Before publication we contact the subject and publish their response in full." },
+        { title: "Second editor", body: "Every case is approved by a second editor who didn't write it." },
+      ],
+    },
+    empty: "The first investigations are on their way.",
+    emptyDetail: "A case is published only after its sources are verified, the subject is asked to respond, and a second editor approves.",
   },
-  filters: { all: "All", category: "Category", status: "Status", search: "Search a name or topic", none: "No cases match these filters." },
+  cases: (n) => (n === 1 ? "1 case" : `${n} cases`),
+  investigations: { heading: "Investigations", intro: "Every published case, with its legal status and sources." },
+  people: { heading: "People & bodies", intro: "Office holders and bodies we have investigated, ordered by seniority.", search: "Search a name or role", allCountries: "All countries", none: "No people found." },
+  countries: { heading: "Countries", intro: "Investigations by the country where the subject holds office.", people: "People", cases: "Cases", none: "No investigations yet." },
+  positions: {
+    head_of_state: "Head of state",
+    head_of_government: "Head of government",
+    minister: "Minister",
+    security: "Security establishment",
+    judiciary: "Judiciary",
+    legislator: "Legislator",
+    party_leader: "Party leader",
+    diplomat: "Diplomat",
+    senior_official: "Senior official",
+    org_leader: "Organization",
+  },
+  filters: { all: "All", category: "Area", status: "Status", country: "Country", search: "Search a name or topic", none: "No cases match these filters." },
   categories: {
     corruption: { name: "Corruption", blurb: "Bribery, fraud and breach of trust by office holders." },
     foreign_influence: { name: "Foreign influence & funding", blurb: "Bodies and campaigns funded or directed from abroad, per official filings." },
-    public_record: { name: "Votes & public record", blurb: "How they voted and what they said — against what they promised." },
+    public_record: { name: "Votes & public record", blurb: "How they voted and what they said, against what they promised." },
     incitement: { name: "Incitement & hostile acts", blurb: "Documented statements and acts against Israel and its citizens." },
   },
   statuses: {
     convicted: { name: "Convicted", note: "Convicted by a court." },
     indicted: { name: "Indicted", note: "Presumed innocent until a verdict." },
     under_investigation: { name: "Under investigation", note: "No charges filed. An investigation is not a finding of guilt." },
-    allegation: { name: "Allegation", note: "Reported by at least two independent outlets. Not proven." },
+    allegation: { name: "Allegation", note: "Reported by at least two independent sources. Not proven." },
     documented: { name: "Public record", note: "A fact documented in an official record or original recording." },
   },
+  progress: { label: "Legal status", publicRecord: "Documented in the public record" },
   entry: {
+    caseFile: "Case",
     summary: "Summary",
     details: "Details",
     timeline: "Timeline",
@@ -229,7 +324,7 @@ const en: Dict = {
     response: "Subject's response",
     responseStatus: {
       requested: "We asked for a response and are waiting for a reply.",
-      responded: "Response received:",
+      responded: "Response received",
       declined: "Declined to comment.",
       no_response: "No response by the time of publication.",
     },
@@ -239,19 +334,24 @@ const en: Dict = {
     retracted: "This case was retracted",
     published: "Published",
     updated: "Updated",
-    profile: "View profile",
-    otherLanguage: "This text is only available in Hebrew.",
+    profile: "Full dossier",
+    subject: "Subject",
+    facts: "Case facts",
+    category: "Area",
+    date: "Date of events",
+    sourcesCount: "Sources",
     reviewedBy: "Checked by two editors",
     reportError: "Spotted an error? Tell us",
+    related: "Other cases",
   },
-  profile: { entries: "Cases", links: "Official links" },
+  profile: { dossier: "Dossier", cases: "Cases", links: "Official links", highest: "Most serious status" },
   sourceTypes: {
     court_ruling: "Court ruling",
     indictment: "Indictment",
     prosecution_statement: "Prosecution statement",
     police_statement: "Police statement",
     state_comptroller: "State Comptroller report",
-    knesset_record: "Knesset record",
+    knesset_record: "Parliamentary record",
     official_filing: "Official filing",
     primary_media: "Original recording",
     news_report: "News report",
@@ -267,44 +367,42 @@ const en: Dict = {
     heading: "Right of reply",
     paragraphs: [
       "If you or your organization appear on this site, you have the right to respond. Before anything is published we contact the subject, and any response is published in full alongside the case.",
-      "If you believe a case is wrong, incomplete or out of date — an acquittal, a closed investigation, a dropped indictment — send us the details and sources. Every correction is logged publicly on the corrections page.",
+      "If you believe a case is wrong, incomplete or out of date (an acquittal, a closed investigation, a dropped indictment), send us the details and sources. Every correction is logged publicly on the corrections page.",
     ],
     contact: "Contact:",
   },
   methodology: {
-    heading: "Methodology & editorial standard",
+    heading: "How we investigate",
+    intro: "These rules aren't a statement of intent: they are written in code, and a case that fails them cannot be published.",
     sections: [
       {
-        title: "What we document",
+        title: "Who we investigate",
         body: [
-          "Office holders, candidates, public figures, organizations, media outlets and foreign governments — in their public role only. We do not document private individuals.",
-          "Four areas: corruption; foreign influence and funding; votes and the public record; incitement and hostile acts.",
+          "People in top roles in Israel and around the world: heads of state and government, ministers, legislators, senior security and judicial officials, diplomats, party and organization leaders. Only in their public role. We do not investigate private individuals.",
         ],
       },
       {
         title: "Evidence requirements",
         body: [
           "“Convicted” requires a court ruling. “Indicted” requires the indictment or a prosecution announcement. “Under investigation” requires an official police, prosecution or State Comptroller statement.",
-          "“Allegation” requires at least two independent news sources and is always shown as an allegation only.",
+          "“Allegation” requires at least two independent sources and is always shown as an allegation only.",
           "Foreign-funding claims rest on the official filing itself. Claims about votes or statements rest on the record or original recording.",
-          "These rules are enforced in code: a case that fails them cannot be published.",
         ],
       },
-      {
-        title: "Two editors, always",
-        body: ["Every case is written by one editor and checked and approved by a different one. Authors never approve their own work."],
-      },
+      { title: "Two editors, always", body: ["Every case is written by one editor and approved by a different one. Authors never approve their own work."] },
       {
         title: "Right of reply & corrections",
         body: [
           "Before publication we contact the subject. Any response received is published alongside the case.",
-          "When something changes — an acquittal, a closed case, an error — we update and log the correction publicly. A retracted case stays up with a retraction notice and the reason.",
+          "When something changes (an acquittal, a closed case, an error) we update and log the correction publicly. A retracted case stays up with a retraction notice and the reason.",
         ],
       },
     ],
   },
-  footer:
-    "Truth of Zion is built on public sources. Everyone is presumed innocent until convicted by a court. Spotted an error? Write to us.",
+  footer: {
+    about: "Truth of Zion is an independent investigations project built on public sources and official documents.",
+    legal: "Everyone is presumed innocent until convicted by a court.",
+  },
   langSwitch: "עברית",
 };
 

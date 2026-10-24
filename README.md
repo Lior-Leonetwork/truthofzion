@@ -1,9 +1,31 @@
 # Truth of Zion · אמת מציון
 
-A bilingual (Hebrew / English) accountability site documenting corruption,
-foreign influence and funding, the public record of officials, and incitement
-against Israel. Every claim is sourced, every case carries its exact legal
-status, and nothing goes up without a second editor.
+A bilingual (Hebrew / English) investigations site on people in top roles in
+Israel and around the world: corruption, foreign influence and funding, the
+public record, and incitement against Israel. Every claim is sourced, every
+case carries its exact legal status, and nothing goes up without a second
+editor.
+
+## Pages
+
+- **Home**: hero with live counts, latest investigations, top roles under
+  scrutiny (sorted by seniority), areas, countries, how we investigate
+- **Investigations**: every case, filterable by area, legal status and country
+- **People**: directory of investigated office holders and bodies
+- **Countries**: per-country pages with their people and cases
+- **Case file**: legal-status tracker (allegation → investigation → indictment
+  → conviction), timeline with numbered citations, response, sources,
+  corrections
+- **Dossier**: per-person profile with every case and the most serious status
+- **Methodology**, **Corrections**, **Right of reply**
+
+## Demo mode
+
+`npm run dev:demo` (or `DEMO_CONTENT=1` at build time) loads
+`content-demo/`: fictional subjects with placeholder names (Ploni Almoni,
+John Doe, Erika Mustermann…) for previewing the design. Every page shows a
+"fictional" banner, and demo builds are marked noindex. Never deploy a demo
+build as the public site.
 
 ## How it works
 
@@ -43,7 +65,8 @@ On top of status:
 
 ## Adding a case
 
-1. Copy `content/_templates/example-official.json` to
+1. Copy `content/_templates/example-official.json` (set `country` and
+   `position`) to
    `content/entities/<slug>.json` (if the subject is new), and
    `content/_templates/example-case.json` to `content/entries/<slug>.json`.
 2. Fill it in with `"state": "draft"`. Add an `archivedUrl`
@@ -60,6 +83,7 @@ On top of status:
 ```bash
 npm install
 npm run dev        # http://localhost:3000 → redirects to /he or /en
+npm run dev:demo   # same, with fictional demo content
 npm run validate   # editorial rules over content/
 npm test           # rule tests (fictional fixtures only)
 npm run typecheck

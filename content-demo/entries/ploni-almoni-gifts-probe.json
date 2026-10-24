@@ -1,0 +1,43 @@
+{
+  "slug": "ploni-almoni-gifts-probe",
+  "entity": "ploni-almoni",
+  "category": "corruption",
+  "status": "under_investigation",
+  "date": "2026-02-09",
+  "title": {
+    "he": "נחקר בחשד לקבלת טובות הנאה",
+    "en": "Under investigation over gifts received"
+  },
+  "summary": {
+    "he": "מבקר המדינה העביר ממצאים ליועץ המשפטי לממשלה. לא הוגשו אישומים.",
+    "en": "The State Comptroller referred findings to the Attorney General. No charges have been filed."
+  },
+  "sources": [
+    {
+      "id": "comptroller",
+      "type": "state_comptroller",
+      "publisher": "Example State Comptroller",
+      "title": "Annual report, chapter 4",
+      "date": "2026-02-09",
+      "url": "https://example.org/comptroller",
+      "archivedUrl": "https://web.archive.org/web/2025/https://example.org/comptroller"
+    }
+  ],
+  "response": {
+    "status": "responded",
+    "requestedOn": "2026-02-10",
+    "text": {
+      "he": "״כל המתנות דווחו כחוק.״",
+      "en": "“All gifts were reported as required by law.”"
+    }
+  },
+  "editorial": {
+    "state": "published",
+    "createdBy": "demo-a",
+    "reviewedBy": "demo-b",
+    "publishedOn": "2026-02-15"
+  },
+  "body": [],
+  "timeline": [],
+  "corrections": []
+}

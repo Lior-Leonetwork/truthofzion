@@ -1,10 +1,14 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
+import { CaseCard } from "@/components/case-card";
+import { CountryTag } from "@/components/country-tag";
 import { L } from "@/components/localized-text";
+import { Monogram } from "@/components/monogram";
+import { Section } from "@/components/section";
 import { StatusBadge } from "@/components/status-badge";
 import { entriesFor, getContent, getEntity } from "@/lib/content/load";
-import { formatDate, getDict, LOCALES, t, type Locale } from "@/lib/i18n";
+import { countryName, getDict, LOCALES, t, type Locale } from "@/lib/i18n";
+import { caseCard, highestStatus, isLive } from "@/lib/view";
 
 export const dynamicParams = false;
 
@@ -27,50 +31,63 @@ export default async function ProfilePage({ params }: PageProps<"/[lang]/profile
   const entries = entriesFor(slug);
   if (!entity || entries.length === 0) notFound();
   const d = getDict(locale);
+  const name = t(entity.name, locale).value;
+  const highest = highestStatus(entries);
+  const live = entries.filter(isLive).length;
 
   return (
-    <div className="max-w-3xl space-y-10">
-      <header className="space-y-2">
-        <L as="h1" text={entity.name} locale={locale} className="font-serif text-4xl font-bold" />
-        <L as="p" text={entity.role} locale={locale} className="text-lg text-muted" />
-        {entity.description && <L as="p" text={entity.description} locale={locale} className="leading-relaxed" />}
-      </header>
+    <div className="space-y-16 pb-20">
+      <section className="hero-grid text-ink-text">
+        <div className="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-12 sm:flex-row sm:items-center sm:py-16">
+          <Monogram name={name} seed={entity.slug} size="lg" />
+          <div className="flex-1 space-y-3">
+            <p className="text-sm font-semibold text-accent">
+              {d.profile.dossier}
+              {entity.position && ` · ${d.positions[entity.position]}`}
+            </p>
+            <h1 className="font-serif text-4xl font-black sm:text-5xl">{name}</h1>
+            <L as="p" text={entity.role} locale={locale} className="text-lg text-ink-muted" />
+            <CountryTag code={entity.country} name={countryName(entity.country, locale)} tone="ink" />
+          </div>
+          <dl className="grid shrink-0 grid-cols-2 gap-px overflow-hidden rounded-2xl border border-ink-border bg-ink-border">
+            <div className="bg-ink-2 p-4">
+              <dt className="text-xs text-ink-muted">{d.profile.cases}</dt>
+              <dd className="font-serif text-3xl font-bold">{live}</dd>
+            </div>
+            <div className="bg-ink-2 p-4">
+              <dt className="text-xs text-ink-muted">{d.profile.highest}</dt>
+              <dd className="mt-2">{highest && <StatusBadge status={highest} label={d.statuses[highest].name} className="bg-ink" />}</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
 
-      {entity.links.length > 0 && (
-        <section className="space-y-2">
-          <h2 className="font-serif text-xl font-bold">{d.profile.links}</h2>
-          <ul className="flex flex-wrap gap-3 text-sm">
-            {entity.links.map((l) => (
-              <li key={l.url}>
-                <a href={l.url} target="_blank" rel="noopener noreferrer" className="text-brand underline">
-                  <L text={l.label} locale={locale} />
-                </a>
-              </li>
-            ))}
-          </ul>
-        </section>
+      {(entity.description || entity.links.length > 0) && (
+        <div className="mx-auto max-w-6xl space-y-4 px-4">
+          {entity.description && <L as="p" text={entity.description} locale={locale} className="max-w-3xl text-lg leading-relaxed" />}
+          {entity.links.length > 0 && (
+            <ul className="flex flex-wrap gap-2 text-sm">
+              {entity.links.map((l) => (
+                <li key={l.url}>
+                  <a href={l.url} target="_blank" rel="noopener noreferrer" className="inline-block rounded-full border border-border bg-surface px-3 py-1 hover:border-brand hover:text-brand">
+                    <L text={l.label} locale={locale} /> ↗
+                  </a>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
       )}
 
-      <section className="space-y-3">
-        <h2 className="font-serif text-xl font-bold">{d.profile.entries}</h2>
-        <ul className="divide-y divide-border rounded-xl border border-border bg-surface">
+      <Section title={d.profile.cases}>
+        <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {entries.map((e) => (
             <li key={e.slug}>
-              <Link href={`/${locale}/entries/${e.slug}`} className="block space-y-2 p-5 hover:bg-brand-soft/50">
-                <div className="flex flex-wrap items-center gap-3 text-xs text-muted">
-                  <StatusBadge status={e.status} locale={locale} />
-                  <span>{d.categories[e.category].name}</span>
-                  <span>{formatDate(e.date, locale)}</span>
-                  {e.editorial.state === "retracted" && (
-                    <span className="font-semibold text-status-convicted">{d.entry.retracted}</span>
-                  )}
-                </div>
-                <L as="h3" text={e.title} locale={locale} className="font-serif text-lg font-bold" />
-              </Link>
+              <CaseCard c={caseCard(e, locale)} locale={locale} retractedLabel={d.entry.retracted} />
             </li>
           ))}
         </ul>
-      </section>
+      </Section>
     </div>
   );
 }

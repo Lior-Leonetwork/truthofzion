@@ -1,0 +1,78 @@
+{
+  "slug": "ploni-almoni-breach-of-trust",
+  "entity": "ploni-almoni",
+  "category": "corruption",
+  "status": "indicted",
+  "date": "2026-09-14",
+  "title": {
+    "he": "כתב אישום בגין הפרת אמונים במכרז ממשלתי",
+    "en": "Indicted for breach of trust over a government tender"
+  },
+  "summary": {
+    "he": "לפי כתב האישום, השר קידם מכרז בהיקף מאות מיליונים לחברה שבה מחזיק קרוב משפחה. השר מכחיש. חזקת החפות עומדת בתוקף.",
+    "en": "According to the indictment, the minister steered a tender worth hundreds of millions to a company part-owned by a relative. He denies it. He is presumed innocent."
+  },
+  "body": [
+    {
+      "he": "כתב האישום מפרט שלוש פגישות שבהן נדונו תנאי המכרז מחוץ לפרוטוקול.",
+      "en": "The indictment details three meetings at which tender terms were discussed off the record."
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2025-11-02",
+      "text": {
+        "he": "המשטרה מודיעה על פתיחת חקירה",
+        "en": "Police announce an investigation"
+      },
+      "sourceIds": [
+        "police-2025"
+      ]
+    },
+    {
+      "date": "2026-09-14",
+      "text": {
+        "he": "הפרקליטות מגישה כתב אישום",
+        "en": "Prosecution files an indictment"
+      },
+      "sourceIds": [
+        "indictment-2026"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "police-2025",
+      "type": "police_statement",
+      "publisher": "Example Police",
+      "title": "Investigation announced",
+      "date": "2025-11-02",
+      "url": "https://example.org/police-2025",
+      "archivedUrl": "https://web.archive.org/web/2025/https://example.org/police-2025"
+    },
+    {
+      "id": "indictment-2026",
+      "type": "indictment",
+      "publisher": "Example State Attorney",
+      "title": "Indictment, case 1234-26",
+      "date": "2026-09-14",
+      "url": "https://example.org/indictment-2026",
+      "archivedUrl": "https://web.archive.org/web/2025/https://example.org/indictment-2026"
+    }
+  ],
+  "response": {
+    "status": "responded",
+    "requestedOn": "2026-09-15",
+    "text": {
+      "he": "״מדובר ברדיפה פוליטית. אוכיח את חפותי בבית המשפט.״",
+      "en": "“This is political persecution. I will prove my innocence in court.”"
+    }
+  },
+  "editorial": {
+    "state": "published",
+    "createdBy": "demo-a",
+    "reviewedBy": "demo-b",
+    "publishedOn": "2026-09-18"
+  },
+  "corrections": []
+}

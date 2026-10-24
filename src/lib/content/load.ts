@@ -86,7 +86,12 @@ function readDir(dir: string): RawFile[] {
     .map((f) => ({ path: path.join(dir, f), text: fs.readFileSync(path.join(dir, f), "utf8") }));
 }
 
-export function readContent(root = path.join(process.cwd(), "content")): Content {
+// DEMO_CONTENT=1 swaps in content-demo/: fictional people and cases for
+// previewing the design. Every page shows a banner saying so.
+export const IS_DEMO = process.env.DEMO_CONTENT === "1";
+const CONTENT_ROOT = path.join(process.cwd(), IS_DEMO ? "content-demo" : "content");
+
+export function readContent(root = CONTENT_ROOT): Content {
   const editorsPath = path.join(root, "editors.json");
   return parseContent({
     editors: { path: editorsPath, text: fs.readFileSync(editorsPath, "utf8") },

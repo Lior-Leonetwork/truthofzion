@@ -1,0 +1,27 @@
+{
+  "slug": "jean-dupont",
+  "kind": "public_figure",
+  "position": "party_leader",
+  "country": "FR",
+  "name": {
+    "he": "ז׳אן דופון",
+    "en": "Jean Dupont"
+  },
+  "role": {
+    "he": "יו״ר מפלגה (דמות בדויה)",
+    "en": "Party leader (fictional)"
+  },
+  "description": {
+    "he": "דמות בדויה לצורכי הדגמה בלבד.",
+    "en": "A fictional subject for demonstration only."
+  },
+  "links": [
+    {
+      "label": {
+        "he": "דף רשמי",
+        "en": "Official page"
+      },
+      "url": "https://example.org/jean-dupont"
+    }
+  ]
+}

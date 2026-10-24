@@ -28,14 +28,30 @@ export const ENTITY_KINDS = [
   "foreign_government",
 ] as const;
 
+// Seniority of the role, used to sort the directory with the top roles first.
+export const POSITIONS = [
+  "head_of_state",
+  "head_of_government",
+  "minister",
+  "security",
+  "judiciary",
+  "legislator",
+  "party_leader",
+  "diplomat",
+  "senior_official",
+  "org_leader",
+] as const;
+export type Position = (typeof POSITIONS)[number];
+
 export const Entity = z
   .object({
     slug,
     kind: z.enum(ENTITY_KINDS),
     name: Localized,
     role: Localized,
+    position: z.enum(POSITIONS).optional(),
     description: Localized.optional(),
-    country: z.string().length(2).optional(), // ISO 3166-1 alpha-2
+    country: z.string().regex(/^[A-Z]{2}$/, "ISO 3166-1 alpha-2, e.g. IL"),
     links: z
       .array(z.object({ label: Localized, url: httpsUrl }).strict())
       .default([]),

@@ -1,0 +1,57 @@
+{
+  "slug": "joe-bloggs-undeclared-funding",
+  "entity": "joe-bloggs",
+  "category": "foreign_influence",
+  "status": "allegation",
+  "date": "2026-04-03",
+  "title": {
+    "he": "נטען: מימון לא מדווח מגורם זר",
+    "en": "Alleged: undeclared funding from a foreign source"
+  },
+  "summary": {
+    "he": "שני כלי תקשורת בלתי תלויים דיווחו כי לשכתו קיבלה מימון שלא דווח. בפנקס האינטרסים הרשמי לא מופיע מימון כזה. הטענה לא הוכחה.",
+    "en": "Two independent outlets reported his office received undeclared funding. The official register of interests shows no such funding. The claim is unproven."
+  },
+  "sources": [
+    {
+      "id": "paper-a",
+      "type": "news_report",
+      "publisher": "Example Times",
+      "title": "Report on office funding",
+      "date": "2026-04-03",
+      "url": "https://example.org/paper-a",
+      "archivedUrl": "https://web.archive.org/web/2025/https://example.org/paper-a"
+    },
+    {
+      "id": "paper-b",
+      "type": "news_report",
+      "publisher": "Example Herald",
+      "title": "Follow-up report",
+      "date": "2026-04-05",
+      "url": "https://example.org/paper-b",
+      "archivedUrl": "https://web.archive.org/web/2025/https://example.org/paper-b"
+    },
+    {
+      "id": "register",
+      "type": "official_filing",
+      "publisher": "Example Parliament",
+      "title": "Register of members' interests",
+      "date": "2026-04-01",
+      "url": "https://example.org/register",
+      "archivedUrl": "https://web.archive.org/web/2025/https://example.org/register"
+    }
+  ],
+  "response": {
+    "status": "requested",
+    "requestedOn": "2026-04-06"
+  },
+  "editorial": {
+    "state": "published",
+    "createdBy": "demo-a",
+    "reviewedBy": "demo-b",
+    "publishedOn": "2026-04-10"
+  },
+  "body": [],
+  "timeline": [],
+  "corrections": []
+}

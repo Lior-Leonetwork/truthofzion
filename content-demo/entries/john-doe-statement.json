@@ -1,0 +1,43 @@
+{
+  "slug": "john-doe-statement",
+  "entity": "john-doe",
+  "category": "incitement",
+  "status": "documented",
+  "date": "2026-05-12",
+  "title": {
+    "he": "קרא בכנס פומבי להחרמת אזרחים ישראלים",
+    "en": "Called at a public conference for Israeli citizens to be boycotted"
+  },
+  "summary": {
+    "he": "הקלטת הכנס מתעדת את הדברים במלואם. משרדו טען כי הדברים הוצאו מהקשרם.",
+    "en": "The conference recording documents the remarks in full. His office says they were taken out of context."
+  },
+  "sources": [
+    {
+      "id": "conference-video",
+      "type": "primary_media",
+      "publisher": "Example Conference",
+      "title": "Full session recording",
+      "date": "2026-05-12",
+      "url": "https://example.org/conference-video",
+      "archivedUrl": "https://web.archive.org/web/2025/https://example.org/conference-video"
+    }
+  ],
+  "response": {
+    "status": "responded",
+    "requestedOn": "2026-05-13",
+    "text": {
+      "he": "״הדברים הוצאו מהקשרם.״",
+      "en": "“The remarks were taken out of context.”"
+    }
+  },
+  "editorial": {
+    "state": "published",
+    "createdBy": "demo-a",
+    "reviewedBy": "demo-b",
+    "publishedOn": "2026-05-20"
+  },
+  "body": [],
+  "timeline": [],
+  "corrections": []
+}

@@ -15,6 +15,7 @@ const entity = {
   kind: "public_official",
   name: { he: "נבחר ציבור לדוגמה", en: "Example Official" },
   role: { en: "Fictional minister" },
+  country: "IL",
 };
 
 function entry(overrides: Record<string, unknown> = {}) {

@@ -1,78 +1,137 @@
 import Link from "next/link";
-import { Suspense } from "react";
-import { EntryBrowser, type EntryCardData } from "@/components/entry-browser";
+import { CaseCard } from "@/components/case-card";
+import { CategoryIcon } from "@/components/icons";
+import { PersonCard } from "@/components/person-card";
+import { Section } from "@/components/section";
 import { getContent } from "@/lib/content/load";
-import { CATEGORIES, STATUSES } from "@/lib/content/schema";
-import { formatDate, getDict, t, type Locale } from "@/lib/i18n";
+import { CATEGORIES } from "@/lib/content/schema";
+import { getDict, type Locale } from "@/lib/i18n";
+import { caseCard, countries, isLive, people, stats } from "@/lib/view";
 
 export default async function Home({ params }: PageProps<"/[lang]">) {
   const locale = (await params).lang as Locale;
   const d = getDict(locale);
-  const { entries, entities } = getContent();
-
-  const items: EntryCardData[] = entries.map((e) => ({
-    slug: e.slug,
-    title: t(e.title, locale).value,
-    summary: t(e.summary, locale).value,
-    entityName: t(entities.get(e.entity)?.name, locale).value,
-    category: e.category,
-    status: e.status,
-    statusLabel: d.statuses[e.status].name,
-    categoryLabel: d.categories[e.category].name,
-    date: formatDate(e.date, locale),
-    retracted: e.editorial.state === "retracted",
-  }));
-  const counts = Object.fromEntries(
-    CATEGORIES.map((c) => [c, entries.filter((e) => e.category === c && e.editorial.state === "published").length]),
-  );
-  const labels = {
-    ...d.filters,
-    retracted: d.entry.retracted,
-    categories: CATEGORIES.map((c) => [c, d.categories[c].name] as [typeof c, string]),
-    statuses: STATUSES.map((s) => [s, d.statuses[s].name] as [typeof s, string]),
-  };
+  const live = getContent().entries.filter(isLive);
+  const latest = live.slice(0, 5).map((e) => caseCard(e, locale));
+  const top = people(locale).slice(0, 6);
+  const byCountry = countries(locale);
+  const s = stats();
+  const perCategory = Object.fromEntries(CATEGORIES.map((c) => [c, live.filter((e) => e.category === c).length]));
 
   return (
-    <div className="space-y-14">
-      <section className="space-y-5">
-        <p className="text-sm font-semibold tracking-wide text-gold">{d.tagline}</p>
-        <h1 className="max-w-3xl font-serif text-4xl font-bold leading-tight sm:text-5xl">{d.home.heading}</h1>
-        <p className="max-w-3xl text-lg text-muted">{d.home.intro}</p>
-        <ul className="grid gap-3 sm:grid-cols-3">
-          {d.home.pillars.map((p) => (
-            <li key={p} className="rounded-xl border border-border bg-surface p-4 text-sm leading-relaxed">{p}</li>
-          ))}
-        </ul>
+    <div className="space-y-20 pb-20">
+      <section className="hero-grid text-ink-text">
+        <div className="mx-auto max-w-6xl px-4 pb-14 pt-16 sm:pb-20 sm:pt-24">
+          <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-ink-border bg-ink-2/70 px-3 py-1 text-sm text-accent">
+            <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-accent" />
+            {d.home.eyebrow}
+          </p>
+          <h1 className="max-w-4xl font-serif text-5xl font-black leading-[1.05] sm:text-7xl">{d.home.heading}</h1>
+          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-ink-muted sm:text-xl">{d.home.intro}</p>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <Link href={`/${locale}/investigations`} className="rounded-xl bg-accent px-5 py-3 font-semibold text-ink hover:brightness-110">
+              {d.home.ctaPrimary}
+            </Link>
+            <Link href={`/${locale}/methodology`} className="rounded-xl border border-ink-border px-5 py-3 font-semibold hover:bg-ink-2">
+              {d.home.ctaSecondary}
+            </Link>
+          </div>
+          <dl className="mt-14 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-ink-border bg-ink-border sm:grid-cols-4">
+            {(["cases", "people", "countries", "sources"] as const).map((k) => (
+              <div key={k} className="bg-ink-2/90 p-5">
+                <dt className="text-sm text-ink-muted">{d.home.stats[k]}</dt>
+                <dd className="mt-1 font-serif text-4xl font-bold tabular-nums">{s[k]}</dd>
+              </div>
+            ))}
+          </dl>
+        </div>
       </section>
 
-      <section className="grid gap-3 sm:grid-cols-2">
-        {CATEGORIES.map((c) => (
-          <Link
-            key={c}
-            href={`/${locale}?category=${c}#cases`}
-            className="group rounded-xl border border-border bg-surface p-5 hover:border-brand"
-          >
-            <div className="flex items-baseline justify-between gap-3">
-              <h2 className="font-serif text-xl font-bold group-hover:text-brand">{d.categories[c].name}</h2>
-              <span className="text-sm tabular-nums text-muted">{counts[c]}</span>
-            </div>
-            <p className="mt-1 text-sm text-muted">{d.categories[c].blurb}</p>
-          </Link>
-        ))}
-      </section>
-
-      <section id="cases" className="scroll-mt-6 space-y-5">
-        <h2 className="font-serif text-2xl font-bold">{d.home.browse}</h2>
-        {items.length === 0 ? (
-          <div className="rounded-xl border border-dashed border-border p-10 text-center">
-            <p className="font-semibold">{d.home.empty}</p>
-            <p className="mt-2 text-sm text-muted">{d.home.emptyDetail}</p>
+      <Section title={d.home.latest} link={latest.length ? { href: `/${locale}/investigations`, label: d.home.viewAll } : undefined}>
+        {latest.length === 0 ? (
+          <div className="rounded-2xl border border-dashed border-border p-12 text-center">
+            <p className="font-serif text-xl font-bold">{d.home.empty}</p>
+            <p className="mt-2 text-muted">{d.home.emptyDetail}</p>
           </div>
         ) : (
-          <Suspense>
-            <EntryBrowser locale={locale} items={items} labels={labels} />
-          </Suspense>
+          <div className="grid gap-4 lg:grid-cols-2">
+            <CaseCard c={latest[0]} locale={locale} retractedLabel={d.entry.retracted} featured />
+            <div className="grid gap-4 sm:grid-cols-2">
+              {latest.slice(1).map((c) => (
+                <CaseCard key={c.slug} c={c} locale={locale} retractedLabel={d.entry.retracted} />
+              ))}
+            </div>
+          </div>
         )}
+      </Section>
+
+      {top.length > 0 && (
+        <Section title={d.home.topRoles} link={{ href: `/${locale}/people`, label: d.home.allPeople }}>
+          <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {top.map((p) => (
+              <li key={p.slug}>
+                <PersonCard p={p} locale={locale} />
+              </li>
+            ))}
+          </ul>
+        </Section>
+      )}
+
+      <Section title={d.home.byArea}>
+        <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {CATEGORIES.map((c) => (
+            <li key={c}>
+              <Link
+                href={`/${locale}/investigations?category=${c}`}
+                className="group flex h-full flex-col gap-3 rounded-2xl border border-border bg-surface p-5 transition hover:border-brand hover:shadow-lg"
+              >
+                <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-brand-soft text-brand">
+                  <CategoryIcon category={c} />
+                </span>
+                <h3 className="font-serif text-lg font-bold group-hover:text-brand">{d.categories[c].name}</h3>
+                <p className="text-sm text-muted">{d.categories[c].blurb}</p>
+                <p className="mt-auto text-sm font-semibold">{d.cases(perCategory[c])}</p>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </Section>
+
+      {byCountry.length > 0 && (
+        <Section title={d.home.byCountry} link={{ href: `/${locale}/countries`, label: d.nav.countries }}>
+          <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
+            {byCountry.map((c) => (
+              <li key={c.code}>
+                <Link
+                  href={`/${locale}/countries/${c.code.toLowerCase()}`}
+                  className="flex h-full flex-col gap-1 rounded-2xl border border-border bg-surface p-4 hover:border-brand"
+                >
+                  <span className="font-mono text-xs font-semibold tracking-widest text-muted">{c.code}</span>
+                  <span className="font-serif text-lg font-bold">{c.name}</span>
+                  <span className="text-sm text-muted">{d.cases(c.cases)}</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </Section>
+      )}
+
+      <section className="bg-ink text-ink-text">
+        <div className="mx-auto max-w-6xl space-y-8 px-4 py-16">
+          <h2 className="font-serif text-3xl font-bold">{d.home.how.title}</h2>
+          <ol className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {d.home.how.steps.map((step, i) => (
+              <li key={step.title} className="space-y-2 border-t border-ink-border pt-4">
+                <span className="font-mono text-sm text-accent">0{i + 1}</span>
+                <h3 className="font-serif text-xl font-bold">{step.title}</h3>
+                <p className="text-sm leading-relaxed text-ink-muted">{step.body}</p>
+              </li>
+            ))}
+          </ol>
+          <Link href={`/${locale}/methodology`} className="inline-block font-semibold text-accent hover:underline">
+            {d.nav.methodology} <span className="inline-block rtl:rotate-180">→</span>
+          </Link>
+        </div>
       </section>
     </div>
   );

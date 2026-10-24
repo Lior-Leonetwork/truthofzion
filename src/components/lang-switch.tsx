@@ -13,7 +13,7 @@ export function LangSwitch({ locale, label }: { locale: Locale; label: string })
       href={href}
       hrefLang={other}
       lang={other}
-      className="rounded-full border border-border px-3 py-1 text-sm hover:bg-brand-soft"
+      className="rounded-full border border-ink-border px-3 py-1 text-sm text-ink-text hover:bg-ink-2"
     >
       {label}
     </Link>

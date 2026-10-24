@@ -1,0 +1,57 @@
+{
+  "slug": "jean-dupont-rally-remarks",
+  "entity": "jean-dupont",
+  "category": "incitement",
+  "status": "allegation",
+  "date": "2026-03-18",
+  "title": {
+    "he": "נטען: הסתה נגד יהודים בעצרת",
+    "en": "Alleged: incitement against Jews at a rally"
+  },
+  "summary": {
+    "he": "שני כלי תקשורת דיווחו על התבטאויות בעצרת; ההקלטה החלקית שפורסמה אינה כוללת את המשפט המיוחס לו. הטענה לא הוכחה.",
+    "en": "Two outlets reported remarks at a rally; the partial recording released does not include the attributed sentence. The claim is unproven."
+  },
+  "sources": [
+    {
+      "id": "rally-a",
+      "type": "news_report",
+      "publisher": "Example Daily",
+      "title": "Rally report",
+      "date": "2026-03-18",
+      "url": "https://example.org/rally-a",
+      "archivedUrl": "https://web.archive.org/web/2025/https://example.org/rally-a"
+    },
+    {
+      "id": "rally-b",
+      "type": "news_report",
+      "publisher": "Example Wire",
+      "title": "Rally coverage",
+      "date": "2026-03-18",
+      "url": "https://example.org/rally-b",
+      "archivedUrl": "https://web.archive.org/web/2025/https://example.org/rally-b"
+    },
+    {
+      "id": "rally-video",
+      "type": "primary_media",
+      "publisher": "Example Wire",
+      "title": "Partial rally recording",
+      "date": "2026-03-18",
+      "url": "https://example.org/rally-video",
+      "archivedUrl": "https://web.archive.org/web/2025/https://example.org/rally-video"
+    }
+  ],
+  "response": {
+    "status": "declined",
+    "requestedOn": "2026-03-19"
+  },
+  "editorial": {
+    "state": "published",
+    "createdBy": "demo-a",
+    "reviewedBy": "demo-b",
+    "publishedOn": "2026-03-25"
+  },
+  "body": [],
+  "timeline": [],
+  "corrections": []
+}

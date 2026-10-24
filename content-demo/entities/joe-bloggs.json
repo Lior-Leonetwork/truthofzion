@@ -1,0 +1,27 @@
+{
+  "slug": "joe-bloggs",
+  "kind": "public_official",
+  "position": "legislator",
+  "country": "GB",
+  "name": {
+    "he": "ג׳ו בלוגס",
+    "en": "Joe Bloggs"
+  },
+  "role": {
+    "he": "חבר פרלמנט (דמות בדויה)",
+    "en": "Member of Parliament (fictional)"
+  },
+  "description": {
+    "he": "דמות בדויה לצורכי הדגמה בלבד.",
+    "en": "A fictional subject for demonstration only."
+  },
+  "links": [
+    {
+      "label": {
+        "he": "דף רשמי",
+        "en": "Official page"
+      },
+      "url": "https://example.org/joe-bloggs"
+    }
+  ]
+}

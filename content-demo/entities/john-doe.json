@@ -1,0 +1,27 @@
+{
+  "slug": "john-doe",
+  "kind": "public_official",
+  "position": "senior_official",
+  "country": "US",
+  "name": {
+    "he": "ג׳ון דו",
+    "en": "John Doe"
+  },
+  "role": {
+    "he": "בכיר במשרד החוץ (דמות בדויה)",
+    "en": "Senior State Department official (fictional)"
+  },
+  "description": {
+    "he": "דמות בדויה לצורכי הדגמה בלבד.",
+    "en": "A fictional subject for demonstration only."
+  },
+  "links": [
+    {
+      "label": {
+        "he": "דף רשמי",
+        "en": "Official page"
+      },
+      "url": "https://example.org/john-doe"
+    }
+  ]
+}

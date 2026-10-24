@@ -1,0 +1,27 @@
+{
+  "slug": "example-foundation",
+  "kind": "organization",
+  "position": "org_leader",
+  "country": "IL",
+  "name": {
+    "he": "קרן הדוגמה",
+    "en": "The Example Foundation"
+  },
+  "role": {
+    "he": "עמותה (גוף בדוי)",
+    "en": "Non-profit (fictional)"
+  },
+  "description": {
+    "he": "דמות בדויה לצורכי הדגמה בלבד.",
+    "en": "A fictional subject for demonstration only."
+  },
+  "links": [
+    {
+      "label": {
+        "he": "דף רשמי",
+        "en": "Official page"
+      },
+      "url": "https://example.org/example-foundation"
+    }
+  ]
+}

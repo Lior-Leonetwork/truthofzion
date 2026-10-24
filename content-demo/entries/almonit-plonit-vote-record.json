@@ -1,0 +1,48 @@
+{
+  "slug": "almonit-plonit-vote-record",
+  "entity": "almonit-plonit",
+  "category": "public_record",
+  "status": "documented",
+  "date": "2026-07-22",
+  "title": {
+    "he": "הצביעה נגד חוק שהבטיחה לקדם",
+    "en": "Voted against a bill she pledged to champion"
+  },
+  "summary": {
+    "he": "במערכת הבחירות התחייבה חברת הכנסת לקדם את החוק. בקריאה השנייה הצביעה נגדו.",
+    "en": "During the campaign the MK pledged to advance the bill. At second reading she voted against it."
+  },
+  "sources": [
+    {
+      "id": "knesset-vote",
+      "type": "knesset_record",
+      "publisher": "Example Knesset",
+      "title": "Plenum vote record",
+      "date": "2026-07-22",
+      "url": "https://example.org/knesset-vote",
+      "archivedUrl": "https://web.archive.org/web/2025/https://example.org/knesset-vote"
+    },
+    {
+      "id": "campaign-video",
+      "type": "primary_media",
+      "publisher": "Example campaign channel",
+      "title": "Campaign speech",
+      "date": "2025-10-01",
+      "url": "https://example.org/campaign-video",
+      "archivedUrl": "https://web.archive.org/web/2025/https://example.org/campaign-video"
+    }
+  ],
+  "response": {
+    "status": "no_response",
+    "requestedOn": "2026-07-23"
+  },
+  "editorial": {
+    "state": "published",
+    "createdBy": "demo-a",
+    "reviewedBy": "demo-b",
+    "publishedOn": "2026-07-28"
+  },
+  "body": [],
+  "timeline": [],
+  "corrections": []
+}

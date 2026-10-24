@@ -1,6 +1,7 @@
 {
   "slug": "example-official",
   "kind": "public_official",
+  "position": "minister",
   "name": { "he": "שם לדוגמה", "en": "Example Name" },
   "role": { "he": "תפקיד ציבורי לדוגמה", "en": "Example public role" },
   "description": { "he": "תיאור קצר של התפקיד הציבורי.", "en": "Short description of the public role." },

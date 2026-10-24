@@ -1,0 +1,27 @@
+{
+  "slug": "almonit-plonit",
+  "kind": "public_official",
+  "position": "legislator",
+  "country": "IL",
+  "name": {
+    "he": "אלמונית פלונית",
+    "en": "Almonit Plonit"
+  },
+  "role": {
+    "he": "חברת כנסת (דמות בדויה)",
+    "en": "Member of Knesset (fictional)"
+  },
+  "description": {
+    "he": "דמות בדויה לצורכי הדגמה בלבד.",
+    "en": "A fictional subject for demonstration only."
+  },
+  "links": [
+    {
+      "label": {
+        "he": "דף רשמי",
+        "en": "Official page"
+      },
+      "url": "https://example.org/almonit-plonit"
+    }
+  ]
+}

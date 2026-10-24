@@ -1,0 +1,27 @@
+{
+  "slug": "ploni-almoni",
+  "kind": "public_official",
+  "position": "minister",
+  "country": "IL",
+  "name": {
+    "he": "פלוני אלמוני",
+    "en": "Ploni Almoni"
+  },
+  "role": {
+    "he": "שר לענייני דוגמה (דמות בדויה)",
+    "en": "Minister of Example Affairs (fictional)"
+  },
+  "description": {
+    "he": "דמות בדויה לצורכי הדגמה בלבד.",
+    "en": "A fictional subject for demonstration only."
+  },
+  "links": [
+    {
+      "label": {
+        "he": "דף רשמי",
+        "en": "Official page"
+      },
+      "url": "https://example.org/ploni-almoni"
+    }
+  ]
+}
