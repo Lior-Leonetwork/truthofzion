@@ -1,0 +1,48 @@
+{
+  "slug": "example-case",
+  "entity": "example-official",
+  "category": "corruption",
+  "status": "indicted",
+  "date": "2025-03-02",
+  "title": { "he": "כותרת עובדתית וקצרה", "en": "Short, factual headline" },
+  "summary": {
+    "he": "שניים-שלושה משפטים: מה קרה, מה המעמד המשפטי, ומה עוד לא הוכרע.",
+    "en": "Two or three sentences: what happened, the legal status, and what is still undecided."
+  },
+  "body": [
+    { "he": "פסקה עם הפרטים, כל טענה מגובה במקור.", "en": "A paragraph of detail, every claim backed by a source." }
+  ],
+  "timeline": [
+    { "date": "2024-11-10", "text": { "he": "נפתחה חקירה", "en": "Investigation opened" }, "sourceIds": ["police"] },
+    { "date": "2025-03-02", "text": { "he": "הוגש כתב אישום", "en": "Indictment filed" }, "sourceIds": ["indictment"] }
+  ],
+  "sources": [
+    {
+      "id": "police",
+      "type": "police_statement",
+      "publisher": "Example Police",
+      "title": "Statement on the opening of an investigation",
+      "date": "2024-11-10",
+      "url": "https://example.org/police-statement",
+      "archivedUrl": "https://web.archive.org/web/2024/https://example.org/police-statement"
+    },
+    {
+      "id": "indictment",
+      "type": "indictment",
+      "publisher": "Example State Attorney",
+      "title": "Indictment",
+      "date": "2025-03-02",
+      "url": "https://example.org/indictment"
+    }
+  ],
+  "response": {
+    "status": "responded",
+    "requestedOn": "2025-03-03",
+    "text": { "he": "תגובת מושא התיק, במלואה.", "en": "The subject's response, in full." }
+  },
+  "corrections": [],
+  "editorial": {
+    "state": "draft",
+    "createdBy": "lior"
+  }
+}

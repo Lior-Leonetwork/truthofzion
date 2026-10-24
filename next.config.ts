@@ -1,9 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
-  cacheComponents: true,
-  partialPrefetching: true,
+  // Every page is prerendered from content/ at build time; publishing is a
+  // reviewed pull request followed by a rebuild.
+  experimental: {
+    globalNotFound: true,
+  },
   turbopack: {
     rules: {
       "*.css": {

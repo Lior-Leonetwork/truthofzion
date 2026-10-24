@@ -1,26 +1,60 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  --background: #fbfaf7;
+  --surface: #ffffff;
+  --foreground: #14213d;
+  --muted: #5b6475;
+  --border: #e3e1da;
+  --brand: #0b3b8c;
+  --brand-soft: #e8eefb;
+  --gold: #b8892b;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --status-convicted: #9b1c1c;
+  --status-indicted: #b45309;
+  --status-investigation: #a16207;
+  --status-allegation: #6b7280;
+  --status-documented: #0b3b8c;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #0d1320;
+    --surface: #141c2e;
+    --foreground: #e8ecf4;
+    --muted: #9aa4b8;
+    --border: #26304a;
+    --brand: #7ea6ff;
+    --brand-soft: #1b2744;
+    --gold: #d9b25c;
+
+    --status-convicted: #f87171;
+    --status-indicted: #fb923c;
+    --status-investigation: #facc15;
+    --status-allegation: #a1a1aa;
+    --status-documented: #7ea6ff;
   }
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-brand: var(--brand);
+  --color-brand-soft: var(--brand-soft);
+  --color-gold: var(--gold);
+  --color-status-convicted: var(--status-convicted);
+  --color-status-indicted: var(--status-indicted);
+  --color-status-investigation: var(--status-investigation);
+  --color-status-allegation: var(--status-allegation);
+  --color-status-documented: var(--status-documented);
+  --font-sans: var(--font-heebo), system-ui, sans-serif;
+  --font-serif: var(--font-frank), Georgia, serif;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }
