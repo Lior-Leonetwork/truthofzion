@@ -1,0 +1,5 @@
+[
+  { "name": "סיעת הדוגמה", "short": { "he": "סיעת הדוגמה", "en": "Example Party" }, "spectrum": "right" },
+  { "name": "סיעת המופת", "short": { "he": "סיעת המופת", "en": "Model Party" }, "spectrum": "left" },
+  { "name": "סיעת העתיד הבדוי", "short": { "he": "העתיד הבדוי", "en": "Fictional Future" }, "spectrum": "center" }
+]

@@ -6,7 +6,12 @@ Every draft was written only from the bill's official explanatory notes, and eve
 
 - [ ] Read the summary against the official bill text (link in `bill.summarySource`). Fix wording directly in the file if needed.
 - [ ] Check the topic tags.
-- [ ] **Key vote?** `keyVoteSuggested` is the model's suggestion only. To mark a key vote, set `"keyVote": true` and write a `note` (Hebrew and/or English) saying why. CI refuses a key vote without a note.
+- [ ] **Key vote?** `keyVoteSuggested` is the model's suggestion only. To mark a key vote, set `"keyVote": true`, the site's `"position"` (`"for"` or `"against"`: the vote the site considers in Israel's interest), and a `note` (Hebrew and/or English) giving the reason. Every member's page then shows how they voted against that position, next to your reason. CI refuses a key vote without a position and a note.
+
+  ```json
+  "editorial": { "state": "draft", "keyVote": true, "position": "for",
+    "note": { "he": "החוק מחמיר את הענישה על הסתה לטרור.", "en": "The law toughens penalties for incitement to terrorism." } }
+  ```
 - [ ] To reject a draft, set `"state": "rejected"`. Don't delete the file, or it will be drafted again tomorrow.
 
 `rationale` is the model's note to you and is never shown on the site.

@@ -2,11 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { L } from "@/components/localized-text";
+import { SPECTRUM_DOT } from "@/components/spectrum-badge";
 import { VoteBar } from "@/components/vote-bar";
 import { formatDate, getDict, LOCALES, t, type Locale } from "@/lib/i18n";
 import type { VoteChoice } from "@/lib/knesset/schema";
 import { getKnesset } from "@/lib/knesset/store";
-import { knessetLabels } from "@/lib/knesset/view";
+import { factionInfo, knessetLabels, SPECTRUM_ORDER } from "@/lib/knesset/view";
 
 export const dynamicParams = false;
 
@@ -37,6 +38,13 @@ export default async function VotePage({ params }: PageProps<"/[lang]/knesset/vo
   if (!vote) notFound();
   const a = analyses.get(vote.id);
   const topicNames = new Map(watch.map((w) => [w.id, t(w.name, locale).value]));
+
+  // How each political camp voted.
+  const camps = SPECTRUM_ORDER.map((spectrum) => {
+    const c = { for: 0, against: 0, abstain: 0, other: 0 };
+    for (const m of Object.values(vote.members)) if (factionInfo(m.faction, locale).spectrum === spectrum) c[m.choice]++;
+    return { spectrum, ...c, total: c.for + c.against + c.abstain + c.other };
+  }).filter((c) => c.total > 0);
 
   // Group the roll call by choice, then by faction within each choice.
   const groups = (["for", "against", "abstain", "other"] as VoteChoice[]).map((choice) => {
@@ -104,6 +112,43 @@ export default async function VotePage({ params }: PageProps<"/[lang]/knesset/vo
           <section className="space-y-4">
             <h2 className="flex items-center gap-3 font-serif text-2xl font-bold">
               <span className="h-6 w-1 rounded-full bg-accent" />
+              {d.record.byCamp}
+            </h2>
+            <div className="overflow-x-auto rounded-2xl border border-border bg-surface">
+              <table className="w-full text-sm">
+                <thead className="text-xs text-muted">
+                  <tr className="border-b border-border">
+                    <th className="p-3 text-start font-semibold">{d.people.orientation}</th>
+                    <th className="p-3 font-semibold">{k.choices.for}</th>
+                    <th className="p-3 font-semibold">{k.choices.against}</th>
+                    <th className="p-3 font-semibold">{k.choices.abstain}</th>
+                    <th className="p-3 font-semibold">{k.choices.other}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {camps.map((c) => (
+                    <tr key={c.spectrum} className="border-b border-border last:border-0">
+                      <td className="p-3">
+                        <span className="inline-flex items-center gap-2 font-semibold">
+                          <span className={`h-2.5 w-2.5 rounded-full ${SPECTRUM_DOT[c.spectrum]}`} />
+                          {d.spectrum[c.spectrum]}
+                        </span>
+                      </td>
+                      <td className="p-3 text-center tabular-nums">{c.for}</td>
+                      <td className="p-3 text-center tabular-nums">{c.against}</td>
+                      <td className="p-3 text-center tabular-nums">{c.abstain}</td>
+                      <td className="p-3 text-center tabular-nums text-muted">{c.other}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="text-xs text-muted">{d.record.classificationNote}</p>
+          </section>
+
+          <section className="space-y-4">
+            <h2 className="flex items-center gap-3 font-serif text-2xl font-bold">
+              <span className="h-6 w-1 rounded-full bg-accent" />
               {k.roll}
             </h2>
             <div className="grid gap-4 md:grid-cols-2">
@@ -114,7 +159,10 @@ export default async function VotePage({ params }: PageProps<"/[lang]/knesset/vo
                   </p>
                   {g.byFaction.map(([faction, list]) => (
                     <div key={faction} className="space-y-1.5">
-                      <p lang="he" dir="rtl" className="text-xs font-semibold text-muted">{faction}</p>
+                      <p className="flex items-center gap-1.5 text-xs font-semibold text-muted">
+                        <span className={`h-2 w-2 rounded-full ${SPECTRUM_DOT[factionInfo(faction, locale).spectrum]}`} />
+                        <span lang="he">{factionInfo(faction, locale).short}</span>
+                      </p>
                       <ul className="flex flex-wrap gap-1.5">
                         {list.map((m) => (
                           <li key={m.id}>
