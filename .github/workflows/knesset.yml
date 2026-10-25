@@ -16,6 +16,9 @@ on:
       max_drafts:
         description: Max votes to draft summaries for this run
         default: "20"
+      max_statement_checks:
+        description: Max key votes to check members' public statements against
+        default: "3"
 
 permissions:
   contents: write
@@ -98,15 +101,20 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           KNESSET_HTTP_PROXY: ${{ secrets.KNESSET_HTTP_PROXY }}
+      - name: Check members' public statements against key votes
+        run: npm run knesset:statements -- --max "${{ inputs.max_statement_checks || '3' }}"
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          KNESSET_HTTP_PROXY: ${{ secrets.KNESSET_HTTP_PROXY }}
       - run: npm run validate
       - run: npm test
       - name: Open or update the review pull request
         run: |
-          git add -A data/knesset
-          if git diff --cached --quiet && git diff --quiet origin/main HEAD -- data/knesset/analysis; then
+          git add -A data/knesset content
+          if git diff --cached --quiet && git diff --quiet origin/main HEAD -- data/knesset/analysis content; then
             echo "No drafts to review."; exit 0
           fi
-          git diff --cached --quiet || git commit -m "AI drafts: Knesset vote summaries $(date -u +%F)"
+          git diff --cached --quiet || git commit -m "AI drafts: Knesset vote summaries and statement checks $(date -u +%F)"
           git push origin "$BRANCH"
           gh label create ai-draft --color D9A321 --description "Drafted by AI, needs editor review" --force
           if [ -z "$(gh pr list --head "$BRANCH" --state open --json number --jq '.[].number')" ]; then

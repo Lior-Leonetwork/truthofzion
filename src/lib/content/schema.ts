@@ -180,6 +180,8 @@ export const Editor = z
     // GitHub login. Merging an AI-draft pull request publishes its drafts in
     // this editor's name, so only listed logins can do it.
     github: z.string().optional(),
+    // An automated drafter. It may author drafts but can never approve one.
+    ai: z.boolean().optional(),
   })
   .strict();
 export type Editor = z.infer<typeof Editor>;

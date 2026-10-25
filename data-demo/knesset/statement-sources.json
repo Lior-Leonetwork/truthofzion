@@ -1,0 +1,21 @@
+[
+  { "domain": "ynet.co.il", "name": { "he": "ynet", "en": "Ynet" } },
+  { "domain": "mako.co.il", "name": { "he": "N12 / mako", "en": "N12 / mako" } },
+  { "domain": "kan.org.il", "name": { "he": "כאן", "en": "Kan" } },
+  { "domain": "haaretz.co.il", "name": { "he": "הארץ", "en": "Haaretz" } },
+  { "domain": "haaretz.com", "name": { "he": "הארץ", "en": "Haaretz" } },
+  { "domain": "israelhayom.co.il", "name": { "he": "ישראל היום", "en": "Israel Hayom" } },
+  { "domain": "israelhayom.com", "name": { "he": "ישראל היום", "en": "Israel Hayom" } },
+  { "domain": "maariv.co.il", "name": { "he": "מעריב", "en": "Maariv" } },
+  { "domain": "walla.co.il", "name": { "he": "וואלה", "en": "Walla" } },
+  { "domain": "now14.co.il", "name": { "he": "ערוץ 14", "en": "Channel 14" } },
+  { "domain": "inn.co.il", "name": { "he": "ערוץ 7", "en": "Arutz Sheva" } },
+  { "domain": "israelnationalnews.com", "name": { "he": "ערוץ 7", "en": "Israel National News" } },
+  { "domain": "globes.co.il", "name": { "he": "גלובס", "en": "Globes" } },
+  { "domain": "calcalist.co.il", "name": { "he": "כלכליסט", "en": "Calcalist" } },
+  { "domain": "themarker.com", "name": { "he": "דה מרקר", "en": "TheMarker" } },
+  { "domain": "timesofisrael.com", "name": { "he": "טיימס אוף ישראל", "en": "The Times of Israel" } },
+  { "domain": "jpost.com", "name": { "he": "ג׳רוזלם פוסט", "en": "The Jerusalem Post" } },
+  { "domain": "i24news.tv", "name": { "he": "i24NEWS", "en": "i24NEWS" } },
+  { "domain": "knesset.gov.il", "name": { "he": "הכנסת", "en": "The Knesset" } }
+]

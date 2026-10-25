@@ -6,5 +6,10 @@
   {
     "handle": "demo-b",
     "name": "Demo Editor B"
+  },
+  {
+    "handle": "claude",
+    "name": "Claude (AI drafter)",
+    "ai": true
   }
 ]

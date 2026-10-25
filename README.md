@@ -32,6 +32,19 @@ Runs every day in GitHub Actions (`.github/workflows/knesset.yml`):
 | **Review:** drafts land in one rolling pull request (`ai/knesset-drafts`). Editors fix wording, reject drafts (`"state": "rejected"`), or mark key votes (`"keyVote": true` plus a `note`, required by CI) | Editor | No |
 | **Approve:** merging the PR publishes its drafts in the merging editor's name (`.github/workflows/knesset-publish.yml`). A merger not listed in `content/editors.json` publishes nothing | Editor | **Yes** |
 
+**Said one thing, voted the opposite.** For each key vote, Claude searches
+the outlets in `data/knesset/statement-sources.json` (editors maintain the list,
+across the political spectrum) for members' public statements before the vote
+that contradict how they then voted (`scripts/knesset-statements.ts`). Code
+keeps a finding only if the recorded vote contradicts the statement, it was
+published before the vote by an approved outlet, the quote is word for word in
+the article as fetched (by the model's fetch tool or our own request), and the
+article names the member. Survivors become **draft** cases (category "public
+record"), written from fixed templates around the quote and the vote, never
+model prose. They need an editor's review, the member's right of reply, and a
+human `reviewedBy`; an AI drafter (`"ai": true` in `content/editors.json`) can
+never approve.
+
 The model never marks a key vote, never characterizes a member or party, and
 never summarizes from memory. Pages: `/knesset` (all final-reading votes),
 `/knesset/votes/<id>` (summary and full roll call by faction), and

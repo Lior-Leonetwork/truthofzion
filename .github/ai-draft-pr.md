@@ -11,4 +11,18 @@ Every draft was written only from the bill's official explanatory notes, and eve
 
 `rationale` is the model's note to you and is never shown on the site.
 
+## Said one thing, voted the opposite (`content/entries/mk-*-vote-*.json`)
+
+For key votes, Claude searched approved outlets (`data/knesset/statement-sources.json`) for members' public statements made before the vote that contradict how they voted. Code kept a finding only if:
+- the member's recorded vote (for or against) contradicts the stated position;
+- the statement was published before the vote, by an approved outlet;
+- the quote appears word for word in the article as fetched, and the article names the member.
+
+These arrive as **draft cases**, and merging this pull request does **not** publish them. Each one first needs:
+- [ ] Read the article yourself: is it the member's own words, about this bill, as a firm position, not a condition or a joke?
+- [ ] Ask the member for a response (`response.status` and `requestedOn`), as the editorial rules require.
+- [ ] Add context in `body` if needed, an archived copy of the article (`archivedUrl`), then set `"state": "published"`, `reviewedBy` (you, not `claude`) and `publishedOn` in a pull request.
+
+To drop a finding, delete its file.
+
 New drafts are added to this pull request every day until it is merged.

@@ -2,6 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { z } from "zod";
 import { Analysis, IngestState, Member, Vote, WatchTopic } from "./schema";
+import { StatementSource } from "./statements";
 
 // data/knesset/ holds official vote records (written by the ingester) and the
 // model's drafts (written by the analyst, published only by an editor).
@@ -36,6 +37,8 @@ export const paths = (root = knessetRoot()) => ({
   state: path.join(root, "state.json"),
   members: path.join(root, "members.json"),
   watch: path.join(root, "watch.json"),
+  statementSources: path.join(root, "statement-sources.json"),
+  statementsChecked: path.join(root, "statements-checked.json"),
   votes: path.join(root, "votes"),
   vote: (id: number) => path.join(root, "votes", `${id}.json`),
   analyses: path.join(root, "analysis"),
@@ -45,6 +48,7 @@ export const paths = (root = knessetRoot()) => ({
 export const readState = (root?: string) => readJson(paths(root).state, IngestState.nullable(), null);
 export const readMembers = (root?: string) => readJson(paths(root).members, z.record(z.string(), Member), {});
 export const readWatch = (root?: string) => readJson(paths(root).watch, z.array(WatchTopic), []);
+export const readStatementSources = (root?: string) => readJson(paths(root).statementSources, z.array(StatementSource), []);
 export const readVotes = (root?: string) => readAll(paths(root).votes, Vote).sort((a, b) => b.id - a.id);
 export const readAnalyses = (root?: string) => readAll(paths(root).analyses, Analysis);
 

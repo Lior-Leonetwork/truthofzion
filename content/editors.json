@@ -1,3 +1,4 @@
 [
-  { "handle": "lior", "name": "Lior", "github": "Lior-Leonetwork" }
+  { "handle": "lior", "name": "Lior", "github": "Lior-Leonetwork" },
+  { "handle": "claude", "name": "Claude (AI drafter)", "ai": true }
 ]

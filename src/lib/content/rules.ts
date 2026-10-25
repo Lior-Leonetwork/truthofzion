@@ -112,6 +112,8 @@ export function checkEntry(
   if (!reviewedBy) fail("reviewed", "published entries need editorial.reviewedBy");
   else if (reviewedBy === createdBy) {
     fail("second-editor", "reviewer must be a different editor than the author");
+  } else if (editors.get(reviewedBy)?.ai) {
+    fail("human-reviewer", "an AI drafter can't approve publication; a human editor must");
   }
   if (!publishedOn) fail("published-on", "published entries need editorial.publishedOn");
 
