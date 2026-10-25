@@ -99,17 +99,19 @@ jobs:
           openvpn: ${{ secrets.KNESSET_OPENVPN_CONF }}
           openvpn-auth: ${{ secrets.KNESSET_OPENVPN_AUTH }}
       - run: npm ci
-      # Build on the open review branch, never force-push it: editors may have
-      # edited drafts there, and drafts already in it must not be re-billed.
+      # With an open review pull request, build on its branch and never
+      # force-push it: editors may have edited drafts there. Without one, any
+      # leftover branch is stale (closed or merged), so start fresh from main.
       - name: Check out the review branch
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          if git ls-remote --exit-code --heads origin "$BRANCH" >/dev/null; then
+          if [ -n "$(gh pr list --head "$BRANCH" --state open --json number --jq '.[].number')" ]; then
             git checkout -B "$BRANCH" "origin/$BRANCH"
             git merge --no-edit origin/main
           else
-            git checkout -b "$BRANCH"
+            git checkout -B "$BRANCH" origin/main
+            echo "FRESH_BRANCH=1" >> "$GITHUB_ENV"
           fi
       - name: Check members' public statements against key votes
         run: npm run knesset:statements -- --max "${{ inputs.max_statement_checks || '3' }}"
@@ -125,7 +127,7 @@ jobs:
             echo "No findings to review."; exit 0
           fi
           git diff --cached --quiet || git commit -m "AI findings: said one thing, voted the opposite $(date -u +%F)"
-          git push origin "$BRANCH"
+          if [ -n "${FRESH_BRANCH:-}" ]; then git push --force origin "$BRANCH"; else git push origin "$BRANCH"; fi
           gh label create ai-draft --color D9A321 --description "Drafted by AI, needs editor review" --force
           if [ -z "$(gh pr list --head "$BRANCH" --state open --json number --jq '.[].number')" ]; then
             gh pr create --base main --head "$BRANCH" --label ai-draft \
