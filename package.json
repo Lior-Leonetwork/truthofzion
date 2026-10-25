@@ -9,7 +9,7 @@
     "lint": "eslint",
     "validate": "tsx scripts/validate-content.ts",
     "test": "vitest run",
-    "typecheck": "tsc --noEmit",
+    "typecheck": "next typegen && tsc --noEmit",
     "dev:demo": "DEMO_CONTENT=1 next dev",
     "knesset:ingest": "tsx scripts/knesset-ingest.ts",
     "knesset:analyze": "tsx scripts/knesset-analyze.ts",
