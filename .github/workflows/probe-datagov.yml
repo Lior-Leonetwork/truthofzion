@@ -1,0 +1,30 @@
+name: data.gov.il probe
+
+# Manual diagnostic: finds the Registrar of Associations' foreign state
+# donation datasets on data.gov.il and prints their fields and sample rows.
+on:
+  workflow_dispatch:
+    inputs:
+      queries:
+        description: Search terms, quoted and space-separated (blank for defaults)
+        default: ""
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ${{ vars.KNESSET_RUNNER || 'ubuntu-latest' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - uses: ./.github/actions/israel-vpn
+        with:
+          wireguard: ${{ secrets.KNESSET_WIREGUARD_CONF }}
+          openvpn: ${{ secrets.KNESSET_OPENVPN_CONF }}
+          openvpn-auth: ${{ secrets.KNESSET_OPENVPN_AUTH }}
+      - run: npm ci
+      - run: npm run probe:datagov -- ${{ inputs.queries }}
