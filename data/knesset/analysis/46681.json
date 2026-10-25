@@ -1,0 +1,21 @@
+{
+  "voteId": 46681,
+  "bill": {
+    "id": 1057405,
+    "name": "חוק לתיקון ולהארכת תוקפן של תקנות שעת חירום (חרבות ברזל) (הארכת מעצר לחשוד בעבירת בטחון) (תיקון מס' 9), התשפ\"ו-2026",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=1057405"
+  },
+  "summary": null,
+  "quotes": [],
+  "topics": [
+    "security"
+  ],
+  "keyVoteSuggested": false,
+  "rationale": "No bill text was provided, so the summaries are left empty. The 'security' tag rests only on the agenda title: an amendment and extension of the Swords of Iron emergency regulations on extending detention of suspects in security offenses. As amendment no. 9 of a recurring extension, passed 6-0, it does not appear to be a key vote, though editors may weigh its bearing on detention and judicial-review practice once the text is available.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "draft",
+    "keyVote": false
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "voteId": 46653,
+  "bill": {
+    "id": 2219317,
+    "name": "חוק הגנת הצרכן (תיקון מס' 74), התשפ\"ו-2026",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=2219317"
+  },
+  "summary": {
+    "he": "התיקון מחייב עוסקים להקליט שיחות טלפון עם צרכנים בעסקאות של 750 ש\"ח לפחות מסוגים המנויים בתוספת לחוק (בהן מכירה בעקבות פנייה שיווקית, שירותי טלפון, אינטרנט וטלוויזיה, גז ותיווך הלוואות), להודיע על ההקלטה בתחילת השיחה, לשמור את ההקלטות שנתיים אם העסקה הושלמה או 6 חודשים אם לא, ולמסור אותן לצרכן לבקשתו, בפעם הראשונה ללא תשלום. אם העוסק לא מסר את ההקלטה, יראו אותו בהליך אזרחי כמי שהודה בגרסת הצרכן לגבי השיחה, אלא אם בית המשפט מצא הצדק סביר. בתיקונים עקיפים הוחלו הסדרים דומים על שיחות שיווקיות של בנקים, חברות כרטיסי אשראי, חברות ביטוח, סוכני ביטוח, גופים מוסדיים ונותני שירותים פיננסיים מסוימים. התיקון ייכנס לתוקף ב-22.3.2027, והשרים מוסמכים, באישור ועדת הכלכלה, לדחות את התחילה בעד ארבעה חודשים במצטבר.",
+    "en": "The amendment requires businesses to record phone calls with consumers for transactions of at least NIS 750 of types listed in a schedule to the law (including sales following a marketing call, phone, internet and TV services, gas supply, and loan brokerage), to announce at the start of the call that it is recorded, to keep recordings for two years if the transaction was completed or six months if not, and to give them to the consumer on request, free of charge the first time. If a business fails to provide the recording, in civil proceedings it is treated as having admitted the consumer's version of the call, unless the court finds reasonable justification. Indirect amendments apply similar rules to marketing calls by banks, credit card companies, insurers, insurance agents, institutional bodies and certain licensed financial service providers. It takes effect on 22.3.2027, and the ministers may, with Economy Committee approval, postpone this by up to four months cumulatively."
+  },
+  "quotes": [
+    "עוסק להקליט שיחות קוליות למספר טלפון, שנערכות בינו לבין צרכן",
+    "עסקה שמחירה הכולל הוא 750 שקלים חדשים לפחות",
+    "עוסק להודיע לצרכן בתחילת השיחה כי השיחה מוקלטת",
+    "לתקופה של שנתיים מיום ביצוען אם הושלמה העסקה, או לתקופה של 6 חודשים אם לא הושלמה העסקה",
+    "יראו את העוסק, בהליך אזרחי, כמי שהודה בגרסת הצרכן לגבי תוכן השיחה או לגבי קיומה",
+    "תאגידים בנקאיים (בנקים וחברות כרטיסי אשראי), חברות ביטוח, סוכני ביטוח, גופים מוסדיים",
+    "התיקון לחוק ייכנס לתוקף ב-22.3.2027"
+  ],
+  "topics": [],
+  "keyVoteSuggested": false,
+  "rationale": "Consumer-protection bill on call recording; it touches civil evidence rules but does not substantively concern any watch topic, so no key-vote suggestion. Note for editors: the vote record names 'תיקון מס' 73, התשפ\"ה-2025' while the supplied text is titled 'תיקון מס' 74, התשפ\"ו-2026' — likely renumbering on final passage, but please verify the text matches this vote.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "draft",
+    "keyVote": false
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "voteId": 46664,
+  "bill": {
+    "id": 2206757,
+    "name": "חוק הרשות לפיתוח הנגב (תיקון מס' 4) (תיקון  מס' 2), התשפ\"ו–2026",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=2206757"
+  },
+  "summary": {
+    "he": "התיקון מאריך מ-10 ל-17 שנים את התקופה שבה בעלי \"חוות הבודדים\" בנגב יכולים להשלים את ההליכים התכנוניים לגבי החוות. לפי החוק הקיים, בעלי מיזמים חקלאיים–תיירותיים שאושרו רשאים לקבל זכויות במקרקעין מרשות מקרקעי ישראל ללא מכרז. עם זאת, רמ\"י רשאית שלא להמשיך בהקניית הזכויות אם לא אושרה תוכנית תכנונית בתוך התקופה שנקבעה. על פי דברי ההסבר, ההארכה נובעת מהימשכות ההליכים התכנוניים לגבי חלק מהמיזמים.",
+    "en": "The amendment extends from 10 to 17 years the period in which owners of \"individual farms\" in the Negev can complete the planning procedures for their farms. Under the existing law, owners of approved combined agricultural-tourism enterprises may receive land rights from the Israel Land Authority without a tender. However, the Authority may decline to continue granting those rights if a planning scheme has not been approved within the set period. According to the explanatory notes, the extension is due to protracted planning procedures for some of the enterprises."
+  },
+  "quotes": [
+    "מאריך את התקופה להשלמת ההסדרה התכנונית של המקרקעין בהם מצויים המיזמים",
+    "שהשלמת ההליכים היא תנאי לכך שתוקנה להם זכות קניינית במקרקעין שבהם ממוקמות החוות",
+    "ללא מכרז",
+    "טרם ניתן תוקף לתוכנית המאפשרת את קיומו של המיזם",
+    "בשל הימשכות ההליכים התכנוניים לגבי חלק מהמיזמים הקיימים"
+  ],
+  "topics": [],
+  "keyVoteSuggested": false,
+  "rationale": "The bill is a technical extension of planning deadlines for land rights for individual farms in the Negev, inside Israel proper. It does not substantively concern borders or sovereignty, though editors may weigh the 'settlement' wording of the sovereignty topic; it passed 11-0-1. Not suggested as a key vote.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "draft",
+    "keyVote": false
+  }
+}
