@@ -161,7 +161,7 @@ describe("statement checker", () => {
       { stop_reason: "end_turn", content: [{ type: "text", text: JSON.stringify({ findings: [finding] }) }] },
     ];
     const client = {
-      beta: { messages: { create: async (p: Record<string, unknown>) => (calls.push(p), replies.shift()) } },
+      beta: { messages: { stream: (p: Record<string, unknown>) => (calls.push(p), { finalMessage: async () => replies.shift() }) } },
     } as unknown as Anthropic;
     const res = await findStatements(client, vote, undefined, roster, sources);
     expect(res.ok).toBe(true);
@@ -176,7 +176,7 @@ describe("statement checker", () => {
 
   it("returns nothing usable when the answer isn't valid", async () => {
     const client = {
-      beta: { messages: { create: async () => ({ stop_reason: "end_turn", content: [{ type: "text", text: "I found several!" }] }) } },
+      beta: { messages: { stream: () => ({ finalMessage: async () => ({ stop_reason: "end_turn", content: [{ type: "text", text: "I found several!" }] }) }) } },
     } as unknown as Anthropic;
     expect((await findStatements(client, vote, undefined, roster, sources)).ok).toBe(false);
   });

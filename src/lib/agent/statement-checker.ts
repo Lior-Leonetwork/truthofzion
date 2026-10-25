@@ -74,7 +74,8 @@ export async function findStatements(
   let response: Anthropic.Beta.BetaMessage | null = null;
 
   for (let turn = 0; turn < 6; turn++) {
-    response = await client.beta.messages.create({
+    // Stream: research turns are long, and an idle connection gets dropped.
+    response = await client.beta.messages.stream({
       model: MODEL,
       max_tokens: 16000,
       betas: ["server-side-fallback-2026-07-01"],
@@ -87,7 +88,7 @@ export async function findStatements(
         { type: "web_fetch_20260209", name: "web_fetch", max_uses: 12, allowed_domains: domains },
       ],
       messages,
-    });
+    }).finalMessage();
     for (const block of response.content) {
       if (block.type === "web_fetch_tool_result" && block.content.type === "web_fetch_result") {
         const doc = block.content.content;
