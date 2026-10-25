@@ -4,13 +4,10 @@ name: Knesset probe
 on: workflow_dispatch
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   probe:
-    # knesset.gov.il only answers Israeli IP addresses. Set the repository
-    # variable KNESSET_RUNNER to a self-hosted runner label (e.g. "israel")
-    # to run these jobs on a machine in Israel.
     runs-on: ${{ vars.KNESSET_RUNNER || 'ubuntu-latest' }}
     steps:
       - uses: actions/checkout@v4
@@ -24,6 +21,12 @@ jobs:
           openvpn: ${{ secrets.KNESSET_OPENVPN_CONF }}
           openvpn-auth: ${{ secrets.KNESSET_OPENVPN_AUTH }}
       - run: npm ci
-      - run: npm run knesset:probe
+      - run: npm run funding:ingest
         env:
           KNESSET_HTTP_PROXY: ${{ secrets.KNESSET_HTTP_PROXY }}
+      - name: Commit the sample to this probe branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/funding
+          git commit -m "Probe: funding ingest output" && git push origin HEAD:${{ github.ref_name }}
