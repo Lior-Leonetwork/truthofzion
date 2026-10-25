@@ -18,7 +18,8 @@
     "knesset:statements": "tsx scripts/knesset-statements.ts",
     "probe:datagov": "tsx scripts/probe-datagov.ts",
     "funding:ingest": "tsx scripts/funding-ingest.ts",
-    "knesset:keyvotes": "tsx scripts/knesset-keyvotes.ts"
+    "knesset:keyvotes": "tsx scripts/knesset-keyvotes.ts",
+    "cases:draft": "tsx scripts/cases-draft.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^1.3.0",

@@ -45,6 +45,19 @@ Pages: `/funding`, `/funding/<NGO number>`; donor countries appear under
 listed on the home page and under Investigations. Run locally (from Israel):
 `npm run funding:ingest`.
 
+## Case research (drafts for review)
+
+Weekly (`.github/workflows/cases.yml`): Claude researches criminal and
+integrity cases (indictments, convictions, announced investigations, State
+Comptroller findings) and incitement (members' own words supporting terror or
+calling for violence, and the official steps taken over them) for Knesset
+members, searching official sites and approved outlets. `src/lib/cases/verify.ts`
+keeps a source only if the site may carry that kind of evidence (a news story
+is never an indictment), the quote is verbatim in the page as we fetched it
+through the Israeli VPN, and the page names the member. Survivors become
+**draft** entries in a pull request (`ai/case-drafts`), with what each still
+needs. Publishing stays with an editor and the member's right of reply.
+
 ## The AI system: Knesset votes
 
 Runs every day in GitHub Actions (`.github/workflows/knesset.yml`), without

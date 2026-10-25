@@ -26,5 +26,8 @@ Bilingual (he/en, RTL-first) accountability site. Read README.md first.
   Registrar's filings, published as filed by code, no model. Donor countries
   only when the donor's name names one. data.gov.il is geo-blocked like the
   Knesset; `DATAGOV_API` overrides the endpoint for a local mock.
+- Case research (`src/lib/cases/`, `scripts/cases-draft.ts`): drafts only,
+  never published by the pipeline. Source sites and the evidence types they may
+  carry are fixed in code (`allowedTypes`); keep it that way.
 - Next.js 16: middleware is `src/proxy.ts`; `PageProps<"/route">` /
   `LayoutProps` are global type helpers; the root layout lives in `app/[lang]/`.
