@@ -52,6 +52,7 @@ export async function analyzeVote(
   bill: Bill | null,
   watch: WatchTopic[],
   today: string,
+  opts: { autoPublish?: boolean } = {},
 ): Promise<AnalystResult> {
   const response = await client.beta.messages.parse({
     model: MODEL,
@@ -85,7 +86,8 @@ export async function analyzeVote(
       rationale: out.rationale,
       model: response.model,
       generatedOn: today,
-      editorial: { state: "draft", keyVote: false },
+      // Auto-published summaries never carry a key vote or position (enforced by checkAnalysis).
+      editorial: opts.autoPublish ? { state: "published", keyVote: false, autoPublished: true } : { state: "draft", keyVote: false },
     },
   };
 }

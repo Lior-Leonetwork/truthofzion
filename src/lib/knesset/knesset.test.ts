@@ -215,6 +215,15 @@ describe("analysis publication gate", () => {
     expect(rules({ ...base, editorial: { state: "published", keyVote: false, reviewedBy: "lior", reviewedOn: "2026-10-25" } })).toEqual([]);
   });
 
+  it("lets the pipeline publish a neutral summary, but never a key vote or position", () => {
+    const auto = { ...base, quotes: ["q"], summary: { en: "s" }, editorial: { state: "published" as const, keyVote: false, autoPublished: true } };
+    expect(rules(auto)).toEqual([]);
+    expect(rules({ ...auto, editorial: { ...auto.editorial, keyVote: true, position: "for" as const, note: { en: "x" } } })).toContain("auto-no-stance");
+    expect(rules({ ...auto, quotes: [] })).toContain("auto-quoted");
+    // Without the flag, publishing still needs an editor.
+    expect(rules({ ...auto, editorial: { state: "published", keyVote: false } })).toContain("reviewed");
+  });
+
   it("requires an editor's reason and the site's position for every key vote", () => {
     expect(rules({ ...base, editorial: { state: "draft", keyVote: true, position: "for" } })).toContain("key-vote-note");
     expect(rules({ ...base, editorial: { state: "draft", keyVote: true, note: { en: "Why" } } })).toContain("key-vote-position");

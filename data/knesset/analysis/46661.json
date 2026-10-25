@@ -1,0 +1,28 @@
+{
+  "voteId": 46661,
+  "bill": {
+    "id": 2202055,
+    "name": "חוק ההתיישנות (תיקון מס' 10), התשפ\"ו–2026",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=2202055"
+  },
+  "summary": {
+    "he": "התיקון לחוק ההתיישנות מוסיף בני ובנות דודים להגדרת \"בן משפחה\" בסעיף 18א(ב) לחוק. כך נדחה מועד תחילת ההתיישנות לתביעה אזרחית בשל התעללות בקטין, או בשל תקיפה מינית של בגיר שטרם מלאו לו 21, שבוצעו בידי בן או בת דוד שמלאו להם 15 שנים במועד הפגיעה. לפי דברי ההסבר, נפגעים אלה יוכלו להגיש תביעה אזרחית עד גיל 35. זו הזכות הקיימת כבר למי שנפגע מאחיו, מדודו או מגיסו. ההצעה התקבלה בקריאה שלישית ברוב של 52 תומכים, ללא מתנגדים וללא נמנעים.",
+    "en": "The amendment to the Prescription (Statute of Limitations) Law adds cousins to the definition of \"family member\" in section 18A(b) of the law. This postpones the start of the limitation period for civil claims over abuse of a minor, or sexual assault of an adult not yet 21, committed by a cousin who was at least 15 at the time of the harm. According to the explanatory notes, such victims will be able to file a civil claim until age 35. This is the same right that already exists for those harmed by a brother, uncle or brother-in-law. The bill passed its third reading 52–0 with no abstentions."
+  },
+  "quotes": [
+    "התיקון דוחה את מועד תחילת תקופת ההתיישנות החלה על הזכות להגיש תובענה אזרחית בשל התעללות שבוצעה בקטין",
+    "על ידי בן או בת דודו או דודתו שמלאו להם 15 שנים במועד הפגיעה",
+    "התיקון מאפשר לנפגעים אלו להגיש תביעה אזרחית עד הגיעם לגיל 35",
+    "בדומה לזכות הקיימת למי שנפגע באופן האמור מאחיו, מדודו או מגיסו"
+  ],
+  "topics": [],
+  "keyVoteSuggested": false,
+  "rationale": "The bill concerns civil limitation periods for victims of abuse within the family. It does not substantively touch the courts' structure, the Attorney General or judicial appointments, nor any other watch topic. It passed with no opposition, so it is not suggested as a key vote.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "keyVote": false,
+    "autoPublished": true
+  }
+}

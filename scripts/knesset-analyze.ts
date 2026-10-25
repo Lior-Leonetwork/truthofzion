@@ -1,8 +1,10 @@
-// Drafts bilingual summaries and topic tags for ingested votes with Claude.
-// Every draft lands in data/knesset/analysis/ with state "draft"; the
-// workflow opens a pull request, and only an editor can publish one.
+// Writes bilingual summaries and topic tags for ingested votes with Claude,
+// from the bill's official explanatory notes only; every quote is verified
+// in code and failing drafts are discarded. With --publish they are published
+// automatically (labelled as such on the site, never with a key vote or a
+// position); without it they are drafts for an editor.
 //
-//   ANTHROPIC_API_KEY=... npm run knesset:analyze -- [--max 20]
+//   ANTHROPIC_API_KEY=... npm run knesset:analyze -- [--max 20] [--publish]
 import Anthropic from "@anthropic-ai/sdk";
 import { fetch as undiciFetch, ProxyAgent } from "undici";
 import { z } from "zod";
@@ -59,7 +61,7 @@ async function main() {
       console.warn(`  vote ${vote.id}: bill lookup failed (${e.message}); continuing without bill text`);
       return null;
     });
-    const result = await analyzeVote(client, vote, bill, watch, today);
+    const result = await analyzeVote(client, vote, bill, watch, today, { autoPublish: process.argv.includes("--publish") });
     if (result.ok) {
       writeJson(paths().analysis(vote.id), result.analysis);
       delete skipped[vote.id];

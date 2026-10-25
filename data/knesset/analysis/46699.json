@@ -1,0 +1,20 @@
+{
+  "voteId": 46699,
+  "bill": {
+    "id": 2229019,
+    "name": "חוק נוכחות עורך דין בחקירת קטינים ואנשים עם מוגבלות (תיקוני חקיקה והוראת שעה), התשפ\"ו-2026",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=2229019"
+  },
+  "summary": null,
+  "quotes": [],
+  "topics": [],
+  "keyVoteSuggested": false,
+  "rationale": "No official bill text was provided, so there is no summary and no quotes. Judging only by the title (a lawyer's presence when minors and people with disabilities are questioned), this is a criminal-procedure measure that does not clearly fit any watch topic, including judiciary. It passed its third reading 5-0-0, so a key-vote flag is not suggested unless the full text shows otherwise.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "keyVote": false,
+    "autoPublished": true
+  }
+}

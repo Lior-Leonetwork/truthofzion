@@ -54,6 +54,14 @@ describe("vote analyst", () => {
     expect(JSON.stringify(calls[0])).toContain("מקורות המימון");
   });
 
+  it("can publish automatically, but never as a key vote or with a position", async () => {
+    const { client } = fakeClient({ ...good, key_vote_suggested: true });
+    const res = await analyzeVote(client, vote, bill, watch, "2026-10-25", { autoPublish: true });
+    expect(res.ok).toBe(true);
+    if (!res.ok) return;
+    expect(res.analysis.editorial).toEqual({ state: "published", keyVote: false, autoPublished: true });
+  });
+
   it("discards a draft with a quote the bill doesn't contain", async () => {
     const { client } = fakeClient({ ...good, quotes: ["לפרסם את כל מקורות המימון מדי יום"] });
     const res = await analyzeVote(client, vote, bill, watch, "2026-10-25");

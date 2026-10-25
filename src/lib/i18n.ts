@@ -52,6 +52,7 @@ type Dict = {
     search: string;
     topic: string;
     aiSummary: string;
+    aiSummaryAuto: string;
     noSummary: string;
     fromBill: string;
     official: string;
@@ -161,6 +162,7 @@ const he: Dict = {
     search: "חיפוש חוק או חבר כנסת",
     topic: "נושא",
     aiSummary: "תקציר שנוסח בסיוע בינה מלאכותית מתוך דברי ההסבר הרשמיים, ונבדק בידי עורך",
+    aiSummaryAuto: "תקציר שנכתב בידי בינה מלאכותית מתוך דברי ההסבר הרשמיים בלבד ופורסם אוטומטית, ללא בדיקת עורך. הציטוטים נבדקו מילה במילה מול המקור.",
     noSummary: "עדיין אין תקציר מאושר להצבעה זו. מוצגת הכותרת הרשמית בלבד.",
     fromBill: "מתוך דברי ההסבר",
     official: "הרשומה הרשמית בנתונים הפתוחים של הכנסת",
@@ -388,6 +390,7 @@ const en: Dict = {
     search: "Search a bill or member",
     topic: "Topic",
     aiSummary: "Summary drafted with AI from the official explanatory notes, checked by an editor",
+    aiSummaryAuto: "Summary written by AI from the official explanatory notes only and published automatically, without an editor's review. Quotes were checked word for word against the source.",
     noSummary: "No approved summary for this vote yet. Showing the official title only.",
     fromBill: "From the explanatory notes",
     official: "Official record in the Knesset's open data",

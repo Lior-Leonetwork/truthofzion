@@ -1,0 +1,34 @@
+{
+  "voteId": 46691,
+  "bill": {
+    "id": 1057303,
+    "name": "חוק לתיקון פקודת בתי הסוהר (הארכת הוראות שעה) (תיקוני חקיקה), התשפ\"ו-2026",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=1057303"
+  },
+  "summary": {
+    "he": "החוק מאריך עד 31 בינואר 2027 את הוראת השעה המאפשרת להכריז על מצב חירום כליאתי. במצב זה ניתן להחזיק כלואים בחריגה מהוראות הדין בעניין שטח מחיה, זכאות למיטה והפרדה בין סוגי כלואים. לפי החוק, ההכרזה לא תהיה תלויה עוד במצב הביטחוני, אלא תתבסס על העלייה במספר האסירים בעקבות הפעולות הצבאיות. החוק גם מאריך את ההכרזה הקיימת עד 15 בספטמבר 2026, קובע לאיזו ועדה יועברו בקשות ההארכה והדיווחים בראשית כהונתה של כנסת חדשה, ומאריך עד 31 ביולי 2027 את האפשרות לתת לאסיר חופשה מיוחדת של עד 45 ימים.",
+    "en": "The law extends until 31 January 2027 the temporary provision allowing a 'prison emergency' to be declared. Under such a declaration, inmates may be held in deviation from the legal rules on living space, entitlement to a bed and separation between categories of inmates. The declaration will no longer depend on the security situation itself. Instead, it will be based on the significant rise in the number of prisoners resulting from military operations. The law also: extends the existing declaration until 15 September 2026; provides that, at the start of a new Knesset's term and before the National Security Committee is formed, extension requests and reports go to the Foreign Affairs and Defense Committee or another committee set by the Knesset Committee; and extends until 31 July 2027 the option of granting a prisoner special leave of up to 45 days."
+  },
+  "quotes": [
+    "הוארך תוקפה של הוראת השעה המסדירה את ההכרזה על מצב חירום כליאתי",
+    "המאפשרת להחזיק כלואים תוך חריגה מהוראות הדין לעניין שטח מחיה, זכאות למיטה והפרדה בין סוגי כלואים",
+    "(31 בינואר 2027)",
+    "ההכרזה לא תהיה תלויה עוד במצב הביטחוני השורר במדינה",
+    "תתבסס על העלייה המשמעותית במספר האסירים שנובעת מהפעולות הצבאיות שננקטו בשל המצב הביטחוני במדינה",
+    "הוארך תוקפה של ההכרזה הקיימת על מצב חירום כליאתי",
+    "יועברו לוועדת החוץ והביטחון או לוועדה אחרת שתקבע ועדת הכנסת",
+    "המאפשרת מתן חופשה מיוחדת לאסיר שלא תעלה על 45 ימים"
+  ],
+  "topics": [
+    "security"
+  ],
+  "keyVoteSuggested": false,
+  "rationale": "Tagged security because the grounds for the prison-emergency declaration are explicitly tied to the rise in prisoners from military operations, though the bill is mainly about prison administration. It is a technical extension of existing temporary orders passed with low turnout (8-1), so it is not suggested as a key vote.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "keyVote": false,
+    "autoPublished": true
+  }
+}

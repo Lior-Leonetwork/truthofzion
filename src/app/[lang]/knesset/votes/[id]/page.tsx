@@ -95,7 +95,8 @@ export default async function VotePage({ params }: PageProps<"/[lang]/knesset/vo
                 </div>
               )}
               <p className="flex items-center gap-2 text-xs text-muted">
-                <span className="rounded border border-border px-1.5 py-0.5 font-mono">AI</span> {k.aiSummary}
+                <span className="rounded border border-border px-1.5 py-0.5 font-mono">AI</span>{" "}
+                {a.editorial.autoPublished && !a.editorial.reviewedBy ? k.aiSummaryAuto : k.aiSummary}
               </p>
             </section>
           ) : (

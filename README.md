@@ -21,42 +21,22 @@ editor.
 
 ## The AI system: Knesset votes
 
-Runs every day in GitHub Actions (`.github/workflows/knesset.yml`):
+Runs every day in GitHub Actions (`.github/workflows/knesset.yml`), without
+editor approval for the factual parts:
 
 | Step | Who | Published? |
 |---|---|---|
-| **Ingest:** pull new final-reading plenum votes from the Knesset's official open data (ParliamentInfo OData v4: `KNS_PlenumVote`, `KNS_PlenumVoteResult`, factions from `KNS_PersonToPosition`). The older `Votes.svc` stopped updating in July 2021 | Code only (`scripts/knesset-ingest.ts`) | **Yes, automatically.** Official records, shown as recorded |
+| **Ingest:** pull new final-reading plenum votes from the Knesset's official open data (ParliamentInfo OData v4: `KNS_PlenumVote`, `KNS_PlenumVoteResult`, factions from `KNS_PersonToPosition`), through an Israeli VPN | Code only (`scripts/knesset-ingest.ts`) | **Yes, automatically.** Official records, shown as recorded |
 | **Hold back** any vote with contradictory member records or no results yet. Totals are counted from member rows; pass/fail isn't published by the Knesset, so the site doesn't claim it | Code | No, retried each run |
-| **Draft:** for each final-reading vote, fetch the bill's official explanatory notes (`KNS_Bill.SummaryLaw`) and have Claude write a neutral Hebrew/English summary, quotes and topic tags | Claude (`src/lib/agent/vote-analyst.ts`) | No |
-| **Verify:** every quote must appear word-for-word in the official text; no bill text means no summary; topics only from `data/knesset/watch.json` | Code (`src/lib/knesset/verify.ts`) | Failing drafts are discarded |
-| **Review:** drafts land in one rolling pull request (`ai/knesset-drafts`). Editors fix wording, reject drafts (`"state": "rejected"`), or mark key votes (`"keyVote": true` plus a `note`, required by CI) | Editor | No |
-| **Approve:** merging the PR publishes its drafts in the merging editor's name (`.github/workflows/knesset-publish.yml`). A merger not listed in `content/editors.json` publishes nothing | Editor | **Yes** |
+| **Summarise:** fetch the bill's official explanatory notes (`KNS_Bill.SummaryLaw`) and have Claude write a neutral Hebrew/English summary with quotes and topic tags | Claude (`src/lib/agent/vote-analyst.ts`) | **Yes, automatically**, labelled on the site as an AI summary published without an editor's review |
+| **Verify:** every quote must appear word-for-word in the official text; no bill text means no summary; topics only from `data/knesset/watch.json`; an automatic summary can never carry a key vote or a position | Code (`src/lib/knesset/verify.ts`) | Failing drafts are discarded |
+| **Key votes:** which votes are key, and the site's position on each with the reason | Editor, by editing `data/knesset/analysis/<id>.json` | When committed |
+| **Said one thing, voted the opposite:** for key votes, Claude searches approved outlets for contradicting public statements; code verifies each | Claude + code, then editor | No: draft cases in a pull request, published only after an editor's review and the member's right of reply |
 
-**Said one thing, voted the opposite.** For each key vote, Claude searches
-the outlets in `data/knesset/statement-sources.json` (editors maintain the list,
-across the political spectrum) for members' public statements before the vote
-that contradict how they then voted (`scripts/knesset-statements.ts`). Code
-keeps a finding only if the recorded vote contradicts the statement, it was
-published before the vote by an approved outlet, the quote is word for word in
-the article as fetched (by the model's fetch tool or our own request), and the
-article names the member. Survivors become **draft** cases (category "public
-record"), written from fixed templates around the quote and the vote, never
-model prose. They need an editor's review, the member's right of reply, and a
-human `reviewedBy`; an AI drafter (`"ai": true` in `content/editors.json`) can
-never approve.
-
-**Right, left and key votes.** `data/knesset/factions.json` places each
-faction on the political spectrum (editors' classification, labelled as such
-on the site). On key votes, editors set the site's `position` and a `note`
-with the reason; every member's page shows how they voted on each key vote
-against that position, and People lists all members with their camp and
-record. The site shows the record; it doesn't label people.
-
-The model never marks a key vote, never characterizes a member or party, and
-never summarizes from memory. Pages: `/knesset` (all final-reading votes),
-`/knesset/votes/<id>` (summary and full roll call by faction), and
-`/knesset/members/<id>` (each MK's record). Link an investigated profile to its
-record with `knessetMemberId` in the entity file.
+Editors can correct or reject any automatic summary at any time by editing its
+file (`"state": "rejected"` removes it from the site). Pages: `/knesset`,
+`/knesset/votes/<id>` (summary, roll call by faction and by political camp),
+and `/knesset/members/<id>` (each member's record).
 
 ### Setup (once, in the GitHub repo settings)
 

@@ -48,6 +48,13 @@ export function checkAnalysis(a: Analysis, votes: Map<number, Vote>, editors: Ma
   }
   if (a.editorial.position && !a.editorial.keyVote) fail("position-without-key-vote", "a position is only set on key votes");
   if (a.editorial.state !== "published") return problems;
+  if (a.editorial.autoPublished && !a.editorial.reviewedBy) {
+    if (a.editorial.keyVote || a.editorial.position) {
+      fail("auto-no-stance", "an automatically published summary can't carry a key vote or a position; an editor must review it");
+    }
+    if (a.summary && a.quotes.length === 0) fail("auto-quoted", "an automatically published summary needs its verified quotes");
+    return problems;
+  }
   const by = a.editorial.reviewedBy;
   if (!by) fail("reviewed", "a published analysis needs editorial.reviewedBy");
   else if (!editors.has(by)) fail("known-editor", `"${by}" is not listed in content/editors.json`);

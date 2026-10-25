@@ -99,6 +99,9 @@ export const Analysis = z
         state: z.enum(["draft", "published", "rejected"]),
         reviewedBy: z.string().optional(),
         reviewedOn: z.iso.date().optional(),
+        // Published by the pipeline without an editor: allowed only for the
+        // neutral, quote-verified summary, never with a key vote or position.
+        autoPublished: z.boolean().optional(),
         keyVote: z.boolean().default(false), // the editor's call, not the model's
         // The site's position on a key vote, set by an editor: voting this way
         // is what the site considers in Israel's interest. `note` says why.

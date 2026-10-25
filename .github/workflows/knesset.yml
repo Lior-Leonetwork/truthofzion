@@ -1,21 +1,24 @@
 name: Knesset votes
 
-# Daily: pull new votes from the Knesset's official data and publish them as
-# recorded, then have Claude draft summaries into a pull request for editors.
+# Daily, fully automatic: pull new votes from the Knesset's official data,
+# have Claude summarise each bill from its official explanatory notes (quotes
+# verified in code), publish both, and redeploy the site.
+# Only "said one thing, voted the opposite" findings go to editors, as draft
+# cases in a pull request: they accuse named people and need the right of reply.
 on:
   schedule:
     - cron: "17 3 * * *" # 06:17 Israel time
   workflow_dispatch:
     inputs:
       max_votes:
-        description: Max votes to ingest this run (backfill in chunks)
+        description: Max votes to ingest this run
         default: "400"
       from:
         description: First run only - earliest vote date (YYYY-MM-DD). Default is two years back.
         default: ""
-      max_drafts:
-        description: Max votes to draft summaries for this run
-        default: "20"
+      max_summaries:
+        description: Max votes to summarise and publish this run
+        default: "40"
       max_statement_checks:
         description: Max key votes to check members' public statements against
         default: "3"
@@ -27,7 +30,7 @@ permissions:
 concurrency: knesset
 
 jobs:
-  ingest:
+  publish:
     # knesset.gov.il only answers Israeli IP addresses. Set the repository
     # variable KNESSET_RUNNER to a self-hosted runner label (e.g. "israel")
     # to run these jobs on a machine in Israel.
@@ -50,28 +53,33 @@ jobs:
         run: npm run knesset:ingest -- --max-votes "${{ inputs.max_votes || '400' }}" ${{ inputs.from && format('--from {0}', inputs.from) || '' }}
         env:
           KNESSET_HTTP_PROXY: ${{ secrets.KNESSET_HTTP_PROXY }}
+      - name: Summarise and publish with Claude
+        run: npm run knesset:analyze -- --publish --max "${{ inputs.max_summaries || '40' }}"
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          KNESSET_HTTP_PROXY: ${{ secrets.KNESSET_HTTP_PROXY }}
       - run: npm run validate
-      - name: Publish vote records
+      - run: npm test
+      - name: Publish
+        id: commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/knesset/votes data/knesset/members.json data/knesset/state.json
-          if git diff --cached --quiet; then echo "No new votes."; exit 0; fi
-          git commit -m "Knesset votes: ingest $(date -u +%F)"
+          git add data/knesset
+          if git diff --cached --quiet; then echo "Nothing new."; exit 0; fi
+          git commit -m "Knesset votes and summaries: $(date -u +%F)"
           git push origin HEAD:main
+          echo "pushed=true" >> "$GITHUB_OUTPUT"
       # Vercel may not deploy commits authored by the Actions bot (Hobby plan),
       # so ask it to rebuild explicitly. Secret: a Vercel deploy hook URL.
       - name: Redeploy the site
-        if: env.VERCEL_DEPLOY_HOOK != ''
+        if: steps.commit.outputs.pushed == 'true' && env.VERCEL_DEPLOY_HOOK != ''
         env:
           VERCEL_DEPLOY_HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK }}
         run: curl -fsS -X POST "$VERCEL_DEPLOY_HOOK" > /dev/null && echo "Vercel redeploy requested."
 
-  draft:
-    needs: ingest
-    # knesset.gov.il only answers Israeli IP addresses. Set the repository
-    # variable KNESSET_RUNNER to a self-hosted runner label (e.g. "israel")
-    # to run these jobs on a machine in Israel.
+  statements:
+    needs: publish
     runs-on: ${{ vars.KNESSET_RUNNER || 'ubuntu-latest' }}
     env:
       BRANCH: ai/knesset-drafts
@@ -103,11 +111,6 @@ jobs:
           else
             git checkout -b "$BRANCH"
           fi
-      - name: Draft summaries with Claude
-        run: npm run knesset:analyze -- --max "${{ inputs.max_drafts || '20' }}"
-        env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          KNESSET_HTTP_PROXY: ${{ secrets.KNESSET_HTTP_PROXY }}
       - name: Check members' public statements against key votes
         run: npm run knesset:statements -- --max "${{ inputs.max_statement_checks || '3' }}"
         env:
@@ -117,15 +120,15 @@ jobs:
       - run: npm test
       - name: Open or update the review pull request
         run: |
-          git add -A data/knesset content
-          if git diff --cached --quiet && git diff --quiet origin/main HEAD -- data/knesset/analysis content; then
-            echo "No drafts to review."; exit 0
+          git add -A content data/knesset/statements-checked.json
+          if git diff --cached --quiet && git diff --quiet origin/main HEAD -- content; then
+            echo "No findings to review."; exit 0
           fi
-          git diff --cached --quiet || git commit -m "AI drafts: Knesset vote summaries and statement checks $(date -u +%F)"
+          git diff --cached --quiet || git commit -m "AI findings: said one thing, voted the opposite $(date -u +%F)"
           git push origin "$BRANCH"
           gh label create ai-draft --color D9A321 --description "Drafted by AI, needs editor review" --force
           if [ -z "$(gh pr list --head "$BRANCH" --state open --json number --jq '.[].number')" ]; then
             gh pr create --base main --head "$BRANCH" --label ai-draft \
-              --title "AI drafts: Knesset vote summaries for review" \
+              --title "AI findings for review: said one thing, voted the opposite" \
               --body-file .github/ai-draft-pr.md
           fi
