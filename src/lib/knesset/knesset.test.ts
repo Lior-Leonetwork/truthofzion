@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { decodeXml, parseAtom, parseJson, query } from "./odata";
+import { decodeXml, NotODataError, parseAtom, parseJson, parseResponse, query } from "./odata";
 import { buildVote, countsMatch, isFinalReading, mergeMembers, resultTypes } from "./transform";
 import { nameOverlap } from "./bill";
 import { checkAnalysis, checkDraft, quoteFound } from "./verify";
@@ -67,6 +67,14 @@ describe("OData parsing", () => {
     const out = [];
     for await (const r of query(get, "https://x/a")) out.push(r.n);
     expect(out).toEqual([1, 2]);
+  });
+
+  it("treats a firewall or error page as an error, never as zero rows", () => {
+    const blocked = "<html><head><title>Request Rejected</title></head><body>The requested URL was rejected.</body></html>";
+    expect(() => parseResponse(blocked, "text/html", "https://x")).toThrow(NotODataError);
+    expect(() => parseResponse('{"error":"nope"}', "application/json", "https://x")).toThrow(NotODataError);
+    expect(parseResponse(ATOM, "application/atom+xml", "https://x").rows).toHaveLength(1);
+    expect(parseResponse("<feed xmlns='x'></feed>", "application/atom+xml", "https://x").rows).toEqual([]);
   });
 
   it("decodes numeric and named entities", () => {

@@ -71,8 +71,26 @@ export function parseJson(body: unknown): Page {
   return { rows, next };
 }
 
+export class NotODataError extends Error {}
+
+// A firewall or error page can come back as 200 OK. Anything that isn't
+// recognisably an OData payload is an error, never "zero rows".
 export function parseResponse(text: string, contentType: string, base: string): Page {
-  if (contentType.includes("json") || text.trimStart().startsWith("{")) return parseJson(JSON.parse(text));
+  const head = text.trimStart();
+  if (contentType.includes("json") || head.startsWith("{")) {
+    let body: unknown;
+    try {
+      body = JSON.parse(text);
+    } catch {
+      throw new NotODataError(`invalid JSON from ${base}: ${head.slice(0, 300)}`);
+    }
+    const b = body as Record<string, unknown>;
+    if (!("value" in b) && !("d" in b)) throw new NotODataError(`unexpected JSON from ${base}: ${head.slice(0, 300)}`);
+    return parseJson(body);
+  }
+  if (!/<feed[\s>]/.test(head.slice(0, 2000))) {
+    throw new NotODataError(`not an OData feed from ${base} (${contentType || "no content-type"}): ${head.slice(0, 300)}`);
+  }
   return parseAtom(text, base);
 }
 
