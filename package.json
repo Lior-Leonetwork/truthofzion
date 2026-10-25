@@ -14,7 +14,7 @@
     "knesset:ingest": "tsx scripts/knesset-ingest.ts",
     "knesset:analyze": "tsx scripts/knesset-analyze.ts",
     "knesset:publish": "tsx scripts/knesset-publish.ts",
-    "knesset:probe": "tsx scripts/knesset-probe.ts",
+    "knesset:probe": "tsx scripts/probe-datagov.ts",
     "knesset:statements": "tsx scripts/knesset-statements.ts",
     "probe:datagov": "tsx scripts/probe-datagov.ts"
   },
