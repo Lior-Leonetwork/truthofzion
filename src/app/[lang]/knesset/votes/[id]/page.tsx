@@ -6,7 +6,7 @@ import { SPECTRUM_DOT } from "@/components/spectrum-badge";
 import { VoteBar } from "@/components/vote-bar";
 import { formatDate, getDict, LOCALES, t, type Locale } from "@/lib/i18n";
 import type { VoteChoice } from "@/lib/knesset/schema";
-import { getKnesset } from "@/lib/knesset/store";
+import { getKnesset, readPolicy } from "@/lib/knesset/store";
 import { factionInfo, knessetLabels, SPECTRUM_ORDER } from "@/lib/knesset/view";
 
 export const dynamicParams = false;
@@ -37,6 +37,7 @@ export default async function VotePage({ params }: PageProps<"/[lang]/knesset/vo
   const vote = votes.find((v) => v.id === Number(id));
   if (!vote) notFound();
   const a = analyses.get(vote.id);
+  const stance = a?.editorial.policy ? readPolicy()?.stances.find((x) => x.id === a.editorial.policy) : undefined;
   const topicNames = new Map(watch.map((w) => [w.id, t(w.name, locale).value]));
 
   // How each political camp voted.
@@ -104,9 +105,24 @@ export default async function VotePage({ params }: PageProps<"/[lang]/knesset/vo
           )}
 
           {a?.editorial.keyVote && a.editorial.note && (
-            <section className="rounded-2xl border border-accent bg-surface p-5">
-              <p className="text-xs font-semibold uppercase tracking-wider text-accent">{k.editorNote}</p>
-              <L as="p" text={a.editorial.note} locale={locale} className="mt-1" />
+            <section className="space-y-3 rounded-2xl border border-accent bg-surface p-5">
+              <p className="text-xs font-semibold uppercase tracking-wider text-accent">{a.editorial.autoKeyVote ? k.policyKeyVote : k.editorNote}</p>
+              {stance && <L as="p" text={stance.statement} locale={locale} className="font-semibold" />}
+              {a.editorial.position && (
+                <p>
+                  {d.record.sitePosition}: <strong>{k.choices[a.editorial.position]}</strong>
+                </p>
+              )}
+              <L as="p" text={a.editorial.note} locale={locale} />
+              {a.editorial.evidence && (
+                <blockquote lang="he" dir="rtl" className="border-s-4 border-accent ps-4 text-muted">״{a.editorial.evidence}״</blockquote>
+              )}
+              {a.editorial.autoKeyVote && (
+                <p className="flex items-start gap-2 text-xs text-muted">
+                  <span className="rounded border border-border px-1.5 py-0.5 font-mono">AI</span> {k.autoKeyVote}{" "}
+                  <Link href={`/${locale}/methodology#policy`} className="shrink-0 whitespace-nowrap text-brand hover:underline">{k.policy.title}</Link>
+                </p>
+              )}
             </section>
           )}
 

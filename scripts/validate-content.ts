@@ -2,7 +2,7 @@
 // CI runs this on every pull request; nothing that fails it can be merged.
 import path from "node:path";
 import { readContent } from "../src/lib/content/load";
-import { readAnalyses, readMembers, readVotes, readWatch } from "../src/lib/knesset/store";
+import { readAnalyses, readMembers, readPolicy, readVotes, readWatch } from "../src/lib/knesset/store";
 import { checkAnalysis } from "../src/lib/knesset/verify";
 import { readFundingState, readNgos } from "../src/lib/funding/store";
 
@@ -30,7 +30,14 @@ for (const [contentDir, dataDir] of [
     const watch = readWatch(root);
     const analyses = readAnalyses(root);
     const byId = new Map(votes.map((v) => [v.id, v]));
-    const problems = analyses.flatMap((a) => checkAnalysis(a, byId, content.editors));
+    const policy = readPolicy(root);
+    const problems = analyses.flatMap((a) => checkAnalysis(a, byId, content.editors, policy));
+    if (policy) {
+      for (const s of policy.stances) if (!watch.some((w) => w.id === s.topic)) problems.push({ entry: `policy/${s.id}`, rule: "topic", message: `unknown topic "${s.topic}"` });
+      if (policy.approvedBy && (!content.editors.has(policy.approvedBy) || content.editors.get(policy.approvedBy)?.ai)) {
+        problems.push({ entry: "policy", rule: "human-approval", message: `"${policy.approvedBy}" is not a human editor in content/editors.json` });
+      }
+    }
     const topics = new Set(watch.map((w) => w.id));
     for (const a of analyses) for (const t of a.topics) if (!topics.has(t)) problems.push({ entry: `analysis/${a.voteId}`, rule: "topic", message: `unknown topic "${t}"` });
     const live = analyses.filter((a) => a.editorial.state === "published").length;

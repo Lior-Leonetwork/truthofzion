@@ -61,6 +61,9 @@ type Dict = {
     roll: string;
     byFaction: string;
     editorNote: string;
+    policyKeyVote: string;
+    autoKeyVote: string;
+    policy: { title: string; intro: string; pending: string; approved: (by: string, date: string) => string };
     empty: string;
     emptyDetail: string;
     none: string;
@@ -213,6 +216,14 @@ const he: Dict = {
     roll: "איך הצביע כל חבר כנסת",
     byFaction: "לפי סיעה",
     editorNote: "הערת העורך",
+    policyKeyVote: "הצבעת מפתח לפי מדיניות האתר",
+    autoKeyVote: "סומנה כהצבעת מפתח בידי בינה מלאכותית, לפי המדיניות שאישרו העורכים ומתוך דברי ההסבר הרשמיים בלבד. הציטוט נבדק מילה במילה מול המקור. עמדת האתר נגזרת מהמדיניות, לא מהמודל.",
+    policy: {
+      title: "מדיניות הצבעות המפתח",
+      intro: "אלה העמדות הקבועות של האתר. הצבעה על חוק שמקדם אחת מהן במישרין, או פועל נגדה במישרין, היא הצבעת מפתח: עמדת האתר היא בעד חוק שמקדם עמדה ונגד חוק שפועל נגדה.",
+      pending: "המדיניות ממתינה לאישור עורך, ועד אז לא מסומנות הצבעות מפתח אוטומטית.",
+      approved: (by, date) => `אושרה בידי ${by} ב-${date}.`,
+    },
     empty: "נתוני ההצבעות הראשונים ייאספו בריצה היומית הבאה.",
     emptyDetail: "ההצבעות נשאבות אוטומטית מהממשק הרשמי של הכנסת מדי יום.",
     none: "אין הצבעות שתואמות לסינון.",
@@ -491,6 +502,14 @@ const en: Dict = {
     roll: "How each member voted",
     byFaction: "By faction",
     editorNote: "Editor's note",
+    policyKeyVote: "Key vote under the site's policy",
+    autoKeyVote: "Marked as a key vote by AI under the policy the editors approved, from the official explanatory notes only. The quote was checked word for word against the source. The site's position follows from the policy, not from the model.",
+    policy: {
+      title: "Key-vote policy",
+      intro: "These are the site's standing positions. A vote on a bill that directly advances one of them, or directly works against it, is a key vote: the site is for a bill that advances a stance and against one that works against it.",
+      pending: "The policy is awaiting an editor's approval; until then no key votes are marked automatically.",
+      approved: (by, date) => `Approved by ${by} on ${date}.`,
+    },
     empty: "The first vote data will be collected on the next daily run.",
     emptyDetail: "Votes are pulled automatically from the Knesset's official open-data service every day.",
     none: "No votes match these filters.",

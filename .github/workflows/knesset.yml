@@ -19,6 +19,9 @@ on:
       max_summaries:
         description: Max votes to summarise and publish this run
         default: "40"
+      max_keyvotes:
+        description: Max votes to check against the approved key-vote policy
+        default: "40"
       max_statement_checks:
         description: Max key votes to check members' public statements against
         default: "3"
@@ -55,6 +58,11 @@ jobs:
           KNESSET_HTTP_PROXY: ${{ secrets.KNESSET_HTTP_PROXY }}
       - name: Summarise and publish with Claude
         run: npm run knesset:analyze -- --publish --max "${{ inputs.max_summaries || '40' }}"
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          KNESSET_HTTP_PROXY: ${{ secrets.KNESSET_HTTP_PROXY }}
+      - name: Mark key votes under the approved policy
+        run: npm run knesset:keyvotes -- --max "${{ inputs.max_keyvotes || '40' }}"
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           KNESSET_HTTP_PROXY: ${{ secrets.KNESSET_HTTP_PROXY }}

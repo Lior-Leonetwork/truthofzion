@@ -1,7 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { z } from "zod";
-import { Analysis, Faction, IngestState, Member, Vote, WatchTopic } from "./schema";
+import { Analysis, Faction, IngestState, Member, Policy, Vote, WatchTopic } from "./schema";
 import { StatementSource } from "./statements";
 
 // data/knesset/ holds official vote records (written by the ingester) and the
@@ -39,6 +39,7 @@ export const paths = (root = knessetRoot()) => ({
   watch: path.join(root, "watch.json"),
   statementSources: path.join(root, "statement-sources.json"),
   factions: path.join(root, "factions.json"),
+  policy: path.join(root, "policy.json"),
   statementsChecked: path.join(root, "statements-checked.json"),
   votes: path.join(root, "votes"),
   vote: (id: number) => path.join(root, "votes", `${id}.json`),
@@ -49,6 +50,7 @@ export const paths = (root = knessetRoot()) => ({
 export const readState = (root?: string) => readJson(paths(root).state, IngestState.nullable(), null);
 export const readMembers = (root?: string) => readJson(paths(root).members, z.record(z.string(), Member), {});
 export const readWatch = (root?: string) => readJson(paths(root).watch, z.array(WatchTopic), []);
+export const readPolicy = (root?: string) => readJson(paths(root).policy, Policy.nullable(), null);
 export const readFactions = (root?: string) => readJson(paths(root).factions, z.array(Faction), []);
 export const readStatementSources = (root?: string) => readJson(paths(root).statementSources, z.array(StatementSource), []);
 export const readVotes = (root?: string) => readAll(paths(root).votes, Vote).sort((a, b) => b.id - a.id);
