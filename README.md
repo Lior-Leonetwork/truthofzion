@@ -64,9 +64,10 @@ record with `knessetMemberId` in the entity file.
      Run "Knesset probe" afterwards: it should print OData XML/JSON, not an HTML page.
    - Hasadna's Open Knesset mirror of the vote tables stopped updating in July 2021, so it can't replace the live source.
 2. **Actions permissions** (Settings → Actions → General): "Read and write permissions", and tick "Allow GitHub Actions to create and approve pull requests".
-3. **Editors:** each editor's GitHub login goes in `content/editors.json` (`"github"`).
-4. If `main` is branch-protected, let `github-actions[bot]` push to it. That's how official vote records and approvals land.
-5. Run it once by hand: Actions → "Knesset votes" → Run workflow. The log lists the first votes it saw and which ones it treated as final readings. Check that list on the first run.
+3. **Vercel deploy hook** (secret `VERCEL_DEPLOY_HOOK`): in Vercel, open the project → Settings → Git → Deploy Hooks, create one for branch `main`, and save its URL as this secret. Vercel's Hobby plan doesn't deploy commits made by the Actions bot, so the workflows call this hook after every data update.
+4. **Editors:** each editor's GitHub login goes in `content/editors.json` (`"github"`).
+5. If `main` is branch-protected, let `github-actions[bot]` push to it. That's how official vote records and approvals land.
+6. Run it once by hand: Actions → "Knesset votes" → Run workflow. The log lists the first votes it saw and which ones it treated as final readings. Check that list on the first run.
 
 The archive covers the last two years: the first run sets its start date
 (two years back, or the workflow's `from` input) in `data/knesset/state.json`,

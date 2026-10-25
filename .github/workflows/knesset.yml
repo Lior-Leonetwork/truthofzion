@@ -59,6 +59,13 @@ jobs:
           if git diff --cached --quiet; then echo "No new votes."; exit 0; fi
           git commit -m "Knesset votes: ingest $(date -u +%F)"
           git push origin HEAD:main
+      # Vercel may not deploy commits authored by the Actions bot (Hobby plan),
+      # so ask it to rebuild explicitly. Secret: a Vercel deploy hook URL.
+      - name: Redeploy the site
+        if: env.VERCEL_DEPLOY_HOOK != ''
+        env:
+          VERCEL_DEPLOY_HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK }}
+        run: curl -fsS -X POST "$VERCEL_DEPLOY_HOOK" > /dev/null && echo "Vercel redeploy requested."
 
   draft:
     needs: ingest
