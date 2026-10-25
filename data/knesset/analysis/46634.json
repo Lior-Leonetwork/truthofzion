@@ -1,0 +1,16 @@
+{
+  "voteId": 46634,
+  "bill": null,
+  "summary": null,
+  "quotes": [],
+  "topics": [],
+  "keyVoteSuggested": false,
+  "rationale": "No official bill text was provided, so no summary or quotes were drafted. Judging only from the agenda title (Israel Land Authority amendment on allocating land to a local authority for a renewable-energy electricity facility), the bill does not appear to concern any watch topic. It passed its third reading 13–0 with no abstentions.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "keyVote": false,
+    "autoPublished": true
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "voteId": 46643,
+  "bill": {
+    "id": 2208737,
+    "name": "חוק תקשורת דיגיטלית עם גופים ציבוריים (תיקון מס' 5), התשפ\"ו-2026",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=2208737"
+  },
+  "summary": {
+    "he": "החוק מחייב את המוסד לביטוח לאומי, את רשות המסים ואת רשות האוכלוסין וההגירה, כשהם נותנים שירות דיגיטלי נפוץ לציבור, לשלוח מסר קולי מוקלט לטלפונים שאינם יכולים לקבל מסרונים. בנוסף, גופים אלה יחויבו לאסוף מידע על השירותים הדיגיטליים שהם נותנים לציבור בשפות ערבית, רוסית ואמהרית. מידע זה ייכלל בדיווח שמערך הדיגיטל הלאומי מעביר לכנסת. החוק ייכנס לתוקף בהדרגה במשך שלוש שנים מיום תחילתו.",
+    "en": "The law requires the National Insurance Institute, the Israel Tax Authority and the Population and Immigration Authority, when providing a common digital service to the public, to send a recorded voice message to phones that cannot receive text messages. These bodies must also collect information on the digital services they provide to the public in Arabic, Russian and Amharic. This information will be included in the report the National Digital Agency submits to the Knesset. The law will be applied gradually over three years from its commencement."
+  },
+  "quotes": [
+    "הביטוח הלאומי, רשות המיסים בישראל, ורשות האוכלוסין וההגירה",
+    "יחויבו במשלוח מסר קולי מוקלט לטלפונים שאינם יכולים לקבל מסרונים",
+    "בשפות ערבית רוסית ואמהרית",
+    "מידע זה ייכלל בדיווח המועבר לכנסת על ידי מערך הדיגיטל הלאומי לפי החוק",
+    "החוק יוחל בהדרגה בשלוש השנים מיום תחילתו"
+  ],
+  "topics": [],
+  "keyVoteSuggested": false,
+  "rationale": "The bill concerns accessibility of digital government services (voice messages, service availability in Arabic, Russian and Amharic) and does not substantively touch any watch topic; the mention of Russian and Amharic is a service-language matter, not aliyah or diaspora policy. Not suggested as a key vote.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "keyVote": false,
+    "autoPublished": true
+  }
+}

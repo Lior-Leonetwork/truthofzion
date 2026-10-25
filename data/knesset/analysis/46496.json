@@ -1,0 +1,27 @@
+{
+  "voteId": 46496,
+  "bill": {
+    "id": 2221116,
+    "name": "חוק זכויות הסטודנט (תיקון מס' 12), התשפ\"ו–2026",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=2221116"
+  },
+  "summary": {
+    "he": "התיקון לחוק זכויות הסטודנט קובע במפורש כי קיום מוסדות לימוד נפרדים או מסלולי לימוד נפרדים לגברים ולנשים מטעמי דת אינו נחשב הפליה. הדבר חל על לימודים לתואר ראשון, שני ושלישי. במסלולים נפרדים הפועלים בתוך מוסד מעורב, ההפרדה בין גברים לנשים מוגבלת לכיתות הלימוד בלבד.",
+    "en": "The amendment to the Student Rights Law states explicitly that separate educational institutions or separate study tracks for men and women, maintained for religious reasons, are not considered discrimination. This applies to bachelor's, master's and doctoral studies. In separate tracks operating within a mixed institution, separation between men and women is limited to the classrooms only."
+  },
+  "quotes": [
+    "קיום מוסדות לימוד נפרדים או מסלולי לימוד נפרדים לגברים ולנשים מטעמי דת אינו נחשב להפליה",
+    "בלימודים לתואר ראשון, לתואר שני ולתואר שלישי",
+    "ההפרדה בין גברים לנשים מוגבלת לכיתות הלימוד בלבד"
+  ],
+  "topics": [],
+  "keyVoteSuggested": false,
+  "rationale": "The bill concerns gender-separated academic studies on religious grounds and the definition of discrimination in higher education, which does not substantively match any of the listed watch topics. No key-vote suggestion for these topics, though editors may weigh it under other criteria.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "keyVote": false,
+    "autoPublished": true
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "voteId": 46072,
+  "bill": {
+    "id": 2217079,
+    "name": "חוק הגבלת שכר טרחה (נכי צבא הגנה לישראל וכוחות הביטחון ונפגעי פעולות איבה), התשפ\"ו-2026",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=2217079"
+  },
+  "summary": {
+    "he": "החוק מגביל את הסכום המרבי שעורכי דין וחברות למימוש זכויות רשאים לגבות מנכי צה\"ל וכוחות הביטחון ומנפגעי פעולות איבה בעד טיפול בתביעות ובבקשות לפי חוק הנכים או חוק התגמולים לנפגעי פעולות איבה, ובכלל זה בהליכי ערעור. ההגבלה אינה חלה על ערר או ערעור בעניין עצם ההכרה, אך חלה על ההליכים שלאחר ההכרה. החוק קובע גם הוראות צרכניות, הוראות לפריסת התשלום וזכאות לסיוע משפטי ללא מבחן הכנסה. לגבי הסכמים שנחתמו מ-7.10.23 ועד יום התחילה נאסרת גביית תשלום מופרז, ומי שגבה סכום כזה יחויב להשיבו לפי בקשה שתוגש תוך שנה, בכפוף לחריגים ולאפשרות לפנות לבית המשפט או לבית הדין האזורי לעבודה.",
+    "en": "The law caps the maximum amount that lawyers and rights-realization companies may charge disabled IDF and security-forces veterans and victims of hostile acts for handling claims and applications under the Disabled Persons Law or the Victims of Hostile Acts Benefits Law, including appeal proceedings. The cap does not apply to appeals over the recognition decision itself, but does apply to proceedings after recognition. The law also sets consumer-protection provisions, rules on spreading payments, and an entitlement to legal aid without an income test. For agreements signed from 7.10.23 until the law takes effect, collecting an excessive fee is prohibited, and anyone who collected such a fee must refund it upon a request filed within a year, subject to exceptions and to the option of applying to a court or a regional labor court."
+  },
+  "quotes": [
+    "החוק קובע הגבלה על סכום התשלום המרבי שרשאים לגבות עורכי דין וחברות למימוש זכויות מנכי צה\"ל וכוחות הביטחון ומנפגעי פעולות איבה",
+    "לא תחול על טיפול בערר או בערעור על החלטה של קצין תגמולים או של הרשות המאשרת לעניין הכרה",
+    "נקבעה זכאות לסיוע משפטי ללא מבחן הכנסה",
+    "תשלום העולה על 140% מהסכום המרבי שמותר לגבות לפי החוק",
+    "ובלבד שהבקשה הוגשה תוך שנה מיום התחילה"
+  ],
+  "topics": [
+    "security"
+  ],
+  "keyVoteSuggested": false,
+  "rationale": "Tagged security because the law concerns disabled IDF and security-forces veterans and victims of hostile acts, with retroactive provisions for agreements signed since 7.10.23. Its substance is fee regulation and consumer protection rather than defense policy, so it is probably not a key vote; editors may weigh this differently.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "keyVote": false,
+    "autoPublished": true
+  }
+}

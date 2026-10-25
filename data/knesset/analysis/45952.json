@@ -1,0 +1,29 @@
+{
+  "voteId": 45952,
+  "bill": {
+    "id": 2195995,
+    "name": "חוק ביטוח בריאות ממלכתי (תיקון מס' 75), התשפ\"ו–2026",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=2195995"
+  },
+  "summary": {
+    "he": "לפי הטקסט שסופק, החוק קובע כי מבוטח שאובחן במחלה או הפרעה נפשית קשה (סכיזופרניה, הפרעה דו-קוטבית או הפרעה סכיזו-אפקטיבית) יהיה זכאי מקופת החולים להחזר של 80% מההוצאה על הסעה באמבולנס או בניידת טיפול נמרץ לחדר מיון או למחלקה לרפואה דחופה, כאשר הביקור הסתיים ללא אשפוז. הזכאות חלה החל מההסעה השנייה בכל שנה קלנדרית. זכאות דומה נקבעת להזעקת אמבולנס שהסתיימה בטיפול רפואי בזירת האירוע. גובה ההחזר מוגבל ל-80% מהאגרה בתעריף הנמוך שבתקנות מגן דוד אדום, ולפי תעריף זה יחושב גם התשלום של קופות החולים במקרים אלה.",
+    "en": "According to the text provided, the law entitles an insured person diagnosed with a severe mental illness or disorder (schizophrenia, bipolar disorder or schizoaffective disorder) to a reimbursement from their health fund of 80% of the cost of transport by ambulance or intensive-care unit to an emergency department or emergency room, where the visit ended without hospitalization. The entitlement applies from the second such transport in each calendar year. A similar entitlement applies to an ambulance call-out that ended with medical treatment at the scene. Each reimbursement is capped at 80% of the lowest-rate fee set in the Magen David Adom ambulance fee regulations, and the fee health funds pay in these cases is also calculated at that rate."
+  },
+  "quotes": [
+    "סכיזופרניה, הפרעה דו-קוטבית או הפרעה סכיזו-אפקטיבית",
+    "יהיה זכאי מקופת החולים להחזר בשיעור של 80% מההוצאה בעד הסעתו באמבולנס או בניידת טיפול נמרץ",
+    "שהסתיימה ללא אשפוז, וזאת החל מההסעה השנייה בכל שנה קלנדרית",
+    "בעד הזעקת אמבולנס שהסתיימה בטיפול רפואי בזירת האירוע",
+    "לא יעלה על 80% מסכום האגרה בתעריף הנמוך"
+  ],
+  "topics": [],
+  "keyVoteSuggested": false,
+  "rationale": "WARNING: the vote record is for amendment no. 73 to the National Health Insurance Law, but the bill text provided is labeled amendment no. 75 — please verify the text matches this vote before publishing the summary. The bill concerns health-fund reimbursement for ambulance costs for people with severe mental illness and does not touch any watch topic, so no key-vote suggestion.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "keyVote": false,
+    "autoPublished": true
+  }
+}

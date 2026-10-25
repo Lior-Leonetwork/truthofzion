@@ -1,0 +1,30 @@
+{
+  "voteId": 46640,
+  "bill": {
+    "id": 2244347,
+    "name": "חוק משק הדלק (קווי תשתית), התשפ\"ו-2026",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=2244347"
+  },
+  "summary": {
+    "he": "החוק מאפשר לבעל מיתקן דלק תת-קרקעי שהקמתו אושרה בתכנית לפי חוק התכנון והבנייה, או למי שפועל מטעמו, להיכנס למקרקעין שבהם נמצא המיתקן כדי להקים, להפעיל ולתחזק אותו, למשל לערוך מדידות, לחפור תעלות ולבצע בדיקות. הכניסה מותנית בהודעה מראש לבעל המקרקעין, ובמקומות המוחזקים בידי מערכת הביטחון נדרש גם אישור מראש של הגוף המוסמך. במקרי חירום ניתן לפעול גם בלי הודעה מראש, אך לא במקומות המוחזקים בידי מערכת הביטחון. בעל מקרקעין רשאי להגיש השגה למנהל מינהל הדלק והגז ולערער על החלטתו לבית המשפט, ובעל המיתקן חייב לפעול בזהירות, להשיב את המצב לקדמותו ולשלם פיצויים על נזק.",
+    "en": "The law allows the owner of an underground fuel facility whose construction was approved in a plan under the Planning and Building Law, or someone acting on the owner's behalf, to enter the land where the facility is located in order to build, operate and maintain it, for example to take measurements, dig trenches and inspect the facility. Entry requires advance notice to the landowner, and sites held by the security establishment also require prior approval from the competent body. In emergencies, work may proceed without advance notice, but this exception does not apply to sites held by the security establishment. A landowner may file an objection with the director of the Fuel and Gas Administration and appeal the director's decision to court, and the facility owner must work carefully, restore the land to its prior condition and pay compensation for any damage."
+  },
+  "quotes": [
+    "להיכנס למקרקעין שבהם נמצא המיתקן לשם ביצוע פעולות שונות הנדרשות להקמה, הפעלה או תחזוקה של המיתקן",
+    "תותנה במתן הודעה מראש לבעל המקרקעין",
+    "יידרש גם אישור מראש של הגוף המוסמך לכך לפי דין לגבי אותו מקום",
+    "במקרי חירום שבהם בעל המיתקן סובר כי ביצוע הפעולה דחוף לשם מניעת סכנה לחיי אדם, לסביבה או לשם מניעת נזק משמעותי לרכוש",
+    "מנגנון של השגה למנהל מינהל הדלק והגז במשרד האנרגיה והתשתיות",
+    "יחויב בתשלום פיצויים לבעל המקרקעין ככל שייגרם נזק למקרקעין"
+  ],
+  "topics": [],
+  "keyVoteSuggested": false,
+  "rationale": "This is an energy-infrastructure and land-access law. Its references to security-establishment sites and to a court appeal are incidental procedural safeguards, not the substance of the bill, so no watch topic applies. It passed 9-0, and nothing in it suggests a key vote for the watch topics.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "keyVote": false,
+    "autoPublished": true
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "voteId": 46298,
+  "bill": {
+    "id": 1044596,
+    "name": "חוק לתיקון פקודת המועצות המקומיות (מס'  82),  התשפ\"ו-2026",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=1044596"
+  },
+  "summary": {
+    "he": "החוק מתקן את פקודת המועצות המקומיות ומאפשר לשר הפנים להכריז בצו על הקמת מועצה מקומית או אזורית לכפר, לקבוצת כפרים או לאזור גם כאשר מספר התושבים בהם אינו עולה על 5,000. ההכרזה מותנית בשלושה תנאים: קיומה של תוכנית מיתאר מחוזית מאושרת; אישור או הפקדה של תוכנית מפורטת הכוללת יותר מ-2,500 יחידות דיור (או 1,250 בנסיבות מיוחדות); ושכנוע השר כי היישוב צפוי למנות יותר מ-20,000 תושבים (או 10,000 בנסיבות מיוחדות) בתוך עשר שנים מהקמתו. עוד קובע החוק כי שר הפנים ידווח מדי שנה לוועדת הפנים והגנת הסביבה של הכנסת על יישום החוק.",
+    "en": "The law amends the Local Councils Ordinance to allow the Interior Minister to declare by order that a village, group of villages or area will be governed by a local or regional council even where its population does not exceed 5,000. The declaration is subject to three conditions: an approved district master plan exists; a detailed plan with more than 2,500 housing units (or 1,250 in special circumstances) has been approved or deposited; and the minister is persuaded that the locality is expected to exceed 20,000 residents (or 10,000 in special circumstances) within ten years of its establishment. The law also requires the Interior Minister to report annually to the Knesset Interior and Environmental Protection Committee on its implementation."
+  },
+  "quotes": [
+    "שר הפנים יהיה רשאי להכריז, בצו, כי כפר או קבוצת כפרים או אזור יתנהלו על ידי מועצה מקומית או אזורית",
+    "גם במקרה שבו מספר התושבים בהם אינו עולה על חמשת אלפים",
+    "קיימת תוכנית מיתאר מחוזית מאושרת",
+    "יחידות דיור או 1,250 אם קיימות נסיבות מיוחדות",
+    "השר שוכנע כי היישוב צפוי לכלול למעלה מעשרים אלף תושבים או עשרת אלפים אם קיימות נסיבות מיוחדות, בתוך עשר שנים ממועד ההקמה",
+    "שר הפנים ידווח אחת לשנה לוועדת הפנים והגנת הסביבה של הכנסת על יישום החוק"
+  ],
+  "topics": [],
+  "keyVoteSuggested": false,
+  "rationale": "The provided text concerns municipal governance and planning thresholds for establishing local councils; it does not mention any specific geographic area, settlement policy, or borders, so no watch topic is tagged from the text alone. Editors may wish to check the bill's context (e.g., where it is expected to apply) before deciding whether the sovereignty topic is relevant.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "keyVote": false,
+    "autoPublished": true
+  }
+}

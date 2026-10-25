@@ -1,0 +1,34 @@
+{
+  "voteId": 46110,
+  "bill": {
+    "id": 2197937,
+    "name": "חוק לתיקון פקודת המשטרה (מס' 45), התשפ\"ו–2026",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=2197937"
+  },
+  "summary": {
+    "he": "החוק קובע כי המחלקה לחקירות שוטרים (מח\"ש) תוקם כגוף עצמאי במשרד המשפטים בעל תקציב נפרד, שיוסמך לחקור ולהעמיד לדין שוטרים, לרבות בעבירות קלות, וכן לטפל בעבירות של מתנדבים במשטרה. מנהל המחלקה ימונה באמצעות ועדת איתור ייעודית, ויוקם תפקיד של ממונה על תיאום שיכריע במחלוקות בין מח\"ש לגופי חקירה ותביעה אחרים ויקבל עררים על החלטות לסגור תיק. החוק מפריד את מח\"ש ממערך הייעוץ המשפטי לממשלה ומעביר למנהל המחלקה סמכויות פליליות הנתונות כיום ליועץ המשפטי לממשלה או לפרקליטות, אך המחלקה תהיה כפופה להנחיות הכלליות של היועץ ושל פרקליט המדינה, בכפוף לחריג. עוד נקבעו הוראות תחילה, גישת עובדי מח\"ש למערכות המידע של המשטרה וחובת דיווח של שר המשפטים והשר לביטחון לאומי לכנסת.",
+    "en": "The law establishes the Police Investigations Department (Mahash) as an independent body within the Ministry of Justice with a separate budget, authorized to investigate and prosecute police officers for criminal offenses, including minor ones, and to handle offenses by police volunteers. The department's director will be appointed through a dedicated search committee, and a new coordination commissioner will resolve disputes between Mahash and other investigative and prosecuting bodies and hear appeals against decisions to close cases. The law separates Mahash from the Attorney General's legal advisory system and transfers to the department director criminal powers currently held by the Attorney General or the State Attorney's Office in Mahash cases, while the department remains subject to the general guidelines of the Attorney General and State Attorney, with one exception. It also sets commencement provisions, rules on Mahash staff access to police information systems, and a reporting duty to the Knesset for the Justice Minister and the National Security Minister."
+  },
+  "quotes": [
+    "תוקם המחלקה לחקירות שוטרים כגוף עצמאי במשרד המשפטים, בעל תקציב נפרד",
+    "מנגנון חדש למינוי מנהל המחלקה באמצעות ועדת איתור ייעודית",
+    "ממונה על תיאום בעניין חקירת שוטרים",
+    "החוק קובע הפרדה בין מח\"ש לבין מערך הייעוץ המשפטי לממשלה",
+    "עררים על החלטות מח\"ש לסגור תיק יוגשו לממונה על התיאום",
+    "המחלקה תהיה כפופה להנחיות הכלליות של היועץ המשפטי לממשלה ושל פרקליט המדינה",
+    "חובת דיווח של שר המשפטים והשר לביטחון לאומי לכנסת"
+  ],
+  "topics": [
+    "judiciary",
+    "integrity"
+  ],
+  "keyVoteSuggested": true,
+  "rationale": "The law transfers criminal powers from the Attorney General and State Attorney's Office to a separated Mahash and creates new appointment and dispute-resolution mechanisms, touching both the judiciary (Attorney General) and public-integrity (oversight of officials, appointments) topics. It is a structural change passed on third reading by a narrow 43-39 margin, so editors may want to consider it a key vote.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "keyVote": false,
+    "autoPublished": true
+  }
+}

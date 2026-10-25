@@ -1,0 +1,28 @@
+{
+  "voteId": 46628,
+  "bill": {
+    "id": 2240494,
+    "name": "חוק לקידום הבנייה במתחמים מועדפים (הוראת שעה) (תיקון מס' 9), התשפ\"ו-2026",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=2240494"
+  },
+  "summary": {
+    "he": "החוק מאריך בשנה נוספת את תוקפה של הוראת השעה בחוק לקידום הבנייה במתחמים מועדפים (ותמ\"ל). כך תוכל הוועדה למתחמים מועדפים להמשיך לדון בתוכניות מועדפות שיוגשו וייקלטו בה עד 8 באוגוסט 2027. בנוסף, החוק מבטל את ההסדר שאפשר לשר האוצר ולשר הפנים להאריך את תוקף החוק בצו, ומוחק את הוראת ההפניה להסדר זה.",
+    "en": "The law extends by one more year the temporary provision in the Law for the Promotion of Construction in Preferred Housing Areas (VATMAL). The Committee for Preferred Housing Areas may therefore continue to consider preferred plans submitted to and received by it until August 8, 2027. The law also repeals the arrangement that allowed the Finance Minister and the Interior Minister to extend the law by order, and deletes the provision referring to that arrangement."
+  },
+  "quotes": [
+    "תוקפה של הוראת השעה בחוק לקידום הבנייה במתחמים מועדפים (ותמ\"ל) יוארך בשנה נוספת",
+    "עד ליום 8 באוגוסט 2027",
+    "יבוטל ההסדר המאפשר לשר האוצר ולשר הפנים להאריך את תוקף החוק בצו",
+    "תימחק מהחוק הוראת ההפניה להסדר ההארכה האמור"
+  ],
+  "topics": [],
+  "keyVoteSuggested": false,
+  "rationale": "This is a housing and planning measure: it extends the VATMAL temporary provision and removes the ministerial extension-by-order mechanism. It does not substantively concern any of the watch topics, so no key-vote suggestion.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "keyVote": false,
+    "autoPublished": true
+  }
+}

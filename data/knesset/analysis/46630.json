@@ -1,0 +1,31 @@
+{
+  "voteId": 46630,
+  "bill": {
+    "id": 2240508,
+    "name": "חוק נתוני אשראי (תיקון מס' 6), התשפ\"ו–2026",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=2240508"
+  },
+  "summary": {
+    "he": "התיקון לחוק נתוני אשראי מסמיך את נגיד בנק ישראל לקבוע בכללים הקמת מאגר נתוני אשראי על תאגידים קטנים ובינוניים, בנוסף למאגר הקיים על יחידים. גופים הנותנים אשראי יחויבו להעביר אליו נתונים, והגישה למאגר תינתן רק ללשכות האשראי. במאגר הקיים על יחידים, נותן אשראי לא יוכל לבקש מלקוח דוח אשראי שקיבל מנותן אשראי אחר. כמו כן, לשכות האשראי יתייחסו בחיווי אשראי לנתונים שליליים לתקופה של שנה אחת במקום שלוש שנים. עוד נקבעו הוראות על בקשת לקוח שלא להיכלל במאגר, על כשירות נושאי משרה בלשכות אשראי ואיסור ניגוד עניינים שלהם, ועל סמכויות הפיקוח של הממונה בבנק ישראל.",
+    "en": "The amendment to the Credit Data Law authorizes the Governor of the Bank of Israel to establish, by rules, a credit data registry on small and medium-sized corporations, in addition to the existing registry on individuals. Credit providers would be required to report data to it, and access would be given only to credit bureaus. For the existing registry on individuals, a credit provider may not ask a customer for a credit report the customer received from another credit provider. Credit bureaus may consider negative data in credit indications for one year instead of three. The amendment also sets rules on customer requests to be excluded from the registry, on the fitness of credit bureau officers and a ban on their conflicts of interest, and on the supervisory powers of the Bank of Israel supervisor."
+  },
+  "quotes": [
+    "נגיד בנק ישראל (להלן – הנגיד) מוסמך לקבוע בכללים, בהתייעצות עם שר המשפטים ובאישור ועדת הכלכלה של הכנסת, כי יוקם מאגר נתוני אשראי הכולל מידע על תאגידים קטנים ובינוניים",
+    "הגישה למידע המצוי במאגר תינתן רק ללשכות האשראי",
+    "נותן אשראי אינו רשאי לבקש מלקוח דוח ריכוז נתונים לגביו או דוח אשראי לגביו שנמסר ללקוח מנותן אשראי אחר",
+    "הן לא רשאיות להתייחס לנתונים שליליים אשר נרשמו ביחס ללקוח, מעבר לשנה אחת",
+    "לשכות אשראי יתייחסו למידע שלילי כאמור למשך 3 שנים",
+    "מחיקת נתוני הלקוח מהמאגר תתבצע רק בחלוף שנה ממועד הגשת הבקשה שלא להיכלל במאגר",
+    "איסור על ניגוד עניינים של נושאי משרה כאמור"
+  ],
+  "topics": [],
+  "keyVoteSuggested": false,
+  "rationale": "This is a financial-regulation bill on credit data registries. Its conflict-of-interest provisions apply to officers of private credit bureaus, not to public officials, so it does not substantively touch the integrity topic or any other watch topic; a key vote is not suggested.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "keyVote": false,
+    "autoPublished": true
+  }
+}

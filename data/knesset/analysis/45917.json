@@ -1,0 +1,20 @@
+{
+  "voteId": 45917,
+  "bill": {
+    "id": 1056982,
+    "name": "חוק התוכנית לסיוע כלכלי (הוראת שעה) (סיוע לעסקים ולמוסדות ציבור), התשפ\"ו-2026",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=1056982"
+  },
+  "summary": null,
+  "quotes": [],
+  "topics": [],
+  "keyVoteSuggested": false,
+  "rationale": "No bill text was provided, so the summaries and quotes are left empty. Judging only from the title (a temporary economic-aid program for businesses and public institutions), the bill does not clearly fall under any watch topic; editors may wish to check whether the aid is tied to wartime security circumstances, which could justify a 'security' tag.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "keyVote": false,
+    "autoPublished": true
+  }
+}
