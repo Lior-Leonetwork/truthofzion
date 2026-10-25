@@ -1,0 +1,24 @@
+{
+  "voteId": 90004,
+  "bill": {
+    "id": 91004,
+    "name": "(fictional)",
+    "summarySource": "https://example.org/bill"
+  },
+  "summary": {
+    "he": "טיוטה שטרם נבדקה.",
+    "en": "Unreviewed draft."
+  },
+  "quotes": [
+    "טיוטה"
+  ],
+  "topics": [],
+  "keyVoteSuggested": false,
+  "rationale": "Demo.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "draft",
+    "keyVote": false
+  }
+}

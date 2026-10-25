@@ -19,10 +19,41 @@ editor.
 - **Dossier**: per-person profile with every case and the most serious status
 - **Methodology**, **Corrections**, **Right of reply**
 
+## The AI system: Knesset votes
+
+Runs every day in GitHub Actions (`.github/workflows/knesset.yml`):
+
+| Step | Who | Published? |
+|---|---|---|
+| **Ingest:** pull new plenum votes from the Knesset's official OData service (`Votes.svc`) | Code only (`scripts/knesset-ingest.ts`) | **Yes, automatically.** Official records, shown as recorded |
+| **Hold back** any vote whose per-member rows don't add up to the official totals | Code | No, retried each run |
+| **Draft:** for each final-reading vote, fetch the bill's official explanatory notes (`KNS_Bill.SummaryLaw`) and have Claude write a neutral Hebrew/English summary, quotes and topic tags | Claude (`src/lib/agent/vote-analyst.ts`) | No |
+| **Verify:** every quote must appear word-for-word in the official text; no bill text means no summary; topics only from `data/knesset/watch.json` | Code (`src/lib/knesset/verify.ts`) | Failing drafts are discarded |
+| **Review:** drafts land in one rolling pull request (`ai/knesset-drafts`). Editors fix wording, reject drafts (`"state": "rejected"`), or mark key votes (`"keyVote": true` plus a `note`, required by CI) | Editor | No |
+| **Approve:** merging the PR publishes its drafts in the merging editor's name (`.github/workflows/knesset-publish.yml`). A merger not listed in `content/editors.json` publishes nothing | Editor | **Yes** |
+
+The model never marks a key vote, never characterizes a member or party, and
+never summarizes from memory. Pages: `/knesset` (all final-reading votes),
+`/knesset/votes/<id>` (summary and full roll call by faction), and
+`/knesset/members/<id>` (each MK's record). Link an investigated profile to its
+record with `knessetMemberId` in the entity file.
+
+### Setup (once, in the GitHub repo settings)
+
+1. **Secrets** (Settings → Secrets and variables → Actions):
+   - `ANTHROPIC_API_KEY`: needed for drafting. Without it, votes are still ingested and published; only the summaries are skipped.
+   - `KNESSET_HTTP_PROXY` (optional): knesset.gov.il sometimes blocks non-Israeli IP addresses, and GitHub's runners are abroad. If the ingest job fails with connection errors, set this to an HTTP proxy with an Israeli IP address.
+2. **Actions permissions** (Settings → Actions → General): "Read and write permissions", and tick "Allow GitHub Actions to create and approve pull requests".
+3. **Editors:** each editor's GitHub login goes in `content/editors.json` (`"github"`).
+4. If `main` is branch-protected, let `github-actions[bot]` push to it. That's how official vote records and approvals land.
+5. Run it once by hand: Actions → "Knesset votes" → Run workflow. The log lists the first votes it saw and which ones it treated as final readings. Check that list on the first run.
+
+Run locally: `npm run knesset:ingest`, `ANTHROPIC_API_KEY=… npm run knesset:analyze -- --max 5`.
+
 ## Demo mode
 
 `npm run dev:demo` (or `DEMO_CONTENT=1` at build time) loads
-`content-demo/`: fictional subjects with placeholder names (Ploni Almoni,
+`content-demo/` and `data-demo/`: fictional subjects and votes with placeholder names (Ploni Almoni,
 John Doe, Erika Mustermann…) for previewing the design. Every page shows a
 "fictional" banner, and demo builds are marked noindex. Never deploy a demo
 build as the public site.

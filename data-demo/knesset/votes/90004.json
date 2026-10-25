@@ -1,0 +1,73 @@
+{
+  "id": 90004,
+  "knesset": 25,
+  "date": "2026-03-17",
+  "time": "17:30",
+  "item": {
+    "id": 91004,
+    "title": "הצעת חוק התקציב הבדוי לשנת 2027"
+  },
+  "voteTitle": "הצבעה על החוק כולו - קריאה שלישית",
+  "accepted": true,
+  "totals": {
+    "for": 6,
+    "against": 4,
+    "abstain": 0
+  },
+  "members": {
+    "000000101": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "סיעת הדוגמה"
+    },
+    "000000102": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "סיעת הדוגמה"
+    },
+    "000000103": {
+      "choice": "against",
+      "raw": "נגד",
+      "faction": "סיעת המופת"
+    },
+    "000000104": {
+      "choice": "against",
+      "raw": "נגד",
+      "faction": "סיעת המופת"
+    },
+    "000000105": {
+      "choice": "against",
+      "raw": "נגד",
+      "faction": "סיעת המופת"
+    },
+    "000000106": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "סיעת העתיד הבדוי"
+    },
+    "000000107": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "סיעת העתיד הבדוי"
+    },
+    "000000108": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "סיעת העתיד הבדוי"
+    },
+    "000000109": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "סיעת הדוגמה"
+    },
+    "000000110": {
+      "choice": "against",
+      "raw": "נגד",
+      "faction": "סיעת המופת"
+    }
+  },
+  "source": {
+    "url": "https://example.org/vote/90004",
+    "retrievedOn": "2026-10-25"
+  }
+}

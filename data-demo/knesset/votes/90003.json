@@ -1,0 +1,73 @@
+{
+  "id": 90003,
+  "knesset": 25,
+  "date": "2026-05-04",
+  "time": "17:30",
+  "item": {
+    "id": 91003,
+    "title": "הצעת חוק הוועדה לבחירת שופטים (דוגמה), התשפ\"ו-2026"
+  },
+  "voteTitle": "הצבעה על החוק כולו - קריאה שלישית",
+  "accepted": false,
+  "totals": {
+    "for": 4,
+    "against": 5,
+    "abstain": 0
+  },
+  "members": {
+    "000000101": {
+      "choice": "against",
+      "raw": "נגד",
+      "faction": "סיעת הדוגמה"
+    },
+    "000000102": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "סיעת הדוגמה"
+    },
+    "000000103": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "סיעת המופת"
+    },
+    "000000104": {
+      "choice": "against",
+      "raw": "נגד",
+      "faction": "סיעת המופת"
+    },
+    "000000105": {
+      "choice": "against",
+      "raw": "נגד",
+      "faction": "סיעת המופת"
+    },
+    "000000106": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "סיעת העתיד הבדוי"
+    },
+    "000000107": {
+      "choice": "against",
+      "raw": "נגד",
+      "faction": "סיעת העתיד הבדוי"
+    },
+    "000000108": {
+      "choice": "against",
+      "raw": "נגד",
+      "faction": "סיעת העתיד הבדוי"
+    },
+    "000000109": {
+      "choice": "other",
+      "raw": "לא הצביע",
+      "faction": "סיעת הדוגמה"
+    },
+    "000000110": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "סיעת המופת"
+    }
+  },
+  "source": {
+    "url": "https://example.org/vote/90003",
+    "retrievedOn": "2026-10-25"
+  }
+}

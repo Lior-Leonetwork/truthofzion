@@ -37,7 +37,35 @@ type Dict = {
   siteName: string;
   tagline: string;
   demo: string;
-  nav: { investigations: string; people: string; countries: string; methodology: string; corrections: string; reply: string };
+  nav: { investigations: string; people: string; countries: string; knesset: string; methodology: string; corrections: string; reply: string };
+  knesset: {
+    heading: string;
+    intro: string;
+    stats: { votes: string; keyVotes: string; members: string; updated: string };
+    passed: string;
+    rejected: string;
+    choices: { for: string; against: string; abstain: string; other: string };
+    keyVote: string;
+    keyVotes: string;
+    allVotes: string;
+    search: string;
+    topic: string;
+    aiSummary: string;
+    noSummary: string;
+    fromBill: string;
+    official: string;
+    billText: string;
+    roll: string;
+    byFaction: string;
+    editorNote: string;
+    empty: string;
+    emptyDetail: string;
+    none: string;
+    latest: string;
+    member: { record: string; faction: string; votes: string; profile: string };
+    howTitle: string;
+    how: string[];
+  };
   home: {
     eyebrow: string;
     heading: string;
@@ -102,7 +130,40 @@ const he: Dict = {
   siteName: "אמת מציון",
   tagline: "תחקירים עצמאיים · מבוססי מקורות",
   demo: "מצב הדגמה — כל השמות, התפקידים והתיקים באתר בדויים.",
-  nav: { investigations: "תחקירים", people: "אישים", countries: "מדינות", methodology: "מתודולוגיה", corrections: "תיקונים", reply: "זכות תגובה" },
+  nav: { investigations: "תחקירים", people: "אישים", countries: "מדינות", knesset: "הצבעות בכנסת", methodology: "מתודולוגיה", corrections: "תיקונים", reply: "זכות תגובה" },
+  knesset: {
+    heading: "הצבעות בכנסת",
+    intro: "כל הצבעה על חוק בקריאה שלישית, ישירות מהנתונים הרשמיים של הכנסת: מי הצביע בעד, מי נגד ומי נמנע.",
+    stats: { votes: "הצבעות", keyVotes: "הצבעות מפתח", members: "חברי כנסת", updated: "עודכן" },
+    passed: "התקבל",
+    rejected: "נדחה",
+    choices: { for: "בעד", against: "נגד", abstain: "נמנע", other: "לא הצביע" },
+    keyVote: "הצבעת מפתח",
+    keyVotes: "הצבעות מפתח",
+    allVotes: "כל ההצבעות",
+    search: "חיפוש חוק או חבר כנסת",
+    topic: "נושא",
+    aiSummary: "תקציר שנוסח בסיוע בינה מלאכותית מתוך דברי ההסבר הרשמיים, ונבדק בידי עורך",
+    noSummary: "עדיין אין תקציר מאושר להצבעה זו. מוצגת הכותרת הרשמית בלבד.",
+    fromBill: "מתוך דברי ההסבר",
+    official: "הרשומה הרשמית באתר הכנסת",
+    billText: "הצעת החוק באתר הכנסת",
+    roll: "איך הצביע כל חבר כנסת",
+    byFaction: "לפי סיעה",
+    editorNote: "הערת העורך",
+    empty: "נתוני ההצבעות הראשונים ייאספו בריצה היומית הבאה.",
+    emptyDetail: "ההצבעות נשאבות אוטומטית מהממשק הרשמי של הכנסת מדי יום.",
+    none: "אין הצבעות שתואמות לסינון.",
+    latest: "מהכנסת",
+    member: { record: "רשומת הצבעות", faction: "סיעה", votes: "הצבעות בקריאה שלישית", profile: "רשומת ההצבעות בכנסת" },
+    howTitle: "מאיפה הנתונים",
+    how: [
+      "תוצאות ההצבעות נשאבות מדי יום מהממשק הפתוח הרשמי של הכנסת ומתפרסמות כפי שהן, ללא עיבוד או פרשנות.",
+      "הצבעה שבה פירוט חברי הכנסת אינו תואם לסיכומים הרשמיים מעוכבת ואינה מתפרסמת.",
+      "תקצירים נכתבים בסיוע בינה מלאכותית רק מתוך דברי ההסבר הרשמיים, כל ציטוט נבדק מילה במילה מול המקור, ושום תקציר אינו מתפרסם לפני שעורך אישר אותו.",
+      "״הצבעת מפתח״ היא החלטה של עורך, עם הסבר, ולא של המערכת.",
+    ],
+  },
   home: {
     eyebrow: "תחקירים עצמאיים · מבוססי מקורות",
     heading: "שופכים אור על מי שפועל נגד ישראל",
@@ -256,7 +317,40 @@ const en: Dict = {
   siteName: "Truth of Zion",
   tagline: "Independent, source-based investigations",
   demo: "Demo mode: every name, role and case on this site is fictional.",
-  nav: { investigations: "Investigations", people: "People", countries: "Countries", methodology: "Methodology", corrections: "Corrections", reply: "Right of reply" },
+  nav: { investigations: "Investigations", people: "People", countries: "Countries", knesset: "Knesset votes", methodology: "Methodology", corrections: "Corrections", reply: "Right of reply" },
+  knesset: {
+    heading: "Knesset votes",
+    intro: "Every final-reading vote on a law, straight from the Knesset's official data: who voted for, who voted against, who abstained.",
+    stats: { votes: "Votes", keyVotes: "Key votes", members: "Members", updated: "Updated" },
+    passed: "Passed",
+    rejected: "Rejected",
+    choices: { for: "For", against: "Against", abstain: "Abstain", other: "Did not vote" },
+    keyVote: "Key vote",
+    keyVotes: "Key votes",
+    allVotes: "All votes",
+    search: "Search a bill or member",
+    topic: "Topic",
+    aiSummary: "Summary drafted with AI from the official explanatory notes, checked by an editor",
+    noSummary: "No approved summary for this vote yet. Showing the official title only.",
+    fromBill: "From the explanatory notes",
+    official: "Official record on the Knesset website",
+    billText: "The bill on the Knesset website",
+    roll: "How each member voted",
+    byFaction: "By faction",
+    editorNote: "Editor's note",
+    empty: "The first vote data will be collected on the next daily run.",
+    emptyDetail: "Votes are pulled automatically from the Knesset's official open-data service every day.",
+    none: "No votes match these filters.",
+    latest: "From the Knesset",
+    member: { record: "Voting record", faction: "Faction", votes: "Final-reading votes", profile: "Knesset voting record" },
+    howTitle: "Where this data comes from",
+    how: [
+      "Vote results are pulled daily from the Knesset's official open-data service and published as recorded, without interpretation.",
+      "A vote whose per-member breakdown doesn't match the official totals is held back, not published.",
+      "Summaries are drafted with AI from the official explanatory notes only, every quote is checked word for word against the source, and no summary is published before an editor approves it.",
+      "A \"key vote\" is an editor's decision, with a stated reason, never the system's.",
+    ],
+  },
   home: {
     eyebrow: "Independent, source-based investigations",
     heading: "Shining light on those who act against Israel",

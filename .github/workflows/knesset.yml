@@ -1,0 +1,97 @@
+name: Knesset votes
+
+# Daily: pull new votes from the Knesset's official data and publish them as
+# recorded, then have Claude draft summaries into a pull request for editors.
+on:
+  schedule:
+    - cron: "17 3 * * *" # 06:17 Israel time
+  workflow_dispatch:
+    inputs:
+      max_votes:
+        description: Max votes to ingest this run (backfill in chunks)
+        default: "400"
+      max_drafts:
+        description: Max votes to draft summaries for this run
+        default: "20"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency: knesset
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Ingest official votes
+        run: npm run knesset:ingest -- --max-votes "${{ inputs.max_votes || '400' }}"
+        env:
+          KNESSET_HTTP_PROXY: ${{ secrets.KNESSET_HTTP_PROXY }}
+      - run: npm run validate
+      - name: Publish vote records
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/knesset/votes data/knesset/members.json data/knesset/state.json
+          if git diff --cached --quiet; then echo "No new votes."; exit 0; fi
+          git commit -m "Knesset votes: ingest $(date -u +%F)"
+          git push origin HEAD:main
+
+  draft:
+    needs: ingest
+    runs-on: ubuntu-latest
+    env:
+      BRANCH: ai/knesset-drafts
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      # Build on the open review branch, never force-push it: editors may have
+      # edited drafts there, and drafts already in it must not be re-billed.
+      - name: Check out the review branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git ls-remote --exit-code --heads origin "$BRANCH" >/dev/null; then
+            git checkout -B "$BRANCH" "origin/$BRANCH"
+            git merge --no-edit origin/main
+          else
+            git checkout -b "$BRANCH"
+          fi
+      - name: Draft summaries with Claude
+        run: npm run knesset:analyze -- --max "${{ inputs.max_drafts || '20' }}"
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          KNESSET_HTTP_PROXY: ${{ secrets.KNESSET_HTTP_PROXY }}
+      - run: npm run validate
+      - run: npm test
+      - name: Open or update the review pull request
+        run: |
+          git add -A data/knesset
+          if git diff --cached --quiet && git diff --quiet origin/main HEAD -- data/knesset/analysis; then
+            echo "No drafts to review."; exit 0
+          fi
+          git diff --cached --quiet || git commit -m "AI drafts: Knesset vote summaries $(date -u +%F)"
+          git push origin "$BRANCH"
+          gh label create ai-draft --color D9A321 --description "Drafted by AI, needs editor review" --force
+          if [ -z "$(gh pr list --head "$BRANCH" --state open --json number --jq '.[].number')" ]; then
+            gh pr create --base main --head "$BRANCH" --label ai-draft \
+              --title "AI drafts: Knesset vote summaries for review" \
+              --body-file .github/ai-draft-pr.md
+          fi

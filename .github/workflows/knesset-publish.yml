@@ -1,0 +1,39 @@
+name: Publish reviewed drafts
+
+# Merging an AI-draft pull request is the editor's approval: publish the merged
+# drafts in the name of the editor who merged it. A merger who isn't listed in
+# content/editors.json publishes nothing, and the job fails.
+on:
+  pull_request:
+    types: [closed]
+    branches: [main]
+
+permissions:
+  contents: write
+
+concurrency: knesset
+
+jobs:
+  publish:
+    if: github.event.pull_request.merged && github.event.pull_request.head.ref == 'ai/knesset-drafts'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run knesset:publish -- --by "${{ github.event.pull_request.merged_by.login }}"
+      - run: npm run validate
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/knesset/analysis
+          git diff --cached --quiet && exit 0
+          git commit -m "Publish Knesset summaries reviewed by @${{ github.event.pull_request.merged_by.login }}"
+          git push origin HEAD:main
+          git push origin --delete ai/knesset-drafts || true

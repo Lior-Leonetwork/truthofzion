@@ -7,6 +7,9 @@ import { getContent } from "@/lib/content/load";
 import { CATEGORIES } from "@/lib/content/schema";
 import { getDict, type Locale } from "@/lib/i18n";
 import { caseCard, countries, isLive, people, stats } from "@/lib/view";
+import { VoteRow } from "@/components/vote-browser";
+import { getKnesset } from "@/lib/knesset/store";
+import { knessetLabels, voteCard } from "@/lib/knesset/view";
 
 export default async function Home({ params }: PageProps<"/[lang]">) {
   const locale = (await params).lang as Locale;
@@ -16,6 +19,8 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
   const top = people(locale).slice(0, 6);
   const byCountry = countries(locale);
   const s = stats();
+  const recentVotes = getKnesset().votes.slice(0, 4).map((v) => voteCard(v, locale));
+  const voteLabels = { keyVote: d.knesset.keyVote, passed: d.knesset.passed, rejected: d.knesset.rejected, bar: knessetLabels(locale) };
   const perCategory = Object.fromEntries(CATEGORIES.map((c) => [c, live.filter((e) => e.category === c).length]));
 
   return (
@@ -71,6 +76,18 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
             {top.map((p) => (
               <li key={p.slug}>
                 <PersonCard p={p} locale={locale} />
+              </li>
+            ))}
+          </ul>
+        </Section>
+      )}
+
+      {recentVotes.length > 0 && (
+        <Section title={d.knesset.latest} link={{ href: `/${locale}/knesset`, label: d.nav.knesset }}>
+          <ul className="grid gap-4 md:grid-cols-2">
+            {recentVotes.map((v) => (
+              <li key={v.id}>
+                <VoteRow v={v} locale={locale} labels={voteLabels} />
               </li>
             ))}
           </ul>

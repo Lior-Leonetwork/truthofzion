@@ -1,0 +1,9 @@
+[
+  { "id": "security", "name": { "he": "ביטחון והגנה", "en": "Security & defense" }, "description": { "he": "צה״ל, מערכת הביטחון, מלחמה וטרור.", "en": "The IDF, the security establishment, war and terrorism." } },
+  { "id": "foreign-funding", "name": { "he": "מימון זר ועמותות", "en": "Foreign funding & NGOs" }, "description": { "he": "מימון מישויות מדיניות זרות, שקיפות עמותות.", "en": "Funding from foreign state entities, NGO transparency." } },
+  { "id": "incitement", "name": { "he": "הסתה וטרור", "en": "Incitement & terror" }, "description": { "he": "הסתה, תמיכה בטרור, ענישה ושלילת זכויות.", "en": "Incitement, support for terrorism, penalties and revocation of rights." } },
+  { "id": "sovereignty", "name": { "he": "ריבונות, ירושלים וגבולות", "en": "Sovereignty, Jerusalem & borders" }, "description": { "he": "ריבונות, ירושלים, התיישבות וגבולות המדינה.", "en": "Sovereignty, Jerusalem, settlement and the state's borders." } },
+  { "id": "integrity", "name": { "he": "טוהר המידות", "en": "Public integrity" }, "description": { "he": "שחיתות, ניגודי עניינים, מינויים ופיקוח על נבחרים.", "en": "Corruption, conflicts of interest, appointments and oversight of officials." } },
+  { "id": "judiciary", "name": { "he": "מערכת המשפט", "en": "Judiciary" }, "description": { "he": "בתי המשפט, היועמ״ש, מינוי שופטים.", "en": "The courts, the Attorney General, judicial appointments." } },
+  { "id": "diaspora-antisemitism", "name": { "he": "תפוצות ואנטישמיות", "en": "Diaspora & antisemitism" }, "description": { "he": "יהדות התפוצות, עלייה ומאבק באנטישמיות.", "en": "Diaspora Jewry, aliyah and fighting antisemitism." } }
+]

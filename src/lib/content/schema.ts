@@ -52,6 +52,8 @@ export const Entity = z
     position: z.enum(POSITIONS).optional(),
     description: Localized.optional(),
     country: z.string().regex(/^[A-Z]{2}$/, "ISO 3166-1 alpha-2, e.g. IL"),
+    // kmmbr_id in the Knesset's vote data; links the profile to its voting record.
+    knessetMemberId: z.string().optional(),
     links: z
       .array(z.object({ label: Localized, url: httpsUrl }).strict())
       .default([]),
@@ -172,6 +174,12 @@ export const Entry = z
 export type Entry = z.infer<typeof Entry>;
 
 export const Editor = z
-  .object({ handle: z.string().min(1), name: z.string().min(1) })
+  .object({
+    handle: z.string().min(1),
+    name: z.string().min(1),
+    // GitHub login. Merging an AI-draft pull request publishes its drafts in
+    // this editor's name, so only listed logins can do it.
+    github: z.string().optional(),
+  })
   .strict();
 export type Editor = z.infer<typeof Editor>;

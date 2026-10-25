@@ -1,0 +1,33 @@
+{
+  "voteId": 90001,
+  "bill": {
+    "id": 91001,
+    "name": "(fictional)",
+    "summarySource": "https://example.org/bill"
+  },
+  "summary": {
+    "he": "החוק מחייב גופים ציבוריים לפרסם אחת לרבעון את מקורות המימון שלהם, כולל מימון ממדינות זרות.",
+    "en": "The law requires public bodies to publish their funding sources quarterly, including funding from foreign states."
+  },
+  "quotes": [
+    "לפרסם את מקורות המימון שלהם"
+  ],
+  "topics": [
+    "foreign-funding",
+    "integrity"
+  ],
+  "keyVoteSuggested": true,
+  "rationale": "Demo.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "keyVote": true,
+    "reviewedBy": "demo-a",
+    "reviewedOn": "2026-10-25",
+    "note": {
+      "he": "הצבעת מפתח: שקיפות מימון זר.",
+      "en": "Key vote: transparency of foreign funding."
+    }
+  }
+}

@@ -9,6 +9,8 @@ import { StatusBadge } from "@/components/status-badge";
 import { entriesFor, getContent, getEntity } from "@/lib/content/load";
 import { countryName, getDict, LOCALES, t, type Locale } from "@/lib/i18n";
 import { caseCard, highestStatus, isLive } from "@/lib/view";
+import { getKnesset } from "@/lib/knesset/store";
+import Link from "next/link";
 
 export const dynamicParams = false;
 
@@ -48,6 +50,14 @@ export default async function ProfilePage({ params }: PageProps<"/[lang]/profile
             <h1 className="font-serif text-4xl font-black sm:text-5xl">{name}</h1>
             <L as="p" text={entity.role} locale={locale} className="text-lg text-ink-muted" />
             <CountryTag code={entity.country} name={countryName(entity.country, locale)} tone="ink" />
+            {entity.knessetMemberId && getKnesset().members[entity.knessetMemberId] && (
+              <Link
+                href={`/${locale}/knesset/members/${entity.knessetMemberId}`}
+                className="block text-sm font-semibold text-accent hover:underline"
+              >
+                {d.knesset.member.profile} <span className="inline-block rtl:rotate-180">→</span>
+              </Link>
+            )}
           </div>
           <dl className="grid shrink-0 grid-cols-2 gap-px overflow-hidden rounded-2xl border border-ink-border bg-ink-border">
             <div className="bg-ink-2 p-4">

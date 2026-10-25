@@ -10,12 +10,17 @@
     "validate": "tsx scripts/validate-content.ts",
     "test": "vitest run",
     "typecheck": "tsc --noEmit",
-    "dev:demo": "DEMO_CONTENT=1 next dev"
+    "dev:demo": "DEMO_CONTENT=1 next dev",
+    "knesset:ingest": "tsx scripts/knesset-ingest.ts",
+    "knesset:analyze": "tsx scripts/knesset-analyze.ts",
+    "knesset:publish": "tsx scripts/knesset-publish.ts"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^1.3.0",
     "next": "16.4.3",
     "react": "19.3.0",
     "react-dom": "19.3.0",
+    "undici": "^8.12.3",
     "zod": "^4.6.7"
   },
   "devDependencies": {

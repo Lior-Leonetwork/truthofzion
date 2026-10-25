@@ -9,6 +9,7 @@ export function SiteFooter({ locale }: { locale: Locale }) {
     { href: `/${locale}/investigations`, label: d.nav.investigations },
     { href: `/${locale}/people`, label: d.nav.people },
     { href: `/${locale}/countries`, label: d.nav.countries },
+    { href: `/${locale}/knesset`, label: d.nav.knesset },
     { href: `/${locale}/methodology`, label: d.nav.methodology },
     { href: `/${locale}/corrections`, label: d.nav.corrections },
     { href: `/${locale}/reply`, label: d.nav.reply },

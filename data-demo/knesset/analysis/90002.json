@@ -1,0 +1,33 @@
+{
+  "voteId": 90002,
+  "bill": {
+    "id": 91002,
+    "name": "(fictional)",
+    "summarySource": "https://example.org/bill"
+  },
+  "summary": {
+    "he": "החוק מחמיר את הענישה על הסתה לטרור ברשתות החברתיות.",
+    "en": "The law increases penalties for incitement to terrorism on social media."
+  },
+  "quotes": [
+    "הסתה לטרור"
+  ],
+  "topics": [
+    "incitement",
+    "security"
+  ],
+  "keyVoteSuggested": true,
+  "rationale": "Demo.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "keyVote": true,
+    "reviewedBy": "demo-a",
+    "reviewedOn": "2026-10-25",
+    "note": {
+      "he": "הצבעת מפתח: מאבק בהסתה.",
+      "en": "Key vote: fighting incitement."
+    }
+  }
+}
