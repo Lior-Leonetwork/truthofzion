@@ -4,6 +4,7 @@ import { countryName, formatDate, getDict, t, type Locale } from "./i18n";
 import { getKnesset } from "./knesset/store";
 import { factionInfo, scorecardFor, SPECTRUM_ORDER } from "./knesset/view";
 import type { Spectrum } from "./knesset/schema";
+import { donorCountries } from "./funding/view";
 
 // Most serious first. Used for a profile's headline status.
 const SEVERITY: Status[] = ["convicted", "indicted", "under_investigation", "allegation", "documented"];
@@ -151,18 +152,29 @@ export function people(locale: Locale): PersonCard[] {
   return [...cases, ...members];
 }
 
-export type CountrySummary = { code: string; name: string; people: number; cases: number };
+// funding: what bodies of that country gave Israeli NGOs in the recent window
+// (official filings), so donor countries are listed even with no case yet.
+export type CountrySummary = { code: string; name: string; people: number; cases: number; funding: number; fundedNgos: number };
 
 export function countries(locale: Locale): CountrySummary[] {
   const map = new Map<string, CountrySummary>();
+  const blank = (code: string) => ({ code, name: countryName(code, locale), people: 0, cases: 0, funding: 0, fundedNgos: 0 });
   for (const p of people(locale)) {
-    const c = map.get(p.country) ?? { code: p.country, name: p.countryName, people: 0, cases: 0 };
+    const c = map.get(p.country) ?? blank(p.country);
     c.people += 1;
     c.cases += p.cases;
     map.set(p.country, c);
   }
-  // Israel first, then by number of cases.
-  return [...map.values()].sort((a, b) => Number(b.code === "IL") - Number(a.code === "IL") || b.cases - a.cases);
+  for (const f of donorCountries()) {
+    const c = map.get(f.code) ?? blank(f.code);
+    c.funding = f.recent;
+    c.fundedNgos = f.ngos;
+    map.set(f.code, c);
+  }
+  // Israel first, then by number of cases, then by funding.
+  return [...map.values()].sort(
+    (a, b) => Number(b.code === "IL") - Number(a.code === "IL") || b.cases - a.cases || b.funding - a.funding,
+  );
 }
 
 export function stats() {

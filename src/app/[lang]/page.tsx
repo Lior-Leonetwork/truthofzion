@@ -10,17 +10,25 @@ import { caseCard, countries, isLive, people, stats } from "@/lib/view";
 import { VoteRow } from "@/components/vote-browser";
 import { getKnesset } from "@/lib/knesset/store";
 import { knessetLabels, voteCard } from "@/lib/knesset/view";
+import { fundingStats, mainlyCards, money } from "@/lib/funding/view";
+import { NgoCard } from "@/components/ngo-card";
 
 export default async function Home({ params }: PageProps<"/[lang]">) {
   const locale = (await params).lang as Locale;
   const d = getDict(locale);
   const live = getContent().entries.filter(isLive);
   const latest = live.slice(0, 5).map((e) => caseCard(e, locale));
-  const top = people(locale).filter((p) => p.kind === "case").slice(0, 6);
+  const top = people(locale)
+    .filter((p) => p.kind === "case")
+    .slice(0, 6);
   const byCountry = countries(locale);
   const s = stats();
-  const recentVotes = getKnesset().votes.slice(0, 4).map((v) => voteCard(v, locale));
+  const recentVotes = getKnesset()
+    .votes.slice(0, 4)
+    .map((v) => voteCard(v, locale));
   const voteLabels = { keyVote: d.knesset.keyVote, passed: d.knesset.passed, rejected: d.knesset.rejected, bar: knessetLabels(locale) };
+  const fs = fundingStats();
+  const funded = mainlyCards(locale, { badge: d.funding.mainlyBadge, since: d.funding.stats.recent(fs.from) }, 6);
   const perCategory = Object.fromEntries(CATEGORIES.map((c) => [c, live.filter((e) => e.category === c).length]));
 
   return (
@@ -94,6 +102,19 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
         </Section>
       )}
 
+      {funded.length > 0 && (
+        <Section title={d.funding.homeTitle} link={{ href: `/${locale}/funding`, label: d.funding.allFunding }}>
+          <p className="max-w-3xl text-muted">{d.funding.investigationsIntro}</p>
+          <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {funded.map((n) => (
+              <li key={n.number}>
+                <NgoCard n={n} locale={locale} />
+              </li>
+            ))}
+          </ul>
+        </Section>
+      )}
+
       <Section title={d.home.byArea}>
         <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {CATEGORIES.map((c) => (
@@ -125,7 +146,9 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
                 >
                   <span className="font-mono text-xs font-semibold tracking-widest text-muted">{c.code}</span>
                   <span className="font-serif text-lg font-bold">{c.name}</span>
-                  <span className="text-sm text-muted">{d.cases(c.cases)}</span>
+                  <span className="text-sm text-muted">
+                    {c.cases > 0 || c.funding === 0 ? d.cases(c.cases) : `${money(c.funding, locale, true)} ${d.funding.toNgos(c.fundedNgos)}`}
+                  </span>
                 </Link>
               </li>
             ))}

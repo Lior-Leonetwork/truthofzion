@@ -12,12 +12,38 @@ editor.
   scrutiny (sorted by seniority), areas, countries, how we investigate
 - **Investigations**: every case, filterable by area, legal status and country
 - **People**: directory of investigated office holders and bodies
-- **Countries**: per-country pages with their people and cases
+- **Countries**: per-country pages with their people, cases, and the Israeli
+  NGOs that country's bodies fund
+- **Foreign funding**: every NGO's reported donations from foreign state
+  entities, by year, donor and country, with a page per NGO
 - **Case file**: legal-status tracker (allegation → investigation → indictment
   → conviction), timeline with numbered citations, response, sources,
   corrections
 - **Dossier**: per-person profile with every case and the most serious status
 - **Methodology**, **Corrections**, **Right of reply**
+
+## Foreign funding (automatic, no model)
+
+Runs every day in GitHub Actions (`.github/workflows/funding.yml`), through the
+same Israeli VPN (data.gov.il only answers Israeli addresses):
+
+- `scripts/funding-ingest.ts` pulls the Registrar of Associations' register of
+  donations from foreign state entities (data.gov.il dataset `moj-amutot`,
+  resource "תרומות מישות מדינית זרה") and joins the NGO registry for names,
+  status, field and revenue. Output: `data/funding/ngos.json`, one NGO per line.
+- Published as filed, automatically: these are the NGOs' own official reports,
+  so there is nothing to approve. No model reads or rewrites them.
+- A donor country is assigned only when the donor's name names it (or is a
+  well-known agency of it, e.g. GIZ, USAID, SDC); everything else is "other
+  foreign body" (`donorCountry` in `src/lib/funding/transform.ts`). The donor's
+  name is always shown as filed.
+- "Mainly funded by foreign states" is the NGO's own declaration in its report.
+- The ingest refuses to replace the data if the register suddenly shrinks.
+
+Pages: `/funding`, `/funding/<NGO number>`; donor countries appear under
+`/countries`, and NGOs that declared they are mainly foreign-state funded are
+listed on the home page and under Investigations. Run locally (from Israel):
+`npm run funding:ingest`.
 
 ## The AI system: Knesset votes
 

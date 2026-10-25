@@ -4,6 +4,7 @@ import path from "node:path";
 import { readContent } from "../src/lib/content/load";
 import { readAnalyses, readMembers, readVotes, readWatch } from "../src/lib/knesset/store";
 import { checkAnalysis } from "../src/lib/knesset/verify";
+import { readFundingState, readNgos } from "../src/lib/funding/store";
 
 let failed = false;
 const report = (label: string, problems: { entry: string; rule: string; message: string }[], ok: string) => {
@@ -36,6 +37,21 @@ for (const [contentDir, dataDir] of [
     report(`${dataDir}/knesset`, problems, `${votes.length} votes, ${analyses.length} analyses (${live} published)`);
   } catch (e) {
     report(`${dataDir}/knesset`, [{ entry: dataDir, rule: "schema", message: e instanceof Error ? e.message : String(e) }], "");
+  }
+  const fundingRoot = path.join(process.cwd(), dataDir, "funding");
+  try {
+    const ngos = readNgos(fundingRoot);
+    readFundingState(fundingRoot);
+    const problems = [];
+    const seen = new Set<string>();
+    for (const n of ngos) {
+      if (seen.has(n.number)) problems.push({ entry: `funding/${n.number}`, rule: "unique", message: "NGO listed twice" });
+      seen.add(n.number);
+      if (n.donations.length === 0) problems.push({ entry: `funding/${n.number}`, rule: "has-reports", message: "NGO with no reports" });
+    }
+    report(`${dataDir}/funding`, problems, `${ngos.length} NGOs, ${ngos.reduce((s, n) => s + n.donations.length, 0)} reports`);
+  } catch (e) {
+    report(`${dataDir}/funding`, [{ entry: dataDir, rule: "schema", message: e instanceof Error ? e.message : String(e) }], "");
   }
 }
 if (failed) process.exit(1);

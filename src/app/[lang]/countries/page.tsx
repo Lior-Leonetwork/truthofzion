@@ -3,6 +3,7 @@ import Link from "next/link";
 import { PageHeader } from "@/components/page-header";
 import { getDict, type Locale } from "@/lib/i18n";
 import { countries } from "@/lib/view";
+import { money } from "@/lib/funding/view";
 
 export async function generateMetadata({ params }: PageProps<"/[lang]/countries">): Promise<Metadata> {
   return { title: getDict((await params).lang as Locale).nav.countries };
@@ -31,14 +32,24 @@ export default async function Countries({ params }: PageProps<"/[lang]/countries
                     <p className="font-serif text-2xl font-bold group-hover:text-brand">{c.name}</p>
                   </div>
                   <dl className="flex gap-5 text-center">
-                    <div>
-                      <dd className="font-serif text-2xl font-bold tabular-nums">{c.people}</dd>
-                      <dt className="text-xs text-muted">{d.countries.people}</dt>
-                    </div>
-                    <div>
-                      <dd className="font-serif text-2xl font-bold tabular-nums">{c.cases}</dd>
-                      <dt className="text-xs text-muted">{d.countries.cases}</dt>
-                    </div>
+                    {c.funding > 0 && (
+                      <div>
+                        <dd className="font-serif text-2xl font-bold tabular-nums">{money(c.funding, locale, true)}</dd>
+                        <dt className="text-xs text-muted">{d.funding.toNgos(c.fundedNgos)}</dt>
+                      </div>
+                    )}
+                    {c.people > 0 && (
+                      <div>
+                        <dd className="font-serif text-2xl font-bold tabular-nums">{c.people}</dd>
+                        <dt className="text-xs text-muted">{d.countries.people}</dt>
+                      </div>
+                    )}
+                    {(c.cases > 0 || c.funding === 0) && (
+                      <div>
+                        <dd className="font-serif text-2xl font-bold tabular-nums">{c.cases}</dd>
+                        <dt className="text-xs text-muted">{d.countries.cases}</dt>
+                      </div>
+                    )}
                   </dl>
                 </Link>
               </li>
