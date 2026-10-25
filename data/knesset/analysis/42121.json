@@ -24,7 +24,16 @@
   "generatedOn": "2026-10-25",
   "editorial": {
     "state": "published",
-    "keyVote": false,
-    "autoPublished": true
+    "autoPublished": true,
+    "keyVote": true,
+    "keyVoteCheckedOn": "2026-10-25",
+    "position": "for",
+    "note": {
+      "he": "החוק מאריך עד 15 בפברואר 2025 את תקנות שעת החירום, המאפשרות למנוע פגישה עם עורך דין לעצורים ביטחוניים הקשורים לאירועי 7–13 באוקטובר 2023 או למלחמה בעזה. בכך הוא משמר כלי שבידי כוחות הביטחון בטיפול בעצורים בעבירות טרור.",
+      "en": "The law extends until 15 February 2025 the emergency regulations that allow preventing security detainees linked to the 7–13 October 2023 events or the Gaza war from meeting their lawyers. It thereby keeps a tool available to the security forces in handling terror-offence detainees."
+    },
+    "autoKeyVote": true,
+    "policy": "security",
+    "evidence": "החוק מאריך את תוקפן של תקנות שעת חירום, המאפשרות מניעת פגישה של עצורים ביטחוניים"
   }
 }

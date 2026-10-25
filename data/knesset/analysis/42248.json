@@ -24,7 +24,16 @@
   "generatedOn": "2026-10-25",
   "editorial": {
     "state": "published",
-    "keyVote": false,
-    "autoPublished": true
+    "autoPublished": true,
+    "keyVote": true,
+    "keyVoteCheckedOn": "2026-10-25",
+    "position": "for",
+    "note": {
+      "he": "החוק מאריך את הוראת השעה מתקופת המלחמה בחוק כליאתם של לוחמים בלתי חוקיים. ההוראה מאריכה את תקופות הכליאה, מורידה את הדרג המוסמך להגביל פגישה עם עורך דין ומאפשרת דיונים בהיוועדות חזותית. בכך הוא מרחיב את סמכויות כוחות הביטחון בכליאת לוחמי אויב.",
+      "en": "The law extends the wartime temporary provision of the Incarceration of Unlawful Combatants Law. The provision lengthens detention periods, lowers the authority level needed to restrict lawyer meetings, and allows video-conference hearings. It thereby extends the security forces' powers to detain enemy combatants."
+    },
+    "autoKeyVote": true,
+    "policy": "security",
+    "evidence": "הוארכה תוקפה של הוראת השעה כאמור עד ליום ב' בניסן התשפ\"ה (31 במרץ 2025)"
   }
 }

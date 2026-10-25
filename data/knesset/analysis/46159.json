@@ -24,7 +24,16 @@
   "generatedOn": "2026-10-25",
   "editorial": {
     "state": "published",
-    "keyVote": false,
-    "autoPublished": true
+    "autoPublished": true,
+    "keyVote": true,
+    "keyVoteCheckedOn": "2026-10-25",
+    "position": "for",
+    "note": {
+      "he": "החוק מאריך עד ספטמבר 2026 את הוראת השעה מתקופת המלחמה, המרחיבה את סמכויות הכליאה של לוחמים בלתי חוקיים, תוך קיצור חלק מפרקי הזמן המרביים שנקבעו בה. בכך הוא משמר את כלי הכליאה המורחבים של כוחות הביטחון במאבק בטרור.",
+      "en": "The law extends until September 2026 the wartime temporary provision that expands detention powers over unlawful combatants, while shortening some of the maximum time periods set in it. It thereby keeps the security forces' expanded detention tools in place for fighting terror."
+    },
+    "autoKeyVote": true,
+    "policy": "security",
+    "evidence": "הוארך תוקפה של הוראת השעה לעניין כליאתם של לוחמים בלתי חוקיים עד ליום י\"ט בתשרי התשפ\"ז (30 בספטמבר 2026)"
   }
 }

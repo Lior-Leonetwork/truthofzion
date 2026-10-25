@@ -22,7 +22,16 @@
   "generatedOn": "2026-10-25",
   "editorial": {
     "state": "published",
-    "keyVote": false,
-    "autoPublished": true
+    "autoPublished": true,
+    "keyVote": true,
+    "keyVoteCheckedOn": "2026-10-25",
+    "position": "for",
+    "note": {
+      "he": "החוק אוסר על מועמד לראשות מועצה אזורית לקבל תרומה מישוב שיתופי שבתחום המועצה. בכך הוא מהדק את כללי מימון הבחירות ומצמצם חשש לניגוד עניינים, ולכן מחזק את הפיקוח על נבחרי ציבור.",
+      "en": "The law bars a candidate for head of a regional council from receiving a donation from a cooperative settlement within that council. This tightens election-financing rules and reduces potential conflicts of interest, strengthening oversight of elected officials."
+    },
+    "autoKeyVote": true,
+    "policy": "integrity",
+    "evidence": "החוק מבטל את האפשרות של מועמד לראשות מועצה אזורית לקבל תרומה מישוב שיתופי הנמצא בתחום המועצה האזורית שבה הוא מועמד."
   }
 }

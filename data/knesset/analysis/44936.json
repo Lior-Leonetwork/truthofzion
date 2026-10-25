@@ -27,7 +27,16 @@
   "generatedOn": "2026-10-25",
   "editorial": {
     "state": "published",
-    "keyVote": false,
-    "autoPublished": true
+    "autoPublished": true,
+    "keyVote": true,
+    "keyVoteCheckedOn": "2026-10-25",
+    "position": "for",
+    "note": {
+      "he": "החוק מאריך בשנה את הסמכות של צה\"ל ושב\"כ לחדור למחשבים המפעילים מצלמות אבטחה נייחות, כדי למנוע גישה של גורמי אויב למידע חזותי. הוא גם מחיל את הסמכות בשגרה ולא רק בזמן פעולות צבאיות, אך מצמצם את העילות להפעלתה. בכך הוא מחזק את יכולתם של כוחות הביטחון להגן על המדינה.",
+      "en": "The law extends by one year the IDF and Shin Bet authority to penetrate computers operating fixed security cameras, in order to prevent enemy access to visual information. It also applies this authority in routine times, not only during military operations, while narrowing the grounds for using it. This strengthens the security forces' ability to defend the state."
+    },
+    "autoKeyVote": true,
+    "policy": "security",
+    "evidence": "התיקון מנתק את הסמכויות מהזיקה לפעולות צבאיות משמעותיות, כך שהן ימשיכו לעמוד בתוקפן גם בשגרה"
   }
 }

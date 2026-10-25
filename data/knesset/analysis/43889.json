@@ -25,7 +25,16 @@
   "generatedOn": "2026-10-25",
   "editorial": {
     "state": "published",
-    "keyVote": false,
-    "autoPublished": true
+    "autoPublished": true,
+    "keyVote": true,
+    "keyVoteCheckedOn": "2026-10-25",
+    "position": "for",
+    "note": {
+      "he": "החוק מאריך עד נובמבר 2025 הוראת שעה. ההוראה מסמיכה את שירות הביטחון הכללי, מערך הסייבר והמלמ\"ב לפעול לאיתור, מניעה ובלימה של תקיפות סייבר חמורות אצל ספקי אחסון ושירותים דיגיטליים. בכך היא שומרת על יכולתם של גופי הביטחון להתמודד עם איומי סייבר על ביטחון המדינה.",
+      "en": "The law extends until November 2025 a temporary order. The order empowers the Shin Bet, the National Cyber Directorate and the defense-establishment security authority (MALMAB) to detect, prevent and contain severe cyber attacks on hosting and digital service providers. This preserves the security bodies' ability to counter cyber threats to state security."
+    },
+    "autoKeyVote": true,
+    "policy": "security",
+    "evidence": "החוק מסמיך מנהל מוסמך משירות הביטחון הכללי, ממערך הסייבר או מהמלמ\"ב לקבוע כי תקיפת סייבר שמתרחשת או עומדת להתרחש אצל מי שעיסוקו אספקת שירותי אחסון או שירותים דיגיטליים, היא תקיפת סייבר חמורה"
   }
 }

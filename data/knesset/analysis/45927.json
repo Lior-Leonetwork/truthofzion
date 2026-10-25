@@ -30,7 +30,16 @@
   "generatedOn": "2026-10-25",
   "editorial": {
     "state": "published",
-    "keyVote": false,
-    "autoPublished": true
+    "autoPublished": true,
+    "keyVote": true,
+    "keyVoteCheckedOn": "2026-10-25",
+    "position": "for",
+    "note": {
+      "he": "החוק מקים בית משפט צבאי ייעודי להעמדה לדין של מבצעי מתקפת הטרור ב-7 באוקטובר 2023, מסדיר ביצוע עונש מוות ואוסר על שחרור מוקדם של המעורבים. בכך הוא מחמיר את הענישה על מחבלים.",
+      "en": "The law establishes a dedicated military court to prosecute perpetrators of the October 7, 2023 terror attack, regulates carrying out death sentences, and bars early release of those involved. It thereby toughens punishment for terrorists."
+    },
+    "autoKeyVote": true,
+    "policy": "counter-terror",
+    "evidence": "החוק מסמיך את שר הביטחון לקבוע הוראות בדבר ביצוע גזר דין המטיל עונש מוות, וקובע איסור על שחרור מוקדם של אסירים המעורבים באירועים אלה."
   }
 }

@@ -21,7 +21,8 @@
   "generatedOn": "2026-10-25",
   "editorial": {
     "state": "published",
+    "autoPublished": true,
     "keyVote": false,
-    "autoPublished": true
+    "keyVoteCheckedOn": "2026-10-25"
   }
 }

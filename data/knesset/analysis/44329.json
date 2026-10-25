@@ -27,7 +27,16 @@
   "generatedOn": "2026-10-25",
   "editorial": {
     "state": "published",
-    "keyVote": false,
-    "autoPublished": true
+    "autoPublished": true,
+    "keyVote": true,
+    "keyVoteCheckedOn": "2026-10-25",
+    "position": "for",
+    "note": {
+      "he": "החוק אוסר לתת היתר שהייה או לחדש רישיון ישיבה בישראל לפעילי טרור, למי שהורשע במעשה טרור ולבני משפחתם, ומחמיר את הענישה על שהייה שלא כדין. בכך הוא מקדם את שלילת התושבות או מעמד השהייה ממחבלים ומבני משפחותיהם.",
+      "en": "The law bars granting stay permits or renewing residency licences in Israel for terror operatives, people convicted of terror acts and their family members, and toughens penalties for illegal stay. This advances denying residency or stay status to terrorists and their families."
+    },
+    "autoKeyVote": true,
+    "policy": "counter-terror",
+    "evidence": "לא ייתן היתר שהייה בישראל ולא יחדש רישיון לישיבה בישראל למבקש שהוא פעיל טרור או של מי שהורשע במעשה טרור, וכן למבקש שהוא בן משפחה של אדם כאמור"
   }
 }

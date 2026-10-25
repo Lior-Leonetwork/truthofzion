@@ -28,7 +28,16 @@
   "generatedOn": "2026-10-25",
   "editorial": {
     "state": "published",
-    "keyVote": false,
-    "autoPublished": true
+    "autoPublished": true,
+    "keyVote": true,
+    "keyVoteCheckedOn": "2026-10-25",
+    "position": "for",
+    "note": {
+      "he": "החוק מאפשר למעסיק לקבל מהמשטרה, בהסכמת המועמד, הודעה אם יש לו רישום פלילי בגין עבירת טרור חמורה, הסתה לטרור או הזדהות עם ארגון טרור. בכך הוא מוסיף השלכה תעסוקתית לעבירות טרור, ברוח החמרת המאבק בטרור.",
+      "en": "The law lets an employer receive from the police, with the candidate's consent, notice of whether the candidate has a criminal record for a serious terror offence, incitement to terror or identification with a terrorist organisation. This adds an employment consequence to terror offences, in line with a tougher fight against terror."
+    },
+    "autoKeyVote": true,
+    "policy": "counter-terror",
+    "evidence": "מעסיק רשאי לבקש מהמשטרה הודעה המציינת אם יש או אין למועמד בגיר לעבודה רישום פלילי בגין עבירת טרור חמורה, הסתה לטרור או הזדהות עם ארגון טרור"
   }
 }

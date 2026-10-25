@@ -26,7 +26,16 @@
   "generatedOn": "2026-10-25",
   "editorial": {
     "state": "published",
-    "keyVote": false,
-    "autoPublished": true
+    "autoPublished": true,
+    "keyVote": true,
+    "keyVoteCheckedOn": "2026-10-25",
+    "position": "for",
+    "note": {
+      "he": "החוק מאריך עד 31 ביולי 2025 את תוקף תקנות שעת החירום, המאפשרות תקופות מעצר ארוכות יותר לחשודים בעבירות ביטחון הקשורות לפעולות האיבה של 7 באוקטובר או למלחמה בעזה. בכך הוא מחמיר את הכלים העומדים לרשות המדינה בטיפול בחשודים בטרור.",
+      "en": "The law extends, until 31 July 2025, emergency regulations that allow longer detention periods for suspects in security offences linked to the 7 October hostilities or the Gaza war. It thereby toughens the tools available to the state in handling terror suspects."
+    },
+    "autoKeyVote": true,
+    "policy": "counter-terror",
+    "evidence": "המאריכות את תקופות המעצרים המפורטות בחוק המעצרים בנוגע לעצור שחשוד בעבירת ביטחון בשל פעולות האיבה שהתרחשו בין יום ה-7 באוקטובר לבין ה-13 באוקטובר 2023"
   }
 }

@@ -25,7 +25,16 @@
   "generatedOn": "2026-10-25",
   "editorial": {
     "state": "published",
-    "keyVote": false,
-    "autoPublished": true
+    "autoPublished": true,
+    "keyVote": true,
+    "keyVoteCheckedOn": "2026-10-25",
+    "position": "for",
+    "note": {
+      "he": "החוק מאריך בשנה, עד ינואר 2027, הוראת שעה שמסמיכה את מערך הסייבר, השב\"כ, הממונה על הביטחון במשרד הביטחון וצה\"ל לפעול מול ספקי שירותים דיגיטליים ואחסון בעת תקיפת סייבר חמורה. בכך הוא משמר את סמכויותיהם של גופי הביטחון להגן מפני תקיפות כאלה.",
+      "en": "The law extends by one year, to January 2027, a temporary provision that empowers the National Cyber Directorate, the Shin Bet, the Defense Ministry security director and the IDF to act toward digital and hosting service providers during severe cyber attacks. It thereby keeps these security bodies' powers to defend against such attacks in force."
+    },
+    "autoKeyVote": true,
+    "policy": "security",
+    "evidence": "החוק מסמיך את מערך הסייבר הלאומי, שירות הביטחון הכללי, הממונה על הביטחון במשרד הביטחון וצה\"ל להכריז על תקיפת סייבר כחמורה"
   }
 }

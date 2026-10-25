@@ -29,7 +29,16 @@
   "generatedOn": "2026-10-25",
   "editorial": {
     "state": "published",
-    "keyVote": false,
-    "autoPublished": true
+    "autoPublished": true,
+    "keyVote": true,
+    "keyVoteCheckedOn": "2026-10-25",
+    "position": "for",
+    "note": {
+      "he": "החוק מסמיך את מנכ\"ל משרד החינוך לפטר עובדי הוראה שהזדהו בפומבי עם מעשה טרור או קראו לביצועו, ואת שר החינוך לשלול או להפחית תקציב ממוסדות חינוך שבהם היו גילויי הזדהות עם טרור. בכך החוק מטיל סנקציות על הסתה לטרור ועל הזדהות עם ארגוני טרור.",
+      "en": "The law authorizes the Education Ministry director-general to dismiss teachers who publicly identified with or called for an act of terror. It also authorizes the education minister to revoke or reduce funding to educational institutions where expressions of identification with terror occurred. It thereby imposes sanctions for incitement to terror and identification with terrorist organisations."
+    },
+    "autoKeyVote": true,
+    "policy": "incitement",
+    "evidence": "החוק מסמיך את שר החינוך לשלול או להפחית את ההשתתפות בתקציבו של מוסד חינוך המקבל מאוצר המדינה תמיכה או השתתפות בתקציבו, אם התקיימו במוסד החינוך גילויי תמיכה או הזדהות עם מעשה טרור או עם ארגון טרור"
   }
 }

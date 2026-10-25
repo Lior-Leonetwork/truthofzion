@@ -23,7 +23,16 @@
   "generatedOn": "2026-10-25",
   "editorial": {
     "state": "published",
-    "keyVote": false,
-    "autoPublished": true
+    "autoPublished": true,
+    "keyVote": true,
+    "keyVoteCheckedOn": "2026-10-25",
+    "position": "for",
+    "note": {
+      "he": "החוק מאריך עד נובמבר 2027 את הוראת השעה הקובעת עבירה פלילית של צריכת פרסומי טרור. בכך הוא ממשיך את הענישה על עיסוק בתכני הסתה והזדהות עם ארגוני טרור.",
+      "en": "The law extends until November 2027 the temporary provision that makes consuming terror publications a criminal offence. It thereby continues punishment for engaging with incitement and terror-identification content."
+    },
+    "autoKeyVote": true,
+    "policy": "incitement",
+    "evidence": "החוק מאריך את הוראת השעה שקובעת עבירה של צריכת פרסומי טרור בחוק המאבק בטרור, עד 30 בנובמבר 2027."
   }
 }

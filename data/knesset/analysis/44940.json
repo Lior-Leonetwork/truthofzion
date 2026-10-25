@@ -27,7 +27,16 @@
   "generatedOn": "2026-10-25",
   "editorial": {
     "state": "published",
-    "keyVote": false,
-    "autoPublished": true
+    "autoPublished": true,
+    "keyVote": true,
+    "keyVoteCheckedOn": "2026-10-25",
+    "position": "for",
+    "note": {
+      "he": "החוק מאריך עד סוף מרץ 2026 את הוראת השעה שמרחיבה את סמכויות הכליאה של לוחמים בלתי חוקיים בתקופת מלחמת חרבות ברזל, ובכך משמר את כלי כוחות הביטחון להחזקת עצורים. לצד זאת, הוא מקצר חלק מהמועדים שנקבעו בהוראת השעה, ובהם המועד לביקורת שיפוטית והתקופה שבה ניתן למנוע מפגש עם עורך דין.",
+      "en": "The law extends until the end of March 2026 the temporary provision that expands detention powers over unlawful combatants during the Iron Swords war, maintaining the security forces' tools for holding detainees. At the same time, it shortens some of the periods set in the temporary provision, including the deadline for judicial review and the period in which a meeting with a lawyer may be denied."
+    },
+    "autoKeyVote": true,
+    "policy": "security",
+    "evidence": "הוארך תוקפה של הוראת השעה הקובעת הסדרים מיוחדים לתקופת הלחימה עד ליום י\"ג בניסן התשפ\"ו (31 במרץ 2026)"
   }
 }

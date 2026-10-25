@@ -26,7 +26,16 @@
   "generatedOn": "2026-10-25",
   "editorial": {
     "state": "published",
-    "keyVote": false,
-    "autoPublished": true
+    "autoPublished": true,
+    "keyVote": true,
+    "keyVoteCheckedOn": "2026-10-25",
+    "position": "for",
+    "note": {
+      "he": "החוק מאריך את הוראת השעה להתמודדות עם תקיפות סייבר חמורות ומנתק אותה ממצב הלחימה. הוא מרחיב את סמכויות מערך הסייבר לדרוש מידע מספקים ומטיל על הספקים חובת דיווח על תקיפות. בכך הוא מחזק את כלי גורמי הביטחון להגנה על תשתיות המדינה.",
+      "en": "The law extends the temporary provision on handling severe cyber attacks and decouples it from the state of combat. It expands the cyber directorate's powers to demand information from providers and requires providers to report attacks. This strengthens security bodies' tools for protecting state infrastructure."
+    },
+    "autoKeyVote": true,
+    "policy": "security",
+    "evidence": "הוסמך מנהל מוסמך לדרוש מספק להציג לו כל ידיעה או מסמך, לרבות פלט מחשב, אם ישנו יסוד סביר להניח שמתרחשת או עומדת להתרחש תקיפת סייבר חמורה נגד הספק או באמצעותו"
   }
 }

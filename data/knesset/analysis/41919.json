@@ -27,7 +27,16 @@
   "generatedOn": "2026-10-25",
   "editorial": {
     "state": "published",
-    "keyVote": false,
-    "autoPublished": true
+    "autoPublished": true,
+    "keyVote": true,
+    "keyVoteCheckedOn": "2026-10-25",
+    "position": "for",
+    "note": {
+      "he": "החוק קובע כי הזמנת אונר\"א מכוח חילופי האיגרות משנת 1967 תפקע, ואוסר על רשויות המדינה לקיים מגע עם אונר\"א. בכך הוא מגביל את פעילותו בישראל של גוף שהעמדה מזהה כפועל נגדה.",
+      "en": "The law terminates UNRWA's invitation under the 1967 exchange of letters and bars state authorities from any contact with UNRWA. This restricts the activity in Israel of a body the stance names as acting against it."
+    },
+    "autoKeyVote": true,
+    "policy": "hostile-bodies",
+    "evidence": "עוד נקבע כי רשות מרשויות המדינה, לרבות גופים ואנשים הממלאים תפקידים ציבוריים על פי דין, לא יקיימו כל מגע עם אונר\"א או עם מי מטעמה;"
   }
 }

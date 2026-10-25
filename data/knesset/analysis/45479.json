@@ -24,7 +24,16 @@
   "generatedOn": "2026-10-25",
   "editorial": {
     "state": "published",
-    "keyVote": false,
-    "autoPublished": true
+    "autoPublished": true,
+    "keyVote": true,
+    "keyVoteCheckedOn": "2026-10-25",
+    "position": "for",
+    "note": {
+      "he": "החוק מאריך בשלושה חודשים, עד 30 ביוני 2026, את הוראת השעה מתקופת מלחמת חרבות ברזל. הוראה זו מאריכה את התקופות שבחוק כליאתם של לוחמים בלתי חוקיים ומתאימה את הדרגים המאשרים. בכך נשמרות סמכויות הכליאה המורחבות של כוחות הביטחון לנוכח הצרכים המבצעיים, ועמדת חיזוק כוחות הביטחון במאבק בטרור מקודמת.",
+      "en": "The law extends by three months, to 30 June 2026, the Swords of Iron temporary order. That order lengthens the periods set in the Unlawful Combatants Detention Law and adjusts which officials approve detentions. Keeping these expanded detention powers in force, citing operational needs, advances the stance of strengthening the security forces' ability to fight terror."
+    },
+    "autoKeyVote": true,
+    "policy": "security",
+    "evidence": "נקבע כי נוכח הצרכים המבצעיים, ההסדרים המיוחדים לתקופת הלחימה יעמדו בתוקפם עד ליום ט\"ו בתמוז התשפ\"ו (30 ביוני 2026)."
   }
 }

@@ -27,7 +27,16 @@
   "generatedOn": "2026-10-25",
   "editorial": {
     "state": "published",
-    "keyVote": false,
-    "autoPublished": true
+    "autoPublished": true,
+    "keyVote": true,
+    "keyVoteCheckedOn": "2026-10-25",
+    "position": "for",
+    "note": {
+      "he": "החוק קובע כי אונר\"א לא תפעיל נציגות, לא תספק שירותים ולא תקיים כל פעילות בשטחה הריבוני של ישראל, וכן מטיל חובת דיווח על יישומו. הדבר מגביל ישירות את פעילותו בישראל של גוף שהעמדה מציינת במפורש.",
+      "en": "The law provides that UNRWA may not operate any representation, provide any service or conduct any activity in Israel's sovereign territory, and it sets reporting duties on implementation. This directly limits activity in Israel by a body the stance names explicitly."
+    },
+    "autoKeyVote": true,
+    "policy": "hostile-bodies",
+    "evidence": "נקבע כי אונר\"א לא תפעיל כל נציגות, לא תספק כל שירות ולא תקיים כל פעילות, במישרין או בעקיפין, בשטחה הריבוני של מדינת ישראל"
   }
 }

@@ -26,7 +26,16 @@
   "generatedOn": "2026-10-25",
   "editorial": {
     "state": "published",
-    "keyVote": false,
-    "autoPublished": true
+    "autoPublished": true,
+    "keyVote": true,
+    "keyVoteCheckedOn": "2026-10-25",
+    "position": "for",
+    "note": {
+      "he": "החוק מאפשר, כהוראת שעה, להטיל עונש מאסר על קטינים בני 12 עד 14 שהורשעו ברצח או בניסיון לרצח שהם מעשה טרור, ולהעבירם ממעון נעול למאסר או למעצר בנסיבות מסוימות. בכך הוא מחמיר את הענישה על עבירות טרור.",
+      "en": "The law allows, as a temporary provision, a prison sentence for minors aged 12 to 14 convicted of murder or attempted murder constituting an act of terror. It also allows moving them from a locked facility to prison or detention in certain circumstances. This toughens punishment for terror offences."
+    },
+    "autoKeyVote": true,
+    "policy": "counter-terror",
+    "evidence": "במקרים אלה, נקבע כי גם אם לא מלאו לקטין 14 שנים בעת מתן גזר הדין, ניתן יהיה להטיל על הקטין עונש מאסר שירוצה במאסר בהגיעו לגיל 14 וכי עד הגיעו לגיל זה הוא יוחזק במעון נעול."
   }
 }

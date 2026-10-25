@@ -25,7 +25,16 @@
   "generatedOn": "2026-10-25",
   "editorial": {
     "state": "published",
-    "keyVote": false,
-    "autoPublished": true
+    "autoPublished": true,
+    "keyVote": true,
+    "keyVoteCheckedOn": "2026-10-25",
+    "position": "for",
+    "note": {
+      "he": "החוק מאריך עד 31 ביולי 2025 את תקנות שעת החירום המאפשרות למנוע מעצורים ביטחוניים הקשורים לאירועי 7 באוקטובר או ללחימה בעזה להיפגש עם עורכי דינם. בכך הוא מאריך כלי שעומד לרשות כוחות הביטחון בטיפול בעצורים אלה, וזה מקדם את העמדה בדבר חיזוק יכולתם להילחם בטרור.",
+      "en": "The law extends until 31 July 2025 the emergency regulations that allow security detainees linked to the October 7 events or the Gaza fighting to be barred from meeting their lawyers. It thereby keeps in place a tool available to the security forces in handling these detainees, which advances the stance on strengthening their ability to fight terror."
+    },
+    "autoKeyVote": true,
+    "policy": "security",
+    "evidence": "החוק מאריך את תוקפן של תקנות שעת חירום, המאפשרות מניעת פגישה של עצורים ביטחוניים, הקשורים לפעולות האיבה שהתרחשו בין ה-7 באוקטובר לבין ה-13 באוקטובר 2023"
   }
 }

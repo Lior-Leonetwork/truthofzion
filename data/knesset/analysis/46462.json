@@ -28,7 +28,16 @@
   "generatedOn": "2026-10-25",
   "editorial": {
     "state": "published",
-    "keyVote": false,
-    "autoPublished": true
+    "autoPublished": true,
+    "keyVote": true,
+    "keyVoteCheckedOn": "2026-10-25",
+    "position": "against",
+    "note": {
+      "he": "החוק מאפשר לממשלה לקבוע שחוות הדעת של היועץ המשפטי לממשלה אינה מחייבת אותה, ולמנות עורך דין אחר שייצג אותה בבית המשפט. הוא גם מעמיד את היועץ תחת פיקוח שר המשפטים. בכך הוא מחליש את הפיקוח המשפטי על הדרג הנבחר, אף שתחום המשפט הפלילי מוחרג.",
+      "en": "The law lets the government decide that the Attorney General's legal opinions do not bind it and appoint other counsel to represent it in court. It also places the Attorney General under the Justice Minister's supervision. This weakens legal oversight of elected officials, though criminal matters are excluded."
+    },
+    "autoKeyVote": true,
+    "policy": "integrity",
+    "evidence": "ואולם הממשלה רשאית להחליט כי היא או גורמים אחרים ברשות המבצעת אינם חייבים לראותה כך, למעט לעניין הפעלת סמכויות בתחום המשפט הפלילי"
   }
 }

@@ -25,7 +25,16 @@
   "generatedOn": "2026-10-25",
   "editorial": {
     "state": "published",
-    "keyVote": false,
-    "autoPublished": true
+    "autoPublished": true,
+    "keyVote": true,
+    "keyVoteCheckedOn": "2026-10-25",
+    "position": "for",
+    "note": {
+      "he": "החוק מאריך עד 31 בדצמבר 2025 את הוראת השעה המסמיכה את צה\"ל ואת שירות הביטחון הכללי לחדור למחשבים המפעילים מצלמות נייחות, כדי למנוע גישה למידע חזותי שעלול לסכן את ביטחון המדינה. בכך הוא מאריך סמכות מבצעית של כוחות הביטחון.",
+      "en": "The bill extends until 31 December 2025 the temporary order authorising the IDF and the Israel Security Agency to penetrate computers operating stationary cameras, in order to prevent access to visual information that could endanger state security. It thereby prolongs an operational power of the security forces."
+    },
+    "autoKeyVote": true,
+    "policy": "security",
+    "evidence": "כעת, במסגרת התיקון הנוכחי, נקבע כי הוראת השעה תוארך עד ליום י\"א בטבת התשפ\"ו (31 בדצמבר 2025)."
   }
 }

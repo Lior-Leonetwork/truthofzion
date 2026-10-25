@@ -26,7 +26,16 @@
   "generatedOn": "2026-10-25",
   "editorial": {
     "state": "published",
-    "keyVote": false,
-    "autoPublished": true
+    "autoPublished": true,
+    "keyVote": true,
+    "keyVoteCheckedOn": "2026-10-25",
+    "position": "for",
+    "note": {
+      "he": "החוק מאריך עד 31 ביולי 2026 את תקנות שעת החירום המאפשרות למנוע פגישה של עצורים ביטחוניים מאירועי 7 באוקטובר וממלחמת עזה עם עורכי דינם, תוך קיצור תקופות המניעה הרגילות. בכך הוא משמר כלי שעומד לרשות כוחות הביטחון בטיפול בעצורים בעבירות טרור.",
+      "en": "The law extends until 31 July 2026 the emergency regulations allowing security detainees from the October 7 events and the Gaza war to be barred from meeting their lawyers, while shortening the standard prevention periods. It thereby keeps a tool available to the security forces in handling detainees held for terror offences."
+    },
+    "autoKeyVote": true,
+    "policy": "security",
+    "evidence": "החוק מאריך את תוקפן של תקנות שעת חירום, המאפשרות מניעת פגישה של עצורים ביטחוניים, הקשורים לפעולות האיבה שהתרחשו בין ה-7 באוקטובר לבין ה-13 באוקטובר 2023, או מי שנעצר במסגרת פעולות המלחמה בעזה, עם עורכי הדין שלהם, עד ליום 31 ביולי 2026."
   }
 }

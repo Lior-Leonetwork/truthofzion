@@ -27,7 +27,16 @@
   "generatedOn": "2026-10-25",
   "editorial": {
     "state": "published",
-    "keyVote": false,
-    "autoPublished": true
+    "autoPublished": true,
+    "keyVote": true,
+    "keyVoteCheckedOn": "2026-10-25",
+    "position": "for",
+    "note": {
+      "he": "החוק מסמיך את שר הפנים להורות, לאחר שימוע, על גירוש בן משפחה של מחבל שידע מראש על תוכנית לבצע מעשה טרור, הביע תמיכה בו או שיבח אותו. בכך הוא מקדם את העמדה בדבר גירוש בני משפחה המעורבים בטרור.",
+      "en": "The law empowers the Interior Minister, after a hearing, to order the deportation of a terrorist's family member who knew in advance of a planned terror act, expressed support for it, or praised it. This advances the stance calling for deporting family members involved in terror."
+    },
+    "autoKeyVote": true,
+    "policy": "counter-terror",
+    "evidence": "נקבע כי שר הפנים רשאי להורות, לאחר קיום שימוע, על גירושו של בן משפחה של מחבל, אם הוא ידע מראש על תוכניתו של בן משפחתו לבצע מעשה טרור ולא עשה את כל המאמצים הנדרשים כדי למנוע את עשייתו"
   }
 }

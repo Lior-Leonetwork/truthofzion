@@ -26,7 +26,16 @@
   "generatedOn": "2026-10-25",
   "editorial": {
     "state": "published",
-    "keyVote": false,
-    "autoPublished": true
+    "autoPublished": true,
+    "keyVote": true,
+    "keyVoteCheckedOn": "2026-10-25",
+    "position": "for",
+    "note": {
+      "he": "החוק מאפשר למנוע מרשימות ומועמדים להשתתף בבחירות לרשויות המקומיות אם הם תומכים במאבק מזוין של מדינת אויב או של ארגון טרור נגד ישראל. בכך הוא קובע סנקציה על הזדהות עם טרור מצד מי שמבקשים להיבחר לתפקיד ציבורי.",
+      "en": "The law allows lists and candidates to be barred from local authority elections if they support the armed struggle of an enemy state or terrorist organisation against Israel. It thereby sets a sanction for identification with terror by those seeking elected office."
+    },
+    "autoKeyVote": true,
+    "policy": "incitement",
+    "evidence": "ניתן למנוע את השתתפותה של רשימת מועמדים בבחירות לרשויות המקומיות אם יש במטרותיה או במעשיה תמיכה במאבק מזוין של מדינת אויב או של ארגון טרור נגד מדינת ישראל"
   }
 }

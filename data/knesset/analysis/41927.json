@@ -22,7 +22,16 @@
   "generatedOn": "2026-10-25",
   "editorial": {
     "state": "published",
-    "keyVote": false,
-    "autoPublished": true
+    "autoPublished": true,
+    "keyVote": true,
+    "keyVoteCheckedOn": "2026-10-25",
+    "position": "for",
+    "note": {
+      "he": "התיקון לחוק-היסוד אוסר הקמת נציגויות רשמיות של מדינות זרות בירושלים, למעט שגרירויות המאומנות למדינת ישראל, וקובע שהמדינה תעודד הקמת שגרירויות בעיר. בכך הוא מחזק את ריבונות ישראל בירושלים.",
+      "en": "The Basic Law amendment bars foreign states from establishing official missions in Jerusalem unless they are embassies accredited to Israel, and directs the state to encourage embassies in the city. This strengthens Israeli sovereignty in Jerusalem."
+    },
+    "autoKeyVote": true,
+    "policy": "sovereignty",
+    "evidence": "התיקון לחוק היסוד קובע כי לא יוקמו בירושלים נציגויות רשמיות של מדינות זרות, אלא אם הן נציגויות דיפלומטיות המאומנות למדינת ישראל, כלומר, שגרירויות."
   }
 }

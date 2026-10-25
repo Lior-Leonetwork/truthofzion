@@ -24,7 +24,16 @@
   "generatedOn": "2026-10-25",
   "editorial": {
     "state": "published",
-    "keyVote": false,
-    "autoPublished": true
+    "autoPublished": true,
+    "keyVote": true,
+    "keyVoteCheckedOn": "2026-10-25",
+    "position": "for",
+    "note": {
+      "he": "החוק קובע ששכר סניגורים שמונו לחשודים, נאשמים או מורשעים בעבירות ביטחון הקשורות ל-7 באוקטובר ולמלחמת חרבות ברזל יקוזז מהכספים שמועברים לרשות הפלסטינית, כך שהמדינה לא תישא בעלות ייצוגם. בכך הוא מחמיר את הצעדים נגד מעורבים בטרור ומקדם את עמדת המאבק בטרור.",
+      "en": "The law provides that the fees of defense attorneys appointed for suspects, defendants or convicts in security offenses tied to October 7 and the Swords of Iron war will be offset from funds transferred to the Palestinian Authority, so the state does not bear the cost of their representation. This toughens measures against those involved in terror, advancing the counter-terror stance."
+    },
+    "autoKeyVote": true,
+    "policy": "counter-terror",
+    "evidence": "יקוזז מהכספים אותם מעבירה ממשלת ישראל לרשות הפלסטינית"
   }
 }

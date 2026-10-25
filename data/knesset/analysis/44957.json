@@ -29,7 +29,16 @@
   "generatedOn": "2026-10-25",
   "editorial": {
     "state": "published",
-    "keyVote": false,
-    "autoPublished": true
+    "autoPublished": true,
+    "keyVote": true,
+    "keyVoteCheckedOn": "2026-10-25",
+    "position": "for",
+    "note": {
+      "he": "התיקון מבטל אישורים והטבות לאונר\"א, אוסר על אספקת חשמל, מים, גז, תקשורת ושירותים בנקאיים לסוכנות, מסמיך את המדינה לתפוס חזקה במקרקעין שבידיה ושולל ממנה חסינויות. בכך הוא מגביל את פעילותה של אונר\"א בישראל, בהתאם לעמדה.",
+      "en": "The amendment cancels approvals and benefits granted to UNRWA, bars the supply of electricity, water, gas, communications and banking services to the agency, authorises the state to take possession of its properties and removes its immunities. It thereby restricts UNRWA's activity in Israel, in line with the stance."
+    },
+    "autoKeyVote": true,
+    "policy": "hostile-bodies",
+    "evidence": "בחוק נקבע כי רשויות המדינה יבטלו כל אישור, רישיון, היתר או הטבה שניתנו לאונר\"א במישרין או בעקיפין."
   }
 }

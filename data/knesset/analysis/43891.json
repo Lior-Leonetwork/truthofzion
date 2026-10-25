@@ -29,7 +29,16 @@
   "generatedOn": "2026-10-25",
   "editorial": {
     "state": "published",
-    "keyVote": false,
-    "autoPublished": true
+    "autoPublished": true,
+    "keyVote": true,
+    "keyVoteCheckedOn": "2026-10-25",
+    "position": "for",
+    "note": {
+      "he": "החוק מרחיב את שלילת גמלאות הביטוח הלאומי ממי שהורשעו ברצח או בניסיון רצח בנסיבות טרור או נגזרו עליהם עשר שנות מאסר לפחות בעבירות ביטחון, כולל הבטחת הכנסה וזכויות בעת פטירה. בכך הוא מקדם את עצירת התשלומים למחבלים.",
+      "en": "The law expands the denial of National Insurance benefits to people convicted of murder or attempted murder in terror circumstances, or sentenced to at least ten years for security offences, including income support and death-related entitlements. This advances stopping payments to terrorists."
+    },
+    "autoKeyVote": true,
+    "policy": "counter-terror",
+    "evidence": "נקבע כי לא ישולמו ולא יינתנו גמלאות לפי חוק הביטוח הלאומי למי שנדון למאסר בשל עבירת רצח או ניסיון לרצח בנסיבות טרור המוגדרת בחוק זה"
   }
 }

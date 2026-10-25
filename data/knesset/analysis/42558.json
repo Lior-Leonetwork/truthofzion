@@ -25,7 +25,16 @@
   "generatedOn": "2026-10-25",
   "editorial": {
     "state": "published",
-    "keyVote": false,
-    "autoPublished": true
+    "autoPublished": true,
+    "keyVote": true,
+    "keyVoteCheckedOn": "2026-10-25",
+    "position": "for",
+    "note": {
+      "he": "החוק מאריך עד 30 ביוני 2025 את הוראת השעה המסמיכה את צה\"ל ואת השב\"כ לחדור למחשבים המפעילים מצלמות נייחות, כדי למנוע גישה למידע חזותי שעלול לסכן את ביטחון המדינה במלחמת \"חרבות ברזל\". בכך הוא מאריך סמכות מבצעית של כוחות הביטחון.",
+      "en": "The law extends until 30 June 2025 the temporary provision authorising the IDF and the Shin Bet to penetrate computers operating stationary cameras, in order to prevent access to visual information that could endanger state security during the \"Swords of Iron\" war. It thereby prolongs an operational power of the security forces."
+    },
+    "autoKeyVote": true,
+    "policy": "security",
+    "evidence": "במסגרת תיקון מס' 3, הוארך תקופת תוקפה של הוראת השעה עד ליום ד' בתמוז התשפ\"ה (30 ביוני 2025)."
   }
 }

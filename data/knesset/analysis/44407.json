@@ -26,7 +26,16 @@
   "generatedOn": "2026-10-25",
   "editorial": {
     "state": "published",
-    "keyVote": false,
-    "autoPublished": true
+    "autoPublished": true,
+    "keyVote": true,
+    "keyVoteCheckedOn": "2026-10-25",
+    "position": "for",
+    "note": {
+      "he": "החוק מאריך את הוראת השעה בעניין כליאת לוחמים בלתי חוקיים בזמן המלחמה, הכוללת תקופות ארוכות יותר ודרג מאשר נמוך יותר. הוא גם מאפשר לבית המשפט למנוע פגישה עם עורך דין גם לאחר 75 הימים הראשונים לכליאה. בכך הוא מרחיב את סמכויות גורמי הביטחון בכליאת לוחמים בלתי חוקיים.",
+      "en": "The law extends the wartime temporary provisions on detaining unlawful combatants, which include longer periods and a lower authorising rank. It also lets a court bar meetings with a lawyer even after the first 75 days of detention. This expands the security forces' powers to detain unlawful combatants."
+    },
+    "autoKeyVote": true,
+    "policy": "security",
+    "evidence": "כן מוצע להבהיר כי סמכות בית המשפט להורות על מניעת פגישה עם עורך דין לתקופה של עד 30 ימים, הקיימת כיום בחוק, תחול לא רק במהלך 75 הימים הראשונים מיום הכליאה, וניתן יהיה להפעילה גם בשלב מאוחר יותר."
   }
 }

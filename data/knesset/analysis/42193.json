@@ -24,7 +24,16 @@
   "generatedOn": "2026-10-25",
   "editorial": {
     "state": "published",
-    "keyVote": false,
-    "autoPublished": true
+    "autoPublished": true,
+    "keyVote": true,
+    "keyVoteCheckedOn": "2026-10-25",
+    "position": "for",
+    "note": {
+      "he": "החוק מאריך עד מאי 2025 את הוראת השעה המאפשרת לשר התקשורת להורות על הפסקת פעילות של ערוץ שידור זר הפוגע בביטחון המדינה, ומאריך את תוקף כל הוראה כזו מ-45 ל-60 ימים. בכך הוא מרחיב את הסמכות להגביל פעילות של כלי תקשורת זרים הפוגעים בביטחון המדינה.",
+      "en": "The law extends until May 2025 the temporary provision allowing the Communications Minister to order a halt to the activity of a foreign broadcaster that harms state security. It also lengthens the validity of each such order from 45 to 60 days. This expands the power to limit the activity of foreign media that harm state security."
+    },
+    "autoKeyVote": true,
+    "policy": "hostile-bodies",
+    "evidence": "במסגרת תיקון מספר 2, הוארך תוקפה של הוראת השעה בעניין מניעת פגיעת גוף שידורים זר בביטחון המדינה עד ליום ד' בסיוון התשפ\"ה (31 במאי 2025)."
   }
 }

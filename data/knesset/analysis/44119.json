@@ -25,7 +25,16 @@
   "generatedOn": "2026-10-25",
   "editorial": {
     "state": "published",
-    "keyVote": false,
-    "autoPublished": true
+    "autoPublished": true,
+    "keyVote": true,
+    "keyVoteCheckedOn": "2026-10-25",
+    "position": "for",
+    "note": {
+      "he": "החוק מאריך עד נובמבר 2025 את הוראת השעה המאפשרת לשר התקשורת להורות על הפסקת פעילות של ערוץ שידור זר הפוגע בביטחון המדינה, לרבות סגירת משרדיו בישראל. בכך הוא מקדם את הגבלת פעילותם בישראל של כלי תקשורת זרים הפוגעים בביטחון המדינה.",
+      "en": "The law extends until November 2025 the temporary provision allowing the Communications Minister to order a halt to the activity of a foreign broadcaster that harms state security, including closing its offices in Israel. It thereby advances limiting the activity in Israel of foreign broadcasters that harm state security."
+    },
+    "autoKeyVote": true,
+    "policy": "hostile-bodies",
+    "evidence": "כעת, במסגרת תיקון מספר 3, הוארך תוקפה של הוראת השעה עד ליום י' בכסלו התשפ\"ו (30 בנובמבר 2025)."
   }
 }

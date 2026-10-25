@@ -26,7 +26,16 @@
   "generatedOn": "2026-10-25",
   "editorial": {
     "state": "published",
-    "keyVote": false,
-    "autoPublished": true
+    "autoPublished": true,
+    "keyVote": true,
+    "keyVoteCheckedOn": "2026-10-25",
+    "position": "for",
+    "note": {
+      "he": "החוק מוסיף איסור כללי על מתן אשרה ורישיון ישיבה בישראל למי שפרסם דברי הכחשת השואה, וכן למכחישי טבח 7 באוקטובר ולתומכים בהעמדה לדין בינלאומית של אנשי כוחות הביטחון. האיסור על כניסת מכחישי שואה הוא צעד ישיר נגד ביטוי מובהק של אנטישמיות.",
+      "en": "The law adds a general bar on granting a visa or residence permit to anyone who published Holocaust denial, as well as to deniers of the October 7 massacre and to supporters of international prosecution of security personnel. Barring the entry of Holocaust deniers is a direct measure against a clear form of antisemitism."
+    },
+    "autoKeyVote": true,
+    "policy": "antisemitism",
+    "evidence": "לא יינתנו, ככלל, אשרה ורישיון ישיבה כאמור גם למי שפרסם דברי הכחשת השואה כמשמעותם בחוק איסור הכחשת השואה"
   }
 }

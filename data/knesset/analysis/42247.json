@@ -25,7 +25,16 @@
   "generatedOn": "2026-10-25",
   "editorial": {
     "state": "published",
-    "keyVote": false,
-    "autoPublished": true
+    "autoPublished": true,
+    "keyVote": true,
+    "keyVoteCheckedOn": "2026-10-25",
+    "position": "for",
+    "note": {
+      "he": "החוק מאריך את הוראת השעה בדבר שחרור מינהלי מורחב, וקובע כהוראה קבועה שאסירים ביטחוניים לא יהיו זכאים לשחרור מינהלי. בכך הוא מחמיר באופן קבוע את ריצוי העונש של אסירים ביטחוניים, בהתאם לעמדה בדבר ענישה מחמירה למחבלים.",
+      "en": "The law extends the temporary provision on expanded administrative release, and makes permanent the rule that security prisoners are not eligible for administrative release. It thereby permanently toughens how security prisoners serve their sentences, in line with the stance favouring harsher punishment for terrorists."
+    },
+    "autoKeyVote": true,
+    "policy": "counter-terror",
+    "evidence": "נקבע כי ההוראה הקובעת כי אסירים ביטחוניים לא יהיו זכאים לשחרור מינהלי תהפוך להוראה קבועה"
   }
 }

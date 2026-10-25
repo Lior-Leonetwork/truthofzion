@@ -24,7 +24,16 @@
   "generatedOn": "2026-10-25",
   "editorial": {
     "state": "published",
-    "keyVote": false,
-    "autoPublished": true
+    "autoPublished": true,
+    "keyVote": true,
+    "keyVoteCheckedOn": "2026-10-25",
+    "position": "for",
+    "note": {
+      "he": "החוק מאריך עד סוף 2026 את הוראת השעה המאפשרת להציב חיילים בשירות חובה ביחידות משטרה שעיקר פעילותן קשור לביטחון המדינה, ומוסיף חובת דיווח חצי־שנתית לוועדת החוץ והביטחון. בכך הוא שומר על כוח האדם של יחידות הביטחון במשטרה.",
+      "en": "The law extends to the end of 2026 the temporary provision allowing conscripted soldiers to be placed in police units whose main activity relates to state security, and adds a semi-annual reporting duty to the Foreign Affairs and Defense Committee. It thereby maintains the manpower of the police's security units."
+    },
+    "autoKeyVote": true,
+    "policy": "security",
+    "evidence": "המאפשרת הצבת חיילים בשירות חובה ביחידות משטרת ישראל שאינן משמר הגבול (מסלול שח\"ם), ובלבד שעיקר פעילותן קשור לביטחון המדינה ותושביה"
   }
 }

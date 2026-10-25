@@ -28,7 +28,16 @@
   "generatedOn": "2026-10-25",
   "editorial": {
     "state": "published",
-    "keyVote": false,
-    "autoPublished": true
+    "autoPublished": true,
+    "keyVote": true,
+    "keyVoteCheckedOn": "2026-10-25",
+    "position": "for",
+    "note": {
+      "he": "החוק קובע כי לא תשולם גמלת ביטוח לאומי למי שאינו תושב ישראל ושוהה מחוץ לה אם הורשע בעבירת טרור או הוכרז פעיל טרור, ומעכב את הגמלה כבר בתקופת המעצר עד תום ההליכים. בכך הוא מקדם את עצירת התשלומים למחבלים.",
+      "en": "The law denies National Insurance benefits to non-residents abroad who were convicted of terror offences or declared terror operatives, and suspends benefits already during detention until the end of proceedings. This advances stopping payments to terrorists."
+    },
+    "autoKeyVote": true,
+    "policy": "counter-terror",
+    "evidence": "לא תשולם לו הגמלה אם הוא הורשע בעבירת טרור חמורה לפי חוק המאבק בטרור"
   }
 }

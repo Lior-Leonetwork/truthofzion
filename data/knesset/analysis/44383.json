@@ -26,7 +26,16 @@
   "generatedOn": "2026-10-25",
   "editorial": {
     "state": "published",
-    "keyVote": false,
-    "autoPublished": true
+    "autoPublished": true,
+    "keyVote": true,
+    "keyVoteCheckedOn": "2026-10-25",
+    "position": "for",
+    "note": {
+      "he": "החוק מאריך עד 29 בינואר 2026 את תוקף תקנות שעת החירום. התקנות מאריכות את תקופות המעצר של חשודים בעבירות ביטחון הקשורות לאירועי 7 באוקטובר או למלחמה בעזה. בכך הוא מחמיר את הטיפול בחשודים בטרור.",
+      "en": "The law extends until 29 January 2026 the emergency regulations that lengthen detention periods for suspects in security offences linked to the 7 October events or the Gaza war. This toughens the handling of terror suspects."
+    },
+    "autoKeyVote": true,
+    "policy": "counter-terror",
+    "evidence": "המאריכות את תקופות המעצרים המפורטות בחוק המעצרים בנוגע לעצור שחשוד בעבירת ביטחון בשל פעולות האיבה שהתרחשו בין יום ה-7 באוקטובר לבין ה-13 באוקטובר 2023"
   }
 }

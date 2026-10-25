@@ -26,7 +26,16 @@
   "generatedOn": "2026-10-25",
   "editorial": {
     "state": "published",
-    "keyVote": false,
-    "autoPublished": true
+    "autoPublished": true,
+    "keyVote": true,
+    "keyVoteCheckedOn": "2026-10-25",
+    "position": "for",
+    "note": {
+      "he": "החוק קובע כי בתקופה שבה ילד שהורשע בעבירת טרור חמורה נמצא במאסר, לא ישולמו להוריו קצבאות ותוספות בעבורו, והוא לא ייכלל במניין הילדים לחישוב גמלאות. בכך הוא מקדם את עצירת התשלומים בזיקה למחבלים.",
+      "en": "The law provides that while a child convicted of a serious terror offence is imprisoned, his parents will not receive allowances or supplements on his account, and he will not be counted among their children for calculating benefits. This advances stopping payments connected to terrorists."
+    },
+    "autoKeyVote": true,
+    "policy": "counter-terror",
+    "evidence": "נמצא במאסר בשל הרשעתו, לא ישולמו להוריו גמלאות לפי פרק ג' לחוק הביטוח הלאומי, ובכלל זה קצבת ילדים ומענק לימודים"
   }
 }

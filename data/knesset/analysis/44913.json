@@ -29,7 +29,16 @@
   "generatedOn": "2026-10-25",
   "editorial": {
     "state": "published",
-    "keyVote": false,
-    "autoPublished": true
+    "autoPublished": true,
+    "keyVote": true,
+    "keyVoteCheckedOn": "2026-10-25",
+    "position": "for",
+    "note": {
+      "he": "החוק, כהוראת שעה עד סוף 2027, מסמיך את שר התקשורת להגביל שידורים ופעילות בישראל של ערוץ זר שתכניו פוגעים באופן ממשי בביטחון המדינה, לרבות הפסקת שידורים וסגירת משרדים, בכפוף לביקורת שיפוטית. בכך הוא מקדם את הגבלת פעילותם של כלי תקשורת זרים הפוגעים בביטחון המדינה.",
+      "en": "The law, a temporary provision until the end of 2027, empowers the Communications Minister to restrict the broadcasts and activity in Israel of a foreign channel whose content substantially harms state security, including halting broadcasts and closing offices, subject to judicial review. This advances limiting the activity of foreign broadcasters that harm state security."
+    },
+    "autoKeyVote": true,
+    "policy": "hostile-bodies",
+    "evidence": "האמצעים שניתן להפעיל כוללים את הפסקת שידורי הערוץ, סגירת משרדיו בשטח ישראל, תפיסת מכשירים המשמשים לאספקת תוכני הערוץ, הסרת אתר אינטרנט של הערוץ או הגבלת הגישה אליו."
   }
 }
