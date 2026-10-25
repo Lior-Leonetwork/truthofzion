@@ -16,7 +16,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
   const d = getDict(locale);
   const live = getContent().entries.filter(isLive);
   const latest = live.slice(0, 5).map((e) => caseCard(e, locale));
-  const top = people(locale).slice(0, 6);
+  const top = people(locale).filter((p) => p.kind === "case").slice(0, 6);
   const byCountry = countries(locale);
   const s = stats();
   const recentVotes = getKnesset().votes.slice(0, 4).map((v) => voteCard(v, locale));

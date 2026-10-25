@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import { decodeXml, NotODataError, parseAtom, parseJson, parseResponse, query } from "./odata";
 import { buildVote, dedupeById, factionAt, factionsFrom, isFinalReading, mergeMembers, startDate } from "./transform";
 import { nameOverlap } from "./bill";
+import { computeScorecard } from "./scorecard";
 import { checkAnalysis, checkDraft, quoteFound } from "./verify";
 import type { Analysis } from "./schema";
 
@@ -214,10 +215,11 @@ describe("analysis publication gate", () => {
     expect(rules({ ...base, editorial: { state: "published", keyVote: false, reviewedBy: "lior", reviewedOn: "2026-10-25" } })).toEqual([]);
   });
 
-  it("requires an editor's reason for every key vote", () => {
-    expect(rules({ ...base, editorial: { state: "draft", keyVote: true } })).toContain("key-vote-note");
-    expect(rules({ ...base, editorial: { state: "published", keyVote: true, reviewedBy: "lior", reviewedOn: "2026-10-25" } })).toContain("key-vote-note");
-    expect(rules({ ...base, editorial: { state: "draft", keyVote: true, note: { en: "Why" } } })).toEqual([]);
+  it("requires an editor's reason and the site's position for every key vote", () => {
+    expect(rules({ ...base, editorial: { state: "draft", keyVote: true, position: "for" } })).toContain("key-vote-note");
+    expect(rules({ ...base, editorial: { state: "draft", keyVote: true, note: { en: "Why" } } })).toContain("key-vote-position");
+    expect(rules({ ...base, editorial: { state: "draft", keyVote: false, position: "for" } })).toContain("position-without-key-vote");
+    expect(rules({ ...base, editorial: { state: "draft", keyVote: true, position: "against", note: { en: "Why" } } })).toEqual([]);
   });
 });
 
@@ -225,5 +227,33 @@ describe("bill matching", () => {
   it("accepts the same bill and refuses a different one", () => {
     expect(nameOverlap("הצעת חוק הדוגמה (תיקון מס' 3), התשפ\"ו-2026", "הצעת חוק הדוגמה (תיקון מס' 3), התשפ\"ו-2026")).toBe(1);
     expect(nameOverlap("הצעת חוק הדוגמה (תיקון מס' 3)", "חוק התקציב לשנת 2027")).toBeLessThan(0.6);
+  });
+});
+
+describe("key-vote scorecard", () => {
+  const v = (id: number, date: string, choice: "for" | "against" | "abstain" | "other") =>
+    ({ ...built().vote, id, date, members: { "1": { choice, raw: "", faction: "סיעה א" } } });
+  const an = (voteId: number, keyVote: boolean, position?: "for" | "against", state: "published" | "draft" = "published") => ({
+    voteId, bill: null, summary: null, quotes: [], topics: [], keyVoteSuggested: false, rationale: "", model: "m", generatedOn: "2026-10-25",
+    editorial: { state, keyVote, position, note: { en: `why ${voteId}` }, reviewedBy: "lior", reviewedOn: "2026-10-25" },
+  });
+  const votes = [v(1, "2026-01-01", "for"), v(2, "2026-02-01", "against"), v(3, "2026-03-01", "abstain"), v(4, "2026-04-01", "for"), v(5, "2026-05-01", "for")];
+  const analyses = new Map([
+    [1, an(1, true, "for")],
+    [2, an(2, true, "for")],
+    [3, an(3, true, "against")],
+    [4, an(4, false)], // not a key vote
+    [5, an(5, true, "against", "draft")], // not yet published
+  ]);
+
+  it("counts votes with and against the site's position, newest first", () => {
+    const card = computeScorecard(votes, analyses, "1");
+    expect(card.rows.map((r) => r.vote.id)).toEqual([3, 2, 1]);
+    expect([card.aligned, card.opposed, card.other]).toEqual([1, 1, 1]);
+    expect(card.rows.find((r) => r.vote.id === 2)?.note).toEqual({ en: "why 2" });
+  });
+
+  it("ignores members with no record on those votes", () => {
+    expect(computeScorecard(votes, analyses, "99").rows).toEqual([]);
   });
 });

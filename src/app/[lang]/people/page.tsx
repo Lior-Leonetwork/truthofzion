@@ -3,6 +3,7 @@ import { Suspense } from "react";
 import { PageHeader } from "@/components/page-header";
 import { PeopleBrowser } from "@/components/people-browser";
 import { getDict, type Locale } from "@/lib/i18n";
+import { SPECTRUM_ORDER } from "@/lib/knesset/view";
 import { countries, people } from "@/lib/view";
 
 export async function generateMetadata({ params }: PageProps<"/[lang]/people">): Promise<Metadata> {
@@ -14,8 +15,10 @@ export default async function People({ params }: PageProps<"/[lang]/people">) {
   const d = getDict(locale);
   const items = people(locale);
   const labels = {
-    all: d.people.allCountries,
+    all: d.filters.all,
     country: d.filters.country,
+    orientation: d.people.orientation,
+    spectra: SPECTRUM_ORDER.filter((s) => items.some((p) => p.spectrum === s)).map((s) => [s, d.spectrum[s]] as [string, string]),
     search: d.people.search,
     none: d.people.none,
     countries: countries(locale).map((c) => [c.code, c.name] as [string, string]),

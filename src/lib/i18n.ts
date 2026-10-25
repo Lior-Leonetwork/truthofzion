@@ -1,4 +1,5 @@
 import type { Category, Localized, Position, Status } from "./content/schema";
+import type { Spectrum } from "./knesset/schema";
 
 export const LOCALES = ["he", "en"] as const;
 export type Locale = (typeof LOCALES)[number];
@@ -86,7 +87,22 @@ type Dict = {
   };
   cases: (n: number) => string;
   investigations: { heading: string; intro: string };
-  people: { heading: string; intro: string; search: string; allCountries: string; none: string };
+  people: { heading: string; intro: string; search: string; allCountries: string; none: string; orientation: string; memberRole: string };
+  spectrum: Record<Spectrum, string>;
+  sector: Record<"haredi" | "arab" | "religious_zionist", string>;
+  record: {
+    title: string;
+    summary: (aligned: number, total: number) => string;
+    none: string;
+    sitePosition: string;
+    theirVote: string;
+    withSite: string;
+    againstSite: string;
+    noVote: string;
+    why: string;
+    byCamp: string;
+    classificationNote: string;
+  };
   countries: { heading: string; intro: string; people: string; cases: string; none: string };
   positions: Record<Position, string>;
   filters: { all: string; category: string; status: string; country: string; search: string; none: string };
@@ -194,7 +210,39 @@ const he: Dict = {
   },
   cases: (n) => (n === 1 ? "תיק אחד" : `${n} תיקים`),
   investigations: { heading: "תחקירים", intro: "כל התיקים שפורסמו, עם מעמדם המשפטי ומקורותיהם." },
-  people: { heading: "אישים וגופים", intro: "בעלי תפקידים בכירים וגופים שנחקרו, מסודרים לפי בכירות.", search: "חיפוש שם או תפקיד", allCountries: "כל המדינות", none: "לא נמצאו אישים." },
+  people: {
+    heading: "אישים וגופים",
+    intro: "בעלי תפקידים בכירים וגופים שנחקרו, וכל חברי הכנסת עם רשומת ההצבעות שלהם.",
+    search: "חיפוש שם, תפקיד או סיעה",
+    allCountries: "כל המדינות",
+    none: "לא נמצאו אישים.",
+    orientation: "מחנה",
+    memberRole: "חבר/ת כנסת",
+  },
+  spectrum: {
+    far_right: "ימין קיצוני",
+    right: "ימין",
+    center_right: "מרכז-ימין",
+    center: "מרכז",
+    center_left: "מרכז-שמאל",
+    left: "שמאל",
+    far_left: "שמאל קיצוני",
+    unclassified: "ללא סיווג",
+  },
+  sector: { haredi: "חרדי", arab: "ערבי", religious_zionist: "ציוני-דתי" },
+  record: {
+    title: "הצבעות מפתח",
+    summary: (a, t) => `הצביע/ה בהתאם לעמדת האתר ב־${a} מתוך ${t} הצבעות מפתח`,
+    none: "אין עדיין הצבעות מפתח עם עמדה של האתר שבהן השתתף/ה.",
+    sitePosition: "עמדת האתר",
+    theirVote: "הצבעה",
+    withSite: "בהתאם לעמדת האתר",
+    againstSite: "נגד עמדת האתר",
+    noVote: "לא הצביע/ה בעד או נגד",
+    why: "למה",
+    byCamp: "לפי מחנה פוליטי",
+    classificationNote: "סיווג הסיעות על הרצף הפוליטי ועמדת האתר בהצבעות המפתח הם החלטות מערכת, מנומקות ושקופות. ההצבעות עצמן הן נתונים רשמיים של הכנסת.",
+  },
   countries: { heading: "מדינות", intro: "תחקירים לפי המדינה שבה מכהן מושא התחקיר.", people: "אישים", cases: "תיקים", none: "אין עדיין תחקירים." },
   positions: {
     head_of_state: "ראש מדינה",
@@ -300,6 +348,13 @@ const he: Dict = {
       },
       { title: "שני עורכים, תמיד", body: ["כל תיק נכתב בידי עורך אחד ומאושר בידי עורך אחר. מי שכתב אינו מאשר."] },
       {
+        title: "ימין, שמאל והצבעות מפתח",
+        body: [
+          "כל סיעה בכנסת מסווגת על הרצף הפוליטי (ימין קיצוני, ימין, מרכז, מרכז-שמאל, שמאל) לפי המקובל בתקשורת הישראלית. זו החלטת מערכת, והיא מוצגת ככזו.",
+          "בהצבעות שהמערכת מגדירה כהצבעות מפתח, האתר קובע עמדה (בעד או נגד) ומפרסם את הנימוק. בעמוד של כל חבר כנסת מוצג כיצד הצביע בכל אחת מהן, לצד הנימוק. איננו מדביקים לאנשים תוויות: הרשומה מדברת בעד עצמה.",
+        ],
+      },
+      {
         title: "זכות תגובה ותיקונים",
         body: [
           "לפני פרסום אנו פונים למושא התחקיר. תגובה שהתקבלה מתפרסמת לצד התיק.",
@@ -382,7 +437,39 @@ const en: Dict = {
   },
   cases: (n) => (n === 1 ? "1 case" : `${n} cases`),
   investigations: { heading: "Investigations", intro: "Every published case, with its legal status and sources." },
-  people: { heading: "People & bodies", intro: "Office holders and bodies we have investigated, ordered by seniority.", search: "Search a name or role", allCountries: "All countries", none: "No people found." },
+  people: {
+    heading: "People & bodies",
+    intro: "Office holders and bodies we have investigated, and every Knesset member with their voting record.",
+    search: "Search a name, role or party",
+    allCountries: "All countries",
+    none: "No people found.",
+    orientation: "Camp",
+    memberRole: "Member of Knesset",
+  },
+  spectrum: {
+    far_right: "Far right",
+    right: "Right",
+    center_right: "Center-right",
+    center: "Center",
+    center_left: "Center-left",
+    left: "Left",
+    far_left: "Far left",
+    unclassified: "Unclassified",
+  },
+  sector: { haredi: "Haredi", arab: "Arab", religious_zionist: "Religious Zionist" },
+  record: {
+    title: "Key votes",
+    summary: (a, t) => `Voted with the site's position on ${a} of ${t} key votes`,
+    none: "No key votes with a site position that this member took part in yet.",
+    sitePosition: "Site's position",
+    theirVote: "Their vote",
+    withSite: "With the site's position",
+    againstSite: "Against the site's position",
+    noVote: "Didn't vote for or against",
+    why: "Why",
+    byCamp: "By political camp",
+    classificationNote: "The parties' places on the political spectrum and the site's position on key votes are editorial decisions, stated and reasoned. The votes themselves are the Knesset's official data.",
+  },
   countries: { heading: "Countries", intro: "Investigations by the country where the subject holds office.", people: "People", cases: "Cases", none: "No investigations yet." },
   positions: {
     head_of_state: "Head of state",
@@ -487,6 +574,13 @@ const en: Dict = {
         ],
       },
       { title: "Two editors, always", body: ["Every case is written by one editor and approved by a different one. Authors never approve their own work."] },
+      {
+        title: "Right, left and key votes",
+        body: [
+          "Each Knesset party is placed on the political spectrum (far right, right, center, center-left, left) following common usage in the Israeli press. This is an editorial decision and is shown as one.",
+          "On votes the editors designate as key votes, the site takes a position (for or against) and publishes its reason. Each member's page shows how they voted on every one of them, next to that reason. We don't put labels on people: the record speaks for itself.",
+        ],
+      },
       {
         title: "Right of reply & corrections",
         body: [

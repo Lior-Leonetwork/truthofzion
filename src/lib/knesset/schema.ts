@@ -57,6 +57,20 @@ export const IngestState = z
   })
   .strict();
 
+// Editors' classification of each Knesset faction on the political spectrum.
+// An editorial judgement, shown as such on the site; edit data/knesset/factions.json.
+export const SPECTRUM = ["far_right", "right", "center_right", "center", "center_left", "left", "far_left", "unclassified"] as const;
+export type Spectrum = (typeof SPECTRUM)[number];
+export const Faction = z
+  .object({
+    name: z.string(), // exactly as the Knesset's data spells it
+    short: Localized,
+    spectrum: z.enum(SPECTRUM),
+    sector: z.enum(["haredi", "arab", "religious_zionist"]).optional(),
+  })
+  .strict();
+export type Faction = z.infer<typeof Faction>;
+
 // Topics editors want flagged. Tags, not verdicts: the model may suggest
 // that a bill touches a topic; it never decides who is right.
 export const WatchTopic = z
@@ -86,7 +100,10 @@ export const Analysis = z
         reviewedBy: z.string().optional(),
         reviewedOn: z.iso.date().optional(),
         keyVote: z.boolean().default(false), // the editor's call, not the model's
-        note: Localized.optional(), // editor's note on why it is a key vote
+        // The site's position on a key vote, set by an editor: voting this way
+        // is what the site considers in Israel's interest. `note` says why.
+        position: z.enum(["for", "against"]).optional(),
+        note: Localized.optional(), // editor's reason for the key vote and the position
       })
       .strict(),
   })

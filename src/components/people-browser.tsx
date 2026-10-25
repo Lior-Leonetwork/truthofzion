@@ -6,7 +6,15 @@ import type { PersonCard as Data } from "@/lib/view";
 import { Chip, FilterRow } from "./chip";
 import { PersonCard } from "./person-card";
 
-type Labels = { all: string; country: string; search: string; none: string; countries: [string, string][] };
+type Labels = {
+  all: string;
+  country: string;
+  orientation: string;
+  search: string;
+  none: string;
+  countries: [string, string][];
+  spectra: [string, string][];
+};
 type Props = { locale: string; items: Data[]; labels: Labels };
 
 export function PeopleBrowser(props: Props) {
@@ -15,15 +23,19 @@ export function PeopleBrowser(props: Props) {
   return <Browser key={initial ?? "all"} initial={initial} {...props} />;
 }
 
-function Browser({ locale, items, labels, initial }: Props & { initial: string | null }) {
+function Browser({ items, labels, initial }: Props & { initial: string | null }) {
   const [country, setCountry] = useState(initial);
+  const [spectrum, setSpectrum] = useState<string | null>(null);
   const [query, setQuery] = useState("");
   const shown = useMemo(() => {
     const q = query.trim().toLowerCase();
     return items.filter(
-      (p) => (!country || p.country === country) && (!q || `${p.name} ${p.role} ${p.position}`.toLowerCase().includes(q)),
+      (p) =>
+        (!country || p.country === country) &&
+        (!spectrum || p.spectrum === spectrum) &&
+        (!q || `${p.name} ${p.role} ${p.position} ${p.party ?? ""}`.toLowerCase().includes(q)),
     );
-  }, [items, country, query]);
+  }, [items, country, spectrum, query]);
 
   return (
     <div className="space-y-6">
@@ -35,6 +47,14 @@ function Browser({ locale, items, labels, initial }: Props & { initial: string |
           placeholder={labels.search}
           className="w-full rounded-xl border border-border bg-background px-4 py-2.5 outline-none focus:border-brand"
         />
+        {labels.spectra.length > 1 && (
+          <FilterRow label={labels.orientation}>
+            <Chip active={!spectrum} onClick={() => setSpectrum(null)}>{labels.all}</Chip>
+            {labels.spectra.map(([id, name]) => (
+              <Chip key={id} active={spectrum === id} onClick={() => setSpectrum(id)}>{name}</Chip>
+            ))}
+          </FilterRow>
+        )}
         <FilterRow label={labels.country}>
           <Chip active={!country} onClick={() => setCountry(null)}>{labels.all}</Chip>
           {labels.countries.map(([c, name]) => (
@@ -48,7 +68,7 @@ function Browser({ locale, items, labels, initial }: Props & { initial: string |
         <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {shown.map((p) => (
             <li key={p.slug}>
-              <PersonCard p={p} locale={locale} />
+              <PersonCard p={p} />
             </li>
           ))}
         </ul>

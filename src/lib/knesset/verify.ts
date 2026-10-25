@@ -43,6 +43,10 @@ export function checkAnalysis(a: Analysis, votes: Map<number, Vote>, editors: Ma
   const fail = (rule: string, message: string) => problems.push({ entry: `analysis/${a.voteId}`, rule, message });
   if (!votes.has(a.voteId)) fail("vote-exists", `no ingested vote ${a.voteId}`);
   if (a.editorial.keyVote && !a.editorial.note) fail("key-vote-note", "a key vote needs an editor's note explaining why");
+  if (a.editorial.keyVote && !a.editorial.position) {
+    fail("key-vote-position", 'a key vote needs the site\'s position ("for" or "against")');
+  }
+  if (a.editorial.position && !a.editorial.keyVote) fail("position-without-key-vote", "a position is only set on key votes");
   if (a.editorial.state !== "published") return problems;
   const by = a.editorial.reviewedBy;
   if (!by) fail("reviewed", "a published analysis needs editorial.reviewedBy");

@@ -45,6 +45,13 @@ model prose. They need an editor's review, the member's right of reply, and a
 human `reviewedBy`; an AI drafter (`"ai": true` in `content/editors.json`) can
 never approve.
 
+**Right, left and key votes.** `data/knesset/factions.json` places each
+faction on the political spectrum (editors' classification, labelled as such
+on the site). On key votes, editors set the site's `position` and a `note`
+with the reason; every member's page shows how they voted on each key vote
+against that position, and People lists all members with their camp and
+record. The site shows the record; it doesn't label people.
+
 The model never marks a key vote, never characterizes a member or party, and
 never summarizes from memory. Pages: `/knesset` (all final-reading votes),
 `/knesset/votes/<id>` (summary and full roll call by faction), and

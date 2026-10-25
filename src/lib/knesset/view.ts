@@ -1,6 +1,7 @@
 import { getContent } from "../content/load";
 import { formatDate, getDict, t, type Locale } from "../i18n";
-import type { Vote, VoteChoice } from "./schema";
+import type { Spectrum, Vote, VoteChoice } from "./schema";
+import { computeScorecard } from "./scorecard";
 import { getKnesset } from "./store";
 
 export type VoteCard = {
@@ -49,3 +50,22 @@ export function knessetLabels(locale: Locale) {
   const k = getDict(locale).knesset;
   return { for: k.choices.for, against: k.choices.against, abstain: k.choices.abstain };
 }
+
+// Editors' classification for a faction as the Knesset spells it.
+export function factionInfo(name: string, locale: Locale) {
+  const f = getKnesset().factions.get(name);
+  const d = getDict(locale);
+  return {
+    short: f ? t(f.short, locale).value : name,
+    spectrum: f?.spectrum ?? ("unclassified" as Spectrum),
+    spectrumLabel: d.spectrum[f?.spectrum ?? "unclassified"],
+    sectorLabel: f?.sector ? d.sector[f.sector] : null,
+  };
+}
+
+export function scorecardFor(memberId: string) {
+  const { votes, analyses } = getKnesset();
+  return computeScorecard(votes, analyses, memberId);
+}
+
+export const SPECTRUM_ORDER: Spectrum[] = ["far_right", "right", "center_right", "center", "center_left", "left", "far_left", "unclassified"];
