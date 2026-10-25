@@ -42,7 +42,11 @@ record with `knessetMemberId` in the entity file.
 
 1. **Secrets** (Settings → Secrets and variables → Actions):
    - `ANTHROPIC_API_KEY`: needed for drafting. Without it, votes are still ingested and published; only the summaries are skipped.
-   - `KNESSET_HTTP_PROXY` (optional): knesset.gov.il sometimes blocks non-Israeli IP addresses, and GitHub's runners are abroad. If the ingest job fails with connection errors, set this to an HTTP proxy with an Israeli IP address.
+   - **knesset.gov.il only answers Israeli IP addresses.** GitHub's own runners are in the US and get a block page (confirmed by the "Knesset probe" workflow). Use one of:
+     - a self-hosted GitHub Actions runner on a machine in Israel (your own computer, or a small VM in Google Cloud `me-west1` / AWS `il-central-1`, both in Tel Aviv), then set the repository **variable** `KNESSET_RUNNER` to its label; or
+     - the secret `KNESSET_HTTP_PROXY`: an HTTP proxy with an Israeli exit address.
+     Run "Knesset probe" afterwards: it should print OData XML/JSON, not an HTML page.
+   - Hasadna's Open Knesset mirror of the vote tables stopped updating in July 2021, so it can't replace the live source.
 2. **Actions permissions** (Settings → Actions → General): "Read and write permissions", and tick "Allow GitHub Actions to create and approve pull requests".
 3. **Editors:** each editor's GitHub login goes in `content/editors.json` (`"github"`).
 4. If `main` is branch-protected, let `github-actions[bot]` push to it. That's how official vote records and approvals land.

@@ -22,7 +22,10 @@ concurrency: knesset
 
 jobs:
   ingest:
-    runs-on: ubuntu-latest
+    # knesset.gov.il only answers Israeli IP addresses. Set the repository
+    # variable KNESSET_RUNNER to a self-hosted runner label (e.g. "israel")
+    # to run these jobs on a machine in Israel.
+    runs-on: ${{ vars.KNESSET_RUNNER || 'ubuntu-latest' }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -48,7 +51,10 @@ jobs:
 
   draft:
     needs: ingest
-    runs-on: ubuntu-latest
+    # knesset.gov.il only answers Israeli IP addresses. Set the repository
+    # variable KNESSET_RUNNER to a self-hosted runner label (e.g. "israel")
+    # to run these jobs on a machine in Israel.
+    runs-on: ${{ vars.KNESSET_RUNNER || 'ubuntu-latest' }}
     env:
       BRANCH: ai/knesset-drafts
       GH_TOKEN: ${{ github.token }}
