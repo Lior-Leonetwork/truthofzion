@@ -10,6 +10,9 @@ on:
       max_votes:
         description: Max votes to ingest this run (backfill in chunks)
         default: "400"
+      from:
+        description: First run only - earliest vote date (YYYY-MM-DD). Default is two years back.
+        default: ""
       max_drafts:
         description: Max votes to draft summaries for this run
         default: "20"
@@ -41,7 +44,7 @@ jobs:
           openvpn-auth: ${{ secrets.KNESSET_OPENVPN_AUTH }}
       - run: npm ci
       - name: Ingest official votes
-        run: npm run knesset:ingest -- --max-votes "${{ inputs.max_votes || '400' }}"
+        run: npm run knesset:ingest -- --max-votes "${{ inputs.max_votes || '400' }}" ${{ inputs.from && format('--from {0}', inputs.from) || '' }}
         env:
           KNESSET_HTTP_PROXY: ${{ secrets.KNESSET_HTTP_PROXY }}
       - run: npm run validate

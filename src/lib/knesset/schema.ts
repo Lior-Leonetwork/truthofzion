@@ -49,6 +49,9 @@ export const IngestState = z
   .object({
     knesset: z.number().int(),
     lastVoteId: z.number().int(),
+    // Earliest vote date collected. Set on the first run (two years back by
+    // default) and kept, so the archive grows forward from there.
+    fromDate: z.iso.date().optional(),
     heldBack: z.array(z.number().int()).default([]), // retried every run
     updatedAt: z.iso.datetime(),
   })

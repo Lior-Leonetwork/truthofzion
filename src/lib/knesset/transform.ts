@@ -10,6 +10,17 @@ const num = (v: Row[string] | undefined) => (v === null || v === undefined || v 
 // When each Knesset was sworn in. Votes don't carry a Knesset number.
 export const KNESSET_START: Record<number, string> = { 25: "2022-11-15" };
 
+// How far back the archive reaches: votes from the last two years, never
+// earlier than the start of the Knesset being collected.
+export function startDate(knesset: number, today: string, years = 2, override?: string) {
+  if (override) return override;
+  const d = new Date(`${today}T00:00:00Z`);
+  d.setUTCFullYear(d.getUTCFullYear() - years);
+  const back = d.toISOString().slice(0, 10);
+  const sworn = KNESSET_START[knesset];
+  return sworn && sworn > back ? sworn : back;
+}
+
 // Final passage: the "for" option reads "לקבל את הצעת החוק בקריאה שלישית".
 // Excludes votes to send a bill to committee "to prepare for second and third reading".
 export function isFinalReading(r: Row) {

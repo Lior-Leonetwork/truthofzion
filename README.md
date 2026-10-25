@@ -55,6 +55,10 @@ record with `knessetMemberId` in the entity file.
 4. If `main` is branch-protected, let `github-actions[bot]` push to it. That's how official vote records and approvals land.
 5. Run it once by hand: Actions → "Knesset votes" → Run workflow. The log lists the first votes it saw and which ones it treated as final readings. Check that list on the first run.
 
+The archive covers the last two years: the first run sets its start date
+(two years back, or the workflow's `from` input) in `data/knesset/state.json`,
+and every run after continues forward from there.
+
 Run locally: `npm run knesset:ingest`, `ANTHROPIC_API_KEY=… npm run knesset:analyze -- --max 5`.
 
 ## Demo mode

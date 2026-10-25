@@ -4,11 +4,14 @@
 // interprets a vote. Runs daily in GitHub Actions (.github/workflows/knesset.yml),
 // through an Israeli VPN because knesset.gov.il only answers Israeli addresses.
 //
-//   npm run knesset:ingest -- [--knesset 25] [--since-id N] [--max-votes N]
+//   npm run knesset:ingest -- [--knesset 25] [--from YYYY-MM-DD] [--since-id N] [--max-votes N]
+//
+// The first run collects votes from the last two years (or --from); every run
+// after that continues forward from where the previous one stopped.
 import { fetch as undiciFetch, ProxyAgent } from "undici";
 import { makeFetcher, odataUrl, PARLIAMENT_V4, query, type Row } from "../src/lib/knesset/odata";
 import { paths, readMembers, readState, writeJson } from "../src/lib/knesset/store";
-import { buildVote, dedupeById, factionsFrom, isFinalReading, KNESSET_START, mergeMembers } from "../src/lib/knesset/transform";
+import { buildVote, dedupeById, factionsFrom, isFinalReading, KNESSET_START, mergeMembers, startDate } from "../src/lib/knesset/transform";
 
 function arg(name: string) {
   const i = process.argv.indexOf(`--${name}`);
@@ -29,13 +32,15 @@ async function main() {
   const p = paths();
   const state = readState();
   const knesset = Number(arg("knesset") ?? state?.knesset ?? 25);
-  const start = KNESSET_START[knesset];
-  if (!start) throw new Error(`no start date known for Knesset ${knesset}; add it to KNESSET_START`);
-  const sinceId = Number(arg("since-id") ?? (state?.knesset === knesset ? state.lastVoteId : 0));
+  if (!KNESSET_START[knesset]) throw new Error(`no start date known for Knesset ${knesset}; add it to KNESSET_START`);
+  const sameKnesset = state?.knesset === knesset;
+  const sinceId = Number(arg("since-id") ?? (sameKnesset ? state.lastVoteId : 0));
   const maxVotes = Number(arg("max-votes") ?? 400);
   const today = new Date().toISOString().slice(0, 10);
+  const start = startDate(knesset, today, 2, arg("from") ?? (sameKnesset ? state.fromDate : undefined));
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(start)) throw new Error(`--from must be YYYY-MM-DD, got ${start}`);
 
-  console.log(`Knesset ${knesset}: fetching votes after id ${sinceId}`);
+  console.log(`Knesset ${knesset}: votes from ${start}, after id ${sinceId}`);
   const factions = factionsFrom(await collect("KNS_PersonToPosition", { $filter: `KnessetNum eq ${knesset}` }));
   console.log(`${factions.size} members with faction records`);
 
@@ -75,7 +80,7 @@ async function main() {
   }
 
   writeJson(p.members, members);
-  writeJson(p.state, { knesset, lastVoteId, heldBack, updatedAt: new Date().toISOString() });
+  writeJson(p.state, { knesset, lastVoteId, fromDate: start, heldBack, updatedAt: new Date().toISOString() });
   console.log(`✓ wrote ${written} votes (${heldBack.length} held back), last vote id ${lastVoteId}`);
 }
 

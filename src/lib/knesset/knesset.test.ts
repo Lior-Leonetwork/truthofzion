@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { decodeXml, NotODataError, parseAtom, parseJson, parseResponse, query } from "./odata";
-import { buildVote, dedupeById, factionAt, factionsFrom, isFinalReading, mergeMembers } from "./transform";
+import { buildVote, dedupeById, factionAt, factionsFrom, isFinalReading, mergeMembers, startDate } from "./transform";
 import { nameOverlap } from "./bill";
 import { checkAnalysis, checkDraft, quoteFound } from "./verify";
 import type { Analysis } from "./schema";
@@ -106,6 +106,13 @@ describe("vote transform", () => {
     expect(isFinalReading({ ForOptionDesc: "לקבל את ההסתייגות" })).toBe(false);
     expect(isFinalReading({ ForOptionDesc: "להעביר את הצעת החוק לוועדה להכנה לקריאה שניה ושלישית" })).toBe(false);
     expect(isFinalReading({ ForOptionDesc: "להביע אי-אמון בממשלה" })).toBe(false);
+  });
+
+  it("collects the last two years, never before the Knesset was sworn in", () => {
+    expect(startDate(25, "2026-10-25")).toBe("2024-10-25");
+    expect(startDate(25, "2024-01-01")).toBe("2022-11-15");
+    expect(startDate(25, "2026-10-25", 2, "2025-03-01")).toBe("2025-03-01");
+    expect(startDate(25, "2028-02-29")).toBe("2026-03-01");
   });
 
   it("drops the duplicate rows the service sometimes returns", () => {
