@@ -20,7 +20,9 @@ jobs:
           cache: npm
       - uses: ./.github/actions/israel-vpn
         with:
-          config: ${{ secrets.KNESSET_WIREGUARD_CONF }}
+          wireguard: ${{ secrets.KNESSET_WIREGUARD_CONF }}
+          openvpn: ${{ secrets.KNESSET_OPENVPN_CONF }}
+          openvpn-auth: ${{ secrets.KNESSET_OPENVPN_AUTH }}
       - run: npm ci
       - run: npm run knesset:probe
         env:

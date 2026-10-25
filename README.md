@@ -44,7 +44,9 @@ record with `knessetMemberId` in the entity file.
    - `ANTHROPIC_API_KEY`: needed for drafting. Without it, votes are still ingested and published; only the summaries are skipped.
    - **knesset.gov.il only answers Israeli IP addresses.** GitHub's own runners are in the US and get a block page (confirmed by the "Knesset probe" workflow). Use one of:
      - a self-hosted GitHub Actions runner on a machine in Israel (your own computer, or a small VM in Google Cloud `me-west1` / AWS `il-central-1`, both in Tel Aviv), then set the repository **variable** `KNESSET_RUNNER` to its label; or
-     - the secret `KNESSET_WIREGUARD_CONF`: the contents of a WireGuard `.conf` file for an Israeli server from a VPN provider. Each run connects to it first (`.github/actions/israel-vpn`) and logs the exit country; or
+     - a VPN with an Israeli server (`.github/actions/israel-vpn`; each run connects first and logs the exit country):
+       - OpenVPN, e.g. NordVPN manual setup or dedicated IP: secret `KNESSET_OPENVPN_CONF` (the `.ovpn` file's contents) and secret `KNESSET_OPENVPN_AUTH` (service username on line 1, service password on line 2); or
+       - WireGuard: secret `KNESSET_WIREGUARD_CONF` (the `.conf` file's contents); or
      - the secret `KNESSET_HTTP_PROXY`: an HTTP proxy with an Israeli exit address.
      Run "Knesset probe" afterwards: it should print OData XML/JSON, not an HTML page.
    - Hasadna's Open Knesset mirror of the vote tables stopped updating in July 2021, so it can't replace the live source.

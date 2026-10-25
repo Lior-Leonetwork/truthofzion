@@ -36,7 +36,9 @@ jobs:
           cache: npm
       - uses: ./.github/actions/israel-vpn
         with:
-          config: ${{ secrets.KNESSET_WIREGUARD_CONF }}
+          wireguard: ${{ secrets.KNESSET_WIREGUARD_CONF }}
+          openvpn: ${{ secrets.KNESSET_OPENVPN_CONF }}
+          openvpn-auth: ${{ secrets.KNESSET_OPENVPN_AUTH }}
       - run: npm ci
       - name: Ingest official votes
         run: npm run knesset:ingest -- --max-votes "${{ inputs.max_votes || '400' }}"
@@ -72,7 +74,9 @@ jobs:
           cache: npm
       - uses: ./.github/actions/israel-vpn
         with:
-          config: ${{ secrets.KNESSET_WIREGUARD_CONF }}
+          wireguard: ${{ secrets.KNESSET_WIREGUARD_CONF }}
+          openvpn: ${{ secrets.KNESSET_OPENVPN_CONF }}
+          openvpn-auth: ${{ secrets.KNESSET_OPENVPN_AUTH }}
       - run: npm ci
       # Build on the open review branch, never force-push it: editors may have
       # edited drafts there, and drafts already in it must not be re-billed.
