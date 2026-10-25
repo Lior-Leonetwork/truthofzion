@@ -1,6 +1,6 @@
 {
-  "approvedBy": null,
-  "approvedOn": null,
+  "approvedBy": "lior",
+  "approvedOn": "2026-10-25",
   "stances": [
     { "id": "counter-terror", "topic": "incitement", "statement": { "he": "החמרת המאבק בטרור: ענישה מחמירה למחבלים, גירוש מחבלים ובני משפחה המעורבים בטרור, שלילת אזרחות או תושבות ממחבלים ועצירת תשלומים למחבלים.", "en": "A tougher fight against terror: harsher punishment for terrorists, deporting terrorists and family members involved in terror, revoking terrorists' citizenship or residency, and stopping payments to terrorists." } },
     { "id": "incitement", "topic": "incitement", "statement": { "he": "ענישה על הסתה לטרור ועל הזדהות עם ארגוני טרור, גם כשמדובר בנבחרי ציבור.", "en": "Punishing incitement to terror and identification with terrorist organisations, including by elected officials." } },
