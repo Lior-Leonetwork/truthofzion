@@ -68,6 +68,8 @@ jobs:
           git add data/knesset
           if git diff --cached --quiet; then echo "Nothing new."; exit 0; fi
           git commit -m "Knesset votes and summaries: $(date -u +%F)"
+          # main may have moved during a long run (e.g. an editor's commit); replay on top.
+          git pull --rebase origin main
           git push origin HEAD:main
           echo "pushed=true" >> "$GITHUB_OUTPUT"
       # Vercel may not deploy commits authored by the Actions bot (Hobby plan),
