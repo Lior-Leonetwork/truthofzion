@@ -1,0 +1,32 @@
+{
+  "voteId": 43109,
+  "bill": {
+    "id": 2201441,
+    "name": "חוק הכניסה לישראל (תיקון מס' 40), התשפ\"ה–2025",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=2201441"
+  },
+  "summary": {
+    "he": "החוק מרחיב את האיסור הקיים על מתן רישיון כניסה או אשרה לישראל, שחל היום על מי שקורא לחרם על ישראל. לפי החוק, ככלל לא יינתנו אשרה ורישיון ישיבה גם למי שפרסם דברי הכחשת השואה או דברי הכחשת טבח ה-7 באוקטובר, כמשמעותם בחוקים האוסרים זאת. האיסור יחול גם על מי שפרסם דברי תמיכה בהעמדה לדין של אזרחים ישראלים במדינת חוץ או בבית דין בין-לאומי, בשל פעולות שעשו במסגרת תפקידם בצה\"ל או בזרועות הביטחון.",
+    "en": "The law expands the existing ban on granting an entry permit or visa to Israel, which currently applies to anyone who calls for a boycott of Israel. Under the law, as a general rule, a visa and residence permit will also not be granted to anyone who has published Holocaust denial or denial of the October 7 massacre, as defined in the laws prohibiting such denial. The ban also applies to anyone who has published support for prosecuting Israeli citizens in a foreign country or before an international tribunal for actions taken in their roles in the IDF or the security forces."
+  },
+  "quotes": [
+    "הקיים על הקורא לחרם על ישראל",
+    "לא יינתנו, ככלל, אשרה ורישיון ישיבה כאמור גם למי שפרסם דברי הכחשת השואה",
+    "למי שפרסם דברי הכחשת טבח ה-7 באוקטובר",
+    "למי שפרסם דברי תמיכה בהעמדה לדין של אזרחים ישראלים במדינת חוץ"
+  ],
+  "topics": [
+    "security",
+    "diaspora-antisemitism",
+    "incitement"
+  ],
+  "keyVoteSuggested": true,
+  "rationale": "This is a final (third-reading) vote on a law that adds Holocaust denial, October 7 massacre denial, and support for prosecuting IDF/security personnel abroad as grounds for denying entry. That bears on the antisemitism and security topics. The incitement tag is borderline, resting on the October 7 denial element, and editors may wish to drop it. Note that only 12 members voted, so editors may want to weigh participation when deciding key-vote status.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "keyVote": false,
+    "autoPublished": true
+  }
+}

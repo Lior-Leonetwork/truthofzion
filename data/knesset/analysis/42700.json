@@ -1,0 +1,32 @@
+{
+  "voteId": 42700,
+  "bill": {
+    "id": 2195309,
+    "name": "חוק הסדרת העיסוק בעבודה במערכת קירור או מיזוג אוויר, התשפ\"ה-2025",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=2195309"
+  },
+  "summary": {
+    "he": "החוק מסדיר לראשונה בחקיקה את העבודה במערכות קירור ומיזוג אוויר, בעקבות המעבר לקררים הכוללים גזים דליקים, נפיצים ורעילים. הוא קובע חובת רישיון בשלוש דרגות לפי תפוקת הקירור של המערכת, לתקופה של חמש שנים, וחידושו מותנה בהשתלמות של 8 שעות לפחות. החוק מחייב עבודה לפי התקן הישראלי 994, כולל בדיקת אטימות, ומסדיר מינוי רשם, מועצה מייעצת ומפקחים, וכן אכיפה מנהלית ועיצומים כספיים. לבעלי ניסיון קיים נקבעה תקופת מעבר של 3 שנים למסלול הכשרה מקוצר.",
+    "en": "The law regulates, for the first time in legislation, work on refrigeration and air-conditioning systems, following the shift to refrigerants that include flammable, explosive and toxic gases. It requires a license in one of three grades based on the system's cooling capacity, valid for five years, with renewal conditional on at least 8 hours of further training. Work must follow Israeli Standard 994, including a leak-tightness test, and the law provides for a registrar, an advisory council, inspectors, administrative enforcement and financial sanctions. People with existing experience get a 3-year transition period with a shortened training track."
+  },
+  "quotes": [
+    "חוק זה מסדיר לראשונה בחקיקה את העיסוק במערכות קירור ומיזוג אוויר",
+    "בעקבות המעבר לשימוש בקררים חדשים הכוללים גזים דליקים, נפיצים ורעילים",
+    "רישיון דרגה 1 לביצוע עבודות במערכת שתפוקת הקירור שלה עד 18 קילו ואט",
+    "רישיונות אלו יינתנו לתקופה של חמש שנים",
+    "בהיקף של 8 שעות לפחות",
+    "על פי התקן הישראלי 994",
+    "תהיה תקופה של 3 שנים",
+    "הוראות של אכיפה מנהלית והטלת עיצומים כספיים על בעלי רישיונות ועל העוסקים בתחום"
+  ],
+  "topics": [],
+  "keyVoteSuggested": false,
+  "rationale": "This is a professional-licensing and safety regulation bill for HVAC work; it does not substantively concern any of the watch topics. Not suggested as a key vote.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "keyVote": false,
+    "autoPublished": true
+  }
+}

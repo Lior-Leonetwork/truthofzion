@@ -1,0 +1,29 @@
+{
+  "voteId": 44873,
+  "bill": {
+    "id": 2224549,
+    "name": "חוק לתיקון פקודת התעבורה (מס' 138), התשפ\"ו-2025",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=2224549"
+  },
+  "summary": {
+    "he": "החוק מתיר לנוהגים בכלי רכב המיועדים להצלת חיי אדם, לשמירה על הביטחון ועל שלום הציבור, לזיהוי קורבנות אסון או להובלת נפטרים, ושנכללים בתוספת השש עשרה לפקודת התעבורה, לנסוע בנתיב תחבורה ציבורית בכל עת, גם שלא בנסיעת חירום. בין כלי הרכב: אמבולנסים, כבאיות, רכבי שירות בתי הסוהר ורכבי זק\"א. לצורך האכיפה, הגופים המפעילים את כלי הרכב יעבירו לרשות הרישוי רשימה של מספרי הרישום ויעדכנו אותה, והרשימה תהיה זמינה לעיון הרשויות המקומיות. הוראות העברת המידע ייכנסו לתוקף שישה חודשים לאחר פרסום החוק.",
+    "en": "The law permits drivers of vehicles used for saving lives, security, public safety, identifying disaster victims or transporting the deceased, as listed in the Sixteenth Schedule of the Traffic Ordinance, to drive in public transport lanes at any time, not only during emergency trips. The listed vehicles include ambulances, fire trucks, Israel Prison Service vehicles and ZAKA vehicles. For enforcement, the bodies operating these vehicles must give the Licensing Authority a list of their registration numbers and keep it updated, and the list will be available to local authorities. The information-transfer provisions take effect six months after the law is published."
+  },
+  "quotes": [
+    "רשאי לנסוע בנתיב תחבורה ציבורית בכל עת, גם שלא במסגרת נסיעת חירום",
+    "נכללים אמבולנסים, כבאיות",
+    "יעביר לרשות הרישוי במשרד התחבורה והבטיחות בדרכים רשימה של מספרי הרישום של כלי הרכב האמורים",
+    "יהיו זמינים לעיונה של כל רשות מקומית",
+    "ייכנסו לתוקף בתום שישה חודשים מיום פרסומו של החוק ברשומות"
+  ],
+  "topics": [],
+  "keyVoteSuggested": false,
+  "rationale": "A traffic-regulation measure on public transport lane access for emergency and service vehicles; the incidental mention of security and Prison Service vehicles does not make it substantively a security bill, so no watch topics are tagged and it is not suggested as a key vote. Note for editors: the vote record names amendment No. 139 (התשפ\"ה) while the bill text is amendment No. 138 (התשפ\"ו); please confirm they are the same bill before publishing.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "keyVote": false,
+    "autoPublished": true
+  }
+}

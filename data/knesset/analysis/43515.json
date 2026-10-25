@@ -1,0 +1,31 @@
+{
+  "voteId": 43515,
+  "bill": {
+    "id": 2224904,
+    "name": "חוק להשגת יעדי התקציב וליישום המדיניות הכלכלית לשנת התקציב 2025 (תיקוני חקיקה), התשפ\"ה–2025",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=2224904"
+  },
+  "summary": {
+    "he": "החוק, שהתקבל בקריאה שלישית כחלק מחקיקת התקציב לשנת 2025, מקל על הדרישות לקבלת הטבות מס בשינויי מבנה ובמיזוגים בחברות הייטק. בין השאר, הוא מפחית את שיעור העברת הזכויות הנדרש מ־80% ל־70%, מבטל את חובת החזקת 25% מהזכויות לאחר שינוי המבנה, מגדיל את שיעור התמורה המותרת במזומן במיזוגים מ־40% ל־49% ומשנה את יחס הגודל המותר בפיצולים. בנוסף, החוק מרחיב את חובת הדיווח המפורט במע\"מ לכל עוסק שמחזור עסקאותיו השנתי עולה על 0.5 מיליון ש\"ח, החל מאוקטובר 2025. כמו כן הוא מחייב הגשה מקוונת של חשבוניות מסוג I לעוסקים הרשומים באזור ובשטחי עזה, ומבטל את הדיווח הכפול על חשבוניות מסוג P החל מאוגוסט 2025.",
+    "en": "The law, passed in its third reading as part of the 2025 budget legislation, eases the conditions for tax benefits in restructurings and mergers of high-tech companies. Among other things, it lowers the required share of transferred rights from 80% to 70%, removes the obligation to hold 25% of the rights after a restructuring, raises the permitted cash consideration in mergers from 40% to 49%, and changes the permitted size ratio in spin-offs. It also extends detailed VAT reporting to every business with annual turnover above NIS 0.5 million, starting with reports filed from October 2025. In addition, it requires online submission of type I invoices by businesses registered in the Area (Judea and Samaria) and in Gaza, and removes double reporting for type P invoices issued from August 2025."
+  },
+  "quotes": [
+    "הקטנת שיעור ההעברה הנדרש של זכויות בחברה מ־80% ל־70%",
+    "ביטול חובת החזקה של 25% מהזכויות לאחר שינוי מבנה",
+    "הרחבת שיעור התמורה במזומן במיזוגים מ־40% ל־49%",
+    "שונה יחס הגודל המותר בפיצולים מ־1:4 ל־1:9",
+    "חובת הדיווח המפורט תחול על כל עוסק שמחזור עסקאותיו השנתי עולה על 0.5 מיליון ש\"ח",
+    "מחייב הגשה מקוונת של חשבוניות מסוג I לעוסקים הרשומים באזור ובשטחי עזה",
+    "מסיר את חובת הדיווח הכפול בגין חשבוניות מסוג P"
+  ],
+  "topics": [],
+  "keyVoteSuggested": false,
+  "rationale": "This is a budget-related tax and reporting bill (high-tech restructuring tax benefits, VAT reporting, invoice digitization) and does not substantively concern any watch topic. The invoicing provision for businesses registered in the Area and Gaza is a tax-administration measure, not a sovereignty measure, so no topic is tagged and it is not suggested as a key vote.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "keyVote": false,
+    "autoPublished": true
+  }
+}

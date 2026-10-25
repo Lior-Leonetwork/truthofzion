@@ -1,0 +1,29 @@
+{
+  "voteId": 45093,
+  "bill": {
+    "id": 2229878,
+    "name": "חוק חדלות פירעון ושיקום כלכלי (תיקון מס' 9), התשפ\"ו-2026",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=2229878"
+  },
+  "summary": {
+    "he": "התיקון מעגן כהסדר קבע, בשינויים מסוימים, הוראת שעה מתיקון מס' 4 לחוק חדלות פירעון ושיקום כלכלי. ההסדר מאפשר לחייבים, תאגידים ויחידים, הנמצאים בקשיים כלכליים לקבל צו שיפוטי של עיכוב הליכים. הצו מקפיא הליכים משפטיים והליכי גבייה נגדם בזמן שהם מנהלים משא ומתן עם נושיהם על הסדר חוב, במקום להיכנס להליך מלא של חדלות פירעון. לתאגידים הצו ניתן לעד 45 ימים וניתן להאריכו עד 120 ימים בסך הכול; ליחידים הוא ניתן לעד 90 ימים וניתן להאריכו בלי תקרה כוללת. החייב ממשיך לנהל את נכסיו, ובית המשפט ממנה מנהל הסדר שמפקח על ההליך.",
+    "en": "The amendment makes permanent, with certain changes, a temporary provision from Amendment No. 4 to the Insolvency and Economic Rehabilitation Law. It allows debtors in financial difficulty, both corporations and individuals, to obtain a court 'stay of proceedings' order. The order freezes legal and collection proceedings against them while they negotiate a debt arrangement with creditors, instead of entering full insolvency proceedings. For corporations the order is granted for up to 45 days and may be extended to a total of up to 120 days. For individuals it is granted for up to 90 days and may be extended without an overall limit. The debtor keeps control of its assets, and the court appoints an 'arrangement manager' to oversee the process."
+  },
+  "quotes": [
+    "מעגן כהסדר קבע, בשינויים מסוימים, את הוראת השעה שנקבעה בעבר בתיקון מספר 4 לחוק",
+    "הצו מביא להקפאה של הליכים משפטיים והליכי גבייה נגד החייב",
+    "לגבי תאגידים, הצו ניתן לתקופה ראשונה של עד 45 ימים וניתן להאריכו לתקופה כוללת של עד 120 ימים",
+    "לגבי יחידים, הצו ניתן לתקופה ראשונה של עד 90 ימים",
+    "החייב ממשיך לשלוט בנכסיו ולנהל את ענייניו הכלכליים ללא מינוי נאמן חיצוני"
+  ],
+  "topics": [],
+  "keyVoteSuggested": false,
+  "rationale": "This is a technical insolvency and debt-arrangement amendment that makes an existing temporary provision permanent. It involves court orders but does not substantively concern the judiciary as an institution or any other watch topic. It passed 12-0, so no key-vote suggestion.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "keyVote": false,
+    "autoPublished": true
+  }
+}

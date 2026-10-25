@@ -1,0 +1,28 @@
+{
+  "voteId": 41957,
+  "bill": {
+    "id": 2222789,
+    "name": "חוק לייעול האכיפה והפיקוח העירוניים ברשויות המקומיות (הוראת שעה) (תיקון מס' 13), התשפ\"ה-2024",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=2222789"
+  },
+  "summary": {
+    "he": "החוק לייעול האכיפה והפיקוח העירוניים ברשויות המקומיות נחקק כהוראת שעה בשנת 2011. החוק מסמיך פקחים עירוניים ומסדיר הקמת מערך שיטור עירוני, כדי לייעל את הפיקוח והאכיפה של הרשויות המקומיות ולסייע למשטרה במניעת אלימות. התיקון מאריך את תוקף הוראת השעה עד 18 בדצמבר 2024.",
+    "en": "The Law for Streamlining Municipal Enforcement and Supervision in Local Authorities was enacted as a temporary provision in 2011. It empowers municipal inspectors and sets up a municipal policing system. Its aim is to improve local authorities' supervision and enforcement and to assist the Israel Police in preventing violence. This amendment extends the temporary provision until 18 December 2024."
+  },
+  "quotes": [
+    "נחקק כהוראת שעה בשנת 2011",
+    "מטרת החוק הינה ייעול יכולת הפיקוח והאכיפה של הרשויות המקומיות בעבירות שבתחום אחריותן",
+    "לשם כך החוק מסמיך פקחים עירוניים ומסדיר את הקמתו של מערך שיטור עירוני",
+    "תוקפו של החוק הוארך לתקופת זמן נוספת ועד ליום י\"ז בכסלו התשפ\"ה (18 בדצמבר 2024)"
+  ],
+  "topics": [],
+  "keyVoteSuggested": false,
+  "rationale": "This is a short technical extension of an existing temporary provision on municipal enforcement and policing. It does not substantively concern any watch topic; municipal violence prevention is not the IDF or the security establishment. It passed 23-0 with no opposition, so it is not suggested as a key vote.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "keyVote": false,
+    "autoPublished": true
+  }
+}

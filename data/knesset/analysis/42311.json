@@ -1,0 +1,29 @@
+{
+  "voteId": 42311,
+  "bill": {
+    "id": 2224337,
+    "name": "חוק להסדרת הפיקוח על כלבים (תיקון מס' 6 – הוראת שעה – חרבות ברזל) (תיקון), התשפ\"ה-2024",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=2224337"
+  },
+  "summary": {
+    "he": "החוק מאריך את הוראת השעה שנחקקה בעקבות מלחמת חרבות ברזל בנוגע לכלבים משוטטים שנכנסו מרצועת עזה. לפי הוראת השעה, וטרינר עירוני רשאי להורות על המתת כלב שנתפס עד 20 קילומטרים מגדר המערכת, בהתקיים התנאים הקבועים בה, ארבעה ימים לאחר העברתו למכלאה, במקום עשרה ימים לפי החוק המקורי. ההארכה היא מ-30 בנובמבר 2024 עד 31 במרץ 2025. כמו כן נקבעו שני מועדים לדיווח שר החקלאות וביטחון המזון לוועדת הכלכלה על יישום הוראת השעה: עד 31 בדצמבר 2024 ועד 16 במרץ 2025.",
+    "en": "The law extends a temporary provision, enacted after the Swords of Iron war, concerning stray dogs that entered Israel from the Gaza Strip. Under the provision, a municipal veterinarian may order a dog euthanized if it was caught within 20 kilometers of the Gaza perimeter fence and meets the conditions the provision sets. This may be done four days after the dog is transferred to the pound, instead of the ten days set by the original law. The provision, which was in force until November 30, 2024, is extended to March 31, 2025. The law also sets two dates for the Minister of Agriculture and Food Security to report to the Economics Committee on its implementation: by December 31, 2024 and by March 16, 2025."
+  },
+  "quotes": [
+    "החוק מאריך את תוקפה של הוראת השעה שנועדה להתמודד עם תופעת הכלבים המשוטטים שנכנסו מרצועת עזה לשטחי המדינה",
+    "וטרינר עירוני מוסמך להורות על המתת כלב שנתפס בטווח של עד 20 קילומטרים מגדר המערכת המקיפה את רצועת עזה",
+    "ארבעה ימים ממועד העברתו למכלאה",
+    "והחוק מאריך את תוקפה עד ליום ב' בניסן התשפ\"ה",
+    "ידווח השר לוועדה על יישום הוראת השעה לא יאוחר מיום ל' בכסלו התשפ\"ה (31 בדצמבר 2024)"
+  ],
+  "topics": [],
+  "keyVoteSuggested": false,
+  "rationale": "The bill concerns animal control: euthanasia timelines for stray dogs near the Gaza fence. Its link to the war is contextual rather than a substantive security or defense measure, so no watch topic was tagged. As a short technical extension of a temporary provision, it does not appear to be a key vote.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "keyVote": false,
+    "autoPublished": true
+  }
+}

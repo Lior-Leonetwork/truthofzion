@@ -1,0 +1,33 @@
+{
+  "voteId": 42072,
+  "bill": {
+    "id": 2197840,
+    "name": "חוק גירוש משפחות מחבלים, התשפ\"ה–2024",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=2197840"
+  },
+  "summary": {
+    "he": "החוק קובע כי שר הפנים רשאי, לאחר שימוע, להורות על גירוש בן משפחה של מחבל באחד משלושה מצבים: אם ידע מראש על תוכנית לבצע מעשה טרור ולא עשה את כל המאמצים הנדרשים כדי למנוע אותו, אם הביע תמיכה או הזדהות עם מעשה הטרור, או אם פרסם דברי שבח, אהדה או עידוד למעשה טרור או לארגון טרור. לגבי אזרח ישראלי, תוקף צו הגירוש הוא בין שבע ל-15 שנים. לגבי תושב קבע או ארעי, תוקפו הוא בין עשר לעשרים שנים. ההצעה התקבלה בקריאה שלישית ברוב של 61 תומכים מול 41 מתנגדים.",
+    "en": "The law provides that the Minister of the Interior may, after a hearing, order the deportation of a family member of a terrorist in any of three cases: the family member knew in advance of a plan to commit a terror act and did not make all required efforts to prevent it; expressed support for or identification with the terror act; or published praise, sympathy or encouragement for a terror act or a terrorist organization. For an Israeli citizen, a deportation order lasts between seven and 15 years. For a permanent or temporary resident, it lasts between ten and twenty years. The bill passed its third reading 61 to 41."
+  },
+  "quotes": [
+    "שר הפנים רשאי להורות, לאחר קיום שימוע, על גירושו של בן משפחה של מחבל",
+    "ידע מראש על תוכניתו של בן משפחתו לבצע מעשה טרור ולא עשה את כל המאמצים הנדרשים כדי למנוע את עשייתו",
+    "אם הביע תמיכה או הזדהות עם מעשה הטרור",
+    "אם פרסם דברי שבח, אהדה או עידוד למעשה טרור או לארגון טרור",
+    "תוקף צו הגירוש לעניין אזרח ישראלי לא יפחת משבע שנים ולא יעלה על 15 שנים",
+    "ולעניין תושב קבע או ארעי - לא יפחת מעשר שנים ולא יעלה על עשרים שנים"
+  ],
+  "topics": [
+    "incitement",
+    "security"
+  ],
+  "keyVoteSuggested": true,
+  "rationale": "The law sets deportation as a sanction for family members of terrorists who supported or praised terror, which falls squarely under the incitement & terror topic and also touches security. Because this is the final (third-reading) vote enacting the law, it may merit key-vote consideration.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "keyVote": false,
+    "autoPublished": true
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "voteId": 42902,
+  "bill": {
+    "id": 2217493,
+    "name": "חוק משפחות חיילים שנספו במערכה (תגמולים ושיקום) (תיקון מס' 46), התשפ\"ה–2025",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=2217493"
+  },
+  "summary": {
+    "he": "החוק קובע הגנות בתעסוקה בשנת האבל הראשונה לעובד שהוא בן משפחה של חייל שנספה או של מי שמת מפגיעת איבה, ובכלל זה יתומים ואחים בכל גיל, ובתנאים מסוימים גם ארוסה, ההורה האחר של יתום קטין או האפוטרופוס שלו. בשלושת החודשים הראשונים אסור לפטר את העובד או לפגוע בהכנסתו ובהיקף משרתו, למעט חריגים מצומצמים באישור ועדת תעסוקה. עד תום השנה הראשונה אסור לפטרו או להוציאו לחל\"ת ללא היתר. עובד שמתפטר בתקופה זו זכאי לפיצויי פיטורים, ועובד מוגן זכאי לסיוע משפטי ללא מבחן הכנסה. על הפרת החוק ניתן להטיל עיצום כספי.",
+    "en": "The law sets employment protections during the first year of mourning for an employee who is a family member of a fallen soldier or of a person killed in a hostile act. This includes orphans and siblings of any age, and under certain conditions also a fiancée, the other parent of a minor orphan, or the orphan's guardian. During the first three months the employee may not be dismissed, and their income and position scope may not be reduced, except in narrow cases approved by an employment committee. Until the end of the first year, dismissal or unpaid leave requires a permit. An employee who resigns in that year is entitled to severance pay, and protected employees receive legal aid without an income test. Violations may incur a monetary sanction."
+  },
+  "quotes": [
+    "חוק זה קובע הגנות בתעסוקה בשנת האבל הראשונה",
+    "יתומים ואחים בכל גיל",
+    "אסור לפטר את העובד המוגן, אסור לפגוע בהכנסתו",
+    "הוא יהיה זכאי לפיצויי הפיטורים שהיה זכאי להם אילו פוטר",
+    "עובד מוגן יוכל לקבל סיוע משפטי ללא מבחן הכנסה",
+    "ניתן להטיל עיצום כספי",
+    "ההגנה לא תחול לגבי מעסיק שהוא יחיד (ולא תאגיד) אם העובד הזכאי להגנה הוא העובד היחידי שלו"
+  ],
+  "topics": [
+    "security"
+  ],
+  "keyVoteSuggested": false,
+  "rationale": "Tagged security because the law concerns families of fallen soldiers and of people killed in hostile acts. However, its substance is employment protection for bereaved families, not defense or terrorism policy itself, and it passed 7-0, so it is not suggested as a key vote.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "keyVote": false,
+    "autoPublished": true
+  }
+}

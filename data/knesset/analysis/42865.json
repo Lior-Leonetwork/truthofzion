@@ -1,0 +1,30 @@
+{
+  "voteId": 42865,
+  "bill": {
+    "id": 2208708,
+    "name": "חוק לשכת עורכי הדין (תיקון מס' 45), התשפ\"ה–2025",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=2208708"
+  },
+  "summary": {
+    "he": "החוק משנה את אופן הגבייה והשימוש בדמי החבר ובאגרות שלשכת עורכי הדין גובה מעורכי הדין. תשלומי החובה ייגבו רק לשם תפקידי הליבה של הלשכה הקבועים בחוק, כגון רישוי ואתיקה, ויתווספו להם 150% שייגבו גם הם באופן מחייב במסגרת דמי החבר. הלשכה ומחוזותיה יוכלו לגבות גם תשלומי רשות. החוק קובע כללים לחלוקת התקציב בין הלשכה הראשית למחוזות ומחזק את העצמאות התקציבית של המחוזות, ובנוסף קובע הנחה של 50% בדמי החבר למשרתי מילואים. רוב ההוראות יחולו משנת הכספים 2026, למעט הפחתה של 20% בדמי החבר שתחול כבר בשנת 2025.",
+    "en": "The law changes how the Israel Bar Association collects and uses membership dues and fees charged to lawyers. Mandatory payments will be collected only for the Bar's core statutory functions, such as licensing and ethics, with an additional 150% also collected as a mandatory part of membership dues; the Bar and its districts may also collect voluntary payments. The law sets rules for dividing the budget between the national Bar and its districts and strengthens the districts' budgetary independence, and it grants military reservists a 50% discount on membership dues. Most provisions apply from fiscal year 2026, except a 20% reduction in membership dues that applies already in 2025."
+  },
+  "quotes": [
+    "תשלומי חובה ייגבו רק לשם ביצוע התפקידים ופעולות הליבה של הלשכה הקבועים בחוק",
+    "לתשלומים אלו יתווספו 150% שייגבו גם כן באופן מחייב במסגרת דמי החבר",
+    "יוכלו הלשכה ומחוזותיה לגבות תשלומי רשות שנתיים או לצורך עניין מסוים",
+    "הלשכה לא תוכל לקזז חובות של המחוזות מתשלומים שהיא חייבת להעביר להם",
+    "תינתן הנחה של 50% בדמי החבר למשרתי המילואים",
+    "מלבד הפחתה של 20% בדמי החבר, שתחול כבר משנת 2025"
+  ],
+  "topics": [],
+  "keyVoteSuggested": false,
+  "rationale": "The bill concerns Bar Association dues and internal budget allocation; it does not address the courts, the Attorney General, or judicial appointments, so no judiciary tag was applied despite the Bar's role in judicial selection. The reservist dues discount is incidental rather than a substantive security measure, so no key-vote suggestion, though editors may note the close 52–45 result.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "keyVote": false,
+    "autoPublished": true
+  }
+}

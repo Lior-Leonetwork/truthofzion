@@ -1,0 +1,20 @@
+{
+  "voteId": 45675,
+  "bill": {
+    "id": 1046679,
+    "name": "חוק התקציב לשנת הכספים 2026, התשפ\"ו-2026",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=1046679"
+  },
+  "summary": null,
+  "quotes": [],
+  "topics": [],
+  "keyVoteSuggested": false,
+  "rationale": "No bill text was provided, so no summary was drafted and no topic is tagged from the text. This is the third-reading vote on the 2026 State Budget Law (62–55); the budget likely includes defense allocations, so editors may want to review the official text and consider tagging 'security' and treating it as a key vote.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "keyVote": false,
+    "autoPublished": true
+  }
+}

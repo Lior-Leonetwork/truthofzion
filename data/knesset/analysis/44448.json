@@ -1,0 +1,32 @@
+{
+  "voteId": 44448,
+  "bill": {
+    "id": 2233667,
+    "name": "חוק הגנה על עובדים בשעת חירום (תיקון מס' 5 והוראת שעה - חרבות ברזל) (תיקון מס' 4), התשפ\"ה-2025",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=2233667"
+  },
+  "summary": {
+    "he": "החוק אוסר על מעסיק לפטר עובד בשל היעדרות מהעבודה או אי ביצוע העבודה, כאשר אלה נבעו מכך שהעובד התפנה מביתו בעקבות נזק שנגרם לבית מהתקפה בעת מבצע \"עם כלביא\". ההגנה מותנית בכך שהעובד מסר למעסיק אישור על הפגיעה מהרשות המקומית שבה נמצא ביתו. תחילת החוק ב-7 באוגוסט 2025, ואיסור הפיטורים חל עד שלושה חודשים מהיום שבו העובד התפנה. על פיטורים כאלה בתקופה שבין 7 באוגוסט ליום פרסום החוק (13 באוגוסט 2025) לא תחול אחריות פלילית.",
+    "en": "The law prohibits an employer from dismissing an employee for absence from work or for not performing work, where this resulted from the employee being evacuated from home because of damage caused to the home by an attack during Operation \"Rising Lion\" (Am KeLavi). The protection applies on condition that the employee gave the employer confirmation of the damage from the local authority where the home is located. The law takes effect on 7 August 2025, and the dismissal ban lasts until three months after the date the employee was evacuated. There is no criminal liability for such dismissals made between 7 August and the law's publication date (13 August 2025)."
+  },
+  "quotes": [
+    "אוסר על מעסיק לפטר עובד בשל היעדרותו מעבודה או בשל אי ביצוע העבודה",
+    "התפנה מביתו בשל נזק שנגרם לביתו כתוצאה מהתקפה בעת מבצע עם כלביא",
+    "שהעובד מסר למעסיק אישור על הפגיעה מהרשות המקומית שבתחומה מצוי ביתו",
+    "תחילת החוק ביום 7 באוגוסט 2025",
+    "עד תום שלושה חודשים מהמועד שבו העובד התפנה מביתו בשל הנזק כאמור",
+    "לא תהיה חבות פלילית לגבי פיטורים בנסיבות האמורות"
+  ],
+  "topics": [
+    "security"
+  ],
+  "keyVoteSuggested": false,
+  "rationale": "Tagged security because the bill responds to home damage from attacks during a wartime operation (Rising Lion), though its substance is a civilian labor protection rather than defense policy. It is a narrow, technical extension that passed 11-0-0 with no opposition, so it is not suggested as a key vote.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "keyVote": false,
+    "autoPublished": true
+  }
+}

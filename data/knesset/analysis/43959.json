@@ -1,0 +1,29 @@
+{
+  "voteId": 43959,
+  "bill": {
+    "id": 2199188,
+    "name": "חוק גיל פרישה (הורה שילדו נפטר) (הוראת שעה) (תיקון מס' 3), התשפ\"ה–2025",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=2199188"
+  },
+  "summary": {
+    "he": "התיקון הופך את חוק גיל פרישה (הורה שילדו נפטר) מהוראת שעה להוראה קבועה. הוא מקצר את תקופת ההעסקה הנדרשת במקום העבודה בסמוך לגיל פרישת החובה, כתנאי לזכאות, משבע שנים לחמש שנים, ומוסיף את מאבטחי הרשות להגנה על עדים לרשימת החריגים שהחוק אינו חל עליהם. כמו כן נקבע כי השר לשוויון חברתי וקידום מעמד האישה יפעל ליידוע הורים שילדם נפטר על זכויותיהם, וכי תקנות בנושא יחסי עבודה יהיו טעונות גם את הסכמת שר העבודה.",
+    "en": "The amendment turns the Retirement Age Law (Parent Whose Child Died) from a temporary provision into a permanent one. It shortens the period a worker must have been employed at their workplace immediately before the mandatory retirement age, as a condition of eligibility, from seven years to five, and adds Witness Protection Authority security guards to the list of exceptions to which the law does not apply. It also requires the Minister for Social Equality and the Advancement of Women to inform parents whose child died of their rights under the law, and requires the Labor Minister's consent for any implementing regulations dealing with labor relations."
+  },
+  "quotes": [
+    "החוק יהפוך מהוראת שעה להוראה קבועה",
+    "והיא תעמוד על חמש שנים לפני גיל פרישת החובה, במקום שבע שנים",
+    "רשימת החריגים שהחוק לא חל בעניינם תכלול גם את מאבטחי הרשות להגנה על עדים",
+    "השר לשוויון חברתי וקידום מעמד האישה יפעל להביא לידיעתם של הורים שילדם נפטר את זכויותיהם לפי חוק זה",
+    "הן יהיו טעונות גם את הסכמתו של שר העבודה"
+  ],
+  "topics": [],
+  "keyVoteSuggested": false,
+  "rationale": "The bill concerns retirement-age rules and employment rights for parents whose child died; the Witness Protection Authority guard exception is incidental and does not make it a substantive security bill. No watch topic applies, so a key-vote designation is not suggested.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "keyVote": false,
+    "autoPublished": true
+  }
+}

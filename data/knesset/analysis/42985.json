@@ -1,0 +1,32 @@
+{
+  "voteId": 42985,
+  "bill": {
+    "id": 2227649,
+    "name": "חוק לתיקון ולהארכת תוקפן של תקנות שעת חירום (חרבות ברזל) (הארכת מעצר לחשוד בעבירת ביטחון) (תיקון מס' 5), התשפ\"ה-2025 ",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=2227649"
+  },
+  "summary": {
+    "he": "החוק מאריך את תוקפן של תקנות שעת חירום שנקבעו במהלך מלחמת \"חרבות ברזל\". התקנות מאריכות את תקופות המעצר הקבועות בחוק המעצרים לגבי עצורים החשודים בעבירת ביטחון בקשר לפעולות האיבה שהתרחשו בין 7 ל-13 באוקטובר 2023, או לגבי מי שנעצרו במסגרת פעולות המלחמה בעזה. לפי החוק, התקנות יעמדו בתוקפן עד 31 ביולי 2025.",
+    "en": "The law extends emergency regulations enacted during the \"Swords of Iron\" war. The regulations lengthen the detention periods set in the Arrests Law for detainees suspected of a security offense connected to the hostilities of 7–13 October 2023, or detained during the war operations in Gaza. Under this law, the regulations remain in force until 31 July 2025."
+  },
+  "quotes": [
+    "החוק מאריך את תוקף תקנות שעת החירום",
+    "בנוגע לעצור שחשוד בעבירת ביטחון",
+    "בין יום ה-7 באוקטובר לבין ה-13 באוקטובר 2023",
+    "או מי שנעצר במסגרת פעולות המלחמה בעזה",
+    "ההארכה שנקבעה בחוק זה היא עד ליום ה-31 ביולי 2025"
+  ],
+  "topics": [
+    "security",
+    "incitement"
+  ],
+  "keyVoteSuggested": false,
+  "rationale": "The law concerns detention of security/terror suspects from October 7 and the Gaza war, so it is tagged security and incitement & terror. It is a routine time extension of existing regulations (amendment no. 5) passed 6–0–0, so it is not suggested as a key vote. Editors may still weigh its relevance to detainee rights and court oversight.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "keyVote": false,
+    "autoPublished": true
+  }
+}

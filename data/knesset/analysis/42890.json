@@ -1,0 +1,29 @@
+{
+  "voteId": 42890,
+  "bill": {
+    "id": 2226851,
+    "name": "חוק הביטוח הלאומי (תיקון מס' 254), התשפ\"ה-2025 ",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=2226851"
+  },
+  "summary": {
+    "he": "החוק מאפשר למוסד לביטוח לאומי להעניק לנפגעי אירועי השבעה באוקטובר ולבני משפחות הנספים באירועים אלה את ההטבות הסוציאליות שנקבעו בהסכם בין המדינה למוסד לביטוח לאומי, גם אם אינם תושבי ישראל. ההסכם נחתם לפי סעיף 9 ומאמץ את המלצות הוועדה הציבורית בנושא.",
+    "en": "The law allows the National Insurance Institute to grant people injured in the events of October 7 and the families of those killed in them the social benefits set out in an agreement between the state and the National Insurance Institute, even if they are not Israeli residents. The agreement was made under section 9 and adopts the recommendations of the public committee on the matter."
+  },
+  "quotes": [
+    "להעניק לנפגעים מהשבעה באוקטובר ולבני משפחות הנספים מהשבעה באוקטובר",
+    "גם אם אינם תושבי ישראל",
+    "המאמץ את המלצות הוועדה הציבורית בעניין"
+  ],
+  "topics": [
+    "security"
+  ],
+  "keyVoteSuggested": false,
+  "rationale": "Tagged security because the bill concerns benefits for victims of the October 7 attacks and bereaved families. Not suggested as a key vote: it is a narrow welfare-eligibility amendment that implements an existing agreement and public-committee recommendations, and it passed 19-0 with no opposition or abstentions.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "keyVote": false,
+    "autoPublished": true
+  }
+}

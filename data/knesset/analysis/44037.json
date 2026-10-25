@@ -1,0 +1,26 @@
+{
+  "voteId": 44037,
+  "bill": {
+    "id": 2220949,
+    "name": "חוק הממשלה (תיקון מס' 14), התשפ''ה–2025",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=2220949"
+  },
+  "summary": {
+    "he": "החוק מבטל את הסעיפים בחוק הממשלה, התשס\"א–2001, העוסקים בהסדר ממשלת החילופים. זהו תיקון משלים לביטול הסדר ממשלת החילופים בחוק-יסוד: הממשלה. החוק התקבל בקריאה שלישית ברוב של 42 תומכים, ללא מתנגדים וללא נמנעים.",
+    "en": "The law repeals the provisions of the Government Law, 2001, that deal with the rotation (alternate) government arrangement. It is a complementary amendment to the repeal of the rotation government arrangement in Basic Law: The Government. It passed its third reading 42 to 0, with no abstentions."
+  },
+  "quotes": [
+    "כתיקון משלים לביטול הסדר ממשלת החילופים בחוק-יסוד: הממשלה",
+    "חוק זה מבטל את הסעיפים אשר מתייחסים להסדר של ממשלת חילופים בחוק הממשלה, התשס\"א–2001"
+  ],
+  "topics": [],
+  "keyVoteSuggested": false,
+  "rationale": "This is a technical amendment that removes the rotation-government provisions from the Government Law after their repeal in the Basic Law. It does not substantively concern any watch topic, and it passed without opposition, so a key-vote designation is not suggested.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "keyVote": false,
+    "autoPublished": true
+  }
+}

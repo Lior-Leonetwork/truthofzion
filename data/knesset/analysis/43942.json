@@ -1,0 +1,27 @@
+{
+  "voteId": 43942,
+  "bill": {
+    "id": 2221190,
+    "name": "חוק הצבת מכשירי החייאה במקומות ציבוריים (תיקון מס' 3), התשפ\"ה–2025",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=2221190"
+  },
+  "summary": {
+    "he": "החוק מרחיב את החובה להציב מכשיר החייאה ולדאוג לתקינותו כך שתחול גם על רכבת ארצית המשמשת להסעת נוסעים, וכן על תחנת רכבת מקומית הנמצאת בתוך מבנה סגור. החוק אושר בקריאה שלישית.",
+    "en": "The law extends the obligation to place a defibrillator (resuscitation device) and keep it in working order so that it also applies to national passenger trains and to local railway stations located inside an enclosed building. It was approved in its third reading."
+  },
+  "quotes": [
+    "החובה להציב מכשיר החייאה במקום ציבורי ולדאוג לתקינותו",
+    "רכבת ארצית המשמשת להסעת נוסעים",
+    "תחנת רכבת מקומית הנמצאת בתוך מבנה סגור"
+  ],
+  "topics": [],
+  "keyVoteSuggested": false,
+  "rationale": "A public-health and safety measure on defibrillators in trains and stations; it does not substantively concern any of the watch topics, so no key-vote suggestion.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "keyVote": false,
+    "autoPublished": true
+  }
+}

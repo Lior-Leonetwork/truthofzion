@@ -1,0 +1,32 @@
+{
+  "voteId": 44407,
+  "bill": {
+    "id": 2233669,
+    "name": "חוק כליאתם של לוחמים בלתי חוקיים (תיקון מס' 4 והוראת שעה - חרבות ברזל) (תיקון מס' 5), התשפ\"ה-2025",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=2233669"
+  },
+  "summary": {
+    "he": "החוק מתקן את הוראת השעה \"חרבות ברזל\" לחוק כליאתם של לוחמים בלתי חוקיים. הוראה זו מאריכה עוד יותר את התקופות הקבועות בחוק בעת הכרזה מיוחדת, מורידה את הדרג המוסמך לאשר הגבלות על פגישה עם עורך דין ומאפשרת דיונים בהיוועדות חזותית. לפי דברי ההסבר, הוראת השעה מוארכת עד 31 בדצמבר 2025, ותוקף ההכרזה מוארך עד 31 באוקטובר 2025. בנוסף מובהר כי בית המשפט רשאי להורות על מניעת פגישה עם עורך דין לתקופה של עד 30 ימים גם לאחר 75 הימים הראשונים מיום הכליאה.",
+    "en": "The law amends the \"Swords of Iron\" temporary provision of the Incarceration of Unlawful Combatants Law. That provision further lengthens the periods set in the law during a special declaration, lowers the rank authorized to approve restrictions on meetings with a lawyer, and allows hearings by video conference. According to the explanatory notes, the temporary provision is extended to 31 December 2025 and the declaration's validity to 31 October 2025. It also clarifies that a court may order a lawyer meeting to be prevented for up to 30 days even after the first 75 days of detention."
+  },
+  "quotes": [
+    "יוארכו התקופות המנויות בחוק אף יותר",
+    "הורד הדרג המוסמך לאשר הגבלות על פגישה עם עורך דין",
+    "הוארכה הוראת השעה כאמור עד ליום י\"א בטבת התשפ\"ו (31 בדצמבר 2025)",
+    "לצד הארכת תקופת תוקפה של ההכרזה מכוח הצעת החוק עד ליום ט' בחשוון התשפ\"ו (31 באוקטובר 2025)",
+    "סמכות בית המשפט להורות על מניעת פגישה עם עורך דין לתקופה של עד 30 ימים",
+    "תחול לא רק במהלך 75 הימים הראשונים מיום הכליאה, וניתן יהיה להפעילה גם בשלב מאוחר יותר"
+  ],
+  "topics": [
+    "security"
+  ],
+  "keyVoteSuggested": true,
+  "rationale": "The bill extends wartime detention arrangements for unlawful combatants, including restrictions on access to counsel, so it falls under security. It was a final (third-reading) vote extending these powers and widening when a court may bar meetings with a lawyer, so editors may want to treat it as a key vote. The court-power clarification could arguably also justify a judiciary tag, but the bill's core is security detention.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "keyVote": false,
+    "autoPublished": true
+  }
+}

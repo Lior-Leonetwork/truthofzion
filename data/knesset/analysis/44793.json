@@ -1,0 +1,29 @@
+{
+  "voteId": 44793,
+  "bill": {
+    "id": 1046181,
+    "name": "חוק המאבק בטרור (תיקון מס' 9 והוראת שעה) (תיקון), התשפ\"ו-2025",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=1046181"
+  },
+  "summary": {
+    "he": "החוק מאריך את תוקפה של הוראת שעה בחוק המאבק בטרור, שקובעת עבירה של צריכת פרסומי טרור. לפי החוק, הוראת השעה תעמוד בתוקף עד 30 בנובמבר 2027.",
+    "en": "The law extends a temporary provision in the Counter-Terrorism Law that makes the consumption of terrorist publications a criminal offense. Under the law, the temporary provision will remain in force until November 30, 2027."
+  },
+  "quotes": [
+    "מאריך את הוראת השעה שקובעת עבירה של צריכת פרסומי טרור",
+    "עד 30 בנובמבר 2027"
+  ],
+  "topics": [
+    "incitement",
+    "security"
+  ],
+  "keyVoteSuggested": true,
+  "rationale": "This is the final (third-reading) vote extending a criminal offense for consuming terrorist publications under the Counter-Terrorism Law, so it falls directly under incitement and terror and also relates to security. It merely extends an existing provision rather than creating a new one, which editors may weigh when deciding whether it is a key vote.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "keyVote": false,
+    "autoPublished": true
+  }
+}

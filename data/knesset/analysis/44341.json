@@ -1,0 +1,31 @@
+{
+  "voteId": 44341,
+  "bill": {
+    "id": 2229620,
+    "name": "חוק לייעול האכיפה והפיקוח העירוניים ברשויות המקומיות (הוראת שעה) (תיקון מס' 18), התשפ\"ה–2025 ",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=2229620"
+  },
+  "summary": {
+    "he": "החוק הופך את חוק ייעול האכיפה והפיקוח העירוניים ברשויות המקומיות, שהיה הוראת שעה מאז 2011, להוראת קבע. הוא מסדיר את הקמתם, הרכבם, מימונם והחזקת הנשק של מערכי אכיפה מקומיים לפי אמות מידה שייקבעו בתקנות, עם חריג לאזורי עדיפות או מיקוד לאומיים. החוק תוחם את סמכויות פקחי השיטור המקומי למקרים כגון מניעת אלימות, גניבה, נזק חמור לרכוש ומעשה מסכן חיים ברכב, ומעניק להם, כהוראת שעה לשנתיים, סמכויות להתמודד עם שכרות באזורים מוגדרים. עוד הוא מעגן יחידה במשרד לביטחון לאומי שתתכלל את המערכים ותטפל בתלונות, וקובע חובת דיווח שנתית של השר לוועדה לביטחון לאומי של הכנסת.",
+    "en": "The law turns the 2011 temporary law on streamlining municipal enforcement and supervision in local authorities into a permanent law. It regulates the establishment, staffing, funding and weapons possession of local enforcement units according to criteria to be set in regulations, with an exception for national priority or focus areas. It limits the powers of local policing inspectors to cases such as preventing violence, theft, serious property damage and life-endangering acts using a vehicle, and grants them, as a two-year temporary provision, powers to address drunkenness in specified areas. It also establishes a unit in the National Security Ministry to coordinate the units and handle complaints, and requires the minister to report annually to the Knesset National Security Committee."
+  },
+  "quotes": [
+    "יהפוך להוראת קבע",
+    "הוסדר מימון מערכי האכיפה המקומיים על ידי המשרד לביטחון לאומי",
+    "הוסדר אופן החזקת הנשקים בידי מערך אכיפה מקומי",
+    "מניעת אלימות, גניבה, נזק חמור לרכוש ומעשה מסכן חיים באמצעות רכב המתבצעים במרחב הציבורי",
+    "סמכויות למאבק בתופעת השכרות, כהוראת שעה לשנתיים",
+    "תטפל בתלונות שהוגשו בגין הפעלת סמכות שלא כדין בידי פקחי השיטור המקומיים",
+    "חובת דיווח שנתית של השר לביטחון לאומי לוועדה לביטחון לאומי של הכנסת"
+  ],
+  "topics": [],
+  "keyVoteSuggested": false,
+  "rationale": "The bill concerns municipal policing and public-order enforcement under the National Security Ministry, not the IDF, war or terrorism, so no watch topic was tagged; editors may consider 'security' if they read it to include internal policing. The vote passed 13-0-0 and does not appear to be a key vote for the listed topics.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "keyVote": false,
+    "autoPublished": true
+  }
+}

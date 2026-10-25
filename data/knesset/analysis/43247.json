@@ -1,0 +1,32 @@
+{
+  "voteId": 43247,
+  "bill": {
+    "id": 2220329,
+    "name": "חוק הביטוח הלאומי (תיקון מס' 255), התשפ\"ה–2025",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=2220329"
+  },
+  "summary": {
+    "he": "התיקון לחוק הביטוח הלאומי קובע כי אדם ששוחרר משירות קבע לפני שירותו במילואים ייחשב, לעניין חישוב תגמול המילואים, כאילו היה עובד בתקופת שירות הקבע, אף שלא התקיימו לגביו יחסי עבודה. זאת אלא אם כן חישוב התגמול בלי התייחסות לשירות הקבע מיטיב עמו. החוק נכנס לתוקף ב-1 ביוני 2025 וחל על תגמול בעד שירות מילואים שהחל ב-7 באוקטובר 2023 או לאחר מכן.",
+    "en": "The amendment to the National Insurance Law provides that a person discharged from career (permanent) military service before reserve duty is treated, for calculating reserve-duty compensation, as if they had been an employee during their career service, even though no employment relationship existed. This does not apply if calculating the compensation without regard to the career service is more favorable to that person. The law takes effect on 1 June 2025 and applies to compensation for reserve service that began on or after 7 October 2023."
+  },
+  "quotes": [
+    "שוחרר משירות קבע",
+    "לעניין חישוב תגמול המילואים, כאילו היה עובד בעת שירותו בשירות הקבע",
+    "אף שלא התקיימו לגביו יחסי עבודה",
+    "אלא אם כן לטובתו הוא שחישוב התגמול ייעשה ללא התייחסות לשירות הקבע",
+    "תחילתו של החוק היא ביום 1 ביוני 2025",
+    "שירות מילואים שהחל ביום 7 באוקטובר 2023 או אחריו"
+  ],
+  "topics": [
+    "security"
+  ],
+  "keyVoteSuggested": false,
+  "rationale": "Tagged security because the bill concerns compensation for IDF reservists, including reserve service since 7 October 2023. Not suggested as a key vote: it is a narrow technical adjustment to how compensation is calculated, and it passed 17-0 with one abstention. Editors may weigh this differently given the wartime-reservist context.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "keyVote": false,
+    "autoPublished": true
+  }
+}

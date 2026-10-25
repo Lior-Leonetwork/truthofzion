@@ -1,0 +1,29 @@
+{
+  "voteId": 44942,
+  "bill": {
+    "id": 1046277,
+    "name": "חוק לתיקון פקודת בתי הסוהר (תיקון מס' 66 – הוראת שעה – חרבות ברזל) (חופשה מיוחדת לאסיר) (תיקון מס' 4), התשפ\"ו-2025",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=1046277"
+  },
+  "summary": {
+    "he": "החוק מאריך הוראת שעה בפקודת בתי הסוהר, שנחקקה על רקע משבר הכליאה. ההוראה מאפשרת לנציב בתי הסוהר או לסוהר בכיר שהוסמך לכך להעניק לאסירים חופשה מיוחדת של עד 45 ימים. ההסדר חל רק על אסירים אזרחי ישראל או תושביה שנותרו להם עד 45 ימי מאסר, ואינו חל על מי שהורשעו בעבירות חמורות כגון עבירות ביטחון, אלימות חמורה, עבירות מין ואלימות במשפחה. לפי החוק, ההסדר יעמוד בתוקפו עד 31 ביולי 2026.",
+    "en": "The law extends a temporary provision in the Prisons Ordinance that was enacted against the background of a prison overcrowding crisis. The provision allows the Prisons Commissioner, or a senior warden authorized for this purpose, to grant prisoners a special furlough of up to 45 days. It applies only to prisoners who are Israeli citizens or residents with no more than 45 days left to serve. It does not apply to prisoners convicted of serious offenses such as security offenses, serious violence, sex offenses and domestic violence. Under the law, the arrangement remains in force until 31 July 2026."
+  },
+  "quotes": [
+    "מסמיך את נציב בתי הסוהר או סוהר בכיר שהוסמך לכך להעניק לאסירים חופשה מיוחדת לתקופה של עד 45 ימים",
+    "הסדר זה חל אך ורק על אסירים שהם אזרחי או תושבי ישראל שיתרת מאסרם ביום היציאה לחופשה אינה עולה על 45 ימים",
+    "ואינו חל על אסירים שהורשעו בעבירות חמורות, כגון עבירות ביטחון, אלימות חמורה, עבירות מין ואלימות במשפחה",
+    "הוארך תוקפה של הוראת השעה המאפשרת מתן חופשות אלו",
+    "עד ליום י\"ז באב התשפ\"ו (31 ביולי 2026)"
+  ],
+  "topics": [],
+  "keyVoteSuggested": false,
+  "rationale": "The bill is a technical extension of a prison-overcrowding furlough measure. Security offenses are mentioned only as an exclusion, and the 'Swords of Iron' label is the provision's name rather than its subject, so no watch topic seems substantively engaged. It passed 12-0-0, with no indication of key-vote significance.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "keyVote": false,
+    "autoPublished": true
+  }
+}

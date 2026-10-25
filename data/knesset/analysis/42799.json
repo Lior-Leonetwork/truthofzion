@@ -1,0 +1,32 @@
+{
+  "voteId": 42799,
+  "bill": {
+    "id": 2225485,
+    "name": "חוק הביטוח הלאומי (תיקון מס' 253 והוראות שעה), התשפ\"ה-2025 ",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=2225485"
+  },
+  "summary": {
+    "he": "התיקון קובע כמה הוראות לחישוב תגמולי מילואים. התגמול המינימלי ליום מילואים יעמוד גם בהמשך על 95% מהסכום הבסיסי לחודש חלקי 30 (כ-321 שקלים ליום), עד סוף 2025. כהוראת שעה, עצמאים ששירתו במילואים בין פברואר 2023 לסוף 2025 יקבלו תגמול לפי הגבוה מבין ההכנסה לפי השומה הסופית לבין ההכנסה ששימשה לחישוב המקדמות, כך שיבוטלו חובות שנוצרו להם. בנוסף נקבעו כללים ל\"סבבי מילואים\" בתקופת חירום: מי שנקרא לשירות נוסף בתוך פחות מ-90 ימים יקבל תגמול לפי השכר שקדם לסבב הראשון, ועליית שכר של יותר מ-20% בין הסבבים תוכר רק אם יוכח שהיא נובעת מעבודה.",
+    "en": "The amendment sets several rules for calculating reserve-duty compensation under the National Insurance Law. The minimum daily reserve payment will continue at an increased rate of 95% of the basic monthly amount divided by 30 (about NIS 321 per day) until the end of 2025. As a temporary provision, self-employed people who served in the reserves between February 2023 and the end of 2025 will be compensated based on the higher of their final tax assessment income or the income used to calculate their advance payments, cancelling debts that arose for them. It also sets rules for repeated reserve rounds during an emergency period: those called up again within less than 90 days receive compensation based on their wage before the first round, and a wage increase of more than 20% between rounds is recognized only if shown to come from work rather than from the reserve payments themselves."
+  },
+  "quotes": [
+    "התגמול המינימלי ליום מילואים ימשיך לעמוד על שיעור מוגדל של 95% מהסכום הבסיסי לחודש חלקי 30",
+    "התגמול יחושב לפי הגבוה מבין אלה",
+    "התיקון יביא, בין השאר לביטול חובות שנוצרו לעצמאים שקיבלו תגמולים לפי המקדמות",
+    "מי שנקרא לשירות נוסף בתוך פחות מ-90 ימים מסיום שירות קודם במילואים יקבל תגמול המבוסס על השכר שקדם לסבב המילואים הראשון שלו בתקופת החירום",
+    "עליית שכר של עד 20% בין הסבבים תובא בחשבון",
+    "ואילו עלייה גבוהה מכך תוכר רק אם יוכח שהיא נובעת מעבודה ולא מתגמולי המילואים עצמם"
+  ],
+  "topics": [
+    "security"
+  ],
+  "keyVoteSuggested": false,
+  "rationale": "Tagged security because the bill concerns compensation for IDF reservists serving during the war and emergency period. It is mainly a social-insurance and benefits measure that passed 18-0 with no opposition, so it is likely not a distinguishing key vote. Note for editors: the bill text says the reserve-round provisions took effect on 1 May 2025, which is later than the vote date of 2025-01-20; this may be worth checking.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "keyVote": false,
+    "autoPublished": true
+  }
+}

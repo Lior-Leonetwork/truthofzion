@@ -1,0 +1,28 @@
+{
+  "voteId": 44964,
+  "bill": {
+    "id": 2225805,
+    "name": "חוק קידום התחרות בענפי המזון והפארם (תיקון מס' 9), התשפ\"ו–2025",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=2225805"
+  },
+  "summary": {
+    "he": "החוק משנה את הגדרת \"קמעונאי פארם גדול\" בחוק קידום התחרות בענפי המזון והפארם, התשע\"ד–2014. לפי ההסדר החדש, קמעונאי פארם ייחשב גדול אם מחזור הכנסותיו הוא 450 מיליון ש\"ח (במקום כ-287 מיליון ש\"ח) והוא מחזיק לפחות 12 חנויות פארם. הגדרת \"קמעונאי גדול\" בתחום המזון אינה משתנה. לפי דברי ההסבר, כתוצאה מהתיקון יפחת מספר קמעונאי הפארם שעליהם חלות ההוראות המחמירות שבחוק, ובהן מגבלות ביחסים עם ספקים וחובות שקיפות מחירים, במטרה להקל על כניסת שחקנים חדשים לשוק.",
+    "en": "The law amends the definition of a \"large pharma retailer\" in the 2014 Law for the Promotion of Competition in the Food and Pharma Sectors. Under the new arrangement, a pharma retailer is considered large if its revenue turnover is NIS 450 million (instead of about NIS 287 million) and it holds at least 12 pharma stores. The definition of a \"large retailer\" in the food sector remains unchanged. According to the explanatory notes, the amendment reduces the number of pharma retailers subject to the law's stricter provisions, such as restrictions on dealings with suppliers and price-transparency duties, with the stated aim of easing entry for new players into the market."
+  },
+  "quotes": [
+    "אם מחזור ההכנסות שלו עומד על 450 מיליון שקלים חדשים, במקום 287 מיליון שקלים, וכן הוא יידרש להחזיק 12 חנויות פארם לפחות",
+    "ההגדרה תחול רק לעניין קמעונאי פארם",
+    "שמתאפיין בריכוזיות גבוהה ובקשיים בכניסת שחקנים חדשים לשוק",
+    "יצטמצם מספרם של קמעונאי פארם שעליהם יחולו הוראות מחמירות כאמור"
+  ],
+  "topics": [],
+  "keyVoteSuggested": false,
+  "rationale": "This is an economic/competition-regulation amendment about the threshold for large pharma retailers; it does not substantively concern any of the watch topics. The vote passed 11-0-1, which does not suggest it is a key vote for the listed topics.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "keyVote": false,
+    "autoPublished": true
+  }
+}

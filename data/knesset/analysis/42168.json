@@ -1,0 +1,34 @@
+{
+  "voteId": 42168,
+  "bill": {
+    "id": 2218862,
+    "name": "חוק הביטוח הלאומי (תיקון מס' 250), התשפ\"ה–2024",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=2218862"
+  },
+  "summary": {
+    "he": "החוק קובע שגמלת ביטוח לאומי לא תשולם למי שאינו תושב ישראל ומקבל אותה בהיותו מחוץ לישראל, אם הורשע בעבירת טרור חמורה, בעבירה שנקבע שהיא מעשה טרור, או בעבירת טרור ביטחונית בבית משפט צבאי, או אם הוכרז כפעיל טרור. הגמלה תעוכב כבר בתקופת מעצר עד תום ההליכים, ומי שהורשע בבית משפט צבאי יוכל לטעון בפני המוסד לביטוח לאומי שהעבירה נעברה בנסיבות פליליות ולא בזיקה לטרור. החוק נכנס לתוקף ב-1.1.2025, חל גם על עבירות שנעברו לפני כן לגבי גמלאות מיום התחילה ואילך, ומחייב דיווח שנתי לוועדת העבודה והרווחה. בנוסף, הוא מאריך עד סוף 2026 את ההוראה שלפיה מענקים בשל מלחמת חרבות ברזל לא ייחשבו כהכנסה.",
+    "en": "The law provides that a National Insurance benefit will not be paid to a non-resident of Israel who receives it while abroad if that person was convicted of a serious terror offense, of an offense a court determined to be an act of terror, or of a security terror offense in a military court, or was declared a terror operative. Payment is suspended already during detention until the end of proceedings, and a person convicted in a military court may argue before the National Insurance Institute that the offense was committed in other criminal circumstances rather than with a link to terrorism. The law takes effect on 1.1.2025, applies also to offenses committed earlier but only for benefits due from that date onward, and requires annual reporting to the Labor and Welfare Committee. It also extends to the end of 2026 the provision under which grants related to the Swords of Iron war are not counted as income."
+  },
+  "quotes": [
+    "לא תשולם לו הגמלה אם הוא הורשע בעבירת טרור חמורה לפי חוק המאבק בטרור",
+    "תשלום הגמלה יעוכב אם העבירה המיוחסת לו בכתב האישום היא אחת מן העבירות האמורות",
+    "יוכל לטעון בפני המוסד לביטוח לאומי כי עבירת הטרור הבטחונית שעבר לא נעברה בנסיבות של פגיעה בביטחון המדינה ובזיקה לטרור",
+    "אם הוא הוכרז כפעיל טרור לפי חוק המאבק בטרור, וכל עוד ההכרזה עומדת בתוקף",
+    "תחילתו של חוק זה תהיה ב1.1.2025 והוא יחול גם לעניין עבירות שנעברו לפני תחילתו",
+    "אי העיכוב או אי התשלום יחולו רק לגבי גמלאות המגיעות בעד יום התחילה ואילך",
+    "לא ייחשבו כהכנסה בידי מקבליהם"
+  ],
+  "topics": [
+    "incitement",
+    "security"
+  ],
+  "keyVoteSuggested": true,
+  "rationale": "The core of the law is revocation and suspension of National Insurance benefits for persons convicted of, charged with, or declared involved in terrorism, which fits the 'incitement & terror' topic (penalties and revocation of rights) and touches security; it passed in its final (third) reading. A secondary provision concerning Swords of Iron grants is unrelated to the sanctions element.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "keyVote": false,
+    "autoPublished": true
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "voteId": 43492,
+  "bill": {
+    "id": 2227232,
+    "name": "חוק התחשבנות בין בתי חולים לקופות חולים (בריאות הנפש), התשפ\"ה-2025",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=2227232"
+  },
+  "summary": {
+    "he": "החוק קובע הסדר התחשבנות בין קופות החולים לבתי החולים בתחום בריאות הנפש, לגבי שירותים הניתנים מתחילת 2025 ועד סוף 2028, עם אפשרות הארכה עד 2031 באישור ועדת הבריאות. לכל בית חולים וקופת חולים ייקבע בסיס התחשבנות פרטני לאשפוז פסיכיאטרי, שהקופה תשלם ממנו חלק חודשי. משרד הבריאות ישלם תוספת לבתי החולים לפי ציונם במדד לשיפור השירות, ושרי הבריאות והאוצר מוסמכים לשנות את בסיס ההתחשבנות ולקבוע תקרת צריכה לשירותי מיון פסיכיאטריים. החוק מטיל על השרים חובת דיווח לוועדת הבריאות של הכנסת.",
+    "en": "The law sets a payment arrangement between health funds (kupot holim) and hospitals for mental health services provided from the start of 2025 through the end of 2028, with a possible extension to 2031 subject to Health Committee approval. An individual settlement base for psychiatric hospitalization is set for each hospital and health fund, with the fund paying one-twelfth of it monthly. The Health Ministry will pay hospitals an additional amount distributed according to a service-improvement index, and the Health and Finance Ministers may adjust the settlement base and set a consumption cap for psychiatric emergency services. The ministers must report to the Knesset Health Committee."
+  },
+  "quotes": [
+    "מתחילת שנת 2025 ועד סוף שנת 2028",
+    "לכל בית חולים ולכל קופת חולים ייקבע בסיס התחשבנות פרטני לגבי שירותי אשפוז פסיכיאטרי",
+    "שיחולק בין בתי החולים בהתאם לציון שיקבלו במדד לשיפור השירות",
+    "ישולמו רק 30% מהמחיר המלא",
+    "שיעור של עד 1.9% מהתשלומים",
+    "חובת דיווח נרחבת לוועדת הבריאות של הכנסת"
+  ],
+  "topics": [],
+  "keyVoteSuggested": false,
+  "rationale": "The bill concerns mental-health funding arrangements between health funds and hospitals, which does not substantively fall under any of the watch topics. Not suggested as a key vote.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "keyVote": false,
+    "autoPublished": true
+  }
+}

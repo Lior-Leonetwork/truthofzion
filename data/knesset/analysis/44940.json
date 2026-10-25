@@ -1,0 +1,33 @@
+{
+  "voteId": 44940,
+  "bill": {
+    "id": 1046391,
+    "name": "חוק כליאתם של לוחמים בלתי חוקיים (תיקון מס' 4 והוראת שעה – חרבות ברזל) (תיקון מס' 6), התשפ\"ו-2025",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=1046391"
+  },
+  "summary": {
+    "he": "החוק מאריך עד 31 במרץ 2026 את הוראת השעה מתקופת מלחמת חרבות ברזל, הקובעת הסדרים מיוחדים לכליאת לוחמים בלתי חוקיים. במקביל הוא מקצר חלק מהמועדים: התקופה המרבית להוצאת צו כליאה קבוע, מועד הביקורת השיפוטית הראשונה, והתקופה שבה ניתן למנוע מכלוא להיפגש עם עורך דין. לגבי קטינים נקבעו מועדים קצרים יותר. בנוסף, החוק מעגן הסדר לקיום דיונים בעניין הכלואים בהיוועדות חזותית, והסדר דומה נקבע לדיוני מעצר של חשודים בעבירות ביטחון.",
+    "en": "The law extends until 31 March 2026 the Swords of Iron wartime temporary order that sets special arrangements for detaining unlawful combatants. At the same time it shortens several deadlines: the maximum period for issuing a permanent detention order, the timing of the first judicial review, and the period during which a detainee can be barred from meeting a lawyer. Shorter deadlines are set for minors. It also establishes a standalone arrangement for holding detainees' hearings by video conference, with a similar arrangement for detention hearings of security-offense suspects."
+  },
+  "quotes": [
+    "הוארך תוקפה של הוראת השעה הקובעת הסדרים מיוחדים לתקופת הלחימה עד ליום י\"ג בניסן התשפ\"ו (31 במרץ 2026)",
+    "קוצרה התקופה המרבית להוצאת צו כליאה קבוע מ-30 ל-25 ימים",
+    "מועד הביקורת השיפוטית הראשונה קוצר מ-45 ל-40 ימים",
+    "התקופה שבה רשאי הממונה למנוע מפגש של כלוא עם עורך דין קוצרה מ-45 ל-25 ימים",
+    "צו כליאה זמני בעניינם יעמוד בתוקפו עד 15 ימים",
+    "קיום דיונים בעניינם של הכלואים בדרך של היוועדות חזותית",
+    "תיקון משלים לחוק העוסק בהארכת מעצר לחשוד בעבירת ביטחון"
+  ],
+  "topics": [
+    "security"
+  ],
+  "keyVoteSuggested": true,
+  "rationale": "The bill directly concerns wartime detention powers over unlawful combatants (security); it also touches judicial-review deadlines and court procedure, though not the judiciary as an institution. It is a key-vote candidate as the final reading extending these wartime powers, though editors may weigh that it is an extension of an existing temporary order passed 12-0.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "keyVote": false,
+    "autoPublished": true
+  }
+}

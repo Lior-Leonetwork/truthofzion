@@ -1,0 +1,30 @@
+{
+  "voteId": 44352,
+  "bill": {
+    "id": 2231609,
+    "name": "חוק חובת המכרזים (תיקון מס' 24 – הוראת שעה) (תיקון מס' 2), התשפ\"ה–2025",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=2231609"
+  },
+  "summary": {
+    "he": "החוק מאריך בשלוש שנים, עד 15 ביולי 2028, הוראת שעה בחוק חובת המכרזים. ההוראה מסמיכה את הממשלה לקבוע בתקנות, באישור ועדת החוקה של הכנסת, העדפה של תוצרת הארץ ברכישת טקסטיל עבור מערכת הביטחון והמשרד לביטחון הפנים. לפי הוראת השעה המקורית, שר האוצר רשאי להאריך תקופה זו בצו, באישור ועדת החוקה, בשנתיים נוספות.",
+    "en": "The law extends by three years, until July 15, 2028, a temporary provision of the Mandatory Tenders Law. The provision authorizes the government to set regulations, with the approval of the Knesset Constitution Committee, giving preference to domestic products when buying textiles for the defense establishment and the Ministry of Internal Security. Under the original temporary provision, the Finance Minister may extend this period by order, with the Constitution Committee's approval, for two more years."
+  },
+  "quotes": [
+    "עד ל-15 ביולי 2028",
+    "העדפה של תוצרת הארץ ברכישת טקסטיל בעבור מערכת הביטחון והמשרד לביטחון הפנים",
+    "באישור ועדת החוקה של הכנסת",
+    "לפרק זמן של שנתיים נוספות"
+  ],
+  "topics": [
+    "security"
+  ],
+  "keyVoteSuggested": false,
+  "rationale": "Tagged security because the bill concerns textile procurement for the defense establishment and the Ministry of Internal Security. It is a technical extension of an existing temporary procurement-preference provision and passed 9-0, so it does not appear to be a key vote.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "keyVote": false,
+    "autoPublished": true
+  }
+}

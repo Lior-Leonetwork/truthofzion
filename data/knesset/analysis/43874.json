@@ -1,0 +1,31 @@
+{
+  "voteId": 43874,
+  "bill": {
+    "id": 2201202,
+    "name": "חוק בתי המשפט (תיקון מס' 105), התשפ\"ה-2025",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=2201202"
+  },
+  "summary": {
+    "he": "החוק משלים את תיקון מס' 4 לחוק-יסוד: השפיטה, ועוסק במינוי שופטים לבית המשפט העליון ובוועדה לבחירת שופטים. נקבע כי ככלל לא ימונה לבית המשפט העליון שופט שטרם מלאו לו 55 שנים, אלא אם הוועדה בחרה בו על דעת כל חבריה, וכי שני שלישים לפחות משופטי בית המשפט העליון יהיו שופטים שכיהנו בבית המשפט המחוזי. עוד נקבעו הוראות לבחירה חדשה של חברי הוועדה שנבחרים על ידי הקואליציה והאופוזיציה, במקרה של שינויים קואליציוניים. כן נקבע כי הגמול לנציגי הציבור בוועדה ייקבע בתקנות של שר המשפטים, באישור ועדת החוקה, חוק ומשפט.",
+    "en": "The law complements Amendment No. 4 to Basic Law: The Judiciary, and deals with appointments to the Supreme Court and with the Judicial Selection Committee. It provides that, as a rule, a judge under 55 may not be appointed to the Supreme Court unless the committee selects them unanimously, and that at least two-thirds of Supreme Court justices must be judges who served on a District Court. It also sets rules for re-selecting committee members chosen by the coalition and opposition when coalition changes occur. Compensation for public representatives on the committee is to be set in regulations issued by the Justice Minister with the approval of the Constitution, Law and Justice Committee."
+  },
+  "quotes": [
+    "תיקון חוק משלים לחוק-יסוד: השפיטה (תיקון מס' 4)",
+    "לא ימונה שופט שטרם מלאו לו 55 שנים לבית המשפט העליון, אלא אם הוועדה לבחירת שופטים בחרה בו על דעת כל חבריה",
+    "שני שלישים לפחות מהשופטים בבית המשפט העליון יהיו שופטים שכיהנו בבית המשפט המחוזי",
+    "נקבעו בחוק הוראות משלימות להסדרת המצבים בהם שינויים קואליציוניים יובילו לבחירה חדשה של חברי הוועדה",
+    "הגמול שיקבלו נציגי הציבור המשמשים כחברים בוועדה לבחירת שופטים, ייקבע בתקנות של שר המשפטים באישור ועדת החוקה, חוק ומשפט"
+  ],
+  "topics": [
+    "judiciary"
+  ],
+  "keyVoteSuggested": true,
+  "rationale": "The bill directly sets Supreme Court appointment criteria and rules for the Judicial Selection Committee, as the companion law to Amendment No. 4 to Basic Law: The Judiciary, so it falls squarely under the judiciary topic. It was a third-reading vote on a structural change to judicial appointments, which may warrant key-vote status; the 64-0-0 result may be worth an editor's look at the full vote record.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "keyVote": false,
+    "autoPublished": true
+  }
+}

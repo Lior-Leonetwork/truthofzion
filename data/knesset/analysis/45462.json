@@ -1,0 +1,32 @@
+{
+  "voteId": 45462,
+  "bill": {
+    "id": 1056886,
+    "name": "חוק הגנה על עובדים בשעת חירום (תיקון מס' 6 והוראת שעה), התשפ\"ו-2026",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=1056886"
+  },
+  "summary": {
+    "he": "החוק מוסיף הגנות מפני פיטורים לעובדים בתקופת מצב מיוחד בעורף, בתחולה רטרואקטיבית מ-28.2.2026. הוא אוסר לפטר עובד שנעדר מעבודתו בשל פינוי מביתו לאחר שנפגע בהתקפה, למשך שלושה חודשים מיום הפינוי, בכפוף להצגת אישור. הוא מגן מפיטורים על הורים לילדים עד גיל 14 שבן או בת זוגם משרתים בצבא או בשירותי חירום מסוימים, ומסמיך את שר העבודה, באישור ועדה של הכנסת, להחיל הגנה זו גם בתקופה נוספת. כמו כן, ההגנה על הורים שנעדרו בשל סגירת מוסד החינוך של ילדם תחול גם כשהמוסד נסגר בהוראת הרשות המקומית או המוסד עצמו, עד חצי שנה מתום ההכרזה.",
+    "en": "The law adds protections against dismissal for employees during the special home-front situation, applying retroactively from 28.2.2026. It bars employers from dismissing an employee who was absent because they were evacuated from a home damaged in an attack, for three months from the evacuation, provided a confirmation is submitted. It protects from dismissal parents of children up to age 14 whose spouse or the child's other parent is serving in the army or in certain emergency services, and authorizes the Labor Minister, with approval of a Knesset committee, to extend this protection to a further period. It also extends the existing protection for parents absent because their child's educational institution closed to closures ordered by the local authority or the institution itself, until six months after the declaration ends."
+  },
+  "quotes": [
+    "ותחולתו רטרואקטיבית החל מיום 28.2.2026",
+    "אסור למעסיק לפטר עובד שנאלץ להיעדר או לא לבצע את עבודתו בשל פינוי מביתו עקב נזק שנגרם לביתו מהתקפה",
+    "למשך שלושה חודשים מיום הפינוי",
+    "תינתן הגנה מפני פיטורים להורים לילדים עד גיל 14 (כולל ילדי אומנה)",
+    "משרת כחייל בסדיר או בקבע",
+    "תקפה גם כאשר מוסד החינוך נסגר בהוראת הרשות המקומית או המוסד עצמו"
+  ],
+  "topics": [
+    "security"
+  ],
+  "keyVoteSuggested": false,
+  "rationale": "Primarily a labor-law measure, tagged 'security' because it responds to wartime home-front conditions (attack damage, evacuation, spouses serving in the army); editors may judge the link too indirect. Not suggested as a key vote: it is a narrow temporary protection that passed 9-0 with no opposition.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "keyVote": false,
+    "autoPublished": true
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "voteId": 43940,
+  "bill": {
+    "id": 2218716,
+    "name": "חוק להנצחת זכרו של מנחם בגין (תיקון מס' 4), התשפ\"ה–2025",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=2218716"
+  },
+  "summary": {
+    "he": "התיקון מוסיף לחוק להנצחת זכרו של מנחם בגין, התשנ\"ח–1998, הוראה שלפיה בכל שנה, בד' באדר, יום פטירתו של מנחם בגין, יקויים יום ציון לזכרו, ובו יתקיימו אירועי זיכרון והנצחה. במחנות צה\"ל יוקדש זמן להנצחת זכרו וללימוד פועלו בהתאם להחלטת הרמטכ\"ל. בבתי הספר יוקדש לכך זמן אם שר החינוך יחליט על כך.",
+    "en": "The amendment adds a provision to the 1998 Menachem Begin Commemoration Law establishing an annual memorial day for Menachem Begin on 4 Adar, the date of his death, during which remembrance and commemoration events will be held. In IDF camps, time will be devoted to commemorating him and studying his legacy, as decided by the Chief of Staff. In schools, time will be devoted to this if the Minister of Education so decides."
+  },
+  "quotes": [
+    "ב-ד' באדר, יום פטירתו של מנחם בגין, יקויים יום ציון לזכרו",
+    "במהלך היום יתקיימו ארועי זכרון והנצחה",
+    "במחנות צה\"ל יוקדש זמן להנצחת זכרו וללימוד פועלו בהתאם להחלטת הרמטכ\"ל",
+    "ובבתי הספר יוקדש זמן לכך ככל ששר החינוך יחליט על כך"
+  ],
+  "topics": [],
+  "keyVoteSuggested": false,
+  "rationale": "This is a commemoration law establishing a memorial day. The reference to IDF camps is incidental to the commemoration and does not substantively concern security policy, so no watch topic is tagged and it is not suggested as a key vote.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "keyVote": false,
+    "autoPublished": true
+  }
+}

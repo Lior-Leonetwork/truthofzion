@@ -1,0 +1,31 @@
+{
+  "voteId": 42247,
+  "bill": {
+    "id": 2223550,
+    "name": "חוק לתיקון פקודת בתי הסוהר (מס' 67 והוראת שעה), התשפ\"ה-2024 ",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=2223550"
+  },
+  "summary": {
+    "he": "החוק מאריך עד 31 בדצמבר 2025 את הוראת השעה שמרחיבה את תקופות השחרור המנהלי של אסירים. שחרור מנהלי הוא מנגנון שבו נציב בתי הסוהר משחרר אסירים לפני תום מאסרם כדי להקל על הצפיפות. החוק הופך להוראה קבועה את הקביעה שאסירים ביטחוניים אינם זכאים לשחרור מנהלי. עוד נקבע כי תקן הכליאה, שמעבר לו מופעל שחרור מנהלי, יעמוד על 14,500 מקומות עד 30 ביוני 2025.",
+    "en": "The law extends until 31 December 2025 the temporary provision that expands the periods of administrative release for prisoners. Administrative release is a mechanism under which the Prisons Commissioner releases prisoners before the end of their sentence to ease overcrowding. The law makes permanent the rule that security prisoners are not eligible for administrative release. It also sets the prison capacity standard, above which administrative release applies, at 14,500 places until 30 June 2025."
+  },
+  "quotes": [
+    "הוארכה תקופת תוקפה של הוראת השעה המסדירה תקופות שחרור מינהלי מורחבות עד ליום י\"א בטבת התשפ\"ו (31 בדצמבר 2025)",
+    "ההוראה הקובעת כי אסירים ביטחוניים לא יהיו זכאים לשחרור מינהלי תהפוך להוראה קבועה",
+    "ימשיך לעמוד על 14,500 מקומות כליאה עד ליום ד' בתמוז התשפ\"ה (30 ביוני 2025)",
+    "כדי להקל על הצפיפות בבתי הסוהר"
+  ],
+  "topics": [
+    "security",
+    "incitement"
+  ],
+  "keyVoteSuggested": true,
+  "rationale": "The bill makes permanent the exclusion of security prisoners from administrative early release, which bears directly on how the state treats people convicted of security and terror offenses. The rest of the bill concerns prison overcrowding mechanics, so editors may judge the security-prisoner provision alone sufficient for key-vote status.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "keyVote": false,
+    "autoPublished": true
+  }
+}

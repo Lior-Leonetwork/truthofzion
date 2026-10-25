@@ -1,0 +1,29 @@
+{
+  "voteId": 43014,
+  "bill": {
+    "id": 2224854,
+    "name": "חוק לתיקון פקודת סימני מסחר (מס' 9), התשפ\"ה–2025 ",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=2224854"
+  },
+  "summary": {
+    "he": "החוק מתקן את פקודת סימני מסחר כדי להתאימה למחויבויות הבין-לאומיות של ישראל לפי פרוטוקול מדריד, הקובע הליך לרישום בין-לאומי של סימני מסחר באמצעות בקשה אחת. לפי התיקון, רישום סימן מסחר בין-לאומי יבוא במקום רישום הסימן הלאומי-הישראלי גם כאשר הסימן הבין-לאומי רשום לגבי ישראל רק לחלק מהטובין, וזאת לגבי אותם טובין. ציון ההחלפה בפנקס סימני המסחר ייעשה לבקשת בעל הסימן הלאומי. ההוראות נכנסו לתוקף ב-1.2.2025 וחלות גם על בקשות שהיו תלויות ועומדות באותו מועד.",
+    "en": "The law amends the Trade Marks Ordinance to align it with Israel's international obligations under the Madrid Protocol, which sets out a procedure for international trademark registration through a single application. Under the amendment, an international trademark registration replaces the Israeli national registration even where the international mark is registered for Israel for only some of the goods, with respect to those goods. Recording this replacement in the trademark register is done at the request of the holder of the national mark. The provisions took effect on 1.2.2025 and also apply to applications designating Israel that were pending on that date."
+  },
+  "quotes": [
+    "למחויבויותיה הבין-לאומיות של מדינת ישראל הנובעות מהפרוטוקול המתייחס להסכם מדריד",
+    "סימן מסחר בין-לאומי יבוא במקום רישום סימן המסחר הלאומי-הישראלי",
+    "רק לגבי חלק מהטובין שלגביהם רשום הסימן הלאומי",
+    "ציון החלפה זו בפנקס סימני המסחר ייעשה לבקשת מי שסימן המסחר הלאומי רשום על שמו",
+    "נכנסו לתוקף ב-1.2.2025"
+  ],
+  "topics": [],
+  "keyVoteSuggested": false,
+  "rationale": "A technical intellectual-property amendment implementing the Madrid Protocol; it does not substantively concern any of the watch topics. Passed 16-0 with no opposition, so no key-vote suggestion.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "keyVote": false,
+    "autoPublished": true
+  }
+}

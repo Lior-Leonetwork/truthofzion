@@ -1,0 +1,16 @@
+{
+  "voteId": 43480,
+  "bill": null,
+  "summary": null,
+  "quotes": [],
+  "topics": [],
+  "keyVoteSuggested": false,
+  "rationale": "No official bill text was provided, so the summaries and quotes are left empty and no topics can be confirmed from the source. Judging only by its title, this is a 2025 budget-framework legislative-amendments bill that does not clearly match a watch topic. Editors may want to review the full text in case specific provisions touch security or oversight of officials before deciding on key-vote status.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "keyVote": false,
+    "autoPublished": true
+  }
+}
