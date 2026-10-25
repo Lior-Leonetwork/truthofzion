@@ -21,7 +21,7 @@ export default async function People({ params }: PageProps<"/[lang]/people">) {
     spectra: SPECTRUM_ORDER.filter((s) => items.some((p) => p.spectrum === s)).map((s) => [s, d.spectrum[s]] as [string, string]),
     search: d.people.search,
     none: d.people.none,
-    countries: countries(locale).map((c) => [c.code, c.name] as [string, string]),
+    countries: countries(locale).filter((c) => c.people > 0).map((c) => [c.code, c.name] as [string, string]),
   };
   return (
     <>

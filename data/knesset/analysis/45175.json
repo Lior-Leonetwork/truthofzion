@@ -1,0 +1,28 @@
+{
+  "voteId": 45175,
+  "bill": {
+    "id": 2232915,
+    "name": "חוק הנוטריונים (תיקון מס' 12), התשפ\"ו-2026",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=2232915"
+  },
+  "summary": {
+    "he": "החוק קובע שייפוי כוח שניתן לתאגיד בנקאי לביצוע עסקת משכנתה יהיה תקף גם אם לא נערך בידי נוטריון, וגם אם החתימות עליו לא אומתו בידי נוטריון. ייפוי הכוח יחול על כל הפעולות הכרוכות ברישום עסקת המשכנתה, כולל ביטולה, העברתה או שינוי תנאיה.",
+    "en": "The law provides that a power of attorney given to a banking corporation to carry out a mortgage transaction is valid even if it was not prepared by a notary and even if the signatures on it were not authenticated by a notary. The power of attorney covers all actions involved in registering the mortgage transaction, including cancelling it, transferring it or changing its terms."
+  },
+  "quotes": [
+    "ייפוי כוח שניתן לתאגיד בנקאי לביצוע עסקת משכנתה יהיה תקף גם אם לא נערך על ידי נוטריון",
+    "וגם אם החתימות שעליו לא אומתו על ידו",
+    "ובכלל זה ביטולה, העברתה או עריכת שינוי בתנאיה"
+  ],
+  "topics": [],
+  "keyVoteSuggested": false,
+  "rationale": "A technical amendment on notarization requirements for bank mortgage powers of attorney; it does not substantively concern any watch topic. The judiciary topic covers courts and the Attorney General, not notarial formalities, so no key-vote suggestion.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "autoPublished": true,
+    "keyVote": false,
+    "keyVoteCheckedOn": "2026-10-25"
+  }
+}

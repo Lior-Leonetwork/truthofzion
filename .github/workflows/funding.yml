@@ -1,0 +1,57 @@
+name: Foreign funding
+
+# Daily, fully automatic: pull every donation from a foreign state entity that
+# Israeli NGOs reported to the Registrar of Associations (data.gov.il), publish
+# the reports as filed, and redeploy the site. No model is involved: these are
+# the NGOs' own official filings, shown verbatim.
+on:
+  schedule:
+    - cron: "47 2 * * *" # 05:47 Israel time
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency: funding
+
+jobs:
+  publish:
+    # data.gov.il only answers Israeli IP addresses: same VPN as the Knesset jobs.
+    runs-on: ${{ vars.KNESSET_RUNNER || 'ubuntu-latest' }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - uses: ./.github/actions/israel-vpn
+        with:
+          wireguard: ${{ secrets.KNESSET_WIREGUARD_CONF }}
+          openvpn: ${{ secrets.KNESSET_OPENVPN_CONF }}
+          openvpn-auth: ${{ secrets.KNESSET_OPENVPN_AUTH }}
+      - run: npm ci
+      - name: Ingest the Registrar's foreign state donation reports
+        run: npm run funding:ingest
+        env:
+          KNESSET_HTTP_PROXY: ${{ secrets.KNESSET_HTTP_PROXY }}
+      - run: npm run validate
+      - run: npm test
+      - name: Publish
+        id: commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/funding
+          # state.json always changes (updatedAt); only publish when a report did.
+          if git diff --cached --quiet -- data/funding/ngos.json; then echo "No new reports."; exit 0; fi
+          git commit -m "Foreign funding reports: $(date -u +%F)"
+          git pull --rebase origin main
+          git push origin HEAD:main
+          echo "pushed=true" >> "$GITHUB_OUTPUT"
+      - name: Redeploy the site
+        if: steps.commit.outputs.pushed == 'true' && env.VERCEL_DEPLOY_HOOK != ''
+        env:
+          VERCEL_DEPLOY_HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK }}
+        run: curl -fsS -X POST "$VERCEL_DEPLOY_HOOK" > /dev/null && echo "Vercel redeploy requested."

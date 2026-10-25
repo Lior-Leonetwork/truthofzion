@@ -1,0 +1,33 @@
+{
+  "voteId": 43266,
+  "bill": {
+    "id": 2220804,
+    "name": "חוק כלי הירייה (תיקון מס' 25), התשפ\"ה–2025",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=2220804"
+  },
+  "summary": {
+    "he": "חוק כלי הירייה מגביל ככלל מתן רישיון להחזקת נשק למי שטרם מלאו לו 21 שנים. התיקון מאפשר לרשות מוסמכת לתת רישיון נשק לאדם שמלאו לו 18 שנים, גם אם לא השלים את שירותו הסדיר. התנאים הם שוועדה רפואית קבעה שאינו כשיר לשירות, ושקצין מוסמך מצה\"ל הודיע כי שירותו הסתיים בשל פציעה בפעילות מבצעית או שהיה לוחם ושוחרר מסיבות רפואיות. בהודעת הקצין יצוין אם אי הכשירות נבעה גם מסיבות נפשיות, והמבקש יידרש לצרף לבקשה מסמכים רפואיים.",
+    "en": "The Firearms Law generally restricts weapon licenses to people aged 21 or older. This amendment lets a licensing authority grant a weapon license to a person aged 18 or older even if they did not complete their mandatory military service. The conditions are that a medical committee found them unfit for service, and that an authorized IDF officer reported their service ended due to injury in operational activity, or that they were a combat soldier discharged for medical reasons. The officer's notice must state whether the unfitness also stemmed from mental-health reasons, and the applicant must attach relevant medical documents."
+  },
+  "quotes": [
+    "מגביל מתן רישיונות או הרשאה להחזקת כלי נשק למי שטרם מלאו לו 21 שנים",
+    "יותר לרשות מוסמכת לתת רישיון נשק לאדם שמלאו לו 18 שנים אף אם לא השלים את תקופת השירות הסדיר שהוא חייב בה",
+    "ועדה רפואית קבעה כי הוא בלתי כשיר לשירות בשל מצבו הרפואי",
+    "שירותו הסתיים בשל פציעה בפעילות מבצעית או שהיה לוחם ושוחרר מסיבות רפואיות",
+    "יצוין אם אי הכשירות הרפואית נבעה גם מסיבות נפשיות",
+    "יידרש לצרף לבקשתו מסמכים רפואיים הנוגעים לפציעתו או לסיבות הרפואיות שהביאו לסיום שירותו"
+  ],
+  "topics": [
+    "security"
+  ],
+  "keyVoteSuggested": false,
+  "rationale": "Tagged security because the amendment ties firearm licensing to IDF service, operational injury and medical discharge certified by the IDF. It is a narrow technical change to licensing eligibility with a lopsided, low-turnout vote (14-0-1), so a key-vote designation seems unlikely to be warranted, though editors may judge otherwise.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "autoPublished": true,
+    "keyVote": false,
+    "keyVoteCheckedOn": "2026-10-25"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "voteId": 42759,
+  "bill": {
+    "id": 2224454,
+    "name": "חוק הביטוח הלאומי (תיקון מס' 252 והוראת שעה), התשפ\"ה–2025",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=2224454"
+  },
+  "summary": {
+    "he": "החוק נחקק במסגרת החקיקה להשלמת הגירעונות בתקציב המדינה שנוצרו עקב המלחמה. הוא קובע שקצבת הילדים לא תעודכן בשנת 2025, אך מענק הלימודים יעודכן כרגיל. כהוראת שעה לשנים 2025–2026, דמי הביטוח הלאומי על חלק ההכנסה שעד 60% מהשכר הממוצע עולים ב-1.6% מהשכר (60% מהתוספת על המעסיק ו-40% על העובד), ובמקביל מופחתת ההקצבה מאוצר המדינה למוסד לביטוח לאומי. שר האוצר רשאי להאריך את ההסדר עד 2028, וכן מעוגנות בחוק הוראות שהיו קבועות בתקנות לגבי דמי ביטוח לעובדי משק בית ולמי שנמצא בהכשרה או בשיקום מקצועי.",
+    "en": "The law was enacted as part of legislation to cover the state budget deficits created by the war. It provides that child allowances will not be updated in 2025, while the school grant will be updated as usual. As a temporary provision for 2025–2026, National Insurance contributions on the portion of income up to 60% of the average wage rise by 1.6% of wages (60% of the increase borne by the employer and 40% by the employee), with a corresponding reduction in the state treasury's allocation to the National Insurance Institute. The Finance Minister may extend the arrangement through 2028, and the law also moves into primary legislation provisions previously set in regulations on contributions for household workers and for people in vocational training or rehabilitation."
+  },
+  "quotes": [
+    "סכום קצבת הילדים על כל מרכיביה לא יעודכן בשנת 2025",
+    "מענק הלימודים המשולם לחלק מהמשפחות יעודכן כרגיל",
+    "כהוראת שעה לשנים 2025 ו-2026 הועלו דמי הביטוח הלאומי המשולמים בעד חלק מההכנסה שעד 60% מהשכר הממוצע",
+    "כנגד העלאה זו תופחת ההקצבה מאוצר המדינה למוסד לביטוח לאומי",
+    "ההעלאה האמורה היא בשיעור של 1.6% מהשכר בעד עובד ובעד עובד עצמאי",
+    "המעסיק יישא בחלק של 60% מאותה תוספת והעובד יישא בחלק של 40%",
+    "יוכל להאריך את ההסדר לשנים 2027 ו-2028 בשנה כל פעם"
+  ],
+  "topics": [],
+  "keyVoteSuggested": false,
+  "rationale": "This is a fiscal/social-insurance measure (child allowance freeze, National Insurance contribution increase); the war is mentioned only as the budgetary context, so it does not substantively concern any watch topic. Not suggested as a key vote for the listed topics, though editors may judge it notable on economic grounds.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "autoPublished": true,
+    "keyVote": false,
+    "keyVoteCheckedOn": "2026-10-25"
+  }
+}

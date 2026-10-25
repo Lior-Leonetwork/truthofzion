@@ -1,0 +1,31 @@
+{
+  "voteId": 45451,
+  "bill": {
+    "id": 1056885,
+    "name": "חוק הסכמים קיבוציים (תיקון מס' 12 - הוראת שעה) (הוראות מיוחדות לעניין הרחבת הסכם קיבוצי כללי שנעשה בשל המצב המיוחד בעורף), התשפ\"ו-2026",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=1056885"
+  },
+  "summary": {
+    "he": "החוק קובע, כהוראת שעה, הליך מקוצר למתן צווי הרחבה להסכמים קיבוציים שנחתמו בשל המצב המיוחד בעורף שהוכרז ב-28.2.2026. לפי החוק, ערר על הכוונה לתת צו הרחבה יוגש בתוך 4 ימים מפרסום ההודעה ברשומות, ושר העבודה רשאי לחתום על הצו בחלוף 7 ימים מהפרסום. ההליך המקוצר חל, בשינויים מסוימים, גם על ההסכם הקיבוצי בעניין משרתי מילואים, בני זוגם וצבירת חופשה. הוראת השעה תעמוד בתוקף עד שלושה חודשים מסיום ההכרזה על המצב המיוחד בעורף.",
+    "en": "As a temporary provision, the law sets a shortened procedure for issuing extension orders for collective agreements signed because of the special home-front situation declared on 28.2.2026. Objections to an intended extension order must be filed within 4 days of its publication in the official gazette, and the Labor Minister may sign the order 7 days after publication. With certain changes, the shortened procedure also applies to the collective agreement concerning reservists, their spouses and accrual of vacation. The temporary provision remains in force until three months after the home-front declaration ends."
+  },
+  "quotes": [
+    "הליך מקוצר כמפורט להלן למתן צווי הרחבה להסכמים קיבוציים שנחתמו בשל המצב המיוחד בעורף שהוכרז ביום 28.2.2026",
+    "ערר לעניין הכוונה לתת צו הרחבה יוגש בתוך 4 ימים מפרסום ההודעה",
+    "ההסכם הקיבוצי בעניין משרתי מילואים, בני זוגם וצבירת חופשה",
+    "תוקף הוראת השעה עד שלושה חודשים מסיום ההכרזה על המצב המיוחד בעורף"
+  ],
+  "topics": [
+    "security"
+  ],
+  "keyVoteSuggested": false,
+  "rationale": "This is primarily a procedural labor-law measure. It is tagged security because it responds to the wartime home-front emergency and covers a reservists' collective agreement. It is not suggested as a key vote: it is a technical, temporary procedural change that passed 9-0-0.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "autoPublished": true,
+    "keyVote": false,
+    "keyVoteCheckedOn": "2026-10-25"
+  }
+}

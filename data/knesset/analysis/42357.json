@@ -1,0 +1,39 @@
+{
+  "voteId": 42357,
+  "bill": {
+    "id": 2211439,
+    "name": "חוק מניעת מימון לייצוג משפטי בידי מדינת ישראל (חשוד, נאשם או מורשע בעבירת ביטחון - חרבות ברזל), התשפ\"ה–2024",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=2211439"
+  },
+  "summary": {
+    "he": "החוק עוסק בשכרם של סניגורים שבית המשפט מינה, החל מ-7 באוקטובר 2023, למי שחשוד, נאשם או הורשע בעבירת ביטחון הקשורה לאירועי 7 באוקטובר או למלחמת חרבות ברזל. לפי החוק, סכום שכר זה יקוזז מהכספים שממשלת ישראל מעבירה לרשות הפלסטינית.",
+    "en": "The law concerns the fees of defense attorneys appointed by a court, from 7 October 2023 onward, for anyone suspected, charged or convicted of a security offense connected to the events of 7 October or the Iron Swords war. Under the law, the amount of these fees is to be deducted from the funds the Israeli government transfers to the Palestinian Authority."
+  },
+  "quotes": [
+    "שכרם של סניגורים שימונו או שמונו החל מה-7 באוקטובר 2023 על ידי בית המשפט",
+    "חשוד, נאשם או הורשע בעבירת ביטחון הקשורה לאירועי ה-7 באוקטובר או במסגרת מלחמת חרבות ברזל",
+    "יקוזז מהכספים אותם מעבירה ממשלת ישראל לרשות הפלסטינית"
+  ],
+  "topics": [
+    "security",
+    "incitement"
+  ],
+  "keyVoteSuggested": true,
+  "rationale": "The law addresses people suspected, charged or convicted of security offenses tied to 7 October and the Iron Swords war, and creates a financial measure linked to terror-related cases (offsetting their state-funded defense costs against transfers to the PA). It touches the security and incitement/terror topics, and this was the final (third) reading. Judiciary was not tagged because court-appointed counsel is incidental to the law.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "autoPublished": true,
+    "keyVote": true,
+    "keyVoteCheckedOn": "2026-10-25",
+    "position": "for",
+    "note": {
+      "he": "החוק קובע ששכר סניגורים שמונו לחשודים, נאשמים או מורשעים בעבירות ביטחון הקשורות ל-7 באוקטובר ולמלחמת חרבות ברזל יקוזז מהכספים שמועברים לרשות הפלסטינית, כך שהמדינה לא תישא בעלות ייצוגם. בכך הוא מחמיר את הצעדים נגד מעורבים בטרור ומקדם את עמדת המאבק בטרור.",
+      "en": "The law provides that the fees of defense attorneys appointed for suspects, defendants or convicts in security offenses tied to October 7 and the Swords of Iron war will be offset from funds transferred to the Palestinian Authority, so the state does not bear the cost of their representation. This toughens measures against those involved in terror, advancing the counter-terror stance."
+    },
+    "autoKeyVote": true,
+    "policy": "counter-terror",
+    "evidence": "יקוזז מהכספים אותם מעבירה ממשלת ישראל לרשות הפלסטינית"
+  }
+}

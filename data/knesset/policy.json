@@ -1,0 +1,14 @@
+{
+  "approvedBy": "lior",
+  "approvedOn": "2026-10-25",
+  "stances": [
+    { "id": "counter-terror", "topic": "incitement", "statement": { "he": "החמרת המאבק בטרור: ענישה מחמירה למחבלים, גירוש מחבלים ובני משפחה המעורבים בטרור, שלילת אזרחות או תושבות ממחבלים ועצירת תשלומים למחבלים.", "en": "A tougher fight against terror: harsher punishment for terrorists, deporting terrorists and family members involved in terror, revoking terrorists' citizenship or residency, and stopping payments to terrorists." } },
+    { "id": "incitement", "topic": "incitement", "statement": { "he": "ענישה על הסתה לטרור ועל הזדהות עם ארגוני טרור, גם כשמדובר בנבחרי ציבור.", "en": "Punishing incitement to terror and identification with terrorist organisations, including by elected officials." } },
+    { "id": "security", "topic": "security", "statement": { "he": "חיזוק צה\"ל וכוחות הביטחון ביכולתם להגן על ישראל ולהילחם בטרור.", "en": "Strengthening the IDF and the security forces' ability to defend Israel and fight terror." } },
+    { "id": "hostile-bodies", "topic": "security", "statement": { "he": "הגבלת פעילותם בישראל של גופים הפועלים נגדה, כמו אונר\"א וכלי תקשורת זרים הפוגעים בביטחון המדינה.", "en": "Limiting the activity in Israel of bodies acting against it, such as UNRWA and foreign broadcasters that harm state security." } },
+    { "id": "foreign-funding", "topic": "foreign-funding", "statement": { "he": "שקיפות ומגבלות על מימון של מדינות זרות לעמותות הפועלות בזירה הציבורית בישראל.", "en": "Transparency and limits on foreign states' funding of NGOs active in Israel's public arena." } },
+    { "id": "sovereignty", "topic": "sovereignty", "statement": { "he": "חיזוק ריבונות ישראל, ובכלל זה בירושלים, והתנגדות למדינה פלסטינית שנכפית מבחוץ.", "en": "Strengthening Israel's sovereignty, including in Jerusalem, and opposing a Palestinian state imposed from outside." } },
+    { "id": "antisemitism", "topic": "diaspora-antisemitism", "statement": { "he": "מאבק באנטישמיות וחיזוק הקשר עם יהדות התפוצות.", "en": "Fighting antisemitism and strengthening ties with Diaspora Jewry." } },
+    { "id": "integrity", "topic": "integrity", "statement": { "he": "חיזוק הפיקוח על נבחרי ציבור והמאבק בשחיתות. האתר מתנגד לחקיקה שמחלישה אותם.", "en": "Stronger oversight of elected officials and a stronger fight against corruption. The site opposes laws that weaken them." } }
+  ]
+}

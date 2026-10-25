@@ -1,0 +1,32 @@
+{
+  "voteId": 42801,
+  "bill": {
+    "id": 2223548,
+    "name": "חוק הגז הפחמימני המעובה (תיקון מס' 2), התשפ\"ה-2025 ",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=2223548"
+  },
+  "summary": {
+    "he": "החוק מסמיך את מנהל מינהל הדלק לדחות, לבקשת בעל רישיון ספק גז, את מועד הבדיקה התקופתית של מיתקן גז או את החלפת המכל הנייח או מונה הגז, לתקופה של עד ארבעה חודשים, אם שוכנע שיש קושי ממשי הנובע מנסיבות חריגות. המנהל רשאי גם להורות על דחייה לכל ספקי הגז במצב מיוחד: מצב מיוחד בעורף, אירוע חירום אזרחי או מצב חירום בשל מחלה מידבקת מסוכנת. המנהל רשאי להאריך את הדחייה לתקופות מוגבלות ולקבוע לה תנאים. שר האנרגיה והתשתיות רשאי לקבוע בתקנות נסיבות חריגות נוספות לדחייה, באישור ועדת הכלכלה. בנוסף נקבעה הפרה מנהלית חדשה על אי-קיום תנאים או חובות שנקבעו מכוח התיקון.",
+    "en": "The law authorizes the Director of the Fuel Administration, at the request of a gas supplier licensee, to postpone the periodic inspection of a gas installation or the replacement of a stationary tank or gas meter for up to four months, if satisfied that exceptional circumstances create a real difficulty. The Director may also order such a postponement for all gas suppliers in a special situation: a special home-front situation, a civil emergency, or an emergency declared over a dangerous contagious disease. The Director may extend postponements for limited periods and attach conditions to them. The Minister of Energy and Infrastructure may set further exceptional circumstances by regulation, with the approval of the Knesset Economic Affairs Committee. The law also adds a new administrative violation for failing to meet conditions or duties set under the amendment."
+  },
+  "quotes": [
+    "מנהל מינהל הדלק רשאי להחליט על דחיית מועד לביצוע בדיקה תקופתית של מיתקן גז",
+    "בתקופה של ארבעה חודשים לכל היותר",
+    "מצב מיוחד בעורף",
+    "מצב של אירוע חירום אזרחי כגון אסון טבע",
+    "המנהל רשאי להאריך תקופה זו לתקופות מוגבלות",
+    "באישור ועדת הכלכלה של הכנסת",
+    "החוק מוסיף הפרה מנהלית חדשה"
+  ],
+  "topics": [],
+  "keyVoteSuggested": false,
+  "rationale": "This is a technical regulatory amendment about postponing gas-safety inspections and equipment replacements. The wartime home-front situation appears only as one trigger for a postponement, so the bill does not substantively concern the security topic or any other watch topic. It passed 17-0, and no key-vote designation is suggested.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "autoPublished": true,
+    "keyVote": false,
+    "keyVoteCheckedOn": "2026-10-25"
+  }
+}

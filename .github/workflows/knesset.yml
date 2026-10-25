@@ -19,6 +19,9 @@ on:
       max_summaries:
         description: Max votes to summarise and publish this run
         default: "40"
+      max_keyvotes:
+        description: Max votes to check against the approved key-vote policy
+        default: "40"
       max_statement_checks:
         description: Max key votes to check members' public statements against
         default: "3"
@@ -58,6 +61,11 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           KNESSET_HTTP_PROXY: ${{ secrets.KNESSET_HTTP_PROXY }}
+      - name: Mark key votes under the approved policy
+        run: npm run knesset:keyvotes -- --max "${{ inputs.max_keyvotes || '40' }}"
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          KNESSET_HTTP_PROXY: ${{ secrets.KNESSET_HTTP_PROXY }}
       - run: npm run validate
       - run: npm test
       - name: Publish
@@ -68,6 +76,8 @@ jobs:
           git add data/knesset
           if git diff --cached --quiet; then echo "Nothing new."; exit 0; fi
           git commit -m "Knesset votes and summaries: $(date -u +%F)"
+          # main may have moved during a long run (e.g. an editor's commit); replay on top.
+          git pull --rebase origin main
           git push origin HEAD:main
           echo "pushed=true" >> "$GITHUB_OUTPUT"
       # Vercel may not deploy commits authored by the Actions bot (Hobby plan),

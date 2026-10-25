@@ -1,0 +1,44 @@
+{
+  "voteId": 44913,
+  "bill": {
+    "id": 2218391,
+    "name": "חוק מניעת פגיעת גוף שידורים זר בביטחון המדינה (הוראת שעה), התשפ\"ו–2025",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=2218391"
+  },
+  "summary": {
+    "he": "החוק, שנקבע כהוראת שעה עד 31 בדצמבר 2027, מסמיך את שר התקשורת, בהסכמת ראש הממשלה ובאישור הממשלה או ועדת השרים לענייני ביטחון לאומי, להורות על הגבלת שידורים ופעילות של ערוץ זר. זאת כאשר ראש הממשלה שוכנע, על יסוד חוות דעת של גורם ביטחוני, שתכני הערוץ פוגעים באופן ממשי בביטחון המדינה. האמצעים כוללים הפסקת שידורים, סגירת משרדים, תפיסת ציוד (למעט ציוד לשימוש אישי), הסרת אתר אינטרנט או הגבלת הגישה אליו, הנחיה לפלטפורמות תוכן להגביל שידורים חיים ומניעת קליטת שידורי לוויין. ההוראה ניתנת ל-90 יום לכל היותר עם אפשרות הארכה, וכל הוראה מובאת לביקורת שיפוטית של נשיא בית משפט מחוזי או סגנו בתוך 24 שעות.",
+    "en": "The law, enacted as a temporary provision in force until 31 December 2027, authorizes the Communications Minister, with the Prime Minister's consent and approval of the government or the ministerial committee on national security, to order measures restricting a foreign channel's broadcasts and activity. This applies when the Prime Minister is persuaded, based on a professional opinion from a security body, that the channel's content substantially harms state security. Measures include halting broadcasts, closing offices in Israel, seizing equipment (excluding equipment mainly for personal use), removing or restricting access to its website, directing user-content platforms to restrict live broadcasts, and blocking direct satellite reception. Orders last up to 90 days with possible extensions, and each order is subject to judicial review by a district court president or deputy within 24 hours."
+  },
+  "quotes": [
+    "(31 בדצמבר 2027)",
+    "שר התקשורת רשאי, בהסכמת ראש הממשלה ובאישור הממשלה או ועדת השרים לענייני ביטחון לאומי, להורות על נקיטת אמצעים להגבלת שידורי ערוץ זר ופעילותו",
+    "כי תכני הערוץ פוגעים באופן ממשי בביטחון המדינה",
+    "הפסקת שידורי הערוץ, סגירת משרדיו בשטח ישראל, תפיסת מכשירים המשמשים לאספקת תוכני הערוץ, הסרת אתר אינטרנט של הערוץ או הגבלת הגישה אליו",
+    "להגביל גישה לשידור הערוץ הזר בזמן אמיתי ובאופן רציף",
+    "למניעת קליטה ישירה של שידורי הערוץ באמצעות לוויין בשטחי ישראל ובאזור יהודה ושומרון",
+    "לא ייתפס ציוד שעיקר תכליתו היא לשימוש אישי",
+    "לתקופה שלא תעלה על 90 ימים",
+    "תובא לביקורת שיפוטית לפני נשיא בית משפט מחוזי או סגנו בהקדם האפשרי, ולא יאוחר מ-24 שעות משעת כניסתה לתוקף"
+  ],
+  "topics": [
+    "security"
+  ],
+  "keyVoteSuggested": true,
+  "rationale": "The law grants ministers powers to restrict foreign broadcasters on state-security grounds based on security-establishment opinions, squarely within the security topic; this is the final (third-reading) passage of a substantive enactment. Judicial review is a procedural safeguard within the law rather than a change to the judiciary itself, so the judiciary topic was not tagged.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "autoPublished": true,
+    "keyVote": true,
+    "keyVoteCheckedOn": "2026-10-25",
+    "position": "for",
+    "note": {
+      "he": "החוק, כהוראת שעה עד סוף 2027, מסמיך את שר התקשורת להגביל שידורים ופעילות בישראל של ערוץ זר שתכניו פוגעים באופן ממשי בביטחון המדינה, לרבות הפסקת שידורים וסגירת משרדים, בכפוף לביקורת שיפוטית. בכך הוא מקדם את הגבלת פעילותם של כלי תקשורת זרים הפוגעים בביטחון המדינה.",
+      "en": "The law, a temporary provision until the end of 2027, empowers the Communications Minister to restrict the broadcasts and activity in Israel of a foreign channel whose content substantially harms state security, including halting broadcasts and closing offices, subject to judicial review. This advances limiting the activity of foreign broadcasters that harm state security."
+    },
+    "autoKeyVote": true,
+    "policy": "hostile-bodies",
+    "evidence": "האמצעים שניתן להפעיל כוללים את הפסקת שידורי הערוץ, סגירת משרדיו בשטח ישראל, תפיסת מכשירים המשמשים לאספקת תוכני הערוץ, הסרת אתר אינטרנט של הערוץ או הגבלת הגישה אליו."
+  }
+}

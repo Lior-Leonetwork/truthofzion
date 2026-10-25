@@ -1,0 +1,32 @@
+{
+  "voteId": 42142,
+  "bill": {
+    "id": 2200387,
+    "name": "חוק כביש אגרה (כביש ארצי לישראל) (תיקון מס' 5), התשפ\"ה–2024",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=2200387"
+  },
+  "summary": {
+    "he": "החוק קובע כי חיילי מילואים שנקראו לשירות ונוסעים ברכבם הפרטי לבסיס השירות או ממנו בכביש 6 (כביש ארצי לישראל) יהיו זכאים להחזר על אגרת הנסיעה ששילמו. שר הביטחון ושר האוצר יקבעו בתקנות, בהסכמת שר התחבורה ובאישור ועדת הכלכלה של הכנסת, את אופן הגשת הבקשה, אופן ומועד קבלת ההחזר ואת סכום ההחזר המרבי. התקנות הראשונות יובאו לאישור הוועדה בתוך ארבעה חודשים מפרסום החוק. החוק ייכנס לתוקף ב-1 בינואר 2025.",
+    "en": "The law provides that reservists called up for reserve duty who drive their private car to or from their base on Highway 6 (the Trans-Israel Highway) are entitled to reimbursement of the toll they paid. The Defense Minister and Finance Minister, with the consent of the Transportation Minister and the approval of the Knesset Economic Affairs Committee, will set regulations on how to apply, how and when the reimbursement is paid, and the maximum reimbursement amount. The first regulations are to be brought for committee approval within four months of the law's publication. The law takes effect on January 1, 2025."
+  },
+  "quotes": [
+    "חיילי מילואים שנקראו להתייצב לשירות מילואים ונוסעים ברכבם הפרטי לבסיס השירות או ממנו בכביש מספר 6",
+    "יהיו זכאים להחזר הוצאות בעד אגרת הנסיעה ששולמה עבור נסיעה בכביש כאמור",
+    "סכום ההחזר המרבי שיינתן",
+    "בתוך ארבעה חודשים מיום פרסומו של החוק",
+    "החוק ייכנס לתוקף ביום א' בטבת"
+  ],
+  "topics": [
+    "security"
+  ],
+  "keyVoteSuggested": false,
+  "rationale": "Tagged security because the law grants a benefit specifically to IDF reservists during reserve service. Not suggested as a key vote: it is a narrow toll-reimbursement measure that passed 13-0 with no opposition or abstentions.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "autoPublished": true,
+    "keyVote": false,
+    "keyVoteCheckedOn": "2026-10-25"
+  }
+}

@@ -38,7 +38,7 @@ type Dict = {
   siteName: string;
   tagline: string;
   demo: string;
-  nav: { investigations: string; people: string; countries: string; knesset: string; methodology: string; corrections: string; reply: string };
+  nav: { investigations: string; people: string; countries: string; knesset: string; funding: string; methodology: string; corrections: string; reply: string };
   knesset: {
     heading: string;
     intro: string;
@@ -61,6 +61,9 @@ type Dict = {
     roll: string;
     byFaction: string;
     editorNote: string;
+    policyKeyVote: string;
+    autoKeyVote: string;
+    policy: { title: string; intro: string; pending: string; approved: (by: string, date: string) => string };
     empty: string;
     emptyDetail: string;
     none: string;
@@ -68,6 +71,48 @@ type Dict = {
     member: { record: string; faction: string; votes: string; profile: string };
     howTitle: string;
     how: string[];
+  };
+  funding: {
+    heading: string;
+    intro: string;
+    stats: { ngos: string; recent: (from: number) => string; total: (from: number) => string; updated: string };
+    search: string;
+    years: string;
+    recentYears: (from: number) => string;
+    allYears: string;
+    donor: string;
+    otherDonor: string;
+    mainly: string;
+    mainlyOnly: string;
+    mainlyBadge: string;
+    none: string;
+    empty: string;
+    emptyDetail: string;
+    sortTotal: string;
+    showMore: string;
+    ngo: string;
+    official: string;
+    sourceNote: string;
+    notAccusation: string;
+    registry: { status: string; sector: string; city: string; goals: string; number: string };
+    total: string;
+    reports: (n: number) => string;
+    byYear: string;
+    byDonor: string;
+    allReports: string;
+    cols: { year: string; donor: string; amount: string; purpose: string; conditions: string; reported: string; country: string; count: string };
+    quarter: (q: number) => string;
+    mainlyDeclared: (years: string) => string;
+    share: (pct: string, year: number, turnover: string) => string;
+    countryHeading: string;
+    countryIntro: (country: string) => string;
+    recipients: string;
+    donorCountries: string;
+    toNgos: (n: number) => string;
+    investigationsHeading: string;
+    investigationsIntro: string;
+    allFunding: string;
+    homeTitle: string;
   };
   home: {
     eyebrow: string;
@@ -148,7 +193,7 @@ const he: Dict = {
   siteName: "אמת מציון",
   tagline: "תחקירים עצמאיים · מבוססי מקורות",
   demo: "מצב הדגמה — כל השמות, התפקידים והתיקים באתר בדויים.",
-  nav: { investigations: "תחקירים", people: "אישים", countries: "מדינות", knesset: "הצבעות בכנסת", methodology: "מתודולוגיה", corrections: "תיקונים", reply: "זכות תגובה" },
+  nav: { investigations: "תחקירים", people: "אישים", countries: "מדינות", knesset: "הצבעות בכנסת", funding: "מימון זר", methodology: "מתודולוגיה", corrections: "תיקונים", reply: "זכות תגובה" },
   knesset: {
     heading: "הצבעות בכנסת",
     intro: "כל הצבעה על חוק בקריאה שלישית, ישירות מהנתונים הרשמיים של הכנסת: מי הצביע בעד, מי נגד ומי נמנע.",
@@ -171,6 +216,14 @@ const he: Dict = {
     roll: "איך הצביע כל חבר כנסת",
     byFaction: "לפי סיעה",
     editorNote: "הערת העורך",
+    policyKeyVote: "הצבעת מפתח לפי מדיניות האתר",
+    autoKeyVote: "סומנה כהצבעת מפתח בידי בינה מלאכותית, לפי המדיניות שאישרו העורכים ומתוך דברי ההסבר הרשמיים בלבד. הציטוט נבדק מילה במילה מול המקור. עמדת האתר נגזרת מהמדיניות, לא מהמודל.",
+    policy: {
+      title: "מדיניות הצבעות המפתח",
+      intro: "אלה העמדות הקבועות של האתר. הצבעה על חוק שמקדם אחת מהן במישרין, או פועל נגדה במישרין, היא הצבעת מפתח: עמדת האתר היא בעד חוק שמקדם עמדה ונגד חוק שפועל נגדה.",
+      pending: "המדיניות ממתינה לאישור עורך, ועד אז לא מסומנות הצבעות מפתח אוטומטית.",
+      approved: (by, date) => `אושרה בידי ${by} ב-${date}.`,
+    },
     empty: "נתוני ההצבעות הראשונים ייאספו בריצה היומית הבאה.",
     emptyDetail: "ההצבעות נשאבות אוטומטית מהממשק הרשמי של הכנסת מדי יום.",
     none: "אין הצבעות שתואמות לסינון.",
@@ -183,6 +236,48 @@ const he: Dict = {
       "תקצירים נכתבים בסיוע בינה מלאכותית רק מתוך דברי ההסבר הרשמיים, כל ציטוט נבדק מילה במילה מול המקור, ושום תקציר אינו מתפרסם לפני שעורך אישר אותו.",
       "״הצבעת מפתח״ היא החלטה של עורך, עם הסבר, ולא של המערכת.",
     ],
+  },
+  funding: {
+    heading: "מימון ממדינות זרות",
+    intro: "כל תרומה מ״ישות מדינית זרה״ שעמותה בישראל דיווחה עליה לרשם העמותות, כפי שדווחה. הנתונים נמשכים מדי יום מהמאגר הרשמי של משרד המשפטים.",
+    stats: { ngos: "עמותות מדווחות", recent: (from) => `התקבל מאז ${from}`, total: (from) => `סך הכול מאז ${from}`, updated: "עודכן" },
+    search: "חיפוש עמותה או תורם",
+    years: "שנים",
+    recentYears: (from) => `מ-${from} ואילך`,
+    allYears: "כל השנים",
+    donor: "מדינה תורמת",
+    otherDonor: "גוף זר אחר",
+    mainly: "הצהרת העמותה",
+    mainlyOnly: "עיקר המימון ממדינות זרות",
+    mainlyBadge: "לפי דיווחה: עיקר מימונה ממדינות זרות",
+    none: "אין עמותות שתואמות לסינון.",
+    empty: "הנתונים הראשונים בדרך.",
+    emptyDetail: "המאגר הרשמי נמשך דרך שרת בישראל, ויופיע כאן לאחר הריצה הראשונה.",
+    sortTotal: "מסודר לפי הסכום בתקופה שנבחרה",
+    showMore: "הצג עוד",
+    ngo: "עמותה",
+    official: "הדיווח הרשמי ברשם העמותות",
+    sourceNote: "מקור: דיווחי העמותות לרשם העמותות על תרומות מישות מדינית זרה (מאגר משרד המשפטים ב-data.gov.il). הסכומים בשקלים כפי שדווחו.",
+    notAccusation: "קבלת תרומה ממדינה זרה חוקית, והדיווח עליה הוא חובה לפי החוק. אנו מפרסמים את הדיווחים כדי שהציבור יידע מי מממן את מי. הרשימה כשלעצמה אינה טענה נגד העמותה.",
+    registry: { status: "סטטוס", sector: "תחום פעילות", city: "יישוב", goals: "מטרות העמותה", number: "מספר עמותה" },
+    total: "סך התרומות שדווחו",
+    reports: (n) => (n === 1 ? "דיווח אחד" : `${n.toLocaleString("he-IL")} דיווחים`),
+    byYear: "לפי שנה",
+    byDonor: "לפי תורם",
+    allReports: "כל הדיווחים",
+    cols: { year: "שנה", donor: "תורם", amount: "סכום", purpose: "מטרת התרומה", conditions: "תנאים", reported: "דווח", country: "מדינה", count: "דיווחים" },
+    quarter: (q) => `רבעון ${q}`,
+    mainlyDeclared: (years) => `בדיווחיה לשנים ${years} הצהירה העמותה כי עיקר מימונה מתרומות של ישויות מדיניות זרות.`,
+    share: (pct, year, turnover) => `התרומות שדווחו לשנת ${year} שוות ל-${pct} מהכנסות העמותה באותה שנה (${turnover}, לפי הדוח הכספי האחרון ברשם).`,
+    countryHeading: "מימון לעמותות בישראל",
+    countryIntro: (country) => `תרומות שהתורם בהן מזוהה עם ${country}, לפי דיווחי העמותות לרשם העמותות.`,
+    recipients: "העמותות המקבלות",
+    donorCountries: "המדינות התורמות",
+    toNgos: (n) => (n === 1 ? "לעמותה אחת" : `ל-${n} עמותות`),
+    investigationsHeading: "מהרשומה הרשמית: עמותות שעיקר מימונן ממדינות זרות",
+    investigationsIntro: "עמותות שהצהירו בעצמן, בדיווח לרשם העמותות, כי עיקר מימונן מגיע מישויות מדיניות זרות. מתעדכן אוטומטית מהמאגר הרשמי.",
+    allFunding: "לכל נתוני המימון הזר",
+    homeTitle: "מי מממן את מי: מדינות זרות ועמותות בישראל",
   },
   home: {
     eyebrow: "תחקירים עצמאיים · מבוססי מקורות",
@@ -245,7 +340,7 @@ const he: Dict = {
     byCamp: "לפי מחנה פוליטי",
     classificationNote: "סיווג הסיעות על הרצף הפוליטי ועמדת האתר בהצבעות המפתח הם החלטות מערכת, מנומקות ושקופות. ההצבעות עצמן הן נתונים רשמיים של הכנסת.",
   },
-  countries: { heading: "מדינות", intro: "תחקירים לפי המדינה שבה מכהן מושא התחקיר.", people: "אישים", cases: "תיקים", none: "אין עדיין תחקירים." },
+  countries: { heading: "מדינות", intro: "תחקירים לפי המדינה שבה מכהן מושא התחקיר, ומדינות זרות שמממנות עמותות בישראל לפי הדיווחים הרשמיים.", people: "אישים", cases: "תיקים", none: "אין עדיין תחקירים." },
   positions: {
     head_of_state: "ראש מדינה",
     head_of_government: "ראש ממשלה",
@@ -357,6 +452,14 @@ const he: Dict = {
         ],
       },
       {
+        title: "מימון ממדינות זרות",
+        body: [
+          "עמותות בישראל חייבות לדווח לרשם העמותות על כל תרומה מ״ישות מדינית זרה״. אנו מושכים את הדיווחים מדי יום מהמאגר הרשמי של משרד המשפטים ומפרסמים אותם כפי שהוגשו, ללא עריכה וללא פרשנות של מודל.",
+          "המדינה התורמת מזוהה רק כששם התורם בדיווח נוקב בה במפורש. כל השאר מוצג כ״גוף זר אחר״. ההצהרה שעיקר המימון מגיע ממדינות זרות היא של העמותה עצמה, בדיווחה.",
+          "קבלת תרומה כזו חוקית. עמותה שמופיעה ברשימה לא הואשמה בדבר: אנו מציגים מי מממן את מי, והקורא שופט.",
+        ],
+      },
+      {
         title: "זכות תגובה ותיקונים",
         body: [
           "לפני פרסום אנו פונים למושא התחקיר. תגובה שהתקבלה מתפרסמת לצד התיק.",
@@ -376,7 +479,7 @@ const en: Dict = {
   siteName: "Truth of Zion",
   tagline: "Independent, source-based investigations",
   demo: "Demo mode: every name, role and case on this site is fictional.",
-  nav: { investigations: "Investigations", people: "People", countries: "Countries", knesset: "Knesset votes", methodology: "Methodology", corrections: "Corrections", reply: "Right of reply" },
+  nav: { investigations: "Investigations", people: "People", countries: "Countries", knesset: "Knesset votes", funding: "Foreign funding", methodology: "Methodology", corrections: "Corrections", reply: "Right of reply" },
   knesset: {
     heading: "Knesset votes",
     intro: "Every final-reading vote on a law, straight from the Knesset's official data: who voted for, who voted against, who abstained.",
@@ -399,6 +502,14 @@ const en: Dict = {
     roll: "How each member voted",
     byFaction: "By faction",
     editorNote: "Editor's note",
+    policyKeyVote: "Key vote under the site's policy",
+    autoKeyVote: "Marked as a key vote by AI under the policy the editors approved, from the official explanatory notes only. The quote was checked word for word against the source. The site's position follows from the policy, not from the model.",
+    policy: {
+      title: "Key-vote policy",
+      intro: "These are the site's standing positions. A vote on a bill that directly advances one of them, or directly works against it, is a key vote: the site is for a bill that advances a stance and against one that works against it.",
+      pending: "The policy is awaiting an editor's approval; until then no key votes are marked automatically.",
+      approved: (by, date) => `Approved by ${by} on ${date}.`,
+    },
     empty: "The first vote data will be collected on the next daily run.",
     emptyDetail: "Votes are pulled automatically from the Knesset's official open-data service every day.",
     none: "No votes match these filters.",
@@ -411,6 +522,48 @@ const en: Dict = {
       "Summaries are drafted with AI from the official explanatory notes only, every quote is checked word for word against the source, and no summary is published before an editor approves it.",
       "A \"key vote\" is an editor's decision, with a stated reason, never the system's.",
     ],
+  },
+  funding: {
+    heading: "Funding from foreign states",
+    intro: "Every donation from a \"foreign state entity\" that an Israeli NGO reported to the Registrar of Associations, as reported. Pulled daily from the Ministry of Justice's official register.",
+    stats: { ngos: "Reporting NGOs", recent: (from) => `Received since ${from}`, total: (from) => `Total since ${from}`, updated: "Updated" },
+    search: "Search an NGO or donor",
+    years: "Years",
+    recentYears: (from) => `${from} onward`,
+    allYears: "All years",
+    donor: "Donor country",
+    otherDonor: "Other foreign body",
+    mainly: "NGO's declaration",
+    mainlyOnly: "Mainly funded by foreign states",
+    mainlyBadge: "Self-declared: mainly funded by foreign states",
+    none: "No NGOs match these filters.",
+    empty: "The first data is on its way.",
+    emptyDetail: "The official register is read through a server in Israel and will appear here after the first run.",
+    sortTotal: "Sorted by the amount in the selected period",
+    showMore: "Show more",
+    ngo: "NGO",
+    official: "The official filing at the Registrar of Associations",
+    sourceNote: "Source: NGOs' reports to the Registrar of Associations of donations from foreign state entities (Ministry of Justice register on data.gov.il). Amounts in shekels, as reported.",
+    notAccusation: "Taking a donation from a foreign state is legal, and reporting it is required by law. We publish the reports so the public knows who funds whom. Being listed is not, by itself, a claim against the NGO.",
+    registry: { status: "Status", sector: "Field", city: "City", goals: "Stated goals", number: "NGO number" },
+    total: "Total reported donations",
+    reports: (n) => (n === 1 ? "1 report" : `${n.toLocaleString("en-GB")} reports`),
+    byYear: "By year",
+    byDonor: "By donor",
+    allReports: "Every report",
+    cols: { year: "Year", donor: "Donor", amount: "Amount", purpose: "Purpose", conditions: "Conditions", reported: "Reported", country: "Country", count: "Reports" },
+    quarter: (q) => `Q${q}`,
+    mainlyDeclared: (years) => `In its reports for ${years}, the NGO declared that most of its funding comes from donations by foreign state entities.`,
+    share: (pct, year, turnover) => `Donations reported for ${year} equal ${pct} of the NGO's revenue that year (${turnover}, per its latest financial report at the Registrar).`,
+    countryHeading: "Funding to Israeli NGOs",
+    countryIntro: (country) => `Donations whose donor is identified with ${country}, as Israeli NGOs reported them to the Registrar of Associations.`,
+    recipients: "Recipient NGOs",
+    donorCountries: "Donor countries",
+    toNgos: (n) => (n === 1 ? "to 1 NGO" : `to ${n} NGOs`),
+    investigationsHeading: "From the official record: NGOs funded mainly by foreign states",
+    investigationsIntro: "NGOs that declared themselves, in their reports to the Registrar of Associations, that most of their funding comes from foreign state entities. Updated automatically from the official register.",
+    allFunding: "All foreign funding data",
+    homeTitle: "Who funds whom: foreign states and Israeli NGOs",
   },
   home: {
     eyebrow: "Independent, source-based investigations",
@@ -473,7 +626,7 @@ const en: Dict = {
     byCamp: "By political camp",
     classificationNote: "The parties' places on the political spectrum and the site's position on key votes are editorial decisions, stated and reasoned. The votes themselves are the Knesset's official data.",
   },
-  countries: { heading: "Countries", intro: "Investigations by the country where the subject holds office.", people: "People", cases: "Cases", none: "No investigations yet." },
+  countries: { heading: "Countries", intro: "Investigations by the country where the subject holds office, and foreign states that fund Israeli NGOs according to the official filings.", people: "People", cases: "Cases", none: "No investigations yet." },
   positions: {
     head_of_state: "Head of state",
     head_of_government: "Head of government",
@@ -582,6 +735,14 @@ const en: Dict = {
         body: [
           "Each Knesset party is placed on the political spectrum (far right, right, center, center-left, left) following common usage in the Israeli press. This is an editorial decision and is shown as one.",
           "On votes the editors designate as key votes, the site takes a position (for or against) and publishes its reason. Each member's page shows how they voted on every one of them, next to that reason. We don't put labels on people: the record speaks for itself.",
+        ],
+      },
+      {
+        title: "Funding from foreign states",
+        body: [
+          "Israeli NGOs must report every donation from a \"foreign state entity\" to the Registrar of Associations. We pull those reports daily from the Ministry of Justice's official register and publish them as filed, unedited and with no model interpreting them.",
+          "A donor country is named only when the donor's name in the report names it outright. Everything else is shown as \"other foreign body\". The statement that most funding comes from foreign states is the NGO's own, in its report.",
+          "Taking such a donation is legal. An NGO on this list has not been accused of anything: we show who funds whom, and the reader judges.",
         ],
       },
       {

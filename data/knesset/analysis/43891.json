@@ -1,0 +1,44 @@
+{
+  "voteId": 43891,
+  "bill": {
+    "id": 2197166,
+    "name": "חוק הביטוח הלאומי (תיקון מס' 257), התשפ\"ה–2025",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=2197166"
+  },
+  "summary": {
+    "he": "החוק מרחיב את שלילת הגמלאות לפי חוק הביטוח הלאומי ממי שנדון למאסר בשל רצח או ניסיון רצח בנסיבות טרור, וממי שנגזרו עליו לפחות עשר שנות מאסר בשל עבירת ביטחון. השלילה חלה גם על תוספות בעד תלויים ועל זכויות בעת פטירה כגון דמי קבורה. במקרים מסוימים היא חלה גם על גמלת שאירים לבני המשפחה ועל גמלת הבטחת הכנסה. קצבת ילדים או קצבת ילד נכה עבור ילדו תשולם לאדם אחר שימנה המוסד לביטוח לאומי. החוק נכנס לתוקף ב-1.5.2025 וחל גם על מי שהורשע לפני כן, אך רק לגבי גמלאות מיום התחילה ואילך. אזרח או תושב שנשפט בבית משפט צבאי יוכל לטעון לפני המוסד שהנסיבות לא היו ביטחוניות.",
+    "en": "The law expands the denial of National Insurance benefits to people sentenced to prison for murder or attempted murder in terror circumstances, and to people sentenced to at least ten years for a security offense. The denial also covers supplements for dependents and death-related entitlements such as burial fees. In some cases it also covers survivors' benefits for family members and income-support benefits. Child or disabled-child allowances for the person's child are to be paid to another person appointed by the National Insurance Institute. The law takes effect on 1.5.2025 and also applies to people convicted before then, but only to benefits from that date onward. A citizen or resident tried in a military court may argue before the Institute that the circumstances were not security-related."
+  },
+  "quotes": [
+    "לא ישולמו ולא יינתנו גמלאות לפי חוק הביטוח הלאומי למי שנדון למאסר בשל עבירת רצח או ניסיון לרצח בנסיבות טרור",
+    "למי שנגזרו עליו עשר שנות מאסר לפחות לאחר שהורשע בעבירת ביטחון",
+    "שלילת הגמלאות תחול גם לעניין תוספות המשולמות בעד תלויים באותו אדם",
+    "לא תשולם במותו גם גמלת שאירים או גמלת תלויים בנפגע עבודה לבני משפחתו",
+    "ימנה המוסד לביטוח לאומי אדם אחד שיקבל את הגמלה עבור הילד",
+    "תישלל גמלת הבטחת הכנסה ממי שנדון למאסר בשל עבירת רצח או ניסיון רצח בנסיבות טרור",
+    "גמלאות יישללו רק בעד התקופה שמיום התחילה ואילך",
+    "הוא יוכל לטעון בפני המוסד לביטוח לאומי כי הנסיבות לא היו ביטחוניות"
+  ],
+  "topics": [
+    "incitement",
+    "security"
+  ],
+  "keyVoteSuggested": true,
+  "rationale": "WARNING: the vote record is for Amendment No. 256, but the bill text provided is for Amendment No. 257, so please verify the text matches the voted bill before publishing. The summary is drafted from the provided text. If it matches, the bill is about revoking benefits from people convicted of terror offenses, which is core to the incitement & terror topic, and it was a final (third) reading.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "autoPublished": true,
+    "keyVote": true,
+    "keyVoteCheckedOn": "2026-10-25",
+    "position": "for",
+    "note": {
+      "he": "החוק מרחיב את שלילת גמלאות הביטוח הלאומי ממי שהורשעו ברצח או בניסיון רצח בנסיבות טרור או נגזרו עליהם עשר שנות מאסר לפחות בעבירות ביטחון, כולל הבטחת הכנסה וזכויות בעת פטירה. בכך הוא מקדם את עצירת התשלומים למחבלים.",
+      "en": "The law expands the denial of National Insurance benefits to people convicted of murder or attempted murder in terror circumstances, or sentenced to at least ten years for security offences, including income support and death-related entitlements. This advances stopping payments to terrorists."
+    },
+    "autoKeyVote": true,
+    "policy": "counter-terror",
+    "evidence": "נקבע כי לא ישולמו ולא יינתנו גמלאות לפי חוק הביטוח הלאומי למי שנדון למאסר בשל עבירת רצח או ניסיון לרצח בנסיבות טרור המוגדרת בחוק זה"
+  }
+}

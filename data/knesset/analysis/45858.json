@@ -28,7 +28,16 @@
   "generatedOn": "2026-10-25",
   "editorial": {
     "state": "published",
-    "keyVote": false,
-    "autoPublished": true
+    "autoPublished": true,
+    "keyVote": true,
+    "keyVoteCheckedOn": "2026-10-25",
+    "position": "for",
+    "note": {
+      "he": "החוק קובע עונש מוות כעונש עיקרי למי שגרם בכוונה למותו של אדם במעשה טרור, מגביל חנינה והקלה ואוסר שחרור של אסירים בעבירות שדינן מיתה. בכך הוא מחמיר את הענישה על מחבלים.",
+      "en": "The law sets the death penalty as the primary sentence for those who intentionally cause death in a terror act, restricts pardon or commutation, and bars releasing prisoners convicted of capital offences. This toughens punishment for terrorists."
+    },
+    "autoKeyVote": true,
+    "policy": "counter-terror",
+    "evidence": "על תושב האזור (למעט אזרח ישראלי או תושב ישראל) שגרם בכוונה למותו של אדם במסגרת מעשה טרור, כהגדרתו בחוק המאבק בטרור, יוטל עונש מוות בלבד"
   }
 }

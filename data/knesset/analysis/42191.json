@@ -1,0 +1,29 @@
+{
+  "voteId": 42191,
+  "bill": {
+    "id": 2216827,
+    "name": "חוק מגבלות על חזרתו של עבריין מין לסביבת נפגע העבירה (תיקון מס' 10), התשפ\"ה–2024 ",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=2216827"
+  },
+  "summary": {
+    "he": "החוק מתקן את חוק מגבלות על חזרתו של עבריין מין לסביבת נפגע העבירה, המאפשר לבית המשפט להטיל מגבלות על מי שהורשע בעבירת מין כדי למנוע מפגש בינו לבין נפגע העבירה בסביבת חייו השגרתית. עד כה נדרש שבית המשפט ישתכנע כי חזרת העבריין עלולה לגרום לנפגע \"נזק נפשי של ממש\". התיקון מוחק את המילים \"של ממש\", כך שבית המשפט יוכל להטיל את המגבלות אם סבר שהמפגש עלול לגרום לנפגע נזק נפשי, בלי לעמוד ברף המחמיר הקודם.",
+    "en": "The bill amends the law on restricting a sex offender's return to the victim's surroundings. That law lets a court impose restrictions on a person convicted of a sex offense, to prevent encounters with the victim in the victim's everyday surroundings. Until now the court had to be convinced that the offender's return could cause the victim \"substantial\" psychological harm. The amendment deletes the word \"substantial\" (\"של ממש\"), so the court may impose restrictions if it believes an encounter could cause the victim psychological harm, without meeting the stricter previous threshold."
+  },
+  "quotes": [
+    "נועד לאפשר לבית המשפט להטיל מגבלות על מי שהורשע בביצוע עבירת מין",
+    "במטרה למנוע מפגש בינו לבין נפגע העבירה בסביבת חייו השגרתית",
+    "נמחקו המילים \"של ממש\" כדי להקל על דרישה זו",
+    "בלא צורך להוכיח רף מחמיר של נזק נפשי של ממש"
+  ],
+  "topics": [],
+  "keyVoteSuggested": false,
+  "rationale": "The bill lowers the evidentiary threshold for court-imposed restrictions on convicted sex offenders. It is a criminal-law and victim-protection measure that does not substantively concern any watch topic, including the judiciary as an institution. Note for editors: the vote record names the bill as התשפ\"ד while the bill text says התשפ\"ה.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "autoPublished": true,
+    "keyVote": false,
+    "keyVoteCheckedOn": "2026-10-25"
+  }
+}

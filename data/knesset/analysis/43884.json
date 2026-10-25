@@ -1,0 +1,34 @@
+{
+  "voteId": 43884,
+  "bill": {
+    "id": 2201200,
+    "name": "חוק-יסוד: השפיטה (תיקון מס' 4) ",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=2201200"
+  },
+  "summary": {
+    "he": "התיקון לחוק-יסוד: השפיטה משנה את הרכב הוועדה לבחירת שופטים. במקום שני נציגי לשכת עורכי הדין, סיעות הקואליציה וסיעות האופוזיציה יבחרו כל אחת נציג ציבור משפטן. הוא גם מעגן את הנוהג שלפיו אחד משני נציגי הכנסת יהיה מהקואליציה והאחר מהאופוזיציה, ונציגות השופטים והשרים נותרת ללא שינוי. החוק קובע רוב של חמישה חברים לבחירת שופט: בערכאות הנמוכות נדרשת תמיכה של נציג קואליציה, נציג אופוזיציה ושופט, ובבית המשפט העליון אין צורך בהסכמת שופט. כמו כן הוא קובע מנגנון ל\"מבוי סתום\" בבחירת שופטים לעליון ואוסר על הוועדה לבחור שופטים בתקופת בחירות או לאחר התפטרות הממשלה.",
+    "en": "The amendment to Basic Law: The Judiciary changes the composition of the Judicial Selection Committee. The two Israel Bar Association representatives are replaced by two public representatives who are jurists, one chosen by the coalition factions and one by the opposition factions. It also enshrines the practice that one of the two Knesset representatives comes from the coalition and the other from the opposition, while the three judges and two ministers remain unchanged. Selecting a judge requires a majority of five members. For lower courts, that majority must include a coalition representative, an opposition representative and a judge; for the Supreme Court, no judge's consent is required. The amendment also sets a once-per-Knesset \"deadlock\" mechanism for Supreme Court appointments and bars the committee from selecting judges during an election period or after the government has resigned."
+  },
+  "quotes": [
+    "במקום שני נציגי לשכת עורכי הדין, יבחרו סיעות הקואליציה וסיעות האופוזיציה, כל אחת בנפרד, שני נציגי ציבור שהם משפטנים שכשירים להתמנות לשופט בית המשפט העליון",
+    "הנציגות של הרשות השופטת ושל הממשלה בוועדה לא תשתנה ותורכב משלושה שופטים ושני שרים",
+    "המניין החוקי בישיבות הוועדה יעמוד על חמישה חברים",
+    "בחירת שופט מחייבת רוב של חמישה מחברי הוועדה, הכולל אחד מנציגי הקואליציה ואחד מנציגי האופוזיציה בוועדה, אך ללא צורך בהסכמת אחד השופטים החברים בוועדה",
+    "בתקופת בחירות, או בתקופה שלאחר שהממשלה התפטרה, לא תבחר הוועדה השופטים",
+    "שניתן להפעילו פעם אחת בכל כנסת",
+    "המנגנון מאפשר לנציגי הקואליציה בוועדה להציע שלושה מועמדים מטעמם ומחייב את יתר החברים לבחור מהם מועמד, ונותן אפשרות מקבילה לנציגי האופוזיציה"
+  ],
+  "topics": [
+    "judiciary"
+  ],
+  "keyVoteSuggested": true,
+  "rationale": "This is a final (third-reading) vote on a Basic Law amendment that restructures the Judicial Selection Committee and its decision rules, which is core to the judiciary topic. Editors may also consider tagging integrity, since the bill concerns appointments, though its focus is judicial.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "autoPublished": true,
+    "keyVote": false,
+    "keyVoteCheckedOn": "2026-10-25"
+  }
+}

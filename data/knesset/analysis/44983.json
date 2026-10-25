@@ -1,0 +1,32 @@
+{
+  "voteId": 44983,
+  "bill": {
+    "id": 2219137,
+    "name": "חוק שירות הקבע בצבא הגנה לישראל (גמלאות) (תיקון מס' 37), התשפ\"ו-2026",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=2219137"
+  },
+  "summary": {
+    "he": "החוק קובע מסגרת חדשה לתשלום רכיב \"השלמת תקופות שירות\" בפנסיה התקציבית של פורשי צה\"ל. החל מינואר 2026, אצל גמלאים הזכאים לרכיב זה, יופחת עדכון הגמלה בעד חצי אחוז בשנה עד הפחתה מצטברת של 4.5%. לאחר מכן יוחזר חצי אחוז בשנה במשך שלוש שנים, כך שההפחתה הכוללת תעמוד על 3%. החוק קובע שלושה הסדרים: גמלאים שכבר פרשו ישמרו את שיעורם, משרתים בני 40 ומעלה ישמרו את ההסדרים הקודמים, ומשרתים מתחת לגיל 40 יקבלו תוספת של עד 7%, עם תוספות ללוחמים ולמשרתי עתודה. החוק אינו חל על משרתים בפנסיה צוברת.",
+    "en": "The law sets a new framework for paying the 'completion of service periods' component of the budgetary pension of retired IDF personnel. From January 2026, for retirees entitled to this component, the annual pension index update will be reduced by up to half a percent per year, up to a cumulative reduction of 4.5%. After that, half a percent will be added back each year for three years, leaving a total cumulative reduction of 3%. The law sets three arrangements: those already retired keep their existing rate, serving personnel aged 40 or over keep the previous arrangements, and those under 40 receive a supplement of up to 7%, with additional increments for combat soldiers and academic-reserve personnel. It does not apply to personnel in accumulative pension plans."
+  },
+  "quotes": [
+    "תבוצע הפחתה של עד חצי אחוז בשנה מעדכון הגמלה, עד להפחתה מצטברת מרבית של 4.5%",
+    "כך שבסופו של התהליך תעמוד ההפחתה הכוללת על 3% במצטבר",
+    "גמלאים שכבר פרשו ימשיכו לקבל את השיעור שנקבע להם במועד פרישתם",
+    "על משרתים שטרם מלאו להם 40 יחול הסדר חדש שיעניק תוספת של עד 7% לגמלה",
+    "ואינן חלות על משרתים בפנסיה צוברת"
+  ],
+  "topics": [
+    "security"
+  ],
+  "keyVoteSuggested": false,
+  "rationale": "The bill concerns pension terms for IDF career personnel, so it is tagged security. It addresses compensation rather than defense policy, and passed 5-0 with low participation, so it is not suggested as a key vote; editors may weigh its significance for IDF personnel differently.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "autoPublished": true,
+    "keyVote": false,
+    "keyVoteCheckedOn": "2026-10-25"
+  }
+}

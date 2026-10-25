@@ -1,0 +1,30 @@
+{
+  "voteId": 44086,
+  "bill": {
+    "id": 2231120,
+    "name": "חוק לתיקון פקודת בתי הסוהר (תיקון מס' 66 - הוראת שעה - חרבות ברזל) (חופשה מיוחדת לאסיר) (תיקון מס' 3), התשפ\"ה-2025",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=2231120"
+  },
+  "summary": {
+    "he": "החוק מאריך עד 31 בדצמבר 2025 הוראת שעה שנחקקה בעקבות מלחמת \"חרבות ברזל\". ההוראה מאפשרת לנציב בתי הסוהר, או לסוהר בדרגת גונדר שהוסמך לכך, לתת לאסיר חופשה מיוחדת של עד 45 ימים, על רקע עלייה בתפוסת האסירים מעבר לתקן הכליאה. ההסדר חל על אסירים אזרחי ישראל או תושביה שנשאו לפחות מחצית מתקופת מאסרם ושיתרת מאסרם אינה עולה על 45 ימים. הוא אינו חל על אסירים שהורשעו בעבירות מסוימות, ובהן עבירות ביטחון. קודם לכן הוארכה ההוראה עד 15 במאי 2025.",
+    "en": "The law extends, until December 31, 2025, a temporary provision enacted after the \"Swords of Iron\" war began. The provision allows the Prisons Commissioner, or an authorized warden of gonder rank, to grant a prisoner special leave of up to 45 days, in response to prison occupancy rising above capacity. It applies to prisoners who are Israeli citizens or residents, have served at least half of their sentence, and have no more than 45 days remaining. It excludes prisoners convicted of certain offenses, including security offenses. The provision had previously been extended to May 15, 2025."
+  },
+  "quotes": [
+    "הוארך תוקפה של הוראת השעה עד ליום י\"א בטבת התשפ\"ו (31 בדצמבר 2025)",
+    "חופשה מיוחדת שלא תעלה על 45 ימים",
+    "בשל העלייה המשמעותית בתפוסת האסירים מעבר לתקן הכליאה",
+    "שנשא לפחות מחצית מתקופת המאסר שנגזרה עליו",
+    "לא יחול לגבי אסירים שהורשעו בעבירות מסוימות, לרבות עבירות ביטחון"
+  ],
+  "topics": [],
+  "keyVoteSuggested": false,
+  "rationale": "This is a technical extension of a prison-overcrowding measure. Its links to security (the wartime background and the exclusion of security offenders) are incidental rather than substantive, so no topic is tagged. The vote passed 18-0 with no contested provisions, so it is not suggested as a key vote.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "autoPublished": true,
+    "keyVote": false,
+    "keyVoteCheckedOn": "2026-10-25"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "voteId": 42287,
+  "bill": {
+    "id": 2222384,
+    "name": "חוק הרבנות הראשית לישראל (תיקון מס' 8), התשפ\"ה-2024",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=2222384"
+  },
+  "summary": {
+    "he": "החוק משנה את הרכב האסיפה הבוחרת את הרבנים הראשיים ואת מועצת הרבנות הראשית. הוא קובע מי ייחשב \"רב\" לעניין עשרת הרבנים שהרבנים הראשיים ממנים לאסיפה: רב שהוסמך מטעם הרבנות הראשית, או רב שבידו תעודת כשירות לכהונת רב עיר, רב אזורי, רב מושב או רב שכונה. החוק קובע גם רף מינימלי לייצוג נשים בנציגות הציבור מכל אחת מהקבוצות באסיפה, עם מנגנון למקרים שבהם אין די נשים בתפקידים אלה, וכן הסדרים בנושא ניגוד עניינים. החל מהבחירות שאחרי הבחירות הקרובות, הגדרות בעלי התפקידים החברים באסיפה יחולו גם על מי שממלא את התפקידים האלה ביהודה ושומרון.",
+    "en": "The law changes the composition of the assembly that elects the Chief Rabbis and the Chief Rabbinate Council. It defines who counts as a \"rabbi\" for the ten rabbis the Chief Rabbis appoint to the assembly: a rabbi ordained by the Chief Rabbinate, or one holding a certificate of eligibility to serve as a city, regional, moshav or neighborhood rabbi. It also sets a minimum quota for women among the public representatives from each group in the assembly, with a mechanism for cases where too few women hold the relevant positions, and adds conflict-of-interest rules. Starting with the elections after the upcoming ones, the definitions of officeholders who sit on the assembly will also apply to people holding those positions in Judea and Samaria."
+  },
+  "quotes": [
+    "החוק עורך שינויים בהרכב האסיפה הבוחרת לרבנים הראשיים ולמועצת הרבנות הראשית",
+    "רב שמוסמך לרבנות מטעם הרבנות הראשית לישראל",
+    "נקבע רף מינימלי למינוי של נשים לנציגות ציבור",
+    "נקבעו הסדרים בנושא ניגוד עניינים",
+    "יחולו גם לגבי מי שממלא תפקיד זה ביהודה ושומרון"
+  ],
+  "topics": [
+    "integrity",
+    "sovereignty"
+  ],
+  "keyVoteSuggested": false,
+  "rationale": "Tagged integrity for the conflict-of-interest rules and the changes to how members of the Chief Rabbinate electoral body are appointed. Tagged sovereignty because the law extends the electoral-assembly membership definitions to officeholders in Judea and Samaria; editors may want to weigh whether this provision raises it to a key vote, though its main subject is the internal structure of the Rabbinate.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "autoPublished": true,
+    "keyVote": false,
+    "keyVoteCheckedOn": "2026-10-25"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "voteId": 41923,
+  "bill": {
+    "id": 2221641,
+    "name": "חוק הסכמים קיבוציים (תיקון מס' 11 – הוראת שעה – חרבות ברזל) (הוראות מיוחדות לעניין הרחבת הסכם קיבוצי כללי שנעשה בשל פעולות האיבה או פעולות המלחמה) (תיקון), התשפ\"ד-2024",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=2221641"
+  },
+  "summary": {
+    "he": "החוק מאריך את תוקפן של הוראות שעה בחוק הסכמים קיבוציים. הוראות אלה מקצרות את המועדים ומפשטות את ההליכים למתן צו הרחבה להסכם קיבוצי כללי, כאשר שר העבודה ציין שהעניינים בהסכם נובעים בעיקרם ממלחמת חרבות ברזל ושוכנע שיש דחיפות בהרחבתו. ההוראות יחולו ברציפות עד תום שלושה חודשים מסיום תוקף ההכרזה על מצב מיוחד בעורף שהוכרזה בתחילת המלחמה.",
+    "en": "The law extends temporary provisions in the Collective Agreements Law. These provisions shorten deadlines and simplify procedures for issuing an extension order for a general collective agreement, where the Labor Minister has stated that the agreement's matters stem mainly from the Swords of Iron war and is convinced that its extension is urgent. The provisions will apply continuously until three months after the declaration of a special situation on the home front, made at the start of the war, expires."
+  },
+  "quotes": [
+    "הוארך תוקפן של הוראות השעה בחוק הסכמים קיבוציים",
+    "שמקצרות את המועדים ומפשטות את ההליכים למתן צו הרחבה להסכם קיבוצי כללי",
+    "נובעים בעיקרם ממלחמת חרבות ברזל, ושוכנע שיש דחיפות בהרחבתו",
+    "הוראות אלו יחולו ברציפות עד תום שלושה חודשים מסיום התוקף של ההכרזה על מצב מיוחד בעורף"
+  ],
+  "topics": [],
+  "keyVoteSuggested": false,
+  "rationale": "This is a labor-law measure extending wartime procedural shortcuts for collective-agreement extension orders. It is linked to the war only as context, and does not substantively concern the security establishment or any other watch topic. The vote was unopposed (13–0).",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "autoPublished": true,
+    "keyVote": false,
+    "keyVoteCheckedOn": "2026-10-25"
+  }
+}

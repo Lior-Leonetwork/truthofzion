@@ -1,0 +1,32 @@
+{
+  "voteId": 42214,
+  "bill": {
+    "id": 2198381,
+    "name": "חוק עידוד תרומות מזון (תיקון), התשפ\"ה–2024",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=2198381"
+  },
+  "summary": {
+    "he": "התיקון קובע כי גוף ציבורי המספק שירותי הסעדה בהיקף של 500 מנות ליום עבודה, בעצמו או באמצעות ספק שירות, לא יוכל לסרב שלא בצדק לבקשת ארגון לחלוקת מזון לאסוף מזון עודף שנותר בחצריו. החובה לא תחול אם האיסוף מטיל על הגוף עלות עודפת ישירה. היא גם לא תחול על מוסדות רפואיים ועל התקשרויות קיימות עם ספקי הסעדה. לגבי צה\"ל, המשטרה, שב\"ס והרשות להגנה על עדים, השר הממונה רשאי לקבוע התאמות או פטור מסיבות ביטחוניות לתקופה של עד שנה בכל פעם. הארגון יידרש למסור לגוף הציבורי פעם בשנה אישור על כמות המזון שאסף ועל השימושים בו.",
+    "en": "The amendment provides that a public body serving catering of 500 meals per workday, directly or through a service provider, may not unjustifiably refuse a food-distribution organization's request to collect surplus food left on its premises. The duty does not apply if collection imposes a direct additional cost on the body. It also does not apply to medical institutions or to existing catering contracts. For the IDF, police, Prison Service and Witness Protection Authority, the responsible minister may set adjustments or security-based exemptions of up to one year at a time. The organization must report to the public body once a year on the amount of food it collected and how it was used."
+  },
+  "quotes": [
+    "שירותי הסעדה בהיקף של 500 מנות ליום עבודה",
+    "לא יוכל לסרב סירוב שאינו מוצדק",
+    "לצורך איסוף המזון העודף שנותר בחצריו",
+    "אם איסוף המזון מטיל על הגוף הציבורי עלות עודפת ישירה",
+    "ואולם מוסד רפואי, לא ייחשב גוף ציבורי לעניין זה",
+    "ובלבד שהפטור יוגבל לעד שנה בכל פעם",
+    "לא יחול על התקשרות קיימת של הגוף הציבורי עם ספק שירות למתן שירותי הסעדה"
+  ],
+  "topics": [],
+  "keyVoteSuggested": false,
+  "rationale": "The bill concerns food donation by public bodies. Its mention of the IDF and security exemptions is incidental, not a substantive security matter, so no watch topic applies. The bill passed unanimously, 28-0, and is not suggested as a key vote.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "autoPublished": true,
+    "keyVote": false,
+    "keyVoteCheckedOn": "2026-10-25"
+  }
+}

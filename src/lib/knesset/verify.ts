@@ -1,6 +1,6 @@
 import type { Editor } from "../content/schema";
 import type { Problem } from "../content/rules";
-import type { Analysis, Vote, WatchTopic } from "./schema";
+import type { Analysis, Policy, Vote, WatchTopic } from "./schema";
 
 // Hebrew text arrives with assorted quote marks, maqaf/hyphens and spacing.
 // Normalising them is the only leniency: the words themselves must match.
@@ -38,7 +38,7 @@ export function checkDraft(draft: Pick<Analysis, "summary" | "quotes" | "topics"
 // The publication gate for analyses, run in CI next to the content rules.
 // The model never sets keyVote (vote-analyst.ts always writes false, and that
 // is tested); an editor may set it while reviewing, but only with a reason.
-export function checkAnalysis(a: Analysis, votes: Map<number, Vote>, editors: Map<string, Editor>): Problem[] {
+export function checkAnalysis(a: Analysis, votes: Map<number, Vote>, editors: Map<string, Editor>, policy: Policy | null = null): Problem[] {
   const problems: Problem[] = [];
   const fail = (rule: string, message: string) => problems.push({ entry: `analysis/${a.voteId}`, rule, message });
   if (!votes.has(a.voteId)) fail("vote-exists", `no ingested vote ${a.voteId}`);
@@ -50,7 +50,14 @@ export function checkAnalysis(a: Analysis, votes: Map<number, Vote>, editors: Ma
   if (a.editorial.state !== "published") return problems;
   if (a.editorial.autoPublished && !a.editorial.reviewedBy) {
     if (a.editorial.keyVote || a.editorial.position) {
-      fail("auto-no-stance", "an automatically published summary can't carry a key vote or a position; an editor must review it");
+      // Only by applying a stance from the editors' approved policy, with the
+      // bill-text passage that shows it.
+      const approved = policy?.approvedBy && editors.has(policy.approvedBy) && !editors.get(policy.approvedBy)?.ai;
+      const stance = approved ? policy!.stances.find((s) => s.id === a.editorial.policy) : undefined;
+      if (!a.editorial.autoKeyVote || !stance) {
+        fail("auto-no-stance", "an automatic key vote must apply a stance from the editors' approved policy");
+      }
+      if (!a.editorial.evidence) fail("auto-evidence", "an automatic key vote needs its verified bill-text evidence");
     }
     if (a.summary && a.quotes.length === 0) fail("auto-quoted", "an automatically published summary needs its verified quotes");
     return problems;

@@ -26,7 +26,16 @@
   "generatedOn": "2026-10-25",
   "editorial": {
     "state": "published",
-    "keyVote": false,
-    "autoPublished": true
+    "autoPublished": true,
+    "keyVote": true,
+    "keyVoteCheckedOn": "2026-10-25",
+    "position": "for",
+    "note": {
+      "he": "החוק מאריך, כהוראת שעה עד 2029 ועל רקע הצורך המבצעי, את השירות הסדיר לגברים מ-30 ל-32 חודשים, ומעניק דמי קיום מוגדלים לחיילים ששירותם הוארך. הארכת השירות מגדילה את כוח האדם העומד לרשות צה\"ל, ולכן היא מקדמת את חיזוק יכולתו.",
+      "en": "The bill extends men's regular IDF service from 30 to 32 months as a temporary provision until 2029, citing operational need, and grants increased subsistence pay to soldiers whose service is extended. Lengthening service increases the manpower available to the IDF, which advances strengthening its capabilities."
+    },
+    "autoKeyVote": true,
+    "policy": "security",
+    "evidence": "כי תקופת השירות הסדיר של יוצא צבא גבר תעמוד על 32 חודשים, במקום 30 חודשים"
   }
 }

@@ -1,0 +1,30 @@
+{
+  "voteId": 45139,
+  "bill": {
+    "id": 2197787,
+    "name": "חוק אומנה לילדים (תיקון מס' 7), התשפ\"ו-2026",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=2197787"
+  },
+  "summary": {
+    "he": "התיקון לחוק אומנה לילדים מרחיב הוראות בחוק בנושא הזכות לחינוך והזכות לשירותים ולהטבות, כך שיחולו גם על ילדים במסגרות השמה חוץ-ביתיות שאינן אומנה. בין היתר, ילדים אלה מוגנים מפני הפליה במוסד חינוך, לרבות ברישום ובקבלה. הם זכאים לזכויות, לשירותים ולהטבות של תושבי הרשות המקומית שבה נמצאת המסגרת, לרבות שיוך למוסדות חינוך. כן נקבע כי הם זכאים לכל הזכויות שזכאי להן כל ילד בישראל.",
+    "en": "This amendment to the Foster Care for Children Law extends the law's provisions on the right to education and the right to services and benefits to children in out-of-home placements other than foster care. Among other things, these children are protected from discrimination in educational institutions, including in registration and admission. They are entitled to the rights, services and benefits of residents of the local authority where the placement is located, including assignment to its educational institutions. The amendment also states that they are entitled to all the rights of every child in Israel."
+  },
+  "quotes": [
+    "מחיל הוראות הקבועות בחוק לעניין הזכות לחינוך והזכות לשירותים ולהטבות",
+    "זכותו של ילד שלא להיות מופלה במוסד חינוך",
+    "לרבות בכל הנוגע לרישומו למוסד חינוך או קבלתו למוסד חינוך",
+    "שזכאי להם ילד שהוא תושב הרשות המקומית",
+    "זכאי לכל הזכויות שזכאי להן כל ילד בישראל"
+  ],
+  "topics": [],
+  "keyVoteSuggested": false,
+  "rationale": "The bill concerns child welfare and education rights for children in out-of-home placements, which falls outside all listed watch topics. It is therefore not suggested as a key vote.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "autoPublished": true,
+    "keyVote": false,
+    "keyVoteCheckedOn": "2026-10-25"
+  }
+}

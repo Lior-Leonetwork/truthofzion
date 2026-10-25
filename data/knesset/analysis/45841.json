@@ -1,0 +1,32 @@
+{
+  "voteId": 45841,
+  "bill": {
+    "id": 1045979,
+    "name": "חוק הפצת שידורים באמצעות תחנות שידור ספרתיות (תיקון מס' 8 – הוראת שעה), התשפ\"ו–2026",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=1045979"
+  },
+  "summary": {
+    "he": "הוראת השעה קובעת הסדר חדש לתשלום דמי הפצה על ידי גופים משדרים בעד הפצת שידוריהם במערך \"עידן פלוס\", מ-1.4.2026 עד 1.4.2029 לכל המאוחר. בתקופה זו המערך יפעל במרבב אחד בלבד, וכל גוף ישלם דמי הפצה לפי מדרגות הכנסתו בשנת 2024: גוף שהכנסתו עד 40 מיליון ש\"ח פטור, והתשלום המרבי הוא 1,300,000 ש\"ח. הכנסת תמשיך לשלם 5,488,000 ש\"ח בשנה, תאגיד השידור הישראלי יישא ביתרת עלויות ההפעלה והתחזוקה, ואוצר המדינה ישתתף בחלק מהעלויות, בהן תשלומים רבעוניים בשנת 2026 וטיפול בתקלות. בנוסף נקבעה הוראת מעבר לתקופה שבין 15.6.2025 ל-31.3.2026, ולפיה הערוצים המסחריים ותחנות הרדיו האזורי פטורים מדמי הפצה בתקופה זו.",
+    "en": "This temporary provision sets a new arrangement for the distribution fees that broadcasters pay to have their broadcasts carried on the digital terrestrial network known as \"Idan Plus\". It applies from 1.4.2026 until 1.4.2029, or earlier if the network is shut down. During this period the network will use a single multiplex. Each broadcaster pays according to its 2024 income bracket: those with income up to NIS 40 million are exempt, and the top fee is NIS 1,300,000. The Knesset continues to pay NIS 5,488,000 a year for the Knesset Channel. The Israeli Public Broadcasting Corporation bears the remaining operating and maintenance costs. The State Treasury covers part of the costs, including quarterly payments in 2026 and the cost of handling outages. A transitional provision for 15.6.2025 to 31.3.2026 exempts the commercial channels and regional radio stations from distribution fees for that period."
+  },
+  "quotes": [
+    "מיום 1.4.2026 עד ליום 1.4.2029",
+    "יעשה שימוש במרבב אחד בלבד לשם הפצת השידורים באמצעותן",
+    "גוף כאמור שהכנסתו לא עלתה על 40 מיליון שקלים חדשים יהיה פטור מתשלום דמי הפצה",
+    "ישלם 1,300,000 שקלים חדשים",
+    "הכנסת תמשיך לשלם סכום של 5,488,000 שקלים חדשים בשנה עבור הפצת שידורי ערוץ הכנסת באמצעות המערך",
+    "תאגיד השידור הישראלי יישא ביתרת התשלומים הכרוכים בהפעלתן ותחזוקתן של תחנות השידור הספרתיות",
+    "כל ערוצי הטלוויזיה המסחריים ובעלי הזיכיונות לשידורי רדיו אזורי פטורים מתשלום דמי הפצה"
+  ],
+  "topics": [],
+  "keyVoteSuggested": false,
+  "rationale": "The bill concerns fees and cost allocation for digital terrestrial broadcast distribution (Idan Plus), a communications and budget matter that does not substantively touch any of the listed watch topics. It is therefore not suggested as a key vote.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "autoPublished": true,
+    "keyVote": false,
+    "keyVoteCheckedOn": "2026-10-25"
+  }
+}

@@ -10,6 +10,7 @@ export function SiteHeader({ locale }: { locale: Locale }) {
     { href: `/${locale}/people`, label: d.nav.people },
     { href: `/${locale}/countries`, label: d.nav.countries },
     { href: `/${locale}/knesset`, label: d.nav.knesset },
+    { href: `/${locale}/funding`, label: d.nav.funding },
     { href: `/${locale}/methodology`, label: d.nav.methodology },
     { href: `/${locale}/corrections`, label: d.nav.corrections },
   ];

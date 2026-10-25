@@ -1,0 +1,40 @@
+{
+  "voteId": 44258,
+  "bill": {
+    "id": 2233093,
+    "name": "חוק הסמכת צבא הגנה לישראל ושירות הביטחון הכללי לביצוע חדירה לחומר מחשב המשמש להפעלת מצלמה נייחת ופעולה בו (הוראת שעה - חרבות ברזל) (תיקון מס' 4), התשפ\"ה-2025",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=2233093"
+  },
+  "summary": {
+    "he": "החוק מאריך הוראת שעה מתקופת מלחמת \"חרבות ברזל\". הוראת השעה מסמיכה את צה\"ל ואת שירות הביטחון הכללי לחדור למחשב המפעיל מצלמה נייחת, כדי לסכל או למנוע גישה לצילומים שלה. זאת כאשר הצילומים עלולים לסכן באופן ממשי את ביטחון המדינה או את רציפות התפקוד המבצעי של צה\"ל. החוק המקורי כולל הסדרים של מידתיות, תיעוד ודיווח לוועדת משנה של ועדת החוץ והביטחון, והתיקון מאריך את תוקפו עד 31 בדצמבר 2025.",
+    "en": "The law extends a temporary order from the \"Swords of Iron\" war. The order authorizes the IDF and the Israel Security Agency (Shin Bet) to penetrate the computer that operates a stationary camera, in order to block or prevent access to its footage. This applies where the footage could substantially endanger state security or the IDF's operational continuity. The original law includes provisions on proportionality, documentation and reporting to a subcommittee of the Knesset Foreign Affairs and Defense Committee, and this amendment extends it until December 31, 2025."
+  },
+  "quotes": [
+    "מסמיך את צבא הגנה לישראל ואת שירות הביטחון הכללי לחדור לחומר מחשב הנמצא במחשב המפעיל מצלמה נייחת",
+    "לשם סיכול או מניעה של גישה למידע החזותי המופק במצלמה",
+    "חובת דיווח לוועדת המשנה למודיעין ולשירותים חשאיים",
+    "חוק זה, נקבע כהוראת שעה, שהוארכה מספר פעמים",
+    "נקבע כי הוראת השעה תוארך עד ליום י\"א בטבת התשפ\"ו (31 בדצמבר 2025)"
+  ],
+  "topics": [
+    "security"
+  ],
+  "keyVoteSuggested": false,
+  "rationale": "Tagged security because the bill concerns wartime operational powers of the IDF and Shin Bet. Not suggested as a key vote because it is a further extension (amendment no. 4) of an existing temporary order with no change to the powers themselves. Editors may still weigh its surveillance and privacy dimension.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "autoPublished": true,
+    "keyVote": true,
+    "keyVoteCheckedOn": "2026-10-25",
+    "position": "for",
+    "note": {
+      "he": "החוק מאריך עד 31 בדצמבר 2025 את הוראת השעה המסמיכה את צה\"ל ואת שירות הביטחון הכללי לחדור למחשבים המפעילים מצלמות נייחות, כדי למנוע גישה למידע חזותי שעלול לסכן את ביטחון המדינה. בכך הוא מאריך סמכות מבצעית של כוחות הביטחון.",
+      "en": "The bill extends until 31 December 2025 the temporary order authorising the IDF and the Israel Security Agency to penetrate computers operating stationary cameras, in order to prevent access to visual information that could endanger state security. It thereby prolongs an operational power of the security forces."
+    },
+    "autoKeyVote": true,
+    "policy": "security",
+    "evidence": "כעת, במסגרת התיקון הנוכחי, נקבע כי הוראת השעה תוארך עד ליום י\"א בטבת התשפ\"ו (31 בדצמבר 2025)."
+  }
+}

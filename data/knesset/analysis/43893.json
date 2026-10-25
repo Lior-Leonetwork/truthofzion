@@ -1,0 +1,40 @@
+{
+  "voteId": 43893,
+  "bill": {
+    "id": 2229709,
+    "name": "חוק כליאתם של לוחמים בלתי חוקיים (תיקון מס' 4 והוראת שעה – חרבות ברזל) (תיקון מס' 4), התשפ\"ה-2025 ",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=2229709"
+  },
+  "summary": {
+    "he": "החוק מאריך הוראת שעה שנקבעה בשנת 2023 במסגרת מלחמת 'חרבות ברזל' לחוק כליאתם של לוחמים בלתי חוקיים. הוראת השעה מאריכה את התקופות הקבועות בחוק, מורידה את הדרג המוסמך לאשר הגבלות על פגישה של עצור עם עורך דין ומאפשרת לקיים דיונים בהיוועדות חזותית. לפי התיקון, הוראת השעה מוארכת עד 31 ביולי 2025, ותוקף ההכרזה מכוח החוק מוארך עד 1 במאי 2025.",
+    "en": "The law extends a temporary provision added in 2023, during the 'Iron Swords' war, to the Incarceration of Unlawful Combatants Law. The temporary provision lengthens the time periods set in the law, lowers the rank authorized to approve restrictions on a detainee's meetings with a lawyer, and allows hearings to be held by video conference. Under this amendment, the temporary provision is extended until 31 July 2025, and the validity of the declaration under the law is extended until 1 May 2025."
+  },
+  "quotes": [
+    "נועד להסדיר את כליאתם של לוחמים בלתי חוקיים",
+    "הורד הדרג המוסמך לאשר הגבלות על פגישה עם עורך דין",
+    "ניתן יהיה לקיים דיונים בדרך של היוועדות חזותית",
+    "הוארכה הוראת השעה כאמור עד ליום ו' באב התשפ\"ה (31 ביולי 2025)",
+    "לצד הארכת תקופת תוקפה של ההכרזה מכוח הצעת החוק עד ליום ג' באייר התשפ\"ה (1 במאי 2025)"
+  ],
+  "topics": [
+    "security"
+  ],
+  "keyVoteSuggested": false,
+  "rationale": "The bill concerns wartime detention powers for unlawful combatants, so it is tagged security. It also touches on judicial review and access to counsel, but only as part of extending existing provisions. It is a further routine extension of an existing temporary order and passed 20-0, so a key-vote designation seems unlikely, though editors may weigh the detainee-rights aspects.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "autoPublished": true,
+    "keyVote": true,
+    "keyVoteCheckedOn": "2026-10-25",
+    "position": "for",
+    "note": {
+      "he": "החוק מאריך את הוראת השעה מתקופת המלחמה בחוק כליאתם של לוחמים בלתי חוקיים. ההוראה מאריכה את תקופות הכליאה, מורידה את הדרג המוסמך להגביל פגישה עם עורך דין ומתירה דיונים בהיוועדות חזותית. בכך הוא מרחיב את סמכויות כוחות הביטחון בטיפול בעצורים בזמן מלחמה.",
+      "en": "The law extends the wartime temporary provision of the Incarceration of Unlawful Combatants Law. That provision lengthens detention periods, lowers the rank authorised to restrict lawyer meetings and allows hearings by video conference. This broadens the security forces' powers in handling detainees during wartime."
+    },
+    "autoKeyVote": true,
+    "policy": "security",
+    "evidence": "במסגרת תיקון מספר 4, הוארכה הוראת השעה כאמור עד ליום ו' באב התשפ\"ה (31 ביולי 2025)"
+  }
+}

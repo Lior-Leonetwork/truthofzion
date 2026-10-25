@@ -1,0 +1,29 @@
+{
+  "voteId": 42577,
+  "bill": {
+    "id": 2223234,
+    "name": "חוק ההתייעלות הכלכלית (תיקוני חקיקה להשגת יעדי התקציב לשנת התקציב 2025) (הקפאת עדכוני מס ומס יסף), התשפ\"ה-2024",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=2223234"
+  },
+  "summary": {
+    "he": "החוק מקפיא, כהוראת שעה לשנים 2025–2027, את העדכון של סכומים במס הכנסה ובמיסוי מקרקעין. ההקפאה כוללת תקרות הכנסה, נקודות זיכוי, קצבאות, מדרגות מס רכישה ופטור ממס שבח, אך אינה חלה על מענק מס הכנסה שלילי. בנוסף, החוק מטיל מס יסף נוסף של 2% על הכנסה ממקורות הוניים, מעל תקרת הכנסה שנתית של 721,560 ש\"ח (לפי ערכי 2024).",
+    "en": "The law freezes the updating of amounts in income tax and real-estate taxation as a temporary provision for 2025–2027. The freeze covers income ceilings, tax credit points, allowances, purchase-tax brackets and the capital-gains (shevach) tax exemption, but does not apply to the negative income tax grant. The law also imposes an additional 2% surtax on income from capital sources above an annual income ceiling of NIS 721,560 (2024 figure)."
+  },
+  "quotes": [
+    "הקפאה של עדכוני סכומים במס הכנסה ובמיסוי מקרקעין כהוראת שעה לשנים 2025-2027",
+    "תקרות הכנסה, נקודות זיכוי, קצבאות, מדרגות מס רכישה ופטור ממס שבח",
+    "ההקפאה לא חלה על מענק מס הכנסה שלילי.",
+    "הוטל מס יסף נוסף של 2% על הכנסה ממקורות הוניים"
+  ],
+  "topics": [],
+  "keyVoteSuggested": false,
+  "rationale": "This is a 2025 budget-arrangements tax measure (freezing tax-bracket updates and adding a capital-income surtax). It does not substantively concern any of the listed watch topics, so no key-vote suggestion is made. Editors may still note that the third-reading vote was close (55–52).",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "autoPublished": true,
+    "keyVote": false,
+    "keyVoteCheckedOn": "2026-10-25"
+  }
+}

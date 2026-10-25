@@ -1,0 +1,28 @@
+{
+  "voteId": 44167,
+  "bill": {
+    "id": 2221617,
+    "name": "חוק עזרה משפטית בין מדינות (תיקון מס' 12), התשפ\"ה-2025",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=2221617"
+  },
+  "summary": {
+    "he": "החוק מתקן את חוק עזרה משפטית בין מדינות וקובע שניתן לאכוף בישראל צו חילוט שניתן במדינה זרה. האכיפה חלה הן על רכוש הקשור בעבירה והן על רכוש בשווי רכוש כזה. אכיפה של צו חילוט זר לגבי רכוש בשווי תתאפשר רק אם ניתן לבקש את חילוט אותו רכוש לפי הדין בישראל. בנוסף, החוק מאפשר לתת סעד זמני לגבי רכוש בשווי, כדי להבטיח את חילוטו בעתיד לבקשת המדינה הזרה.",
+    "en": "The law amends the Legal Assistance Between States Law and provides that a foreign forfeiture order can be enforced in Israel. Enforcement covers both property connected to an offense and property equal in value to such property. A foreign forfeiture order concerning value-equivalent property will be enforced only if forfeiture of that property could be sought under Israeli law. The law also allows interim relief over value-equivalent property, to secure its future forfeiture at the foreign state's request."
+  },
+  "quotes": [
+    "ניתן לאכוף צו חילוט זר הן לגבי רכוש הקשור בעבירה והן לגבי רכוש בשווי רכוש כאמור",
+    "תיעשה רק אם ניתן לבקש את החילוט של אותו הרכוש לפי הדין בישראל",
+    "האפשרות למתן סעד זמני לגבי רכוש בשווי הרכוש הקשור לעבירה, לצורך הבטחת חילוט הרכוש בעתיד לבקשת המדינה הזרה"
+  ],
+  "topics": [],
+  "keyVoteSuggested": false,
+  "rationale": "This is a technical amendment on international legal cooperation over enforcing foreign forfeiture orders. The provided text does not substantively touch any watch topic (no reference to terrorism, corruption or the court system as an institution). It passed unanimously, so it is not suggested as a key vote.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "autoPublished": true,
+    "keyVote": false,
+    "keyVoteCheckedOn": "2026-10-25"
+  }
+}

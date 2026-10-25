@@ -1,0 +1,32 @@
+{
+  "voteId": 44425,
+  "bill": {
+    "id": 2232444,
+    "name": "חוק שירות אזרחי (תיקון מס' 7), התשפ\"ה-2025",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=2232444"
+  },
+  "summary": {
+    "he": "החוק מתקן את חוק השירות האזרחי, המיועד למי שפטורים משירות צבאי או שלא נקראו אליו. הוא מעלה את הגיל המרבי לשירות של מתמודדי נפש מ-24 ל-27. הוא גם מרחיב את הסמכות לאשר הפסקות בשירות, ובכלל זה הפסקה של עד שנה בשעת חירום. בנוסף, הוא מאפשר למתנדבים מאוכלוסיות מסוימות ולמתנדבים בשנתם השנייה ללמוד מקצוע או להשלים השכלה על חשבון שעות השירות. החוק מרחיב את הגופים שבהם ניתן לשרת: המוסדות הלאומיים, ארגוני חקלאות ללא כוונת רווח, גופי טכנולוגיה המעמידים תוכנה או חומרה לשימוש חופשי, תאגידים שהוקמו בחוק ובתי חולים שאינם ממשלתיים. הוא גם מרחיב את מימון התקנים למתנדבים מקבוצות נוספות, ודוחה ל-31.8.2027 את המועד להשלמת ההכרה בגופים שפעלו ב-2018.",
+    "en": "The law amends the Civil Service Law, which covers national or community volunteer service for people exempt from military service or not called up. It raises the maximum service age for people with mental-health conditions from 24 to 27. It widens the authority to approve breaks in service, including a break of up to a year during emergencies. It also lets volunteers from certain populations, and volunteers in their second year, take vocational training or complete their education within their service hours. The law expands where service may be performed: the national institutions (Jewish Agency, World Zionist Organization, Keren Hayesod, KKL), non-profit agricultural organizations, technology bodies that make software or hardware freely available, statutory corporations, and non-government hospitals. It extends funded positions to volunteers from additional groups, and postpones to 31.8.2027 the deadline for formal recognition of bodies operating in 2018."
+  },
+  "quotes": [
+    "הועלה הגיל המרבי לשירות לגבי מתמודדי נפש מ-24 ל-27 שנים",
+    "ובשעת חירום יוכל מנהל הרשות לאשר בעצמו הפסקה שאינה עולה על שנה בשל נסיבות החירום",
+    "להשתתף על חשבון שעות השירות בהכשרה מקצועית או בהשלמת השכלה",
+    "תתאפשר התנדבות במוסדות הלאומיים (הסוכנות היהודית, ההסתדרות הציונית העולמית, קרן היסוד וקק\"ל)",
+    "בתחום החקלאות השירות ייעשה רק בארגונים ללא כוונת רווח",
+    "עולים חדשים, ערבים, דרוזים, צ'רקסים",
+    "מ-31.8.2025 ל-31.8.2027"
+  ],
+  "topics": [],
+  "keyVoteSuggested": false,
+  "rationale": "The bill concerns the administration of civilian national service. It touches watch topics only tangentially: it is an alternative to military service, and it adds the national institutions and new immigrants. None of the watch topics is its substance. It passed 15-0 as a technical amendment, so a key-vote designation is not suggested.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "autoPublished": true,
+    "keyVote": false,
+    "keyVoteCheckedOn": "2026-10-25"
+  }
+}

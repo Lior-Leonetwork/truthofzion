@@ -1,0 +1,32 @@
+{
+  "voteId": 42897,
+  "bill": {
+    "id": 2217525,
+    "name": "חוק הכללת אמצעי זיהוי ביומטריים ונתוני זיהוי ביומטריים במסמכי זיהוי ובמאגר מידע (תיקון מס' 6), התשפ\"ה-2025",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=2217525"
+  },
+  "summary": {
+    "he": "החוק מסדיר סמכויות לאיסוף אמצעי זיהוי ביומטריים ולשימוש בהם. הוא מסמיך אנשי ביטחון ומאבטחים ליטול אמצעי זיהוי ביומטריים. בנתב\"ג, במעברים היבשתיים ובטיסות נכנסות של חברות ישראליות בחו\"ל יוצבו מכונות לבדיקה ביטחונית באמצעות תווי פנים, ומי שאינו יכול להשתמש בהן בשל גיל או מוגבלות ייבדק בפני בעל תפקיד. בנוסף, החוק מתיר צפייה בתמונת תווי הפנים שבשבב מסמך הזיהוי, אוסר על שמירתה בעונש של עד שלוש שנות מאסר, ומטיל חובת דיווח שנתית לשר התחבורה ולכנסת.",
+    "en": "The law sets rules for collecting and using biometric identification means. It authorizes security officers and guards to take biometric identification means. Automated machines for security screening by facial features will be installed at Ben Gurion Airport, at land crossings and on Israeli airlines' inbound flights from abroad, and a person who cannot use them because of age or disability will be identified by an official instead. The law also permits viewing the facial image stored on an ID document's chip, prohibits storing it on penalty of three years' imprisonment, and requires annual reporting to the Transport Minister, who reports to the Knesset."
+  },
+  "quotes": [
+    "הסמכת איש ביטחון כהגדרתו בחוק הטיס וממונה ביטחון או מאבטח שמונה לפי חוק להסדרת הביטחון של גופים מסויימים ליטול אמצעי זיהוי ביומטריים",
+    "יוצבו מכונות אוטומטיות (אמצעי ממוכן) לבדיקה בטחונית באמצעות תווי פנים, תוך שמירה על ביטחון המידע והפרטיות",
+    "זיהוי בפני בעל תפקיד במקרה ובו בשל גיל או מוגבלות, נמנע מאדם להשתמש באמצעי הממוכן",
+    "צפייה בתמונת תווי פנים השמורה בשבב מסמך הזיהוי תחשב כשימוש מותר, תוך הטלת איסור על שמירתה שדין הפרתו מאסר שלוש שנים",
+    "ידווחו לשר התחבורה מדי שנה על נטילת טביעות אצבע לשם זיהוי בשדות תעופה בארץ"
+  ],
+  "topics": [
+    "security"
+  ],
+  "keyVoteSuggested": false,
+  "rationale": "Tagged security because the law concerns biometric security screening at airports and border crossings by security officers; it is mainly an administrative and privacy arrangement rather than a core defense matter. It passed 10-0 with no opposition, so it is not suggested as a key vote.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "autoPublished": true,
+    "keyVote": false,
+    "keyVoteCheckedOn": "2026-10-25"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "voteId": 45080,
+  "bill": {
+    "id": 2198087,
+    "name": "חוק הרשויות המקומיות (בחירות) (תיקון מס' 58), התשפ\"ו–2026",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=2198087"
+  },
+  "summary": {
+    "he": "החוק מאפשר למנוע מרשימת מועמדים להשתתף בבחירות לרשויות המקומיות אם יש במטרותיה או במעשיה תמיכה במאבק מזוין של מדינת אויב או של ארגון טרור נגד מדינת ישראל, וכן למנוע השתתפות של מועמדים מסוימים מתוך רשימה. ועדת הבחירות של הרשות המקומית, או היועץ המשפטי לממשלה או אחד ממשניו, רשאים להגיש עתירה ליושב ראש ועדת הבחירות האזורית. לפי החוק, מניעת רשימה מחייבת רוב מחברי ועדת הבחירות, ומניעת מועמד מחייבת רוב של שני שלישים. על ההחלטה ניתן לערור לפני יושב ראש ועדת הבחירות המרכזית לכנסת, ולאחר מכן לבית המשפט העליון בשאלה משפטית בלבד.",
+    "en": "The law allows a list of candidates to be barred from running in local authority elections if its goals or actions include support for the armed struggle of an enemy state or a terrorist organization against the State of Israel, and also allows specific candidates on a list to be barred. The local authority's elections committee, or the Attorney General or one of the Attorney General's deputies, may file a petition with the chair of the regional elections committee. Under the law, barring a list requires a majority of the elections committee's members, and barring a candidate requires a two-thirds majority. Such a decision may be appealed to the chair of the Central Elections Committee for the Knesset, and then to the Supreme Court on questions of law only."
+  },
+  "quotes": [
+    "ניתן למנוע את השתתפותה של רשימת מועמדים בבחירות לרשויות המקומיות אם יש במטרותיה או במעשיה תמיכה במאבק מזוין של מדינת אויב או של ארגון טרור נגד מדינת ישראל",
+    "החוק מאפשר למנוע את השתתפותם של מועמדים מסוימים מתוך רשימת המועמדים",
+    "להגיש עתירה ליושב ראש ועדת הבחירות האזורית",
+    "ולעניין מועמד מנוע, שני שליש",
+    "ולאחר מכן לבית המשפט העליון בשאלה משפטית בלבד"
+  ],
+  "topics": [
+    "incitement",
+    "judiciary"
+  ],
+  "keyVoteSuggested": true,
+  "rationale": "The law sets grounds for barring local election lists and candidates over support for armed struggle by an enemy state or terrorist organization, which falls squarely under incitement and terror. It also defines the Attorney General's petition role and limits Supreme Court review to questions of law, which is why judiciary is tagged as well. Two points for editors to check: the agenda item names the bill as התשפ\"ה–2025 while the bill text is titled התשפ\"ו–2026, and the vote was third reading with 24 MKs voting.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "autoPublished": true,
+    "keyVote": true,
+    "keyVoteCheckedOn": "2026-10-25",
+    "position": "for",
+    "note": {
+      "he": "החוק מאפשר למנוע מרשימות ומועמדים להשתתף בבחירות לרשויות המקומיות אם הם תומכים במאבק מזוין של מדינת אויב או של ארגון טרור נגד ישראל. בכך הוא קובע סנקציה על הזדהות עם טרור מצד מי שמבקשים להיבחר לתפקיד ציבורי.",
+      "en": "The law allows lists and candidates to be barred from local authority elections if they support the armed struggle of an enemy state or terrorist organisation against Israel. It thereby sets a sanction for identification with terror by those seeking elected office."
+    },
+    "autoKeyVote": true,
+    "policy": "incitement",
+    "evidence": "ניתן למנוע את השתתפותה של רשימת מועמדים בבחירות לרשויות המקומיות אם יש במטרותיה או במעשיה תמיכה במאבק מזוין של מדינת אויב או של ארגון טרור נגד מדינת ישראל"
+  }
+}

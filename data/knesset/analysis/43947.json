@@ -1,0 +1,34 @@
+{
+  "voteId": 43947,
+  "bill": {
+    "id": 2229396,
+    "name": "חוק תוספות לתגמולים ולהטבות לבני משפחה של חטופים ונעדרים (תיקוני חקיקה), התשפ\"ה-2025",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=2229396"
+  },
+  "summary": {
+    "he": "החוק מקנה להורים, לבני זוג, לאחים ולילדים של חטוף ששוחרר הטבות לשיקום תעסוקתי והטבות רפואיות למשך שלוש שנים, וכן הטבות פסיכו-סוציאליות למשך ארבע שנים מיום השחרור. ההטבות חלות גם על משפחות של מי שהיה חטוף ב-7.10.23 וגופתו הושבה. ההטבות מקוזזות מול הטבות דומות שהתקבלו בתקופת השבי. ועדת החריגים רשאית להגדיל את ההטבות ולאשר מימון לצרכים נוספים במקרים חריגים. החוק מוסיף גם תוספות רטרואקטיביות (מ-7.10.23) למענק הרבעוני להורים פרודים או גרושים ולאחים וילדים בגירים של חטופים, וכן מענק התארגנות חד-פעמי.",
+    "en": "The law grants parents, spouses, siblings and children of a released hostage vocational-rehabilitation and medical benefits for three years, and psycho-social benefits for four years from the date of release. The benefits also apply to families of people who were taken hostage on 7.10.23 and whose bodies were returned. Similar benefits received while the hostage was in captivity are deducted from these benefits. An exceptions committee may increase the benefits and, in exceptional cases, approve funding for additional needs. The law also adds retroactive supplements (from 7.10.23) to the quarterly grant for separated or divorced parents and for adult siblings and children of hostages, plus a one-time resettlement grant."
+  },
+  "quotes": [
+    "יהיו זכאים למשך שלוש שנים מיום שחרורו של החטוף להטבות הנוגעות לשיקום תעסוקתי ולהטבות רפואיות",
+    "למשך ארבע שנים מיום השחרור להטבות פסיכו-סוציאליות",
+    "הטבות אלה יחולו גם על בני משפחה של מי שהיה חטוף ביום 7.10.23 וגופתו הושבה",
+    "קובע תוספת בסך 13,500 שקלים למענק הרבעוני שישולם להורה של החטוף",
+    "עוד נקבעה תוספת של 3,000 שקלים למענק הרבעוני המשולם לאחים וילדים של חטופים שמלאו להם 18 שנים",
+    "התוספות האמורות למענקים ישולמו רטרואקטיבית מיום ה-7.10.23",
+    "תוספת מענק לשם התארגנות"
+  ],
+  "topics": [
+    "security"
+  ],
+  "keyVoteSuggested": false,
+  "rationale": "The bill concerns benefits for families of hostages taken in the 7.10.23 attack, so it is tagged under security (war and terrorism consequences), though its substance is welfare and compensation. The third-reading vote passed 14-0 with no opposition or abstentions. A key-vote designation is therefore not suggested, but editors may judge otherwise given the topic's public salience.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "autoPublished": true,
+    "keyVote": false,
+    "keyVoteCheckedOn": "2026-10-25"
+  }
+}

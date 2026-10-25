@@ -63,7 +63,9 @@ async function main() {
   for (const analysis of keyVotes) {
     const vote = votes.get(analysis.voteId)!;
     console.log(`\nvote ${vote.id}: ${vote.item.title}`);
-    const result = await findStatements(client, vote, analysis, rosterFor(vote, members), sources);
+    const result = await findStatements(client, vote, analysis, rosterFor(vote, members), sources).catch(
+      (e: Error) => ({ ok: false as const, errors: [`request failed: ${e.message}`] }),
+    );
     if (!result.ok) {
       console.warn(`  ✗ ${result.errors.join("; ")}`);
       continue; // not marked checked: retried next run

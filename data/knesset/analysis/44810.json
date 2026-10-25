@@ -1,0 +1,29 @@
+{
+  "voteId": 44810,
+  "bill": {
+    "id": 2231121,
+    "name": "חוק הסיוע המשפטי (תיקון מס' 30), התשפ\"ו–2025",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=2231121"
+  },
+  "summary": {
+    "he": "החוק קובע זכאות לסיוע משפטי לאדם שמלאו לו 65 שנים בהליכים שעניינם ניצול קושי, חולשה, מצב קוגניטיבי, בריאותי או קשיי שפה שלו. הזכאות חלה על תביעות שעילתן טעות, הטעיה, כפייה או עושק לפי חוק החוזים, השפעה בלתי הוגנת לפי חוק הגנת הצרכן, או גזל או תרמית לפי פקודת הנזיקין, וכן על הליכים לפי חוק שירותי תשלום. במקרים אלה לא יחול מבחן הזכאות הכלכלית הקבוע בסעיף 3 לחוק הסיוע המשפטי. לפי דברי ההסבר, מטרת החוק היא להתמודד עם עוקץ וניצול כלכלי של אזרחים ותיקים.",
+    "en": "The law grants eligibility for legal aid to people aged 65 or older in proceedings involving the exploitation of their difficulty, weakness, cognitive or health condition, or language difficulties. This covers claims based on mistake, deception, coercion or exploitation under the Contracts Law, undue influence under the Consumer Protection Law, or misappropriation or fraud under the Torts Ordinance, as well as proceedings under the Payment Services Law. In these cases, the financial eligibility test in section 3 of the Legal Aid Law does not apply. According to the explanatory summary, the aim is to address scams and financial exploitation of senior citizens."
+  },
+  "quotes": [
+    "תופעות של עוקץ וניצול כלכלי של אזרחים ותיקים",
+    "קובע זכאות לסיוע משפטי לאדם שמלאו לו 65 שנים",
+    "וכן בהליכים לפי חוק שירותי תשלום",
+    "הדורש עמידה במבחן של זכאות כלכלית, לא יחול במקרים אלה"
+  ],
+  "topics": [],
+  "keyVoteSuggested": false,
+  "rationale": "The bill expands legal aid for seniors facing financial exploitation. This is a social and consumer-protection measure that does not substantively concern the courts, the Attorney General or any other watch topic, and it passed 12-0. Note that the agenda item is dated התשפ\"ה while the bill title says התשפ\"ו; editors may want to verify which is correct.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "autoPublished": true,
+    "keyVote": false,
+    "keyVoteCheckedOn": "2026-10-25"
+  }
+}

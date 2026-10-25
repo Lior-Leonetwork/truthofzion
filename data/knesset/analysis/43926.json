@@ -1,0 +1,30 @@
+{
+  "voteId": 43926,
+  "bill": {
+    "id": 2220995,
+    "name": "חוק העונשין (תיקון מס' 152), התשפ\"ה–2025",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=2220995"
+  },
+  "summary": {
+    "he": "התיקון מאחד את עבירת האינוס (סעיף 345) ואת עבירת מעשה הסדום (סעיף 347) בחוק העונשין לעבירה אחת בשם \"אינוס\". העבירה חלה על החדרת איבר או חפץ לאיברים אינטימיים, ועל החדרת איבר מין לפה, של אישה או גבר. המונחים \"בעילה\" ו\"מעשה סדום\" מוחלפים במונח \"חדירה\". עבירת \"בעילה אסורה בהסכמה\" (סעיף 346) נקראת מעתה \"חדירה אסורה\", חלה על קטינה וקטין כאחד וללא תלות בקשר נישואין, ומי שהורשע בעבר במעשה סדום ייחשב כמי שהורשע לפי סעיף 345 או 346, לפי העניין.",
+    "en": "The amendment merges the offense of rape (section 345) and the offense of sodomy (section 347) of the Penal Law into a single offense called \"rape\". The offense covers penetration of a woman's or a man's intimate organs by a body part or object, and penetration of the mouth by a sexual organ. The terms \"intercourse\" and \"sodomy\" are replaced with the term \"penetration\". The offense of \"prohibited intercourse by consent\" (section 346) is renamed \"prohibited penetration\" and applies equally to female and male minors, regardless of marriage. A person previously convicted of sodomy will be treated as convicted under section 345 or 346, as relevant."
+  },
+  "quotes": [
+    "עבירת האינוס בסעיף 345 לחוק העונשין ועבירת מעשה הסדום בסעיף 347 לחוק העונשין יאוחדו לעבירה אחת",
+    "וכן החדרת איבר מין לפיהם של אישה או גבר",
+    "המשמשים כיום, הוחלפו במונח",
+    "וחל על קטינה או קטין כאחד, ללא תלות בקשר נישואין",
+    "יראו אותו כמי שהורשע בעבירה לפי סעיף 345 (אינוס) או 346 (בעילה אסורה) לחוק העונשין, לפי העניין"
+  ],
+  "topics": [],
+  "keyVoteSuggested": false,
+  "rationale": "The bill reforms the definitions of sexual offenses in the Penal Law. It does not substantively concern any of the listed watch topics, so no topic is tagged and no key vote is suggested.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "autoPublished": true,
+    "keyVote": false,
+    "keyVoteCheckedOn": "2026-10-25"
+  }
+}

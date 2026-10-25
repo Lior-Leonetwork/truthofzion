@@ -12,12 +12,51 @@ editor.
   scrutiny (sorted by seniority), areas, countries, how we investigate
 - **Investigations**: every case, filterable by area, legal status and country
 - **People**: directory of investigated office holders and bodies
-- **Countries**: per-country pages with their people and cases
+- **Countries**: per-country pages with their people, cases, and the Israeli
+  NGOs that country's bodies fund
+- **Foreign funding**: every NGO's reported donations from foreign state
+  entities, by year, donor and country, with a page per NGO
 - **Case file**: legal-status tracker (allegation → investigation → indictment
   → conviction), timeline with numbered citations, response, sources,
   corrections
 - **Dossier**: per-person profile with every case and the most serious status
 - **Methodology**, **Corrections**, **Right of reply**
+
+## Foreign funding (automatic, no model)
+
+Runs every day in GitHub Actions (`.github/workflows/funding.yml`), through the
+same Israeli VPN (data.gov.il only answers Israeli addresses):
+
+- `scripts/funding-ingest.ts` pulls the Registrar of Associations' register of
+  donations from foreign state entities (data.gov.il dataset `moj-amutot`,
+  resource "תרומות מישות מדינית זרה") and joins the NGO registry for names,
+  status, field and revenue. Output: `data/funding/ngos.json`, one NGO per line.
+- Published as filed, automatically: these are the NGOs' own official reports,
+  so there is nothing to approve. No model reads or rewrites them.
+- A donor country is assigned only when the donor's name names it (or is a
+  well-known agency of it, e.g. GIZ, USAID, SDC); everything else is "other
+  foreign body" (`donorCountry` in `src/lib/funding/transform.ts`). The donor's
+  name is always shown as filed.
+- "Mainly funded by foreign states" is the NGO's own declaration in its report.
+- The ingest refuses to replace the data if the register suddenly shrinks.
+
+Pages: `/funding`, `/funding/<NGO number>`; donor countries appear under
+`/countries`, and NGOs that declared they are mainly foreign-state funded are
+listed on the home page and under Investigations. Run locally (from Israel):
+`npm run funding:ingest`.
+
+## Case research (drafts for review)
+
+Weekly (`.github/workflows/cases.yml`): Claude researches criminal and
+integrity cases (indictments, convictions, announced investigations, State
+Comptroller findings) and incitement (members' own words supporting terror or
+calling for violence, and the official steps taken over them) for Knesset
+members, searching official sites and approved outlets. `src/lib/cases/verify.ts`
+keeps a source only if the site may carry that kind of evidence (a news story
+is never an indictment), the quote is verbatim in the page as we fetched it
+through the Israeli VPN, and the page names the member. Survivors become
+**draft** entries in a pull request (`ai/case-drafts`), with what each still
+needs. Publishing stays with an editor and the member's right of reply.
 
 ## The AI system: Knesset votes
 
@@ -30,7 +69,8 @@ editor approval for the factual parts:
 | **Hold back** any vote with contradictory member records or no results yet. Totals are counted from member rows; pass/fail isn't published by the Knesset, so the site doesn't claim it | Code | No, retried each run |
 | **Summarise:** fetch the bill's official explanatory notes (`KNS_Bill.SummaryLaw`) and have Claude write a neutral Hebrew/English summary with quotes and topic tags | Claude (`src/lib/agent/vote-analyst.ts`) | **Yes, automatically**, labelled on the site as an AI summary published without an editor's review |
 | **Verify:** every quote must appear word-for-word in the official text; no bill text means no summary; topics only from `data/knesset/watch.json`; an automatic summary can never carry a key vote or a position | Code (`src/lib/knesset/verify.ts`) | Failing drafts are discarded |
-| **Key votes:** which votes are key, and the site's position on each with the reason | Editor, by editing `data/knesset/analysis/<id>.json` | When committed |
+| **Key-vote policy:** the site's standing positions (`data/knesset/policy.json`), e.g. a tougher fight against terror | Editor writes and approves it once (`approvedBy`) | Shown on the methodology page |
+| **Key votes:** Claude reads each bill's official text and says which stance, if any, it clearly advances or works against, quoting the passage; code verifies the quote and sets the site's position from the stance (advances → for, works against → against) | Claude + code (`src/lib/agent/key-vote.ts`, `scripts/knesset-keyvotes.ts`) | **Yes, automatically**, labelled as applied by AI under the approved policy. Nothing runs until the policy is approved; editors can override any vote by reviewing its file |
 | **Said one thing, voted the opposite:** for key votes, Claude searches approved outlets for contradicting public statements; code verifies each | Claude + code, then editor | No: draft cases in a pull request, published only after an editor's review and the member's right of reply |
 
 Editors can correct or reject any automatic summary at any time by editing its

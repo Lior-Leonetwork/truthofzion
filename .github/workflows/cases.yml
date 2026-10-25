@@ -1,0 +1,88 @@
+name: Case research
+
+# Weekly: Claude researches criminal cases and incitement by Knesset members
+# from official sources; code verifies every source; what survives is opened
+# as DRAFT case files in a pull request. Nothing is published automatically:
+# each case names a person and needs an editor and the right of reply.
+on:
+  schedule:
+    - cron: "23 4 * * 0" # Sundays, 07:23 Israel time
+  workflow_dispatch:
+    inputs:
+      max_corruption:
+        description: Max criminal/integrity cases to research
+        default: "5"
+      max_incitement:
+        description: Max incitement cases to research
+        default: "5"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency: cases
+
+jobs:
+  draft:
+    runs-on: ${{ vars.KNESSET_RUNNER || 'ubuntu-latest' }}
+    env:
+      BRANCH: ai/case-drafts
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      # Our own copy of each cited page is fetched from Israel, so gov.il and
+      # knesset.gov.il pages can be verified.
+      - uses: ./.github/actions/israel-vpn
+        with:
+          wireguard: ${{ secrets.KNESSET_WIREGUARD_CONF }}
+          openvpn: ${{ secrets.KNESSET_OPENVPN_CONF }}
+          openvpn-auth: ${{ secrets.KNESSET_OPENVPN_AUTH }}
+      - run: npm ci
+      - name: Check out the review branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [ -n "$(gh pr list --head "$BRANCH" --state open --json number --jq '.[].number')" ]; then
+            git checkout -B "$BRANCH" "origin/$BRANCH"
+            git merge --no-edit origin/main
+          else
+            git checkout -B "$BRANCH" origin/main
+            echo "FRESH_BRANCH=1" >> "$GITHUB_ENV"
+          fi
+      - name: Research criminal and integrity cases
+        run: npm run cases:draft -- --category corruption --max "${{ inputs.max_corruption || '5' }}"
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          KNESSET_HTTP_PROXY: ${{ secrets.KNESSET_HTTP_PROXY }}
+      - name: Research incitement
+        if: always()
+        run: npm run cases:draft -- --category incitement --max "${{ inputs.max_incitement || '5' }}"
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          KNESSET_HTTP_PROXY: ${{ secrets.KNESSET_HTTP_PROXY }}
+      - run: npm run validate
+      - run: npm test
+      - name: Open or update the review pull request
+        run: |
+          git add -A content data/cases
+          if git diff --cached --quiet && git diff --quiet origin/main HEAD -- content; then
+            echo "No cases to review."; exit 0
+          fi
+          git diff --cached --quiet || git commit -m "AI case drafts: $(date -u +%F)"
+          if [ -n "${FRESH_BRANCH:-}" ]; then git push --force origin "$BRANCH"; else git push origin "$BRANCH"; fi
+          gh label create ai-draft --color D9A321 --description "Drafted by AI, needs editor review" --force
+          PR=$(gh pr list --head "$BRANCH" --state open --json number --jq '.[].number')
+          if [ -z "$PR" ]; then
+            { cat .github/ai-cases-pr.md; echo; echo "## This run"; cat .cases-report.md 2>/dev/null; } > /tmp/body.md
+            gh pr create --base main --head "$BRANCH" --label ai-draft \
+              --title "AI case drafts for review: criminal cases and incitement" --body-file /tmp/body.md
+          elif [ -s .cases-report.md ]; then
+            gh pr comment "$PR" --body-file .cases-report.md
+          fi

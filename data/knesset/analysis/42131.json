@@ -1,0 +1,31 @@
+{
+  "voteId": 42131,
+  "bill": {
+    "id": 2222646,
+    "name": "חוק לתיקון דיני הבחירות לרשויות המקומיות (הוראת שעה), התשפ\"ה-2024",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=2222646"
+  },
+  "summary": {
+    "he": "החוק קובע בהוראת שעה תיקונים לבחירות לרשויות המקומיות שנדחו: בחירות בצפון הארץ שנדחו ל-18 בפברואר 2025, ובחירות בדרום הארץ שנדחו ל-19 בנובמבר 2024. לפי החוק, יום הבחירות יהיה יום שבתון לתושבי הרשויות שבהן מתקיימות הבחירות, תחול חובה להציב קלפיות לחיילי צה\"ל, ותושבים יוכלו להצביע במעטפות כפולות בקלפיות שיוצבו ברחבי הארץ. בנוסף, שיעור המס לעובדים המועסקים בתקופת הבחירות יושווה לשיעור שנקבע בהוראת השעה.",
+    "en": "The law sets temporary provisions for postponed local authority elections: elections in northern Israel postponed to 18 February 2025, and elections in southern Israel postponed to 19 November 2024. Under the law, election day is a day of rest for residents of the authorities holding elections, polling stations for IDF soldiers are mandatory, and residents may vote using double envelopes at polling stations placed across the country. In addition, the tax rate for workers employed during the election period is equalized to the rate set in the temporary provision."
+  },
+  "quotes": [
+    "שנדחו ליום כ' בשבט התשפ\"ה, 18 בפברואר 2025 בצפון הארץ",
+    "19 בנובמבר 2024 בדרום הארץ",
+    "יום הבחירות נקבע כיום שבתון לתושבי הרשויות בהם יתקיימו בחירות",
+    "נקבעה חובה להצבת קלפיות חיילים בצה\"ל",
+    "תינתן אפשרות לתושב להצביע במעטפות כפולות בקלפיות שיוצבו ברחבי הארץ",
+    "השוואה של שיעור המס לעובדים המועסקים בתקפות הבחירות"
+  ],
+  "topics": [],
+  "keyVoteSuggested": false,
+  "rationale": "The bill is a procedural temporary provision on the administration of postponed local elections (day of rest, soldiers' polling stations, double-envelope voting, tax rate for election workers); the mention of IDF polling stations is administrative and does not substantively concern defense policy, so no watch topic is tagged. The bill text does not state the reason for the postponement, so none is given in the summary.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "autoPublished": true,
+    "keyVote": false,
+    "keyVoteCheckedOn": "2026-10-25"
+  }
+}

@@ -107,8 +107,37 @@ export const Analysis = z
         // is what the site considers in Israel's interest. `note` says why.
         position: z.enum(["for", "against"]).optional(),
         note: Localized.optional(), // editor's reason for the key vote and the position
+        // Key vote set by the pipeline from the editors' published policy
+        // (data/knesset/policy.json): `policy` is the stance it applies, and
+        // `evidence` the bill-text passage, verified verbatim, that shows it.
+        autoKeyVote: z.boolean().optional(),
+        policy: z.string().optional(),
+        evidence: z.string().optional(),
+        keyVoteCheckedOn: z.iso.date().optional(), // the policy check ran (key vote or not)
       })
       .strict(),
   })
   .strict();
 export type Analysis = z.infer<typeof Analysis>;
+
+// The editors' standing positions. A vote whose bill clearly advances or
+// works against one of these is a key vote, and the site's position follows
+// from the stance, not from the model's view. Nothing is applied until a
+// human editor has approved the policy (approvedBy).
+export const Stance = z
+  .object({
+    id: z.string().regex(/^[a-z0-9-]+$/),
+    topic: z.string(), // a watch-topic id
+    statement: Localized, // what the site supports, in one sentence
+  })
+  .strict();
+export type Stance = z.infer<typeof Stance>;
+
+export const Policy = z
+  .object({
+    approvedBy: z.string().nullable(),
+    approvedOn: z.iso.date().nullable(),
+    stances: z.array(Stance),
+  })
+  .strict();
+export type Policy = z.infer<typeof Policy>;

@@ -1,0 +1,41 @@
+{
+  "voteId": 42813,
+  "bill": {
+    "id": 2211184,
+    "name": "חוק איסור הכחשת אירועי טבח 7 באוקטובר 2023 (טבח שמיני עצרת), התשפ\"ה–2025",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=2211184"
+  },
+  "summary": {
+    "he": "החוק קובע עבירה פלילית של פרסום דברים המכחישים את טבח 7 באוקטובר 2023, כאשר הפרסום נעשה בכוונה להגן על מבצעי המעשים או להביע להם אהדה או הזדהות. העונש הקבוע לעבירה הוא חמש שנות מאסר. פרסום שנעשה באקראי, בתום לב או למטרה כשרה אינו מהווה עבירה. כתב אישום בעבירה יוגש רק על ידי היועץ המשפטי לממשלה או בהסכמתו.",
+    "en": "The law creates a criminal offense of publishing statements that deny the October 7, 2023 massacre, where the publication is made with intent to defend the perpetrators or to express sympathy or identification with them. The offense carries a penalty of five years' imprisonment. A publication made incidentally, in good faith or for a legitimate purpose is not an offense. An indictment for this offense may be filed only by the Attorney General or with the Attorney General's consent."
+  },
+  "quotes": [
+    "חוק זה קובע איסור פלילי על הכחשת אירועי טבח 7 באוקטובר 2023",
+    "בכוונה להגן על מי שביצע את המעשים או להביע להם אהדה או הזדהות",
+    "שהעונש בצידה הוא חמש שנות מאסר",
+    "לא יהווה עבירה פלילית אם הוא נעשה באקראי, בתום לב או למטרה כשרה",
+    "כתב אישום בעבירה זו יוגש על ידי היועץ המשפטי לממשלה או בהסכמתו"
+  ],
+  "topics": [
+    "incitement",
+    "security"
+  ],
+  "keyVoteSuggested": true,
+  "rationale": "This is the third-reading (final passage) vote on a new criminal offense concerning expressions of sympathy with perpetrators of the October 7 attack, which falls directly under incitement/support for terrorism and relates to security. Editors may note the low turnout (16 for, 0 against, 0 abstaining) when weighing key-vote status; the Attorney General consent requirement touches the judiciary topic only marginally, so it was not tagged.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "autoPublished": true,
+    "keyVote": true,
+    "keyVoteCheckedOn": "2026-10-25",
+    "position": "for",
+    "note": {
+      "he": "החוק קובע עבירה פלילית, שדינה עד חמש שנות מאסר, על פרסום המכחיש את טבח 7 באוקטובר בכוונה להגן על מבצעיו או להביע כלפיהם אהדה או הזדהות. בכך הוא מרחיב את הענישה על הזדהות עם מבצעי טרור.",
+      "en": "The law creates a criminal offence, punishable by up to five years in prison, for publishing a denial of the October 7 massacre with intent to defend its perpetrators or express sympathy or identification with them. This extends punishment for identification with perpetrators of terror."
+    },
+    "autoKeyVote": true,
+    "policy": "incitement",
+    "evidence": "מי שיפרסם דברים המכחישים את טבח 7 באוקטובר 2023, בכוונה להגן על מי שביצע את המעשים או להביע להם אהדה או הזדהות, יואשם בעבירה פלילית שהעונש בצידה הוא חמש שנות מאסר"
+  }
+}

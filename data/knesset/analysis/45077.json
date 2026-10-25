@@ -1,0 +1,32 @@
+{
+  "voteId": 45077,
+  "bill": {
+    "id": 2235351,
+    "name": "חוק קצבאות שאירים של משרתי שירות הקבע ושירות המדינה וגמלאיהם (תיקוני חקיקה), התשפ\"ו-2026",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=2235351"
+  },
+  "summary": {
+    "he": "החוק מתקן את הסדרי קצבת השאירים בפנסיה התקציבית של משרתי קבע בצה\"ל ועובדי המדינה. הוא מבטל את הפסקת הקצבה לאלמנים, לאלמנות ולבני זוג לשעבר שנישאו מחדש. כמו כן הוא מאפשר לשאירים של חללי מערכות ישראל ושל נפגעי פעולות איבה לקבל גם את קצבת השאירים וגם את התגמולים ממשרד הביטחון או מהמוסד לביטוח לאומי, ומגדיל את הסכום הכולל של הקצבה למלוא המשכורת הקובעת או למלוא הקצבה. ההוראות חלות גם על שאירים של מי שנפטרו לפני תחילת החוק (לגבי תשלומים מכאן ואילך) ועל שאירים של חיילי מילואים.",
+    "en": "The law amends survivors' pension rules under the budgetary pension schemes for IDF career personnel and civil servants. It cancels the termination of survivors' pensions for widows, widowers and former spouses who remarry. It also allows survivors of fallen soldiers and of people killed in hostile acts to receive both the survivors' pension and compensation from the Defense Ministry or the National Insurance Institute, and raises the total survivors' pension to the full determining salary or the full pension. The provisions also apply, for future payments, to survivors of people who died before the law took effect, and to survivors of reservists."
+  },
+  "quotes": [
+    "החוק מבטל את ההוראה שהפסיקה את זכאותם של אלמנים ואלמנות או בני זוג לשעבר לקצבת שאירים בשל נישואיהם מחדש.",
+    "לקבל הן את קצבת השאירים והן את התגמולים ממשרד הביטחון או מהמוסד לביטוח לאומי",
+    "כך שיעמוד על מלוא המשכורת הקובעת שהייתה לפעיל או מלוא הקצבה ששולמה לגמלאי",
+    "הוראות החוק חלות גם על שאירים של מי שנפטר לפני כניסת החוק לתוקף (18.1.2026) לגבי תשלומים מכאן ואילך",
+    "התיקונים יחולו גם לעניין שאירים של חיילי מילואים"
+  ],
+  "topics": [
+    "security"
+  ],
+  "keyVoteSuggested": false,
+  "rationale": "The bill concerns benefits for survivors of IDF career soldiers, reservists, fallen soldiers and terror victims, so it is tagged security. It is a welfare and benefits measure that passed 14-0 with no opposition, so it is not suggested as a key vote, though editors may judge otherwise given its link to bereaved families.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "autoPublished": true,
+    "keyVote": false,
+    "keyVoteCheckedOn": "2026-10-25"
+  }
+}

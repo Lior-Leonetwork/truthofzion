@@ -1,0 +1,29 @@
+{
+  "voteId": 42757,
+  "bill": {
+    "id": 2224349,
+    "name": "חוק ביטוח בריאות ממלכתי (תיקון מס' 72 והוראת שעה), התשפ\"ה-2025",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=2224349"
+  },
+  "summary": {
+    "he": "החוק משנה את שיעורי דמי ביטוח הבריאות. לפי הטקסט, השיעור ברמת ההכנסה הנמוכה מופחת ב-0.005% ויעמוד על 3.23%, והשיעור ברמת ההכנסה הגבוהה מוגדל ב-0.005% ויעמוד על 5.17%. ההגדלה ברמת ההכנסה הגבוהה תחול רק מפברואר 2025, ובינואר 2025 יעמוד שיעור זה על 5.16%.",
+    "en": "The law changes National Health Insurance contribution rates. According to the text, the rate on the lower income bracket is reduced by 0.005% to 3.23%, and the rate on the higher income bracket is increased by 0.005% to 5.17%. The increase for the higher bracket applies only from February 2025; in January 2025 that rate stands at 5.16%."
+  },
+  "quotes": [
+    "מפחית ב0.005% את שיעור דמי ביטוח הבריאות ברמת ההכנסה הנמוכה, כך שיעמוד על 3.23%",
+    "מגדיל ב0.005% את שיעור דמי ביטוח הבריאות ברמת ההכנסה הגבוהה, כך שיעמוד על 5.17%",
+    "תחול רק מחודש פברואר של שנת 2025",
+    "ובחודש ינואר של שנת 2025, יעמוד אותו שיעור על 5.16%"
+  ],
+  "topics": [],
+  "keyVoteSuggested": false,
+  "rationale": "The bill adjusts health insurance contribution rates by income bracket. This is a fiscal and health-financing matter that does not substantively concern any of the listed watch topics, so no key-vote suggestion is made.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "autoPublished": true,
+    "keyVote": false,
+    "keyVoteCheckedOn": "2026-10-25"
+  }
+}

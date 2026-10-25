@@ -1,0 +1,42 @@
+{
+  "voteId": 41919,
+  "bill": {
+    "id": 2214465,
+    "name": "חוק להפסקת פעילות אונר\"א, התשפ\"ה-2024",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=2214465"
+  },
+  "summary": {
+    "he": "החוק קובע כי הזמנת אונר\"א, המבוססת על חילופי איגרות בין ישראל לאונר\"א משנת 1967, תפקע, וכי שר החוץ יודיע על כך לאומות המאוחדות בתוך שבעה ימים מקבלת החוק בכנסת. עוד נקבע כי רשויות המדינה וגופים ואנשים הממלאים תפקידים ציבוריים לא יקיימו מגע עם אונר\"א או עם מי מטעמה, וכי החוק אינו מייתר הליכים פליליים נגד עובדי אונר\"א. החוק כולל גם חובות דיווח לכנסת ותחילה מאוחרת של הוראותיו, למעט הוראת פקיעת האיגרות. לפי דברי ההסבר, החוק נחקק לאור טענות על מעורבות אונר\"א ועובדיה בפעילות טרור ובהסתה נגד ישראל, לרבות במתקפת 7 באוקטובר 2023.",
+    "en": "The law provides that UNRWA's invitation, based on a 1967 exchange of letters between Israel and UNRWA, will expire, and that the Foreign Minister will notify the United Nations within seven days of the law's passage in the Knesset. It also provides that state authorities, including bodies and individuals performing public functions, will have no contact with UNRWA or anyone acting on its behalf, and that the law does not preclude criminal proceedings against UNRWA employees. The law also includes reporting requirements to the Knesset and a delayed effective date for its provisions, except for the expiry of the exchange of letters. According to the explanatory notes, the law was enacted in light of claims that UNRWA and its employees were involved in terrorist activity and incitement against Israel, including in the October 7, 2023 attack."
+  },
+  "quotes": [
+    "הזמנת אונר\"א בהסתמך על חילופי האיגרות בין ישראל ובין אונר\"א משנת 1967 תפקע",
+    "שר החוץ יודיע על כך לאומות המאוחדות בתוך שבעה ימים מיום קבלתו של חוק זה בכנסת",
+    "לא יקיימו כל מגע עם אונר\"א או עם מי מטעמה",
+    "הוראות החוק לא ייתרו כל הליך פלילי נגד עובדי אונר\"א",
+    "נקבעו הוראות דיווח לכנסת",
+    "נמצאו הוכחות ישירות למעורבות שלה ושל עובדיה בפעילות טרור נגד ישראל"
+  ],
+  "topics": [
+    "security",
+    "incitement"
+  ],
+  "keyVoteSuggested": true,
+  "rationale": "The law ends Israel's 1967 arrangement with UNRWA and bars state contact with it, justified in the explanatory notes by terrorism and incitement allegations including October 7; tagged security and incitement. Suggested as a key vote given its third-reading passage and its significance for security and international relations.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "autoPublished": true,
+    "keyVote": true,
+    "keyVoteCheckedOn": "2026-10-25",
+    "position": "for",
+    "note": {
+      "he": "החוק קובע כי הזמנת אונר\"א מכוח חילופי האיגרות משנת 1967 תפקע, ואוסר על רשויות המדינה לקיים מגע עם אונר\"א. בכך הוא מגביל את פעילותו בישראל של גוף שהעמדה מזהה כפועל נגדה.",
+      "en": "The law terminates UNRWA's invitation under the 1967 exchange of letters and bars state authorities from any contact with UNRWA. This restricts the activity in Israel of a body the stance names as acting against it."
+    },
+    "autoKeyVote": true,
+    "policy": "hostile-bodies",
+    "evidence": "עוד נקבע כי רשות מרשויות המדינה, לרבות גופים ואנשים הממלאים תפקידים ציבוריים על פי דין, לא יקיימו כל מגע עם אונר\"א או עם מי מטעמה;"
+  }
+}

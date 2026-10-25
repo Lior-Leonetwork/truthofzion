@@ -1,0 +1,33 @@
+{
+  "voteId": 45836,
+  "bill": {
+    "id": 1046468,
+    "name": "חוק שירות לאומי-אזרחי (תיקון מס' 9), התשפ\"ו-2026",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=1046468"
+  },
+  "summary": {
+    "he": "החוק מאריך פעם נוספת את תוקפה של הוראת השעה בחוק שירות לאומי-אזרחי, התשע\"ד–2014, עד ליום 31 באוגוסט 2026. החוק מסדיר שירות לאומי-אזרחי לבוגרי ישיבות ומוסדות חינוך חרדיים שמלאו להם 21 שנים, כתחליף לשירות בצה\"ל. השירות מתבצע בשני מסלולים: שירות אזרחי-חברתי, למשל בבריאות, ברווחה ובחינוך, ושירות אזרחי-ביטחוני, למשל במשטרה, בשירות בתי הסוהר ובכבאות והצלה. לפי דברי ההסבר, ההארכה נועדה לאפשר למי ששירותו הצבאי נדחה להמשיך להשתלב בשירות זה.",
+    "en": "The bill extends, once again, the temporary provision in the National-Civil Service Law of 2014 so that it remains in force until 31 August 2026. The law governs national-civil service, as an alternative to IDF service, for graduates of Haredi yeshivas and educational institutions aged 21 and over. Service runs on two tracks: a civil-social track, for example in health, welfare and education, and a civil-security track, for example in the police, the Prison Service and the fire and rescue authority. According to the explanatory notes, the extension is meant to keep allowing people whose military service was deferred to take part in this service."
+  },
+  "quotes": [
+    "הינו הוראת שעה המסדירה את שירותם של בוגרי ישיבות ומוסדות חינוך חרדיים שמלאו להם 21 שנים",
+    "כתחליף לשירותם בצבא הגנה לישראל",
+    "שירות אזרחי-חברתי בתחומי הבריאות, הרווחה, החינוך, ביטחון הפנים והגנת העורף",
+    "שירות אזרחי-ביטחוני בגופים דוגמת משטרת ישראל, שירות בתי הסוהר והרשות הארצית לכבאות והצלה",
+    "כדי להמשיך ולאפשר למי ששירותו הצבאי נדחה להשתלב בשירות לאומי-אזרחי",
+    "נקבע כי תוקף הוראת השעה יוארך פעם נוספת, כך שהחוק יעמוד בתוקפו עד ליום י\"ח באלול התשפ\"ו (31 באוגוסט 2026)"
+  ],
+  "topics": [
+    "security"
+  ],
+  "keyVoteSuggested": true,
+  "rationale": "Tagged security because the law sets an alternative to IDF service for Haredi yeshiva graduates whose military service was deferred, which connects to the wider question of IDF conscription. Key vote suggested for editor consideration on that basis and given the close result (48-39), though editors may weigh that it is a short technical extension of an existing temporary provision.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "autoPublished": true,
+    "keyVote": false,
+    "keyVoteCheckedOn": "2026-10-25"
+  }
+}

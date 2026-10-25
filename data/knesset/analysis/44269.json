@@ -1,0 +1,29 @@
+{
+  "voteId": 44269,
+  "bill": {
+    "id": 2233647,
+    "name": "חוק לייעול האכיפה והפיקוח העירוניים ברשויות המקומיות (הוראת שעה) (תיקון מס' 17), התשפ\"ה-2025",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=2233647"
+  },
+  "summary": {
+    "he": "החוק מאריך את תוקפה של הוראת השעה לייעול האכיפה והפיקוח העירוניים ברשויות המקומיות עד 14 ביולי 2025. החוק המקורי נחקק כהוראת שעה בשנת 2011 והחל כפיילוט במספר רשויות מקומיות. הוא מסמיך פקחים עירוניים ומסדיר הקמה של מערך שיטור עירוני, שנועד לסייע למשטרה במניעת אלימות. התיקון משנה את סעיף 23 לחוק, וזו אחת מכמה הארכות של הוראת השעה לאורך השנים.",
+    "en": "The law extends the temporary provision on more efficient municipal enforcement and oversight in local authorities until 14 July 2025. The original law was enacted as a temporary provision in 2011 and began as a pilot in several local authorities. It empowers municipal inspectors and sets up a municipal policing system meant to help the police prevent violence. The amendment changes section 23 of the law and is one of several extensions of the temporary provision over the years."
+  },
+  "quotes": [
+    "נחקק כהוראת שעה בשנת 2011, והחל כפיילוט במספר רשויות מקומיות",
+    "החוק מסמיך פקחים עירוניים ומסדיר את הקמתו של מערך שיטור עירוני",
+    "סיוע למשטרת ישראל בפעולות למניעת אלימות",
+    "תוקפו של החוק הוארך לתקופת זמן נוספת ועד ליום י\"ח בתמוז התשפ\"ה (14 ביולי 2025)"
+  ],
+  "topics": [],
+  "keyVoteSuggested": false,
+  "rationale": "This is a technical extension of a temporary provision on municipal enforcement and urban policing. It does not substantively concern the IDF, war or terrorism, or any other watch topic. The vote also had broad agreement (20–0, 1 abstention), so it is not suggested as a key vote.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "autoPublished": true,
+    "keyVote": false,
+    "keyVoteCheckedOn": "2026-10-25"
+  }
+}

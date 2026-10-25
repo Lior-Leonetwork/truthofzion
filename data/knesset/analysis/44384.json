@@ -1,0 +1,41 @@
+{
+  "voteId": 44384,
+  "bill": {
+    "id": 2233919,
+    "name": "חוק לתיקון ולהארכת תוקפן של תקנות שעת חירום (חרבות ברזל) (פגישה עם עורך דין של עצור בעבירת ביטחון) (תיקון מס' 6), התשפ\"ה-2025",
+    "summarySource": "https://main.knesset.gov.il/Activity/Legislation/Laws/Pages/LawBill.aspx?t=lawsuggestionssearch&lawitemid=2233919"
+  },
+  "summary": {
+    "he": "החוק מאריך את תוקפן של תקנות שעת חירום שהותקנו במלחמת \"חרבות ברזל\", המאפשרות למנוע מעצורים ביטחוניים להיפגש עם עורכי הדין שלהם. התקנות חלות על עצורים הקשורים לפעולות האיבה שהתרחשו בין 7 ל-13 באוקטובר 2023, ועל מי שנעצר במסגרת פעולות המלחמה בעזה. לפי החוק, התקנות יעמדו בתוקף עד 29 בינואר 2026.",
+    "en": "The law extends emergency regulations issued during the \"Swords of Iron\" war that allow security detainees to be prevented from meeting their lawyers. The regulations apply to detainees connected to the hostilities between October 7 and October 13, 2023, and to people detained during the war operations in Gaza. Under the law, the regulations remain in force until January 29, 2026."
+  },
+  "quotes": [
+    "החוק מאריך את תוקפן של תקנות שעת חירום",
+    "המאפשרות מניעת פגישה של עצורים ביטחוניים",
+    "הקשורים לפעולות האיבה שהתרחשו בין ה-7 באוקטובר לבין ה-13 באוקטובר 2023",
+    "או מי שנעצר במסגרת פעולות המלחמה בעזה",
+    "התקנות יעמדו בתוקף עד ה-29 בינואר 2026"
+  ],
+  "topics": [
+    "security",
+    "incitement"
+  ],
+  "keyVoteSuggested": true,
+  "rationale": "The law concerns wartime emergency powers over security detainees (security) and restricts a procedural right, lawyer access, for people detained in connection with terror attacks and the Gaza war (incitement & terror: revocation of rights). This was a final (third-reading) vote extending these powers, so editors may want to consider it a key vote.",
+  "model": "claude-opus-5-5",
+  "generatedOn": "2026-10-25",
+  "editorial": {
+    "state": "published",
+    "autoPublished": true,
+    "keyVote": true,
+    "keyVoteCheckedOn": "2026-10-25",
+    "position": "for",
+    "note": {
+      "he": "החוק מאריך עד ינואר 2026 את תקנות החירום המאפשרות למנוע פגישה של עצורים ביטחוניים מאירועי 7 באוקטובר והמלחמה בעזה עם עורכי דינם. בכך הוא משמר כלי שבידי כוחות הביטחון בטיפול בעצורים אלה.",
+      "en": "The law extends, until January 2026, the emergency regulations allowing security detainees from the October 7 events and the Gaza war to be prevented from meeting their lawyers. It thereby keeps this tool available to the security forces in handling these detainees."
+    },
+    "autoKeyVote": true,
+    "policy": "security",
+    "evidence": "החוק מאריך את תוקפן של תקנות שעת חירום, המאפשרות מניעת פגישה של עצורים ביטחוניים, הקשורים לפעולות האיבה שהתרחשו בין ה-7 באוקטובר לבין ה-13 באוקטובר 2023, או מי שנעצר במסגרת פעולות המלחמה בעזה, עם עורכי הדין שלהם."
+  }
+}
