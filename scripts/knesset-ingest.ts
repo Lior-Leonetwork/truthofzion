@@ -1,78 +1,73 @@
-// Pulls new plenum votes from the Knesset's official OData service into
+// Pulls new final-reading plenum votes from the Knesset's official open data
+// (ParliamentInfo OData v4: KNS_PlenumVote, KNS_PlenumVoteResult) into
 // data/knesset/. Deterministic: no model is involved, and nothing here
-// interprets a vote. Runs daily in GitHub Actions (.github/workflows/knesset.yml).
+// interprets a vote. Runs daily in GitHub Actions (.github/workflows/knesset.yml),
+// through an Israeli VPN because knesset.gov.il only answers Israeli addresses.
 //
 //   npm run knesset:ingest -- [--knesset 25] [--since-id N] [--max-votes N]
 import { fetch as undiciFetch, ProxyAgent } from "undici";
-import { makeFetcher, odataUrl, query, ODataError, VOTES_SVC, type Row } from "../src/lib/knesset/odata";
+import { makeFetcher, odataUrl, PARLIAMENT_V4, query, type Row } from "../src/lib/knesset/odata";
 import { paths, readMembers, readState, writeJson } from "../src/lib/knesset/store";
-import { buildVote, countsMatch, headerId, isFinalReading, mergeMembers, resultTypes } from "../src/lib/knesset/transform";
+import { buildVote, dedupeById, factionsFrom, isFinalReading, KNESSET_START, mergeMembers } from "../src/lib/knesset/transform";
 
 function arg(name: string) {
   const i = process.argv.indexOf(`--${name}`);
   return i > 0 ? process.argv[i + 1] : undefined;
 }
 
-// The Knesset sometimes refuses non-Israeli addresses; KNESSET_HTTP_PROXY routes through one that isn't.
 const proxy = process.env.KNESSET_HTTP_PROXY;
 const dispatcher = proxy ? new ProxyAgent(proxy) : undefined;
 const get = makeFetcher(((url: string, init: object) => undiciFetch(url, { ...init, dispatcher })) as unknown as typeof fetch);
 
-async function collect(url: string) {
+async function collect(entity: string, params: Record<string, string>) {
   const rows: Row[] = [];
-  for await (const r of query(get, url)) rows.push(r);
+  for await (const r of query(get, odataUrl(PARLIAMENT_V4, entity, params))) rows.push(r);
   return rows;
-}
-
-async function headersSince(knesset: number, sinceId: number) {
-  // The header key has been published as "vote_id"; older dumps call it "id".
-  for (const key of ["vote_id", "id"]) {
-    try {
-      return await collect(odataUrl(VOTES_SVC, "View_vote_rslts_hdr_Approved", { $filter: `knesset_num eq ${knesset} and ${key} gt ${sinceId}` }));
-    } catch (e) {
-      if (!(e instanceof ODataError && e.status === 400) || key === "id") throw e;
-    }
-  }
-  return [];
 }
 
 async function main() {
   const p = paths();
   const state = readState();
   const knesset = Number(arg("knesset") ?? state?.knesset ?? 25);
+  const start = KNESSET_START[knesset];
+  if (!start) throw new Error(`no start date known for Knesset ${knesset}; add it to KNESSET_START`);
   const sinceId = Number(arg("since-id") ?? (state?.knesset === knesset ? state.lastVoteId : 0));
   const maxVotes = Number(arg("max-votes") ?? 400);
   const today = new Date().toISOString().slice(0, 10);
 
   console.log(`Knesset ${knesset}: fetching votes after id ${sinceId}`);
-  const types = resultTypes(await collect(odataUrl(VOTES_SVC, "vote_result_type", {})));
+  const factions = factionsFrom(await collect("KNS_PersonToPosition", { $filter: `KnessetNum eq ${knesset}` }));
+  console.log(`${factions.size} members with faction records`);
+
   const retry = state?.knesset === knesset ? state.heldBack : [];
-  const retried: Row[] = [];
-  for (const id of retry) {
-    retried.push(...(await collect(odataUrl(VOTES_SVC, "View_vote_rslts_hdr_Approved", { $filter: `knesset_num eq ${knesset} and vote_id eq ${id}` }))));
-  }
-  const headers = (await headersSince(knesset, sinceId)).sort((a, b) => headerId(a)! - headerId(b)!);
+  const retried = retry.length
+    ? await collect("KNS_PlenumVote", { $filter: retry.map((id) => `Id eq ${id}`).join(" or ") })
+    : [];
+  const fresh = await collect("KNS_PlenumVote", {
+    $filter: `Id gt ${sinceId} and VoteDateTime ge ${start}T00:00:00Z`,
+    $orderby: "Id",
+  });
+  const headers = dedupeById([...retried, ...fresh]).sort((a, b) => Number(a.Id) - Number(b.Id));
   const finals = headers.filter(isFinalReading);
-  console.log(`${headers.length} new votes, ${finals.length} final readings`);
-  // Printed so the first live run shows what the filter is matching against.
-  for (const h of headers.slice(0, 15)) console.log(`  ${isFinalReading(h) ? "✓" : " "} ${headerId(h)} ${h.sess_item_dscr} | ${h.vote_item_dscr}`);
+  console.log(`${fresh.length} new vote rows (${headers.length} unique incl. retries), ${finals.length} final readings`);
+  for (const h of finals.slice(0, 10)) console.log(`  ✓ ${h.Id} ${String(h.VoteDateTime).slice(0, 10)} ${h.VoteTitle}`);
 
   const members = readMembers();
   let lastVoteId = sinceId;
   let written = 0;
   const heldBack: number[] = [];
-  for (const h of [...retried, ...headers]) {
-    const id = headerId(h)!;
+  for (const h of headers) {
+    const id = Number(h.Id);
     if (isFinalReading(h)) {
       if (written >= maxVotes && id > sinceId) break; // resume from here next run
-      const rows = await collect(odataUrl(VOTES_SVC, "vote_rslts_kmmbr_shadow", { $filter: `vote_id eq ${id}` }));
-      const vote = buildVote(h, rows, types, today);
-      if (!countsMatch(vote)) {
-        console.warn(`  vote ${id}: member rows disagree with official totals; held back`);
+      const results = await collect("KNS_PlenumVoteResult", { $filter: `VoteID eq ${id}` });
+      const built = buildVote(h, results, factions, knesset, today);
+      if (!built.ok) {
+        console.warn(`  vote ${id}: ${built.reason}; held back`);
         heldBack.push(id);
       } else {
-        writeJson(p.vote(id), vote);
-        mergeMembers(members, vote, new Map(rows.map((r) => [String(r.kmmbr_id).trim(), String(r.kmmbr_name ?? "").trim()])));
+        writeJson(p.vote(id), built.vote);
+        mergeMembers(members, built.vote, built.names);
         written++;
       }
     }

@@ -79,9 +79,11 @@ export function VoteRow({ v, locale, labels }: {
       className="group flex h-full flex-col gap-3 rounded-2xl border border-border bg-surface p-5 transition hover:-translate-y-0.5 hover:border-brand hover:shadow-lg"
     >
       <div className="flex flex-wrap items-center gap-2 text-xs">
-        <span className={`rounded-full px-2.5 py-0.5 font-semibold text-white ${v.accepted ? "bg-status-documented" : "bg-status-allegation"}`}>
-          {v.accepted ? labels.passed : labels.rejected}
-        </span>
+        {v.accepted !== null && (
+          <span className={`rounded-full px-2.5 py-0.5 font-semibold text-white ${v.accepted ? "bg-status-documented" : "bg-status-allegation"}`}>
+            {v.accepted ? labels.passed : labels.rejected}
+          </span>
+        )}
         {v.keyVote && <span className="rounded-full bg-accent px-2.5 py-0.5 font-semibold text-ink">★ {labels.keyVote}</span>}
         {v.topicLabels.map((tl) => (
           <span key={tl} className="text-muted">{tl}</span>

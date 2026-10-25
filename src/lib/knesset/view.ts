@@ -7,7 +7,7 @@ export type VoteCard = {
   id: number;
   title: string;
   date: string;
-  accepted: boolean;
+  accepted: boolean | null;
   totals: Vote["totals"];
   summary: string | null;
   keyVote: boolean;

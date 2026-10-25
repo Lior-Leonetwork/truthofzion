@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { decodeXml, NotODataError, parseAtom, parseJson, parseResponse, query } from "./odata";
-import { buildVote, countsMatch, isFinalReading, mergeMembers, resultTypes } from "./transform";
+import { buildVote, dedupeById, factionAt, factionsFrom, isFinalReading, mergeMembers } from "./transform";
 import { nameOverlap } from "./bill";
 import { checkAnalysis, checkDraft, quoteFound } from "./verify";
 import type { Analysis } from "./schema";
@@ -25,19 +25,36 @@ const ATOM = `<?xml version="1.0" encoding="utf-8"?>
   <link rel="next" href="https://knesset.gov.il/Odata/Votes.svc/View_vote_rslts_hdr_Approved?$filter=knesset_num%20eq%2025&amp;$skiptoken=901" />
 </feed>`;
 
-const types = resultTypes([
-  { result_type_id: 1, result_type_name: "בעד" },
-  { result_type_id: 2, result_type_name: "נגד" },
-  { result_type_id: 3, result_type_name: "נמנע" },
-  { result_type_id: 4, result_type_name: "לא הצביע" },
+// Shaped like the ParliamentInfo v4 rows the live probe returned. Fictional people.
+const header = {
+  Id: 46700,
+  VoteDateTime: "2026-07-28T17:42:00+03:00",
+  SessionID: 2245272,
+  ItemID: 2229019,
+  VoteTitle: "הצעת חוק הדוגמה (תיקוני חקיקה), התשפ\"ו-2026",
+  VoteSubject: null,
+  ForOptionDesc: "לקבל את הצעת החוק בקריאה שלישית",
+  AgainstOptionDesc: "לדחות את הצעת החוק",
+};
+const results = [
+  { MkId: 1, FirstName: "פלוני", LastName: "אלמוני", ResultCode: 7, ResultDesc: "בעד" },
+  { MkId: 2, FirstName: "אלמונית", LastName: "פלונית", ResultCode: 7, ResultDesc: "בעד" },
+  { MkId: 3, FirstName: "ישראל", LastName: "ישראלי", ResultCode: 8, ResultDesc: "נגד" },
+  { MkId: 4, FirstName: "שרה", LastName: "כהן", ResultCode: 6, ResultDesc: "נוכח" },
+];
+const factions = factionsFrom([
+  { PersonID: 1, FactionName: "סיעה א", StartDate: "2022-11-15T00:00:00", FinishDate: null },
+  { PersonID: 2, FactionName: "סיעה א", StartDate: "2022-11-15T00:00:00", FinishDate: null },
+  { PersonID: 3, FactionName: "סיעה ישנה", StartDate: "2022-11-15T00:00:00", FinishDate: "2025-01-01T00:00:00" },
+  { PersonID: 3, FactionName: "סיעה ב", StartDate: "2025-01-02T00:00:00", FinishDate: null },
+  { PersonID: 4, FactionName: null, StartDate: "2022-11-15T00:00:00", FinishDate: null },
 ]);
 
-const rows = [
-  { vote_id: 901, kmmbr_id: "000000001", kmmbr_name: "פלוני אלמוני", vote_result: 1, faction_name: "סיעה א" },
-  { vote_id: 901, kmmbr_id: "000000002", kmmbr_name: "אלמונית פלונית", vote_result: 1, faction_name: "סיעה א" },
-  { vote_id: 901, kmmbr_id: "000000003", kmmbr_name: "ישראל ישראלי", vote_result: 2, faction_name: "סיעה ב" },
-  { vote_id: 901, kmmbr_id: "000000004", kmmbr_name: "שרה כהן", vote_result: 4, faction_name: "סיעה ב" },
-];
+function built() {
+  const b = buildVote(header, results, factions, 25, "2026-10-25");
+  if (!b.ok) throw new Error(b.reason);
+  return b;
+}
 
 describe("OData parsing", () => {
   it("reads typed properties, nulls and the next link from Atom", () => {
@@ -83,35 +100,53 @@ describe("OData parsing", () => {
 });
 
 describe("vote transform", () => {
-  const header = parseAtom(ATOM, "https://knesset.gov.il/Odata/Votes.svc").rows[0];
-
-  it("recognises final readings and skips procedural votes", () => {
+  it("recognises final passage and skips second readings, reservations and committee referrals", () => {
     expect(isFinalReading(header)).toBe(true);
-    expect(isFinalReading({ sess_item_dscr: "הצעת חוק", vote_item_dscr: "להעביר את הצעת החוק לוועדה" })).toBe(false);
-    expect(isFinalReading({ sess_item_dscr: "הצעת חוק - קריאה שנייה ושלישית", vote_item_dscr: "סעיף 1" })).toBe(true);
+    expect(isFinalReading({ ForOptionDesc: "לקבל בקריאה שנייה" })).toBe(false);
+    expect(isFinalReading({ ForOptionDesc: "לקבל את ההסתייגות" })).toBe(false);
+    expect(isFinalReading({ ForOptionDesc: "להעביר את הצעת החוק לוועדה להכנה לקריאה שניה ושלישית" })).toBe(false);
+    expect(isFinalReading({ ForOptionDesc: "להביע אי-אמון בממשלה" })).toBe(false);
   });
 
-  it("builds a vote with each member's choice and faction", () => {
-    const v = buildVote(header, rows, types, "2026-10-25");
-    expect(v.id).toBe(901);
-    expect(v.date).toBe("2026-07-22");
-    expect(v.accepted).toBe(true);
-    expect(v.members["000000001"]).toEqual({ choice: "for", raw: "בעד", faction: "סיעה א" });
-    expect(v.members["000000004"].choice).toBe("other");
-    expect(v.source.url).toContain("vote_id_t=901");
-    expect(countsMatch(v)).toBe(true);
+  it("drops the duplicate rows the service sometimes returns", () => {
+    expect(dedupeById([{ Id: 1 }, { Id: 1 }, { Id: 2 }])).toHaveLength(2);
   });
 
-  it("holds back a vote whose member rows disagree with the official totals", () => {
-    const v = buildVote(header, rows.slice(1), types, "2026-10-25");
-    expect(countsMatch(v)).toBe(false);
+  it("builds a vote with each member's choice, the faction they sat in that day, and counted totals", () => {
+    const { vote, names } = built();
+    expect(vote.id).toBe(46700);
+    expect(vote.date).toBe("2026-07-28");
+    expect(vote.time).toBe("17:42");
+    expect(vote.item).toEqual({ id: 2229019, title: header.VoteTitle });
+    expect(vote.voteTitle).toBe("לקבל את הצעת החוק בקריאה שלישית");
+    expect(vote.accepted).toBeNull();
+    expect(vote.totals).toEqual({ for: 2, against: 1, abstain: 0 });
+    expect(vote.members["1"]).toEqual({ choice: "for", raw: "בעד", faction: "סיעה א" });
+    expect(vote.members["3"].faction).toBe("סיעה ב");
+    expect(vote.members["4"]).toEqual({ choice: "other", raw: "נוכח", faction: "" });
+    expect(vote.source.url).toBe("https://knesset.gov.il/OdataV4/ParliamentInfo/KNS_PlenumVote(46700)");
+    expect(names.get("2")).toBe("אלמונית פלונית");
   });
 
-  it("tracks each member's latest faction", () => {
-    const v = buildVote(header, rows, types, "2026-10-25");
-    const names = new Map(rows.map((r) => [r.kmmbr_id, r.kmmbr_name]));
-    const m = mergeMembers({ "000000003": { id: "000000003", name: "ישראל ישראלי", faction: "סיעה ישנה", knessets: [24] } }, v, names);
-    expect(m["000000003"]).toEqual({ id: "000000003", name: "ישראל ישראלי", faction: "סיעה ב", knessets: [24, 25] });
+  it("uses the faction for the vote's date", () => {
+    expect(factionAt(factions, "3", "2024-06-01")).toBe("סיעה ישנה");
+    expect(factionAt(factions, "3", "2026-01-01")).toBe("סיעה ב");
+    expect(factionAt(factions, "99", "2026-01-01")).toBe("");
+  });
+
+  it("holds back contradictory or empty results", () => {
+    const twice = [...results, { MkId: 1, FirstName: "פלוני", LastName: "אלמוני", ResultDesc: "נגד" }];
+    expect(buildVote(header, twice, factions, 25, "2026-10-25").ok).toBe(false);
+    expect(buildVote(header, [], factions, 25, "2026-10-25").ok).toBe(false);
+    // An exact duplicate row is harmless.
+    expect(buildVote(header, [...results, results[0]], factions, 25, "2026-10-25").ok).toBe(true);
+  });
+
+  it("tracks each member's name and latest faction", () => {
+    const { vote, names } = built();
+    const m = mergeMembers({ "3": { id: "3", name: "ישראל ישראלי", faction: "סיעה ישנה", knessets: [24] } }, vote, names);
+    expect(m["3"]).toEqual({ id: "3", name: "ישראל ישראלי", faction: "סיעה ב", knessets: [24, 25] });
+    expect(m["4"].name).toBe("שרה כהן");
   });
 });
 
@@ -145,11 +180,11 @@ describe("AI draft checks", () => {
 });
 
 describe("analysis publication gate", () => {
-  const vote = buildVote(parseAtom(ATOM, "https://x").rows[0], rows, types, "2026-10-25");
+  const { vote } = built();
   const votes = new Map([[vote.id, vote]]);
   const editors = new Map([["lior", { handle: "lior", name: "Lior" }]]);
   const base: Analysis = {
-    voteId: 901,
+    voteId: 46700,
     bill: null,
     summary: null,
     quotes: [],

@@ -35,7 +35,7 @@ function prompt(vote: Vote, bill: Bill | null, watch: WatchTopic[]) {
     `Knesset ${vote.knesset}, vote ${vote.id}, ${vote.date}`,
     `Agenda item: ${vote.item.title}`,
     `Vote: ${vote.voteTitle}`,
-    `Result: ${vote.accepted ? "accepted" : "rejected"} — for ${vote.totals.for}, against ${vote.totals.against}, abstain ${vote.totals.abstain}`,
+    `Result: ${vote.accepted === null ? "" : vote.accepted ? "accepted — " : "rejected — "}for ${vote.totals.for}, against ${vote.totals.against}, abstain ${vote.totals.abstain}`,
     "</vote>",
     bill?.summary
       ? `<bill_text name="${bill.name}">\n${bill.summary}\n</bill_text>`

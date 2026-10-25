@@ -25,8 +25,8 @@ Runs every day in GitHub Actions (`.github/workflows/knesset.yml`):
 
 | Step | Who | Published? |
 |---|---|---|
-| **Ingest:** pull new plenum votes from the Knesset's official OData service (`Votes.svc`) | Code only (`scripts/knesset-ingest.ts`) | **Yes, automatically.** Official records, shown as recorded |
-| **Hold back** any vote whose per-member rows don't add up to the official totals | Code | No, retried each run |
+| **Ingest:** pull new final-reading plenum votes from the Knesset's official open data (ParliamentInfo OData v4: `KNS_PlenumVote`, `KNS_PlenumVoteResult`, factions from `KNS_PersonToPosition`). The older `Votes.svc` stopped updating in July 2021 | Code only (`scripts/knesset-ingest.ts`) | **Yes, automatically.** Official records, shown as recorded |
+| **Hold back** any vote with contradictory member records or no results yet. Totals are counted from member rows; pass/fail isn't published by the Knesset, so the site doesn't claim it | Code | No, retried each run |
 | **Draft:** for each final-reading vote, fetch the bill's official explanatory notes (`KNS_Bill.SummaryLaw`) and have Claude write a neutral Hebrew/English summary, quotes and topic tags | Claude (`src/lib/agent/vote-analyst.ts`) | No |
 | **Verify:** every quote must appear word-for-word in the official text; no bill text means no summary; topics only from `data/knesset/watch.json` | Code (`src/lib/knesset/verify.ts`) | Failing drafts are discarded |
 | **Review:** drafts land in one rolling pull request (`ai/knesset-drafts`). Editors fix wording, reject drafts (`"state": "rejected"`), or mark key votes (`"keyVote": true` plus a `note`, required by CI) | Editor | No |

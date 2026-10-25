@@ -1,62 +1,90 @@
 import type { Row } from "./odata";
 import type { Member, Vote, VoteChoice } from "./schema";
 
-const str = (v: Row[string]) => (v === null || v === undefined ? "" : String(v)).trim();
-const num = (v: Row[string]) => (v === null || v === undefined || v === "" ? null : Number(v));
+// Built on the Knesset's ParliamentInfo (OData v4) tables KNS_PlenumVote and
+// KNS_PlenumVoteResult. The older Votes.svc stopped updating in July 2021.
 
-// The header table's key has been published as both "vote_id" and "id".
-export const headerId = (r: Row) => num(r.vote_id ?? r.id);
+const str = (v: Row[string] | undefined) => (v === null || v === undefined ? "" : String(v)).trim();
+const num = (v: Row[string] | undefined) => (v === null || v === undefined || v === "" ? null : Number(v));
 
-// Final passage of a law: the votes that decide whether it becomes law. These
-// are the ones the site publishes; procedural votes are skipped.
-const FINAL_READING = [/קריאה\s+שלישית/, /קריאה\s+שני[י]?ה\s+ושלישית/, /החוק\s+כולו/, /הצעת\s+החוק\s+כולה/];
+// When each Knesset was sworn in. Votes don't carry a Knesset number.
+export const KNESSET_START: Record<number, string> = { 25: "2022-11-15" };
 
+// Final passage: the "for" option reads "לקבל את הצעת החוק בקריאה שלישית".
+// Excludes votes to send a bill to committee "to prepare for second and third reading".
 export function isFinalReading(r: Row) {
-  const text = `${str(r.sess_item_dscr)} ${str(r.vote_item_dscr)}`;
-  return FINAL_READING.some((re) => re.test(text));
+  const option = str(r.ForOptionDesc);
+  return /^לקבל/.test(option) && /שלישית/.test(option) && !/להעביר|להכנה/.test(option);
+}
+
+// The service sometimes returns the same row twice.
+export function dedupeById(rows: Row[]) {
+  const seen = new Map<string, Row>();
+  for (const r of rows) seen.set(str(r.Id), r);
+  return [...seen.values()];
 }
 
 const CHOICES: Record<string, VoteChoice> = { בעד: "for", נגד: "against", נמנע: "abstain" };
 
-export function resultTypes(rows: Row[]) {
-  return new Map(rows.map((r) => [num(r.result_type_id)!, str(r.result_type_name)]));
+export function recordUrl(id: number) {
+  return `https://knesset.gov.il/OdataV4/ParliamentInfo/KNS_PlenumVote(${id})`;
 }
 
-export function voteUrl(id: number) {
-  return `https://www.knesset.gov.il/vote/heb/Vote_Res_Map.asp?vote_id_t=${id}`;
-}
+type Position = { faction: string; start: string; finish: string };
 
-export function buildVote(header: Row, memberRows: Row[], types: Map<number, string>, today: string): Vote {
-  const id = headerId(header)!;
-  const members: Vote["members"] = {};
-  for (const r of memberRows) {
-    const raw = types.get(num(r.vote_result)!) ?? str(r.vote_result);
-    members[str(r.kmmbr_id)] = { choice: CHOICES[raw] ?? "other", raw, faction: str(r.faction_name) };
+// KNS_PersonToPosition rows → each person's faction memberships over time.
+export function factionsFrom(rows: Row[]) {
+  const map = new Map<string, Position[]>();
+  for (const r of rows) {
+    const faction = str(r.FactionName);
+    if (!faction) continue;
+    const list = map.get(str(r.PersonID)) ?? [];
+    list.push({ faction, start: str(r.StartDate).slice(0, 10), finish: str(r.FinishDate).slice(0, 10) || "9999-12-31" });
+    map.set(str(r.PersonID), list);
   }
-  return {
-    id,
-    knesset: num(header.knesset_num)!,
-    date: str(header.vote_date).slice(0, 10),
-    time: str(header.vote_time),
-    item: { id: num(header.sess_item_id), title: str(header.sess_item_dscr) },
-    voteTitle: str(header.vote_item_dscr),
-    accepted: num(header.is_accepted) === 1 || header.is_accepted === true,
-    totals: {
-      for: num(header.total_for) ?? 0,
-      against: num(header.total_against) ?? 0,
-      abstain: num(header.total_abstain) ?? 0,
-    },
-    members,
-    source: { url: voteUrl(id), retrievedOn: today },
-  };
+  return map;
 }
 
-// The official totals and the per-member rows come from different tables. If
-// they disagree the vote is held back rather than published inconsistently.
-export function countsMatch(v: Vote) {
-  const c = { for: 0, against: 0, abstain: 0 };
-  for (const m of Object.values(v.members)) if (m.choice !== "other") c[m.choice]++;
-  return c.for === v.totals.for && c.against === v.totals.against && c.abstain === v.totals.abstain;
+export function factionAt(factions: Map<string, Position[]>, personId: string, date: string) {
+  const list = factions.get(personId) ?? [];
+  const match = list.find((p) => p.start <= date && date <= p.finish);
+  return (match ?? [...list].sort((a, b) => b.start.localeCompare(a.start))[0])?.faction ?? "";
+}
+
+export type Built = { ok: true; vote: Vote; names: Map<string, string> } | { ok: false; reason: string };
+
+export function buildVote(header: Row, results: Row[], factions: Map<string, Position[]>, knesset: number, today: string): Built {
+  const id = num(header.Id)!;
+  const stamp = str(header.VoteDateTime);
+  const date = stamp.slice(0, 10);
+  const members: Vote["members"] = {};
+  const names = new Map<string, string>();
+  for (const r of results) {
+    const mk = str(r.MkId);
+    const raw = str(r.ResultDesc);
+    if (members[mk] && members[mk].raw !== raw) return { ok: false, reason: `member ${mk} recorded as both "${members[mk].raw}" and "${raw}"` };
+    members[mk] = { choice: CHOICES[raw] ?? "other", raw, faction: factionAt(factions, mk, date) };
+    names.set(mk, `${str(r.FirstName)} ${str(r.LastName)}`.trim());
+  }
+  if (Object.keys(members).length === 0) return { ok: false, reason: "no member results published yet" };
+  const totals = { for: 0, against: 0, abstain: 0 };
+  for (const m of Object.values(members)) if (m.choice !== "other") totals[m.choice]++;
+  return {
+    ok: true,
+    names,
+    vote: {
+      id,
+      knesset,
+      date,
+      time: stamp.slice(11, 16),
+      item: { id: num(header.ItemID), title: str(header.VoteTitle) },
+      voteTitle: [str(header.ForOptionDesc), str(header.VoteSubject)].filter((x) => x && x !== "null").join(" — "),
+      accepted: null,
+      totals,
+      members,
+      source: { url: recordUrl(id), retrievedOn: today },
+    },
+  };
 }
 
 export function mergeMembers(existing: Record<string, Member>, vote: Vote, names: Map<string, string>) {
@@ -65,7 +93,7 @@ export function mergeMembers(existing: Record<string, Member>, vote: Vote, names
     const knessets = new Set([...(prev?.knessets ?? []), vote.knesset]);
     existing[id] = {
       id,
-      name: names.get(id) ?? prev?.name ?? id,
+      name: names.get(id) || prev?.name || id,
       faction: m.faction || prev?.faction || "",
       knessets: [...knessets].sort((a, b) => a - b),
     };

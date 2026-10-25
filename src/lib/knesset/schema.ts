@@ -24,7 +24,10 @@ export const Vote = z
     time: z.string(),
     item: z.object({ id: z.number().int().nullable(), title: z.string() }).strict(),
     voteTitle: z.string(),
-    accepted: z.boolean(),
+    // The Knesset's current data doesn't say whether a vote passed, and some
+    // votes need special majorities, so this stays null rather than guessed.
+    accepted: z.boolean().nullable(),
+    // Counted from the per-member rows (the current data has no official totals).
     totals: z.object({ for: z.number().int(), against: z.number().int(), abstain: z.number().int() }).strict(),
     members: z.record(z.string(), MemberVote),
     source: z.object({ url: z.url(), retrievedOn: z.iso.date() }).strict(),
@@ -34,9 +37,9 @@ export type Vote = z.infer<typeof Vote>;
 
 export const Member = z
   .object({
-    id: z.string(), // kmmbr_id in the Knesset's vote data
+    id: z.string(), // the Knesset's PersonID (MkId in vote results)
     name: z.string(), // Hebrew, as the Knesset records it
-    faction: z.string(), // latest faction seen in a vote
+    faction: z.string(), // faction at the member's latest ingested vote
     knessets: z.array(z.number().int()),
   })
   .strict();

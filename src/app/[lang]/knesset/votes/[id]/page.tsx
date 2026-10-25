@@ -58,9 +58,11 @@ export default async function VotePage({ params }: PageProps<"/[lang]/knesset/vo
             <Link href={`/${locale}/knesset`} className="hover:text-ink-text">{d.nav.knesset}</Link>
             <span>·</span>
             <span>{formatDate(vote.date, locale)}</span>
-            <span className={`rounded-full px-2.5 py-0.5 text-xs font-semibold text-white ${vote.accepted ? "bg-status-documented" : "bg-status-allegation"}`}>
-              {vote.accepted ? k.passed : k.rejected}
-            </span>
+            {vote.accepted !== null && (
+              <span className={`rounded-full px-2.5 py-0.5 text-xs font-semibold text-white ${vote.accepted ? "bg-status-documented" : "bg-status-allegation"}`}>
+                {vote.accepted ? k.passed : k.rejected}
+              </span>
+            )}
             {a?.editorial.keyVote && <span className="rounded-full bg-accent px-2.5 py-0.5 text-xs font-semibold text-ink">★ {k.keyVote}</span>}
           </div>
           <h1 lang="he" dir="rtl" className="max-w-4xl font-serif text-3xl font-black leading-tight sm:text-4xl">{vote.item.title}</h1>
@@ -156,6 +158,7 @@ export default async function VotePage({ params }: PageProps<"/[lang]/knesset/vo
               </a>
             )}
             <p className="text-xs text-muted" dir="ltr">Knesset {vote.knesset} · vote {vote.id} · {vote.time}</p>
+            <p className="text-xs text-muted">{k.countedNote}</p>
           </div>
         </aside>
       </div>

@@ -75,7 +75,7 @@ export default async function MemberPage({ params }: PageProps<"/[lang]/knesset/
                   <span className={`w-20 shrink-0 font-semibold ${CHOICE_TEXT[choice]}`}>{k.choices[choice]}</span>
                   <span lang="he" dir="rtl" className="min-w-0 flex-1 font-medium">{vote.item.title}</span>
                   {a?.editorial.keyVote && <span className="rounded-full bg-accent px-2 py-0.5 text-xs font-semibold text-ink">★ {k.keyVote}</span>}
-                  <span className="text-xs text-muted">{vote.accepted ? k.passed : k.rejected} · {formatDate(vote.date, locale)}</span>
+                  <span className="text-xs text-muted">{vote.accepted === null ? "" : `${vote.accepted ? k.passed : k.rejected} · `}{formatDate(vote.date, locale)}</span>
                 </Link>
               </li>
             );

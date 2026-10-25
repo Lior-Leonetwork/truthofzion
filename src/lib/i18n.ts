@@ -55,6 +55,7 @@ type Dict = {
     fromBill: string;
     official: string;
     billText: string;
+    countedNote: string;
     roll: string;
     byFaction: string;
     editorNote: string;
@@ -146,8 +147,9 @@ const he: Dict = {
     aiSummary: "תקציר שנוסח בסיוע בינה מלאכותית מתוך דברי ההסבר הרשמיים, ונבדק בידי עורך",
     noSummary: "עדיין אין תקציר מאושר להצבעה זו. מוצגת הכותרת הרשמית בלבד.",
     fromBill: "מתוך דברי ההסבר",
-    official: "הרשומה הרשמית באתר הכנסת",
+    official: "הרשומה הרשמית בנתונים הפתוחים של הכנסת",
     billText: "הצעת החוק באתר הכנסת",
+    countedNote: "הסיכומים נספרו מהצבעות חברי הכנסת כפי שפורסמו בנתונים הפתוחים של הכנסת.",
     roll: "איך הצביע כל חבר כנסת",
     byFaction: "לפי סיעה",
     editorNote: "הערת העורך",
@@ -159,7 +161,7 @@ const he: Dict = {
     howTitle: "מאיפה הנתונים",
     how: [
       "תוצאות ההצבעות נשאבות מדי יום מהממשק הפתוח הרשמי של הכנסת ומתפרסמות כפי שהן, ללא עיבוד או פרשנות.",
-      "הצבעה שבה פירוט חברי הכנסת אינו תואם לסיכומים הרשמיים מעוכבת ואינה מתפרסמת.",
+      "הצבעה שבה רישום חבר כנסת סותר את עצמו, או שעדיין לא פורסמו בה תוצאות, מעוכבת ואינה מתפרסמת.",
       "תקצירים נכתבים בסיוע בינה מלאכותית רק מתוך דברי ההסבר הרשמיים, כל ציטוט נבדק מילה במילה מול המקור, ושום תקציר אינו מתפרסם לפני שעורך אישר אותו.",
       "״הצבעת מפתח״ היא החלטה של עורך, עם הסבר, ולא של המערכת.",
     ],
@@ -333,8 +335,9 @@ const en: Dict = {
     aiSummary: "Summary drafted with AI from the official explanatory notes, checked by an editor",
     noSummary: "No approved summary for this vote yet. Showing the official title only.",
     fromBill: "From the explanatory notes",
-    official: "Official record on the Knesset website",
+    official: "Official record in the Knesset's open data",
     billText: "The bill on the Knesset website",
+    countedNote: "Totals are counted from each member's vote as published in the Knesset's open data.",
     roll: "How each member voted",
     byFaction: "By faction",
     editorNote: "Editor's note",
@@ -346,7 +349,7 @@ const en: Dict = {
     howTitle: "Where this data comes from",
     how: [
       "Vote results are pulled daily from the Knesset's official open-data service and published as recorded, without interpretation.",
-      "A vote whose per-member breakdown doesn't match the official totals is held back, not published.",
+      "A vote with contradictory member records, or with no member results published yet, is held back, not published.",
       "Summaries are drafted with AI from the official explanatory notes only, every quote is checked word for word against the source, and no summary is published before an editor approves it.",
       "A \"key vote\" is an editor's decision, with a stated reason, never the system's.",
     ],
