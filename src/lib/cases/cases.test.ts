@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import type { Member } from "../knesset/schema";
-import { allowedTypes, caseEntry, publicationGaps, verifyCandidate, type Candidate } from "./verify";
+import { allowedTypes, researchDomains, caseEntry, publicationGaps, verifyCandidate, type Candidate } from "./verify";
 
 // Fictional member, fictional case.
 const members: Record<string, Member> = { "900": { id: "900", name: "ישראל ישראלי", faction: "סיעה לדוגמה" } as Member };
@@ -35,6 +35,12 @@ describe("case drafts", () => {
     expect(allowedTypes(newsUrl, news)).toEqual(["news_report"]);
     expect(allowedTypes("https://example.com/x", news)).toEqual([]);
     expect(allowedTypes("http://www.gov.il/x", news)).toEqual([]);
+  });
+
+  it("never sends the search tool a duplicate site", () => {
+    const d = researchDomains(["ynet.co.il", "knesset.gov.il"]);
+    expect(new Set(d).size).toBe(d.length);
+    expect(d).toContain("ynet.co.il");
   });
 
   it("drafts a verified case, never published, with the right of reply still to do", () => {

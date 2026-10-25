@@ -49,6 +49,10 @@ const OFFICIAL: { domain: string; types: SourceType[] }[] = [
 ];
 export const OFFICIAL_DOMAINS = OFFICIAL.map((o) => o.domain);
 
+// The sites the researcher may search and fetch. The API refuses duplicates,
+// and an outlet list can repeat an official site (e.g. knesset.gov.il).
+export const researchDomains = (newsDomains: string[]) => [...new Set([...OFFICIAL_DOMAINS, ...newsDomains])];
+
 const matches = (host: string, domain: string) => host === domain || host.endsWith(`.${domain}`);
 
 export function allowedTypes(url: string, newsDomains: string[]): SourceType[] {

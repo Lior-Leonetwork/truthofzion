@@ -12,7 +12,7 @@ import path from "node:path";
 import { fetch as undiciFetch, ProxyAgent } from "undici";
 import { z } from "zod";
 import { researchCases } from "../src/lib/agent/case-researcher";
-import { CASE_CATEGORIES, caseEntry, caseSlug, OFFICIAL_DOMAINS, publicationGaps, verifyCandidate, type CaseCategory } from "../src/lib/cases/verify";
+import { CASE_CATEGORIES, caseEntry, caseSlug, publicationGaps, researchDomains, verifyCandidate, type CaseCategory } from "../src/lib/cases/verify";
 import { readContent } from "../src/lib/content/load";
 import { entityDraft, htmlToText } from "../src/lib/knesset/statements";
 import { readMembers, readStatementSources, writeJson } from "../src/lib/knesset/store";
@@ -66,7 +66,7 @@ async function main() {
   ];
 
   console.log(`Researching ${category} (up to ${max} cases) among ${Object.keys(members).length} members`);
-  const result = await researchCases(client, category, Object.values(members), covered, [...OFFICIAL_DOMAINS, ...newsDomains], max);
+  const result = await researchCases(client, category, Object.values(members), covered, researchDomains(newsDomains), max);
   if (!result.ok) throw new Error(result.errors.join("; "));
   console.log(`${result.cases.length} candidates`);
 
