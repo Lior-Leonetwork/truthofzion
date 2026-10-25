@@ -1,0 +1,68 @@
+{
+  "id": 44352,
+  "knesset": 25,
+  "date": "2025-07-15",
+  "time": "17:22",
+  "item": {
+    "id": 2231609,
+    "title": "הצעת חוק חובת המכרזים (תיקון מס' 24 – הוראת שעה) (תיקון מס' 2), התשפ\"ה–2025"
+  },
+  "voteTitle": "לקבל את הצעת החוק בקריאה שלישית",
+  "accepted": null,
+  "totals": {
+    "for": 9,
+    "against": 0,
+    "abstain": 0
+  },
+  "members": {
+    "12938": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "ישראל ביתנו"
+    },
+    "22151": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הימין הממלכתי"
+    },
+    "30682": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "כחול לבן - המחנה הממלכתי"
+    },
+    "30693": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "כחול לבן - המחנה הממלכתי"
+    },
+    "30722": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "ישראל ביתנו"
+    },
+    "30810": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הציונות הדתית בראשות בצלאל סמוטריץ'"
+    },
+    "30812": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הציונות הדתית בראשות בצלאל סמוטריץ'"
+    },
+    "30863": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "ישראל ביתנו"
+    },
+    "30893": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    }
+  },
+  "source": {
+    "url": "https://knesset.gov.il/OdataV4/ParliamentInfo/KNS_PlenumVote(44352)",
+    "retrievedOn": "2026-10-25"
+  }
+}

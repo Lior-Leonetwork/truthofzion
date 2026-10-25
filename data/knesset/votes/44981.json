@@ -1,0 +1,53 @@
+{
+  "id": 44981,
+  "knesset": 25,
+  "date": "2025-12-31",
+  "time": "21:27",
+  "item": {
+    "id": 1046387,
+    "title": "הצעת חוק לתיקון פקודת בתי הסוהר (מס' 70 והוראת שעה), התשפ\"ו-2025"
+  },
+  "voteTitle": "לקבל את הצעת החוק בקריאה שלישית",
+  "accepted": null,
+  "totals": {
+    "for": 6,
+    "against": 0,
+    "abstain": 0
+  },
+  "members": {
+    "30601": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "התאחדות הספרדים שומרי תורה תנועתו של מרן הרב עובדיה יוסף זצ\"ל"
+    },
+    "30701": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    },
+    "30772": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    },
+    "30835": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    },
+    "30859": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "עוצמה יהודית בראשות איתמר בן גביר"
+    },
+    "30860": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    }
+  },
+  "source": {
+    "url": "https://knesset.gov.il/OdataV4/ParliamentInfo/KNS_PlenumVote(44981)",
+    "retrievedOn": "2026-10-25"
+  }
+}

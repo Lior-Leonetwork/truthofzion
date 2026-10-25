@@ -1,0 +1,113 @@
+{
+  "id": 43266,
+  "knesset": 25,
+  "date": "2025-03-10",
+  "time": "23:08",
+  "item": {
+    "id": 2220804,
+    "title": "הצעת חוק כלי הירייה (תיקון מס' 25), התשפ\"ה–2025"
+  },
+  "voteTitle": "לקבל את הצעת החוק בקריאה שלישית",
+  "accepted": null,
+  "totals": {
+    "for": 14,
+    "against": 0,
+    "abstain": 1
+  },
+  "members": {
+    "23632": {
+      "choice": "other",
+      "raw": "נוכח",
+      "faction": "יש עתיד"
+    },
+    "23639": {
+      "choice": "other",
+      "raw": "נוכח",
+      "faction": "יש עתיד"
+    },
+    "30102": {
+      "choice": "other",
+      "raw": "נוכח",
+      "faction": "יש עתיד"
+    },
+    "30601": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "התאחדות הספרדים שומרי תורה תנועתו של מרן הרב עובדיה יוסף זצ\"ל"
+    },
+    "30701": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    },
+    "30772": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    },
+    "30835": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    },
+    "30842": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    },
+    "30847": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "עוצמה יהודית בראשות איתמר בן גביר"
+    },
+    "30853": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    },
+    "30854": {
+      "choice": "abstain",
+      "raw": "נמנע",
+      "faction": "יש עתיד"
+    },
+    "30857": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "עוצמה יהודית בראשות איתמר בן גביר"
+    },
+    "30859": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "עוצמה יהודית בראשות איתמר בן גביר"
+    },
+    "30860": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    },
+    "30867": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "עוצמה יהודית בראשות איתמר בן גביר"
+    },
+    "30876": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    },
+    "30880": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    },
+    "30893": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    }
+  },
+  "source": {
+    "url": "https://knesset.gov.il/OdataV4/ParliamentInfo/KNS_PlenumVote(43266)",
+    "retrievedOn": "2026-10-25"
+  }
+}

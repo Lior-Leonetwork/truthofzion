@@ -1,0 +1,88 @@
+{
+  "id": 43109,
+  "knesset": 25,
+  "date": "2025-02-19",
+  "time": "17:39",
+  "item": {
+    "id": 2201441,
+    "title": "הצעת חוק הכניסה לישראל (תיקון מס' 40), התשפ\"ה–2025"
+  },
+  "voteTitle": "לקבל את הצעת החוק בקריאה שלישית",
+  "accepted": null,
+  "totals": {
+    "for": 12,
+    "against": 0,
+    "abstain": 0
+  },
+  "members": {
+    "1027": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הימין הממלכתי"
+    },
+    "30102": {
+      "choice": "other",
+      "raw": "נוכח",
+      "faction": "יש עתיד"
+    },
+    "30118": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הימין הממלכתי"
+    },
+    "30701": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    },
+    "30702": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    },
+    "30749": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "התאחדות הספרדים שומרי תורה תנועתו של מרן הרב עובדיה יוסף זצ\"ל"
+    },
+    "30765": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "התאחדות הספרדים שומרי תורה תנועתו של מרן הרב עובדיה יוסף זצ\"ל"
+    },
+    "30799": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הימין הממלכתי"
+    },
+    "30831": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    },
+    "30842": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    },
+    "30875": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    },
+    "30880": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    },
+    "30893": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    }
+  },
+  "source": {
+    "url": "https://knesset.gov.il/OdataV4/ParliamentInfo/KNS_PlenumVote(43109)",
+    "retrievedOn": "2026-10-25"
+  }
+}

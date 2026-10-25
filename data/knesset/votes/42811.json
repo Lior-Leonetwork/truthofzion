@@ -1,0 +1,68 @@
+{
+  "id": 42811,
+  "knesset": 25,
+  "date": "2025-01-21",
+  "time": "16:57",
+  "item": {
+    "id": 2225865,
+    "title": "הצעת חוק תאגידי מים וביוב (תיקון מס' 17), התשפ\"ה-2025"
+  },
+  "voteTitle": "לקבל את הצעת החוק בקריאה שלישית",
+  "accepted": null,
+  "totals": {
+    "for": 9,
+    "against": 0,
+    "abstain": 0
+  },
+  "members": {
+    "23597": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "יש עתיד"
+    },
+    "30480": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "התאחדות הספרדים שומרי תורה תנועתו של מרן הרב עובדיה יוסף זצ\"ל"
+    },
+    "30601": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "התאחדות הספרדים שומרי תורה תנועתו של מרן הרב עובדיה יוסף זצ\"ל"
+    },
+    "30701": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    },
+    "30711": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    },
+    "30768": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "יהדות התורה"
+    },
+    "30853": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    },
+    "30875": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    },
+    "30876": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    }
+  },
+  "source": {
+    "url": "https://knesset.gov.il/OdataV4/ParliamentInfo/KNS_PlenumVote(42811)",
+    "retrievedOn": "2026-10-25"
+  }
+}

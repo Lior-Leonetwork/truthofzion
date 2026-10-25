@@ -1,0 +1,48 @@
+{
+  "id": 44983,
+  "knesset": 25,
+  "date": "2025-12-31",
+  "time": "22:33",
+  "item": {
+    "id": 2219137,
+    "title": "הצעת חוק שירות הקבע בצבא הגנה לישראל (גמלאות) (תיקון מס' 37), התשפ\"ו-2025"
+  },
+  "voteTitle": "לקבל את הצעת החוק בקריאה שלישית",
+  "accepted": null,
+  "totals": {
+    "for": 5,
+    "against": 0,
+    "abstain": 0
+  },
+  "members": {
+    "30601": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "התאחדות הספרדים שומרי תורה תנועתו של מרן הרב עובדיה יוסף זצ\"ל"
+    },
+    "30701": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    },
+    "30772": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    },
+    "30835": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    },
+    "30880": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    }
+  },
+  "source": {
+    "url": "https://knesset.gov.il/OdataV4/ParliamentInfo/KNS_PlenumVote(44983)",
+    "retrievedOn": "2026-10-25"
+  }
+}

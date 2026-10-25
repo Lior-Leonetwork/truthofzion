@@ -1,0 +1,53 @@
+{
+  "id": 46683,
+  "knesset": 25,
+  "date": "2026-07-28",
+  "time": "12:44",
+  "item": {
+    "id": 2240475,
+    "title": "הצעת חוק לתיקון פקודת העיריות (מס' 162), התשפ\"ו–2026"
+  },
+  "voteTitle": "לקבל את הצעת החוק בקריאה שלישית",
+  "accepted": null,
+  "totals": {
+    "for": 6,
+    "against": 0,
+    "abstain": 0
+  },
+  "members": {
+    "22151": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הימין הממלכתי"
+    },
+    "23632": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "יש עתיד"
+    },
+    "30102": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "יש עתיד"
+    },
+    "30701": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    },
+    "30859": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "עוצמה יהודית בראשות איתמר בן גביר"
+    },
+    "30863": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "ישראל ביתנו"
+    }
+  },
+  "source": {
+    "url": "https://knesset.gov.il/OdataV4/ParliamentInfo/KNS_PlenumVote(46683)",
+    "retrievedOn": "2026-10-25"
+  }
+}

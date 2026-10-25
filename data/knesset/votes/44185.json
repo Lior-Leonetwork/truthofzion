@@ -1,0 +1,98 @@
+{
+  "id": 44185,
+  "knesset": 25,
+  "date": "2025-06-04",
+  "time": "16:55",
+  "item": {
+    "id": 2225242,
+    "title": "הצעת חוק כלי הירייה (תיקון מס' 26), התשפ\"ה–2025"
+  },
+  "voteTitle": "לקבל את הצעת החוק בקריאה שלישית",
+  "accepted": null,
+  "totals": {
+    "for": 12,
+    "against": 0,
+    "abstain": 0
+  },
+  "members": {
+    "23632": {
+      "choice": "other",
+      "raw": "נוכח",
+      "faction": "יש עתיד"
+    },
+    "30102": {
+      "choice": "other",
+      "raw": "נוכח",
+      "faction": "יש עתיד"
+    },
+    "30701": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    },
+    "30702": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    },
+    "30711": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    },
+    "30772": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    },
+    "30831": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    },
+    "30839": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    },
+    "30849": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "עוצמה יהודית בראשות איתמר בן גביר"
+    },
+    "30859": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "עוצמה יהודית בראשות איתמר בן גביר"
+    },
+    "30867": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "עוצמה יהודית בראשות איתמר בן גביר"
+    },
+    "30871": {
+      "choice": "other",
+      "raw": "נוכח",
+      "faction": "יש עתיד"
+    },
+    "30875": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    },
+    "30876": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    },
+    "30893": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    }
+  },
+  "source": {
+    "url": "https://knesset.gov.il/OdataV4/ParliamentInfo/KNS_PlenumVote(44185)",
+    "retrievedOn": "2026-10-25"
+  }
+}

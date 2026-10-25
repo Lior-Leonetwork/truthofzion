@@ -1,0 +1,58 @@
+{
+  "id": 44051,
+  "knesset": 25,
+  "date": "2025-05-13",
+  "time": "18:01",
+  "item": {
+    "id": 2222052,
+    "title": "הצעת חוק הבנקאות (שירות ללקוח) (תיקון מס' 39), התשפ\"ה–2025"
+  },
+  "voteTitle": "לקבל את הצעת החוק בקריאה שלישית",
+  "accepted": null,
+  "totals": {
+    "for": 7,
+    "against": 0,
+    "abstain": 0
+  },
+  "members": {
+    "30480": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "התאחדות הספרדים שומרי תורה תנועתו של מרן הרב עובדיה יוסף זצ\"ל"
+    },
+    "30701": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    },
+    "30702": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    },
+    "30839": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    },
+    "30874": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הציונות הדתית בראשות בצלאל סמוטריץ'"
+    },
+    "30875": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    },
+    "30880": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    }
+  },
+  "source": {
+    "url": "https://knesset.gov.il/OdataV4/ParliamentInfo/KNS_PlenumVote(44051)",
+    "retrievedOn": "2026-10-25"
+  }
+}

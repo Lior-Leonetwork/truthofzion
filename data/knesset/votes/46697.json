@@ -1,0 +1,53 @@
+{
+  "id": 46697,
+  "knesset": 25,
+  "date": "2026-07-28",
+  "time": "14:27",
+  "item": {
+    "id": 2219672,
+    "title": "הצעת חוק לעידוד פעילות בשוק ההון (תיקוני חקיקה), התשפ\"ד-2024"
+  },
+  "voteTitle": "לקבל את הצעת החוק בקריאה שלישית",
+  "accepted": null,
+  "totals": {
+    "for": 6,
+    "against": 0,
+    "abstain": 0
+  },
+  "members": {
+    "22151": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הימין הממלכתי"
+    },
+    "30102": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "יש עתיד"
+    },
+    "30601": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "התאחדות הספרדים שומרי תורה תנועתו של מרן הרב עובדיה יוסף זצ\"ל"
+    },
+    "30701": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    },
+    "30812": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הציונות הדתית בראשות בצלאל סמוטריץ'"
+    },
+    "30863": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "ישראל ביתנו"
+    }
+  },
+  "source": {
+    "url": "https://knesset.gov.il/OdataV4/ParliamentInfo/KNS_PlenumVote(46697)",
+    "retrievedOn": "2026-10-25"
+  }
+}

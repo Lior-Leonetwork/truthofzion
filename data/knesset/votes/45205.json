@@ -1,0 +1,63 @@
+{
+  "id": 45205,
+  "knesset": 25,
+  "date": "2026-02-05",
+  "time": "02:21",
+  "item": {
+    "id": 2227749,
+    "title": "הצעת חוק איסור אלימות בספורט (תיקון מס' 4), התשפ\"ו–2026"
+  },
+  "voteTitle": "לקבל את הצעת החוק בקריאה שלישית",
+  "accepted": null,
+  "totals": {
+    "for": 8,
+    "against": 0,
+    "abstain": 0
+  },
+  "members": {
+    "4397": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הימין הממלכתי"
+    },
+    "23560": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "ישראל ביתנו"
+    },
+    "30121": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "ישראל ביתנו"
+    },
+    "30601": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "התאחדות הספרדים שומרי תורה תנועתו של מרן הרב עובדיה יוסף זצ\"ל"
+    },
+    "30694": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "כחול לבן - המחנה הממלכתי"
+    },
+    "30722": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "ישראל ביתנו"
+    },
+    "30832": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    },
+    "30859": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "עוצמה יהודית בראשות איתמר בן גביר"
+    }
+  },
+  "source": {
+    "url": "https://knesset.gov.il/OdataV4/ParliamentInfo/KNS_PlenumVote(45205)",
+    "retrievedOn": "2026-10-25"
+  }
+}

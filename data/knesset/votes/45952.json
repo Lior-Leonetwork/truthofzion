@@ -1,0 +1,78 @@
+{
+  "id": 45952,
+  "knesset": 25,
+  "date": "2026-05-13",
+  "time": "14:39",
+  "item": {
+    "id": 2195995,
+    "title": "הצעת חוק ביטוח בריאות ממלכתי (תיקון מס' 73), התשפ\"ו–2026"
+  },
+  "voteTitle": "לקבל את הצעת החוק בקריאה שלישית",
+  "accepted": null,
+  "totals": {
+    "for": 11,
+    "against": 0,
+    "abstain": 0
+  },
+  "members": {
+    "22151": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הימין הממלכתי"
+    },
+    "23551": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הציונות הדתית בראשות בצלאל סמוטריץ'"
+    },
+    "23632": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "יש עתיד"
+    },
+    "30102": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "יש עתיד"
+    },
+    "30701": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    },
+    "30758": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "רע\"ם"
+    },
+    "30776": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "יש עתיד"
+    },
+    "30799": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הימין הממלכתי"
+    },
+    "30832": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    },
+    "30840": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "רע\"ם"
+    },
+    "30868": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "התאחדות הספרדים שומרי תורה תנועתו של מרן הרב עובדיה יוסף זצ\"ל"
+    }
+  },
+  "source": {
+    "url": "https://knesset.gov.il/OdataV4/ParliamentInfo/KNS_PlenumVote(45952)",
+    "retrievedOn": "2026-10-25"
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "id": 44200,
+  "knesset": 25,
+  "date": "2025-06-10",
+  "time": "17:52",
+  "item": {
+    "id": 2220900,
+    "title": "הצעת חוק אסטרטגיית הביטחון הלאומי, התשפ\"ה–2025"
+  },
+  "voteTitle": "לקבל את הצעת החוק בקריאה שלישית",
+  "accepted": null,
+  "totals": {
+    "for": 19,
+    "against": 0,
+    "abstain": 0
+  },
+  "members": {
+    "532": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    },
+    "23635": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "המחנה הממלכתי"
+    },
+    "30480": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "התאחדות הספרדים שומרי תורה תנועתו של מרן הרב עובדיה יוסף זצ\"ל"
+    },
+    "30685": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "המחנה הממלכתי"
+    },
+    "30695": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "יש עתיד"
+    },
+    "30701": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    },
+    "30776": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "יש עתיד"
+    },
+    "30777": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "יש עתיד"
+    },
+    "30807": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "העבודה"
+    },
+    "30820": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "יש עתיד"
+    },
+    "30831": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    },
+    "30836": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "המחנה הממלכתי"
+    },
+    "30851": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "יש עתיד"
+    },
+    "30854": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "יש עתיד"
+    },
+    "30863": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "ישראל ביתנו"
+    },
+    "30871": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "יש עתיד"
+    },
+    "30875": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    },
+    "30876": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    },
+    "30893": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    }
+  },
+  "source": {
+    "url": "https://knesset.gov.il/OdataV4/ParliamentInfo/KNS_PlenumVote(44200)",
+    "retrievedOn": "2026-10-25"
+  }
+}

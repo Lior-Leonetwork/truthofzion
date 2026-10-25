@@ -1,0 +1,63 @@
+{
+  "id": 45139,
+  "knesset": 25,
+  "date": "2026-01-21",
+  "time": "22:18",
+  "item": {
+    "id": 2197787,
+    "title": "הצעת חוק אומנה לילדים (תיקון מס' 7), התשפ\"ה-2025 (פ/1409/25) (פ/4824/25)"
+  },
+  "voteTitle": "לקבל את הצעת החוק בקריאה שלישית",
+  "accepted": null,
+  "totals": {
+    "for": 8,
+    "against": 0,
+    "abstain": 0
+  },
+  "members": {
+    "23632": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "יש עתיד"
+    },
+    "30066": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "חד\"ש-תע\"ל"
+    },
+    "30102": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "יש עתיד"
+    },
+    "30713": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "רע\"ם"
+    },
+    "30752": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "רע\"ם"
+    },
+    "30758": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "רע\"ם"
+    },
+    "30777": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "יש עתיד"
+    },
+    "30810": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הציונות הדתית בראשות בצלאל סמוטריץ'"
+    }
+  },
+  "source": {
+    "url": "https://knesset.gov.il/OdataV4/ParliamentInfo/KNS_PlenumVote(45139)",
+    "retrievedOn": "2026-10-25"
+  }
+}

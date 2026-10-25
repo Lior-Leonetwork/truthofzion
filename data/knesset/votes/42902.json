@@ -1,0 +1,58 @@
+{
+  "id": 42902,
+  "knesset": 25,
+  "date": "2025-01-28",
+  "time": "18:33",
+  "item": {
+    "id": 2217493,
+    "title": "הצעת חוק משפחות חיילים שנספו במערכה (תגמולים ושיקום) (תיקון מס' 46), התשפ\"ה–2025"
+  },
+  "voteTitle": "לקבל את הצעת החוק בקריאה שלישית",
+  "accepted": null,
+  "totals": {
+    "for": 7,
+    "against": 0,
+    "abstain": 0
+  },
+  "members": {
+    "30702": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    },
+    "30722": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "ישראל ביתנו"
+    },
+    "30837": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "יש עתיד"
+    },
+    "30857": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "עוצמה יהודית בראשות איתמר בן גביר"
+    },
+    "30859": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "עוצמה יהודית בראשות איתמר בן גביר"
+    },
+    "30867": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "עוצמה יהודית בראשות איתמר בן גביר"
+    },
+    "30876": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    }
+  },
+  "source": {
+    "url": "https://knesset.gov.il/OdataV4/ParliamentInfo/KNS_PlenumVote(42902)",
+    "retrievedOn": "2026-10-25"
+  }
+}

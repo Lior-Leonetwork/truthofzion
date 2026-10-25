@@ -1,0 +1,68 @@
+{
+  "id": 45462,
+  "knesset": 25,
+  "date": "2026-03-24",
+  "time": "19:15",
+  "item": {
+    "id": 1056886,
+    "title": "הצעת חוק הגנה על עובדים בשעת חירום (תיקון מס' 6 והוראת שעה), התשפ\"ו-2026"
+  },
+  "voteTitle": "לקבל את הצעת החוק בקריאה שלישית",
+  "accepted": null,
+  "totals": {
+    "for": 9,
+    "against": 0,
+    "abstain": 0
+  },
+  "members": {
+    "22151": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הימין הממלכתי"
+    },
+    "30066": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "חד\"ש-תע\"ל"
+    },
+    "30701": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    },
+    "30722": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "ישראל ביתנו"
+    },
+    "30810": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הציונות הדתית בראשות בצלאל סמוטריץ'"
+    },
+    "30851": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "יש עתיד"
+    },
+    "30859": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "עוצמה יהודית בראשות איתמר בן גביר"
+    },
+    "30860": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    },
+    "30867": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "עוצמה יהודית בראשות איתמר בן גביר"
+    }
+  },
+  "source": {
+    "url": "https://knesset.gov.il/OdataV4/ParliamentInfo/KNS_PlenumVote(45462)",
+    "retrievedOn": "2026-10-25"
+  }
+}

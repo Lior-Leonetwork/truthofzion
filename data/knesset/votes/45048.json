@@ -1,0 +1,218 @@
+{
+  "id": 45048,
+  "knesset": 25,
+  "date": "2026-01-13",
+  "time": "01:06",
+  "item": {
+    "id": 2230475,
+    "title": "הצעת חוק הקולנוע (תיקון מס' 7), התשפ\"ה-2025"
+  },
+  "voteTitle": "לקבל את הצעת החוק בקריאה שלישית",
+  "accepted": null,
+  "totals": {
+    "for": 27,
+    "against": 0,
+    "abstain": 1
+  },
+  "members": {
+    "12951": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    },
+    "22151": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הימין הממלכתי"
+    },
+    "23551": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הציונות הדתית בראשות בצלאל סמוטריץ'"
+    },
+    "23597": {
+      "choice": "other",
+      "raw": "נוכח",
+      "faction": "יש עתיד"
+    },
+    "23632": {
+      "choice": "other",
+      "raw": "נוכח",
+      "faction": "יש עתיד"
+    },
+    "30102": {
+      "choice": "other",
+      "raw": "נוכח",
+      "faction": "יש עתיד"
+    },
+    "30601": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "התאחדות הספרדים שומרי תורה תנועתו של מרן הרב עובדיה יוסף זצ\"ל"
+    },
+    "30683": {
+      "choice": "other",
+      "raw": "נוכח",
+      "faction": "כחול לבן - המחנה הממלכתי"
+    },
+    "30700": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    },
+    "30701": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    },
+    "30702": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    },
+    "30704": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    },
+    "30708": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    },
+    "30710": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    },
+    "30711": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    },
+    "30720": {
+      "choice": "other",
+      "raw": "נוכח",
+      "faction": "יש עתיד"
+    },
+    "30772": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    },
+    "30777": {
+      "choice": "other",
+      "raw": "נוכח",
+      "faction": "יש עתיד"
+    },
+    "30782": {
+      "choice": "other",
+      "raw": "נוכח",
+      "faction": "יש עתיד"
+    },
+    "30809": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    },
+    "30812": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הציונות הדתית בראשות בצלאל סמוטריץ'"
+    },
+    "30820": {
+      "choice": "other",
+      "raw": "נוכח",
+      "faction": "יש עתיד"
+    },
+    "30831": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    },
+    "30832": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    },
+    "30837": {
+      "choice": "other",
+      "raw": "נוכח",
+      "faction": "יש עתיד"
+    },
+    "30842": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    },
+    "30849": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "עוצמה יהודית בראשות איתמר בן גביר"
+    },
+    "30853": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    },
+    "30854": {
+      "choice": "abstain",
+      "raw": "נמנע",
+      "faction": "יש עתיד"
+    },
+    "30857": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "עוצמה יהודית בראשות איתמר בן גביר"
+    },
+    "30861": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    },
+    "30867": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "עוצמה יהודית בראשות איתמר בן גביר"
+    },
+    "30871": {
+      "choice": "other",
+      "raw": "נוכח",
+      "faction": "יש עתיד"
+    },
+    "30874": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הציונות הדתית בראשות בצלאל סמוטריץ'"
+    },
+    "30875": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    },
+    "30877": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    },
+    "30879": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    },
+    "30880": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    },
+    "30895": {
+      "choice": "other",
+      "raw": "נוכח",
+      "faction": "יש עתיד"
+    }
+  },
+  "source": {
+    "url": "https://knesset.gov.il/OdataV4/ParliamentInfo/KNS_PlenumVote(45048)",
+    "retrievedOn": "2026-10-25"
+  }
+}

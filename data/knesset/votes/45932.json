@@ -1,0 +1,78 @@
+{
+  "id": 45932,
+  "knesset": 25,
+  "date": "2026-05-12",
+  "time": "01:09",
+  "item": {
+    "id": 2219199,
+    "title": "הצעת חוק לתיקון פקודת המשטרה (מס' 43), התשפ\"ו-2026"
+  },
+  "voteTitle": "לקבל את הצעת החוק בקריאה שלישית",
+  "accepted": null,
+  "totals": {
+    "for": 11,
+    "against": 0,
+    "abstain": 0
+  },
+  "members": {
+    "560": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "חד\"ש-תע\"ל"
+    },
+    "30102": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "יש עתיד"
+    },
+    "30106": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "העבודה"
+    },
+    "30713": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "רע\"ם"
+    },
+    "30752": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "רע\"ם"
+    },
+    "30758": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "רע\"ם"
+    },
+    "30799": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הימין הממלכתי"
+    },
+    "30807": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "העבודה"
+    },
+    "30854": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "יש עתיד"
+    },
+    "30859": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "עוצמה יהודית בראשות איתמר בן גביר"
+    },
+    "30894": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "חד\"ש-תע\"ל"
+    }
+  },
+  "source": {
+    "url": "https://knesset.gov.il/OdataV4/ParliamentInfo/KNS_PlenumVote(45932)",
+    "retrievedOn": "2026-10-25"
+  }
+}

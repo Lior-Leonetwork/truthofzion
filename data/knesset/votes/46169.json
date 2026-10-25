@@ -1,0 +1,88 @@
+{
+  "id": 46169,
+  "knesset": 25,
+  "date": "2026-06-29",
+  "time": "22:26",
+  "item": {
+    "id": 2197936,
+    "title": "הצעת חוק העונשין (תיקון מס' 155), התשפ\"ו–2026"
+  },
+  "voteTitle": "לקבל את הצעת החוק בקריאה שלישית",
+  "accepted": null,
+  "totals": {
+    "for": 13,
+    "against": 0,
+    "abstain": 0
+  },
+  "members": {
+    "23565": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "העבודה"
+    },
+    "23632": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "יש עתיד"
+    },
+    "23635": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "כחול לבן - המחנה הממלכתי"
+    },
+    "30067": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "חד\"ש-תע\"ל"
+    },
+    "30102": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "יש עתיד"
+    },
+    "30686": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "יש עתיד"
+    },
+    "30708": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    },
+    "30719": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "חד\"ש-תע\"ל"
+    },
+    "30776": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "יש עתיד"
+    },
+    "30808": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "העבודה"
+    },
+    "30832": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    },
+    "30849": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "עוצמה יהודית בראשות איתמר בן גביר"
+    },
+    "30854": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "יש עתיד"
+    }
+  },
+  "source": {
+    "url": "https://knesset.gov.il/OdataV4/ParliamentInfo/KNS_PlenumVote(46169)",
+    "retrievedOn": "2026-10-25"
+  }
+}

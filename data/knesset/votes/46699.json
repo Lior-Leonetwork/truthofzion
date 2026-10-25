@@ -1,0 +1,48 @@
+{
+  "id": 46699,
+  "knesset": 25,
+  "date": "2026-07-28",
+  "time": "14:43",
+  "item": {
+    "id": 2229019,
+    "title": "הצעת חוק נוכחות עורך דין בחקירת קטינים ואנשים עם מוגבלות (תיקוני חקיקה והוראת שעה), התשפ\"ו-2026"
+  },
+  "voteTitle": "לקבל את הצעת החוק בקריאה שלישית",
+  "accepted": null,
+  "totals": {
+    "for": 5,
+    "against": 0,
+    "abstain": 0
+  },
+  "members": {
+    "22151": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הימין הממלכתי"
+    },
+    "30701": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    },
+    "30807": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "העבודה"
+    },
+    "30812": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הציונות הדתית בראשות בצלאל סמוטריץ'"
+    },
+    "30832": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    }
+  },
+  "source": {
+    "url": "https://knesset.gov.il/OdataV4/ParliamentInfo/KNS_PlenumVote(46699)",
+    "retrievedOn": "2026-10-25"
+  }
+}

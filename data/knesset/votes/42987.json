@@ -1,0 +1,43 @@
+{
+  "id": 42987,
+  "knesset": 25,
+  "date": "2025-02-05",
+  "time": "16:17",
+  "item": {
+    "id": 2227648,
+    "title": "הצעת חוק לתיקון ולהארכת תוקפן של תקנות שעת חירום (חרבות ברזל) (פגישה עם עורך דין של עצור בעבירת ביטחון) (תיקון מס' 5), התשפ\"ה-2025"
+  },
+  "voteTitle": "לקבל את הצעת החוק בקריאה שלישית",
+  "accepted": null,
+  "totals": {
+    "for": 4,
+    "against": 0,
+    "abstain": 0
+  },
+  "members": {
+    "30672": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "יהדות התורה"
+    },
+    "30701": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    },
+    "30702": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    },
+    "30842": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    }
+  },
+  "source": {
+    "url": "https://knesset.gov.il/OdataV4/ParliamentInfo/KNS_PlenumVote(42987)",
+    "retrievedOn": "2026-10-25"
+  }
+}

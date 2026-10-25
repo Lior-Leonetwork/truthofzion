@@ -1,0 +1,48 @@
+{
+  "id": 46077,
+  "knesset": 25,
+  "date": "2026-06-09",
+  "time": "19:00",
+  "item": {
+    "id": 2217042,
+    "title": "הצעת חוק הכרה בתרומתם של כלבים ששירתו בגופים ביטחוניים, התשפ\"ו–2026"
+  },
+  "voteTitle": "לקבל את הצעת החוק בקריאה שלישית",
+  "accepted": null,
+  "totals": {
+    "for": 5,
+    "against": 0,
+    "abstain": 0
+  },
+  "members": {
+    "4397": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הימין הממלכתי"
+    },
+    "23632": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "יש עתיד"
+    },
+    "30601": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "התאחדות הספרדים שומרי תורה תנועתו של מרן הרב עובדיה יוסף זצ\"ל"
+    },
+    "30701": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "הליכוד"
+    },
+    "30820": {
+      "choice": "for",
+      "raw": "בעד",
+      "faction": "יש עתיד"
+    }
+  },
+  "source": {
+    "url": "https://knesset.gov.il/OdataV4/ParliamentInfo/KNS_PlenumVote(46077)",
+    "retrievedOn": "2026-10-25"
+  }
+}
