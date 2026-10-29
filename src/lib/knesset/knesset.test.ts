@@ -266,3 +266,12 @@ describe("key-vote scorecard", () => {
     expect(computeScorecard(votes, analyses, "99").rows).toEqual([]);
   });
 });
+
+describe("party slugs", () => {
+  it("are stable ascii slugs from the English name", async () => {
+    const { partySlug } = await import("./parties");
+    expect(partySlug("Hadash–Ta'al")).toBe("hadash-ta-al");
+    expect(partySlug("New Hope – The National Right")).toBe("new-hope-the-national-right");
+    expect(partySlug("רע\"ם")).toBe("party");
+  });
+});

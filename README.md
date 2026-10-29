@@ -58,6 +58,14 @@ through the Israeli VPN, and the page names the member. Survivors become
 **draft** entries in a pull request (`ai/case-drafts`), with what each still
 needs. Publishing stays with an editor and the member's right of reply.
 
+To go deep on particular parties, run the workflow with `faction` set (e.g.
+`רע"ם,חד"ש-תע"ל`): each member gets their own research session. Claude can
+open official Israeli sites through our VPN (`fetch_page`), so Knesset Ethics
+Committee decisions, indictments and rulings can be quoted directly.
+
+Party pages (`/knesset/parties`) show every faction's members, how they voted
+on each key vote against the site's position, and their published cases.
+
 ## The AI system: Knesset votes
 
 Runs every day in GitHub Actions (`.github/workflows/knesset.yml`), without

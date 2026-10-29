@@ -136,6 +136,19 @@ type Dict = {
   people: { heading: string; intro: string; search: string; allCountries: string; none: string; orientation: string; memberRole: string };
   spectrum: Record<Spectrum, string>;
   sector: Record<"haredi" | "arab" | "religious_zionist", string>;
+  parties: {
+    heading: string;
+    intro: string;
+    link: string;
+    seats: (n: number) => string;
+    alignment: (aligned: number, decided: number) => string;
+    noKeyVotes: string;
+    keyVotes: string;
+    keyVotesNote: string;
+    members: string;
+    cases: string;
+    research: string;
+  };
   record: {
     title: string;
     summary: (aligned: number, total: number) => string;
@@ -327,6 +340,19 @@ const he: Dict = {
     unclassified: "ללא סיווג",
   },
   sector: { haredi: "חרדי", arab: "ערבי", religious_zionist: "ציוני-דתי" },
+  parties: {
+    heading: "מפלגות",
+    intro: "כל סיעה בכנסת: חבריה, איך הצביעו בהצבעות המפתח לעומת עמדת האתר, והתיקים שפורסמו. אותם כללים ואותה מתודולוגיה לכל המפלגות.",
+    link: "לפי מפלגה",
+    seats: (n) => (n === 1 ? "חבר כנסת אחד" : `${n} חברי כנסת`),
+    alignment: (a, t) => `${t ? Math.round((a / t) * 100) : 0}% מקולות חבריה בהצבעות המפתח היו בהתאם לעמדת האתר (${a} מתוך ${t})`,
+    noKeyVotes: "אין עדיין הצבעות מפתח שבהן הצביעו חברי הסיעה.",
+    keyVotes: "הצבעות מפתח",
+    keyVotesNote: "ספירת קולות חברי הסיעה בכל הצבעה, מתוך הרשומה הרשמית של הכנסת. הצבעות המפתח ועמדת האתר נקבעות לפי המדיניות המפורסמת.",
+    members: "חברי הסיעה",
+    cases: "תיקים שפורסמו",
+    research: "תחקירים על חברי הסיעה עוברים אימות מקורות, פנייה לתגובה ואישור עורך לפני פרסום.",
+  },
   record: {
     title: "הצבעות מפתח",
     summary: (a, t) => `הצביע/ה בהתאם לעמדת האתר ב־${a} מתוך ${t} הצבעות מפתח`,
@@ -613,6 +639,19 @@ const en: Dict = {
     unclassified: "Unclassified",
   },
   sector: { haredi: "Haredi", arab: "Arab", religious_zionist: "Religious Zionist" },
+  parties: {
+    heading: "Parties",
+    intro: "Every Knesset faction: its members, how they voted on key votes against the site's position, and its published cases. The same rules and methodology for every party.",
+    link: "By party",
+    seats: (n) => (n === 1 ? "1 member" : `${n} members`),
+    alignment: (a, t) => `${t ? Math.round((a / t) * 100) : 0}% of its members' votes on key votes matched the site's position (${a} of ${t})`,
+    noKeyVotes: "No key votes with this faction's members yet.",
+    keyVotes: "Key votes",
+    keyVotesNote: "Members' votes on each, counted from the Knesset's official record. Key votes and the site's position follow the published policy.",
+    members: "Members",
+    cases: "Published cases",
+    research: "Investigations of members go through source verification, a request for response and an editor's approval before publication.",
+  },
   record: {
     title: "Key votes",
     summary: (a, t) => `Voted with the site's position on ${a} of ${t} key votes`,
