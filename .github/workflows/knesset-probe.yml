@@ -21,5 +21,4 @@ jobs:
           openvpn: ${{ secrets.KNESSET_OPENVPN_CONF }}
           openvpn-auth: ${{ secrets.KNESSET_OPENVPN_AUTH }}
       - run: npm ci
-      - run: npx -y playwright@1.55.0 install --with-deps chromium && npm i --no-save playwright@1.55.0
-      - run: node scripts/probe-elections2.mjs
+      - run: npx tsx scripts/probe-votes-format.ts
