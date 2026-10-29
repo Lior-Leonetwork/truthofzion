@@ -1,0 +1,154 @@
+{
+  "slug": "mk-30719-corruption-2026-10-08",
+  "entity": "mk-30719",
+  "category": "corruption",
+  "status": "convicted",
+  "date": "2026-10-08",
+  "title": {
+    "he": "הורשע בתקיפת שוטר בנסיבות מחמירות בהפגנה בדרום הר חברון – טרם נגזר הדין",
+    "en": "Convicted of aggravated assault on a police officer at a South Hebron Hills protest – sentencing pending"
+  },
+  "summary": {
+    "he": "לפי הדיווחים, בית משפט השלום בירושלים הרשיע ב-8 באוקטובר 2026 את ח\"כ עופר כסיף בעבירה של תקיפת שוטר בנסיבות מחמירות, בגין אירוע ממאי 2022 בהפגנה בדרום הר חברון. על פי כתב האישום, כסיף פגע ברגלו של שוטר עם רכבו ולאחר מכן חבט בראשו. לפי הדיווחים, בית המשפט דחה את טענותיו להגנה עצמית ולחסינות עניינית כחבר כנסת. טרם נגזר דינו; לפי טיימס אוף ישראל, דיון בעונש נקבע לינואר 2027 ועורך דינו אמר שייתכן שיערער, וכסיף כינה את ההרשעה חלק מ\"רדיפה פוליטית\".",
+    "en": "According to the reports, on 8 October 2026 the Jerusalem Magistrate's Court convicted MK Ofer Cassif of aggravated assault on a police officer over a May 2022 incident at a protest in the South Hebron Hills. According to the indictment, Cassif struck an officer's leg with his car and then hit him on the head. According to the reports, the court rejected his self-defense and parliamentary-immunity arguments. He has not yet been sentenced; according to The Times of Israel, a sentencing hearing is set for January 2027 and his attorney said he may appeal, while Cassif called the conviction part of 'political persecution'."
+  },
+  "body": [],
+  "timeline": [
+    {
+      "date": "2022-08-02",
+      "text": {
+        "he": "היועצת המשפטית לממשלה אישרה לזמן את כסיף לחקירה בלהב 433 בחשד לתקיפת שוטר.",
+        "en": "The Attorney General approved summoning Cassif for questioning by Lahav 433 on suspicion of assaulting a police officer."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    },
+    {
+      "date": "2024-01-17",
+      "text": {
+        "he": "היועצת המשפטית לממשלה אישרה להגיש נגדו כתב אישום בגין תקיפה בנסיבות מחמירות; עותק הועבר ליו\"ר הכנסת כדי לאפשר לו לבקש חסינות.",
+        "en": "The Attorney General approved filing an indictment for aggravated assault; a copy was to go to the Knesset Speaker so he could request immunity."
+      },
+      "sourceIds": [
+        "s2"
+      ]
+    },
+    {
+      "date": "2024-02-29",
+      "text": {
+        "he": "היועצת המשפטית לממשלה דחתה את טענותיו בשימוע והחליטה להגיש את כתב האישום לבית משפט השלום בירושלים.",
+        "en": "The Attorney General rejected his hearing arguments and decided to file the indictment at the Jerusalem Magistrate's Court."
+      },
+      "sourceIds": [
+        "s3"
+      ]
+    },
+    {
+      "date": "2026-10-08",
+      "text": {
+        "he": "בית משפט השלום בירושלים הרשיע את כסיף בתקיפת שוטר בנסיבות מחמירות.",
+        "en": "The Jerusalem Magistrate's Court convicted Cassif of aggravated assault on a police officer."
+      },
+      "sourceIds": [
+        "s4"
+      ]
+    },
+    {
+      "date": "2026-10-08",
+      "text": {
+        "he": "לפי הדיווח, בית המשפט קבע כי המעשים אינם חוסים תחת הגנה עצמית או תחת חסינותו העניינית כחבר כנסת.",
+        "en": "According to the report, the court held the acts were not covered by self-defense or by his substantive immunity as an MK."
+      },
+      "sourceIds": [
+        "s5"
+      ]
+    },
+    {
+      "date": "2026-10-08",
+      "text": {
+        "he": "ניתנה הכרעת דין בלבד וטרם נגזר עונשו.",
+        "en": "Only the verdict was issued; he has not yet been sentenced."
+      },
+      "sourceIds": [
+        "s6"
+      ]
+    },
+    {
+      "date": "2026-10-08",
+      "text": {
+        "he": "לפי הדיווח, דיון בעונש נקבע לינואר 2027 ועורך דינו אמר שייתכן שיערער על ההרשעה.",
+        "en": "According to the report, a sentencing hearing is set for January 2027 and his attorney said he may appeal the conviction."
+      },
+      "sourceIds": [
+        "s7"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "type": "news_report",
+      "publisher": "N12 (mako)",
+      "title": "היועמ\"שית אישרה: חה\"כ כסיף ייחקר על תקיפת השוטר בהפגנה",
+      "date": "2022-08-02",
+      "url": "https://www.mako.co.il/news-law/2022_q3/Article-38a7dbc8c1e5281026.htm"
+    },
+    {
+      "id": "s2",
+      "type": "news_report",
+      "publisher": "ynet",
+      "title": "ח\"כ עופר כסיף יועמד לדין בגין תקיפת שוטר",
+      "date": "2024-01-17",
+      "url": "https://www.ynet.co.il/news/article/hj31xusfp"
+    },
+    {
+      "id": "s3",
+      "type": "news_report",
+      "publisher": "וואלה",
+      "title": "גרסת כסיף: השוטר תקף אותי, מדובר בתפירת תיק מסיבות פוליטיות",
+      "date": "2024-02-29",
+      "url": "https://news.walla.co.il/item/3647479"
+    },
+    {
+      "id": "s4",
+      "type": "news_report",
+      "publisher": "N12 (mako)",
+      "title": "ח\"כ עופר כסיף הורשע בתקיפת שוטר במהלך הפגנה",
+      "date": "2026-10-08",
+      "url": "https://www.mako.co.il/news-law/2026_q4/Article-a2bcb14182a11a1026.htm"
+    },
+    {
+      "id": "s5",
+      "type": "news_report",
+      "publisher": "ynet",
+      "title": "יותר מ-4 שנים אחרי: עופר כסיף הורשע בתקיפת שוטר",
+      "date": "2026-10-08",
+      "url": "https://www.ynet.co.il/news/article/rj7v4t4ogx"
+    },
+    {
+      "id": "s6",
+      "type": "news_report",
+      "publisher": "ישראל היום",
+      "title": "התיעוד הכריע: עופר כסיף הורשע בתקיפת שוטר",
+      "date": "2026-10-08",
+      "url": "https://www.israelhayom.co.il/news/local/article/21578371"
+    },
+    {
+      "id": "s7",
+      "type": "news_report",
+      "publisher": "The Times of Israel",
+      "title": "Hadash MK Cassif convicted of assaulting police officer during 2022 West Bank clash",
+      "date": "2026-10-08",
+      "url": "https://www.timesofisrael.com/hadash-mk-cassif-convicted-of-assaulting-police-officer-during-2022-west-bank-clash"
+    }
+  ],
+  "response": {
+    "status": "not_yet_requested"
+  },
+  "corrections": [],
+  "editorial": {
+    "state": "draft",
+    "createdBy": "claude"
+  }
+}

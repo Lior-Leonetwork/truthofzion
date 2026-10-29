@@ -1,0 +1,82 @@
+{
+  "slug": "mk-560-corruption-2008-12-14",
+  "entity": "mk-560",
+  "category": "corruption",
+  "status": "under_investigation",
+  "date": "2008-12-14",
+  "title": {
+    "he": "חקירה פלילית בגין נסיעה ללבנון ללא היתר – התיק נסגר ללא כתב אישום",
+    "en": "Criminal investigation over unauthorized trip to Lebanon – case closed without indictment"
+  },
+  "summary": {
+    "he": "לפי הדיווחים בהארץ ובדה-מרקר, ביוני 2005 הורה היועץ המשפטי לממשלה מני מזוז לפתוח בחקירה פלילית נגד ח\"כ אחמד טיבי. החקירה נפתחה בעקבות נסיעתו ללבנון, המוגדרת \"מדינת אויב\", ללא אישור שר הפנים, בחשד להפרת החוק למניעת הסתננות. בדצמבר 2008 החליט היועץ המשפטי לממשלה לסגור את תיק החקירה ולא להגיש כתב אישום, לפי החלטת משרד המשפטים כפי שדווחה בערוץ 7. בין הנימוקים צוינו הזמן שחלף והתיקון לחוק יסוד: הכנסת, והעניין הועבר לטיפול ועדת האתיקה של הכנסת.",
+    "en": "According to reports in Haaretz and TheMarker, in June 2005 Attorney General Menachem Mazuz ordered a criminal investigation into MK Ahmad Tibi. The investigation followed his trip to Lebanon, defined as an \"enemy state\", without the Interior Minister's approval, on suspicion of violating the Prevention of Infiltration Law. In December 2008 the Attorney General decided to close the investigation file without filing an indictment, according to a Justice Ministry decision reported by Arutz Sheva (INN). The reasons cited included the time that had passed and an amendment to Basic Law: The Knesset, and the matter was referred to the Knesset Ethics Committee."
+  },
+  "body": [],
+  "timeline": [
+    {
+      "date": "2005-06-28",
+      "text": {
+        "he": "היועץ המשפטי לממשלה מני מזוז הורה לפתוח בחקירה פלילית נגד ח\"כ טיבי בעקבות יציאתו ללבנון בלא אישור שר הפנים.",
+        "en": "Attorney General Menachem Mazuz ordered a criminal investigation into MK Tibi over his trip to Lebanon without the Interior Minister's approval."
+      },
+      "sourceIds": [
+        "s2"
+      ]
+    },
+    {
+      "date": "2005-06-29",
+      "text": {
+        "he": "לפי הדיווח, טיבי ייחקר בחשד להפרת החוק למניעת הסתננות בעקבות נסיעתו ללבנון, המוגדרת \"מדינת אויב\".",
+        "en": "According to the report, Tibi was to be questioned on suspicion of violating the Prevention of Infiltration Law over his trip to Lebanon, defined as an \"enemy state\"."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    },
+    {
+      "date": "2008-12-14",
+      "text": {
+        "he": "היועץ המשפטי לממשלה החליט לסגור את תיק החקירה בלי להגיש כתב אישום, והעביר את העניין לטיפול ועדת האתיקה של הכנסת.",
+        "en": "The Attorney General decided to close the investigation file without an indictment and referred the matter to the Knesset Ethics Committee."
+      },
+      "sourceIds": [
+        "s3"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "type": "news_report",
+      "publisher": "הארץ",
+      "title": "בעקבות נסיעה ללבנון, מזוז יפתח בחקירה נגד ח\"כ אחמד טיבי",
+      "date": "2005-06-29",
+      "url": "https://www.haaretz.co.il/misc/2005-06-29/ty-article/0000017f-f67b-d460-afff-ff7f489a0000"
+    },
+    {
+      "id": "s2",
+      "type": "news_report",
+      "publisher": "TheMarker",
+      "title": "חקירה פלילית נגד ח\"כ אחמד טיבי בשל ביקורו בלבנון",
+      "date": "2005-06-28",
+      "url": "https://www.themarker.com/law/2005-06-28/ty-article/0000017f-db75-df9c-a17f-ff7d8a000000"
+    },
+    {
+      "id": "s3",
+      "type": "news_report",
+      "publisher": "ערוץ 7",
+      "title": "נסגר תיק החקירה נגד ח\"כ אחמד טיבי",
+      "date": "2008-12-14",
+      "url": "https://www.inn.co.il/news/182780"
+    }
+  ],
+  "response": {
+    "status": "not_yet_requested"
+  },
+  "corrections": [],
+  "editorial": {
+    "state": "draft",
+    "createdBy": "claude"
+  }
+}

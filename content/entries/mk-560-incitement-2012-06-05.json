@@ -1,0 +1,82 @@
+{
+  "slug": "mk-560-incitement-2012-06-05",
+  "entity": "mk-560",
+  "category": "incitement",
+  "status": "documented",
+  "date": "2012-06-05",
+  "title": {
+    "he": "נזיפה חמורה מוועדת האתיקה בעקבות \"נאום השהידים\" – הפרקליטות החליטה שלא לפתוח בחקירה",
+    "en": "Severe reprimand from the Knesset Ethics Committee over the \"martyrs speech\"; State Prosecutor declined to open an investigation"
+  },
+  "summary": {
+    "he": "בינואר 2012 פורסם סרטון של נאום שנשא ח\"כ טיבי בכנס לציון \"יום השהיד\", שבו אמר כי \"השהיד הוא שיא התפארת\". ב-5 במרץ 2012 הטילה עליו ועדת האתיקה של הכנסת נזיפה חמורה, ולפי הדיווחים קבעה שדבריו משתמעים כאהדה למעשי טרור ואלימות נגד ישראל. טיבי טען בפני הוועדה שהסרטון ערוך ושהאנשים שהזכיר נהרגו ולא הרגו. ביוני 2012 החליט פרקליט המדינה משה לדור שלא לפתוח בחקירה פלילית, בנימוק שקיים ספק ממשי אם יש בדברים תמיכה באלימות ובטרור, וכן מפני שעומדת לטיבי חסינות.",
+    "en": "In January 2012 a video was published of a speech MK Tibi gave at a \"Martyrs' Day\" event, in which he said the shahid (martyr) is \"the height of glory\". On 5 March 2012 the Knesset Ethics Committee imposed a severe reprimand on him. According to the reports, the committee found that his words implied sympathy for acts of terror and violence against Israel. Tibi told the committee that the video was edited and that the people he named had been killed, not killers. In June 2012 State Prosecutor Moshe Lador decided not to open a criminal investigation, citing real doubt over whether the words supported violence and terror, and Tibi's parliamentary immunity."
+  },
+  "body": [],
+  "timeline": [
+    {
+      "date": "2012-01-19",
+      "text": {
+        "he": "וואלה מדווח על סרטון שבו טיבי אומר בכנס לציון \"יום השהיד\" כי \"השהיד הוא שיא התפארת\"; טיבי טוען שדבריו נערכו.",
+        "en": "Walla reports a video in which Tibi tells a \"Martyrs' Day\" event that \"the shahid is the height of glory\". Tibi says his words were edited."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    },
+    {
+      "date": "2012-03-05",
+      "text": {
+        "he": "ועדת האתיקה של הכנסת מטילה על טיבי נזיפה חמורה בעקבות תלונות על הנאום.",
+        "en": "The Knesset Ethics Committee imposes a severe reprimand on Tibi following complaints about the speech."
+      },
+      "sourceIds": [
+        "s2"
+      ]
+    },
+    {
+      "date": "2012-06-05",
+      "text": {
+        "he": "פרקליט המדינה משה לדור מחליט שלא לפתוח בחקירה פלילית נגד טיבי בגין הנאום.",
+        "en": "State Prosecutor Moshe Lador decides not to open a criminal investigation against Tibi over the speech."
+      },
+      "sourceIds": [
+        "s3"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "type": "news_report",
+      "publisher": "וואלה",
+      "title": "טיבי בסרטון: \"אין ערך נעלה יותר מאשר השהיד\"",
+      "date": "2012-01-19",
+      "url": "https://news.walla.co.il/item/2501721"
+    },
+    {
+      "id": "s2",
+      "type": "news_report",
+      "publisher": "ynet",
+      "title": "נזיפה חמורה לח\"כ טיבי על הנאום ב\"יום השהיד\"",
+      "date": "2012-03-05",
+      "url": "https://www.ynet.co.il/articles/0,7340,L-4198790,00.html"
+    },
+    {
+      "id": "s3",
+      "type": "news_report",
+      "publisher": "וואלה",
+      "title": "ח\"כ אחמד טיבי לא יועמד לדין על \"נאום השהידים\"",
+      "date": "2012-06-05",
+      "url": "https://news.walla.co.il/item/2539128"
+    }
+  ],
+  "response": {
+    "status": "not_yet_requested"
+  },
+  "corrections": [],
+  "editorial": {
+    "state": "draft",
+    "createdBy": "claude"
+  }
+}
