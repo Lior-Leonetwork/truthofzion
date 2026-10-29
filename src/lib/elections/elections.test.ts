@@ -52,3 +52,20 @@ describe("ballot-box integrity checks", () => {
     expect(r.digits.map((d) => d.cityCode)).toEqual(["4"]);
   });
 });
+
+describe("official ballot-box files", async () => {
+  const { boxesFrom, decodeCsv, parseCsv } = await import("./parse");
+  // Fictional rows in the committee's column layout.
+  const csv = 'סמל ועדה,ברזל,שם ישוב,סמל ישוב,קלפי,ריכוז,שופט,בזב,מצביעים,פסולים,כשרים,אמת,"מחל"\r\n18,1,"עיר ""לדוגמה""",967,3.1,1,0,570,173,4,169,100,69\r\n,,,,,,,,,,,,\r\n';
+
+  it("parses the committee's columns, keeps ballot letters as lists, skips blank lines", () => {
+    const boxes = boxesFrom(parseCsv(csv));
+    expect(boxes).toEqual([{ cityCode: "967", city: 'עיר "לדוגמה"', box: "3.1", registered: 570, voters: 173, invalid: 4, valid: 169, votes: { אמת: 100, מחל: 69 } }]);
+  });
+
+  it("reads Windows-1255 files as well as UTF-8", () => {
+    const hebrew = new Uint8Array([0xf9, 0xec, 0xe5, 0xed]); // "שלום" in Windows-1255
+    expect(decodeCsv(hebrew)).toBe("שלום");
+    expect(decodeCsv(new TextEncoder().encode("﻿שלום"))).toBe("שלום");
+  });
+});
