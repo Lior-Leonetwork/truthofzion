@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import type { Member } from "../knesset/schema";
+import { researchCases } from "../agent/case-researcher";
 import { allowedTypes, researchDomains, caseEntry, publicationGaps, verifyCandidate, type Candidate } from "./verify";
 
 // Fictional member, fictional case.
@@ -78,5 +79,42 @@ describe("case drafts", () => {
     const v = verify(candidate({ status: "allegation", sources: [{ url: attorneyUrl, type: "official_filing", publisher: "x", title: "t", date: "2026-05-01", quote: "הוגש כתב אישום נגד חבר הכנסת ישראל ישראלי" }] }));
     const entities = new Map([["mk-900", { slug: "mk-900" } as never]]);
     expect(publicationGaps(caseEntry(v), entities, new Map()).map((p) => p.rule)).toContain("allegation-corroborated");
+  });
+});
+
+describe("case researcher's Israeli fetcher", () => {
+  const knesset = "https://main.knesset.gov.il/news/example-ethics-decision";
+  const decision = "ועדת האתיקה החליטה להטיל על חבר הכנסת ישראל ישראלי הרחקה מדיוני הכנסת בשל התבטאות התומכת בטרור.";
+  const final = {
+    cases: [
+      {
+        mk_id: "900", category: "incitement", status: "documented", date: "2026-03-01",
+        title_he: "הרחקה בידי ועדת האתיקה", title_en: "Suspended by the Ethics Committee", summary_he: "ס", summary_en: "s",
+        timeline: [], explanation: "",
+        sources: [{ url: knesset, type: "knesset_record", publisher: "הכנסת", title: "החלטה", date: "2026-03-01", quote: "להטיל על חבר הכנסת ישראל ישראלי הרחקה מדיוני הכנסת" }],
+      },
+    ],
+  };
+
+  it("fetches blocked official sites through our fetcher and verifies against that text", async () => {
+    const calls: { messages: { role: string; content: unknown }[] }[] = [];
+    const replies = [
+      { stop_reason: "tool_use", content: [{ type: "tool_use", id: "a", name: "fetch_page", input: { url: knesset } }, { type: "tool_use", id: "b", name: "fetch_page", input: { url: "https://example.com/x" } }] },
+      { stop_reason: "end_turn", content: [{ type: "text", text: JSON.stringify(final) }] },
+    ];
+    const client = { beta: { messages: { stream: (p: (typeof calls)[number]) => (calls.push(structuredClone(p)), { finalMessage: async () => replies.shift() }) } } };
+    const fetched: string[] = [];
+    const r = await researchCases(client as never, "incitement", [members["900"]], [], researchDomains(news), 3, {
+      fetchPage: async (u) => (fetched.push(u), decision),
+      focus: "test",
+    });
+    expect(fetched).toEqual([knesset]); // the disallowed site was never fetched
+    const results = calls[1].messages.at(-1)!.content as { tool_use_id: string; content: string; is_error: boolean }[];
+    expect(results.find((x) => x.tool_use_id === "a")).toMatchObject({ content: decision, is_error: false });
+    expect(results.find((x) => x.tool_use_id === "b")).toMatchObject({ is_error: true });
+    if (!r.ok) throw new Error(r.errors.join());
+    const v = verifyCandidate(r.cases[0], { members, newsDomains: news, texts: new Map([[knesset, [r.fetched.get(knesset)!]]]), today });
+    expect(v.errors).toEqual([]);
+    expect(caseEntry(v).sources[0].type).toBe("knesset_record");
   });
 });

@@ -1,4 +1,5 @@
 import type Anthropic from "@anthropic-ai/sdk";
+import { z } from "zod";
 import type { CaseCategory } from "../cases/verify";
 import { CandidatesOut, type Candidate } from "../cases/verify";
 import type { Member } from "../knesset/schema";
@@ -22,13 +23,20 @@ Rules:
 - Only members in the roster provided. Use their roster id.
 - Only facts stated in the sources you cite. Never rely on memory: if you can't find and fetch a source that states it, leave it out.
 - The status must be exactly what the sources establish: "convicted" only with a court ruling or an official announcement of a conviction; "indicted" only when an indictment was filed (not just recommended or announced as intended); "under_investigation" only with an official announcement of an investigation; "documented" (incitement only) for the member's own recorded public words; "allegation" for anything only reported by the press, which then needs two independent outlets.
-- Prefer official sources: the State Attorney and ministries on gov.il, police.gov.il, court.gov.il and its rulings, mevaker.gov.il, knesset.gov.il. Fetch every page you cite.
+- Prefer official sources: the State Attorney and ministries on gov.il, police.gov.il, court.gov.il and its rulings, mevaker.gov.il, knesset.gov.il (Ethics Committee decisions, committee and plenum protocols). Many of these sites block foreign servers: open them with the fetch_page tool, which reads them from Israel. Use web_fetch for news sites. Fetch every page you cite.
 - For each source, copy one quote exactly as it appears on the page (at least a full clause) that states the fact and names the member. Code checks it character for character against the page.
 - Write neutrally and attribute: "according to the indictment", "the court ruled". No adjectives, no motives, no conclusions beyond the sources. Say if a conviction is under appeal or a case was closed, when the sources say so.
 - Skip cases already covered (listed below). An empty list is a good answer; never include a case you are unsure of.
 
 Finish with only a JSON object, no other text:
 {"cases":[{"mk_id":"<roster id>","category":"<category>","status":"convicted|indicted|under_investigation|documented|allegation","date":"YYYY-MM-DD (the latest event)","title_he":"","title_en":"","summary_he":"2-4 sentences","summary_en":"","timeline":[{"date":"YYYY-MM-DD","text_he":"","text_en":"","source":<index into sources, from 0>}],"sources":[{"url":"https://...","type":"court_ruling|indictment|prosecution_statement|police_statement|state_comptroller|knesset_record|official_filing|news_report","publisher":"","title":"","date":"YYYY-MM-DD","quote":"<exact words from the page>"}],"explanation":"<one sentence for the editor>"}]}`;
+
+// Our own fetcher, run by the pipeline from Israel (the VPN): official
+// Israeli sites block the model's own fetch tool. The text it returns is also
+// what the quotes are verified against.
+export type PageFetcher = (url: string) => Promise<string | null>;
+const FetchInput = z.object({ url: z.string().url() });
+const PAGE_LIMIT = 60_000;
 
 export type ResearchResult =
   | { ok: true; cases: Candidate[]; fetched: Map<string, string> }
@@ -41,19 +49,42 @@ export async function researchCases(
   covered: string[],
   domains: string[],
   max: number,
+  opts: { fetchPage?: PageFetcher; focus?: string } = {},
 ): Promise<ResearchResult> {
   const prompt = [
     `<category id="${category}">${BRIEF[category]}</category>`,
     `<roster>\n${roster.map((m) => `${m.id} | ${m.name} | ${m.faction}`).join("\n")}\n</roster>`,
     `<already_covered>\n${covered.join("\n") || "(none)"}\n</already_covered>`,
     `<allowed_sites>${domains.join(", ")}</allowed_sites>`,
-    `Find up to ${max} cases in this category, most recent and most serious first. Search in Hebrew and English.`,
+    opts.focus
+      ? `Focus: ${opts.focus}. Research every member in the roster thoroughly: their official record (Knesset Ethics Committee decisions, impeachment or disqualification proceedings, police and State Attorney announcements, court rulings) and their own public statements. Return up to ${max} cases, most serious first. Search in Hebrew, English and Arabic.`
+      : `Find up to ${max} cases in this category, most recent and most serious first. Search in Hebrew and English.`,
   ].join("\n\n");
   const messages: Anthropic.Beta.BetaMessageParam[] = [{ role: "user", content: prompt }];
   const fetched = new Map<string, string>();
   let response: Anthropic.Beta.BetaMessage | null = null;
 
-  for (let turn = 0; turn < 8; turn++) {
+  const allowed = (url: string) => {
+    try {
+      const host = new URL(url).hostname;
+      return url.startsWith("https://") && domains.some((d) => host === d || host.endsWith(`.${d}`));
+    } catch {
+      return false;
+    }
+  };
+  const clientTools: Anthropic.Beta.BetaToolUnion[] = opts.fetchPage
+    ? [
+        {
+          name: "fetch_page",
+          description:
+            "Fetch a web page from inside Israel and return its text. Use it for official Israeli sites that block foreign servers (knesset.gov.il, gov.il, court.gov.il, police.gov.il, mevaker.gov.il). Only the allowed sites can be fetched.",
+          input_schema: { type: "object", properties: { url: { type: "string", description: "Full https URL" } }, required: ["url"] },
+          eager_input_streaming: true,
+        },
+      ]
+    : [];
+
+  for (let turn = 0; turn < 24; turn++) {
     // Long research turns: stream, and take the assembled message.
     response = await client.beta.messages.stream({
       model: MODEL,
@@ -66,6 +97,7 @@ export async function researchCases(
       tools: [
         { type: "web_search_20260209", name: "web_search", max_uses: 15, allowed_domains: domains },
         { type: "web_fetch_20260209", name: "web_fetch", max_uses: 25, allowed_domains: domains },
+        ...clientTools,
       ],
       messages,
     }).finalMessage();
@@ -75,14 +107,34 @@ export async function researchCases(
         if (doc.source.type === "text") fetched.set(block.content.url, doc.source.data);
       }
     }
-    if (response.stop_reason !== "pause_turn") break;
-    messages.push({ role: "assistant", content: response.content });
+    if (response.stop_reason === "pause_turn") {
+      messages.push({ role: "assistant", content: response.content });
+      continue;
+    }
+    if (response.stop_reason !== "tool_use" || !opts.fetchPage) break;
+    // Run our fetch for each fetch_page call and hand back the text.
+    const results: Anthropic.Beta.BetaToolResultBlockParam[] = [];
+    for (const block of response.content) {
+      if (block.type !== "tool_use") continue;
+      const input = FetchInput.safeParse(block.input);
+      let text: string;
+      if (block.name !== "fetch_page" || !input.success) text = "Error: invalid tool call; pass {\"url\": \"https://...\"}.";
+      else if (!allowed(input.data.url)) text = "Error: that site is not on the allowed list.";
+      else {
+        const page = await opts.fetchPage(input.data.url);
+        if (page) fetched.set(input.data.url, page);
+        text = page ? page.slice(0, PAGE_LIMIT) : "Error: the page could not be fetched.";
+      }
+      results.push({ type: "tool_result", tool_use_id: block.id, content: text, is_error: text.startsWith("Error:") });
+    }
+    messages.push({ role: "assistant", content: response.content }, { role: "user", content: results });
   }
 
   if (!response) return { ok: false, errors: ["no response"] };
   if (response.stop_reason === "refusal") return { ok: false, errors: ["model declined"] };
   if (response.stop_reason === "pause_turn") return { ok: false, errors: ["research did not finish"] };
   if (response.stop_reason === "max_tokens") return { ok: false, errors: ["output truncated"] };
+  if (response.stop_reason === "tool_use") return { ok: false, errors: ["research did not finish"] };
   const text = response.content.flatMap((b) => (b.type === "text" ? [b.text] : [])).join("\n");
   const parsed = CandidatesOut.safeParse(extractJson(text));
   if (!parsed.success) return { ok: false, errors: ["final answer was not the expected JSON"] };

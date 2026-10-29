@@ -8,6 +8,7 @@ import { formatDate, getDict, LOCALES, t, type Locale } from "@/lib/i18n";
 import type { VoteChoice } from "@/lib/knesset/schema";
 import { getKnesset } from "@/lib/knesset/store";
 import { factionInfo, memberRecord, profileFor, scorecardFor } from "@/lib/knesset/view";
+import { partyFor } from "@/lib/knesset/parties";
 
 export const dynamicParams = false;
 
@@ -38,6 +39,7 @@ export default async function MemberPage({ params }: PageProps<"/[lang]/knesset/
   const { record, counts } = memberRecord(id);
   const profile = profileFor(id);
   const party = factionInfo(member.faction, locale);
+  const partyPage = partyFor(member.faction);
   const card = scorecardFor(id);
   const r = d.record;
 
@@ -50,7 +52,15 @@ export default async function MemberPage({ params }: PageProps<"/[lang]/knesset/
             <p className="text-sm font-semibold text-accent">{k.member.record}</p>
             <h1 lang="he" dir="rtl" className="font-serif text-4xl font-black sm:text-5xl">{member.name}</h1>
             <p className="text-ink-muted">
-              {k.member.faction}: <span lang="he">{party.short}</span> · Knesset {member.knessets.join(", ")}
+              {k.member.faction}:{" "}
+              {partyPage ? (
+                <Link href={`/${locale}/knesset/parties/${partyPage.slug}`} lang="he" className="underline decoration-ink-muted underline-offset-4 hover:text-ink-text">
+                  {party.short}
+                </Link>
+              ) : (
+                <span lang="he">{party.short}</span>
+              )}{" "}
+              · Knesset {member.knessets.join(", ")}
             </p>
             <SpectrumBadge spectrum={party.spectrum} label={party.spectrumLabel} sector={party.sectorLabel} />
             {profile && (

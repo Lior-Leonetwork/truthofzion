@@ -15,6 +15,9 @@ on:
       max_incitement:
         description: Max incitement cases to research
         default: "5"
+      faction:
+        description: 'Optional: research every member of these factions in depth (comma-separated, as in data/knesset/factions.json, e.g. רע"ם,חד"ש-תע"ל). The maximums are then per member.'
+        default: ""
 
 permissions:
   contents: write
@@ -57,14 +60,16 @@ jobs:
             echo "FRESH_BRANCH=1" >> "$GITHUB_ENV"
           fi
       - name: Research criminal and integrity cases
-        run: npm run cases:draft -- --category corruption --max "${{ inputs.max_corruption || '5' }}"
+        run: npm run cases:draft -- --category corruption --max "${{ inputs.max_corruption || '5' }}" ${FACTION:+--faction "$FACTION"}
         env:
+          FACTION: ${{ inputs.faction }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           KNESSET_HTTP_PROXY: ${{ secrets.KNESSET_HTTP_PROXY }}
       - name: Research incitement
         if: always()
-        run: npm run cases:draft -- --category incitement --max "${{ inputs.max_incitement || '5' }}"
+        run: npm run cases:draft -- --category incitement --max "${{ inputs.max_incitement || '5' }}" ${FACTION:+--faction "$FACTION"}
         env:
+          FACTION: ${{ inputs.faction }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           KNESSET_HTTP_PROXY: ${{ secrets.KNESSET_HTTP_PROXY }}
       - run: npm run validate
