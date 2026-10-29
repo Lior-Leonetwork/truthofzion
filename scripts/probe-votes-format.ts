@@ -2,6 +2,7 @@
 // per-ballot-box and per-locality results on data.gov.il (25th Knesset).
 import { fetch as undiciFetch } from "undici";
 const API = "https://data.gov.il/api/3/action";
+async function main() {
 for (const [label, id] of [
   ["K25 by ballot box", "cc223336-07bc-485d-b160-62df92967c0a"],
   ["K25 by locality", "b392b8ee-ba45-4ea0-bfed-f03a1a36e99c"],
@@ -12,3 +13,5 @@ for (const [label, id] of [
   console.log(`\n### ${label}: ${j.result.total} rows\nfields: ${j.result.fields.map((f) => `${f.id}:${f.type}`).join(" | ")}`);
   for (const r of j.result.records) console.log(JSON.stringify(r));
 }
+}
+main();
