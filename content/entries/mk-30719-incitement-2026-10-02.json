@@ -1,0 +1,82 @@
+{
+  "slug": "mk-30719-incitement-2026-10-02",
+  "entity": "mk-30719",
+  "category": "incitement",
+  "status": "allegation",
+  "date": "2026-10-02",
+  "title": {
+    "he": "ועדת הבחירות פסלה את מועמדותו בעילה של תמיכה במאבק מזוין – בית המשפט העליון לא אישר את הפסילה",
+    "en": "Election committee disqualified him on grounds including support for armed struggle – Supreme Court declined to approve"
+  },
+  "summary": {
+    "he": "ב-23 בספטמבר 2026 החליטה ועדת הבחירות המרכזית, ברוב של 19 נגד 5 ושניים נמנעים, לקבל את בקשת הליכוד ולפסול את ח\"כ עופר כסיף מהתמודדות לכנסת ה-26. לפי הדיווחים, הוועדה פסלה אותו בעילה של שלילת קיומה של מדינת ישראל כמדינה יהודית ודמוקרטית ובעילה של תמיכה במאבק מזוין של מדינת אויב או ארגון טרור נגד מדינת ישראל. לפי הג'רוזלם פוסט, היועצת המשפטית לממשלה ופרקליט המדינה סברו שהחומר שהוגש אינו מספיק לביסוס עילת פסילה. ב-2 באוקטובר 2026 החליט בית המשפט העליון ברוב של שבעה שופטים מול שניים שלא לאשר את הפסילה, וכסיף רשאי להתמודד; שופטי המיעוט מינץ ושטיין סברו כי עילת התמיכה במאבק מזוין התקיימה, וכסיף מסר בתגובה להחלטת הוועדה כי הצגת התנגדותו למדיניות הממשלה כתמיכה באויב היא סילוף של המציאות.",
+    "en": "On 23 September 2026 the Central Elections Committee voted 19-5, with two abstentions, to accept a Likud request and bar MK Ofer Cassif from running for the 26th Knesset. According to the reports, the committee disqualified him on the grounds of denying Israel's existence as a Jewish and democratic state and of supporting an armed struggle by an enemy state or terrorist organization against Israel. According to the Jerusalem Post, the Attorney General and the State Attorney had found the material submitted insufficient to establish any ground for disqualification. On 2 October 2026 the Supreme Court decided 7-2 not to uphold the disqualification, so he may run; dissenting Justices Mintz and Stein held that the armed-struggle ground was established, and Cassif said in response to the committee's decision that presenting his opposition to government policy as support for the enemy distorted reality."
+  },
+  "body": [],
+  "timeline": [
+    {
+      "date": "2026-09-23",
+      "text": {
+        "he": "ועדת הבחירות המרכזית קיבלה את בקשת הליכוד לפסול את כסיף מהתמודדות לכנסת ה-26, \"בשל תמיכה במאבק מזוין של מדינת אויב או של ארגון טרור נגד מדינת ישראל\".",
+        "en": "The Central Elections Committee accepted Likud's request to bar Cassif from the 26th Knesset election, citing support for an armed struggle by an enemy state or terrorist organization against Israel."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    },
+    {
+      "date": "2026-09-23",
+      "text": {
+        "he": "כסיף מסר בתגובה כי הצגת התנגדותו למדיניות הממשלה כתמיכה באויב היא \"סילוף בוטה של המציאות\".",
+        "en": "Cassif responded that presenting his opposition to government policy as support for the enemy was a \"blatant distortion of reality\"."
+      },
+      "sourceIds": [
+        "s2"
+      ]
+    },
+    {
+      "date": "2026-10-02",
+      "text": {
+        "he": "שופטי המיעוט מינץ ושטיין סברו כי התבטאויותיו ופועלו של כסיף מקימים את עילת התמיכה במאבק מזוין נגד מדינת ישראל.",
+        "en": "Dissenting Justices Mintz and Stein held that Cassif's statements and activity established the ground of support for armed struggle against Israel."
+      },
+      "sourceIds": [
+        "s3"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "type": "news_report",
+      "publisher": "ערוץ 7",
+      "title": "ברוב של 19 תומכים: ועדת הבחירות החליטה לפסול את עופר כסיף",
+      "date": "2026-09-23",
+      "url": "https://www.inn.co.il/news/706860"
+    },
+    {
+      "id": "s2",
+      "type": "news_report",
+      "publisher": "ynet",
+      "title": "העליון יכריע: ועדת הבחירות פסלה את מועמדותו של עופר כסיף",
+      "date": "2026-09-23",
+      "url": "https://www.ynet.co.il/news/article/hjvk0xbqmg"
+    },
+    {
+      "id": "s3",
+      "type": "news_report",
+      "publisher": "ynet",
+      "title": "העליון הפך את החלטת ועדת הבחירות: רע\"מ, הרשימה המשותפת וכסיף יוכלו להתמודד",
+      "date": "2026-10-02",
+      "url": "https://www.ynet.co.il/news/elections2026/article/hjw00hep9mx"
+    }
+  ],
+  "response": {
+    "status": "not_yet_requested"
+  },
+  "corrections": [],
+  "editorial": {
+    "state": "draft",
+    "createdBy": "claude"
+  }
+}

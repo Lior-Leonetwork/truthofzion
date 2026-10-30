@@ -1,0 +1,64 @@
+{
+  "slug": "mk-30719-incitement-2024-11-11",
+  "entity": "mk-30719",
+  "category": "incitement",
+  "status": "allegation",
+  "date": "2024-11-11",
+  "title": {
+    "he": "ועדת האתיקה הרחיקה אותו לחצי שנה בשל התבטאויות נגד צה\"ל ובעניין המלחמה בעזה",
+    "en": "Knesset Ethics Committee suspended him for six months over statements on the IDF and the Gaza war"
+  },
+  "summary": {
+    "he": "ב-11 בנובמבר 2024 החליטה ועדת האתיקה של הכנסת פה אחד להרחיק את ח\"כ עופר כסיף מישיבות המליאה והוועדות לשישה חודשים ולשלול את שכרו לשבועיים. לפי ynet, עיקר ההחלטה נגע להתבטאויות המאשימות את חיילי צה\"ל ואת מדינת ישראל בפשעי מלחמה ולחתימתו על עצומה התומכת בתביעת דרום אפריקה נגד ישראל בבית הדין הבינלאומי בהאג. לפי טיימס אוף ישראל, הוועדה ציינה בין היתר ציוץ שבו תיאר פלסטינים הנלחמים בצה\"ל בג'נין כ\"לוחמי חופש\". כסיף כינה את ההחלטה \"צנזורה פוליטית-לאומנית\".",
+    "en": "On 11 November 2024 the Knesset Ethics Committee unanimously suspended MK Ofer Cassif from plenum and committee sessions for six months and docked two weeks' pay. According to ynet, the core of the decision concerned statements accusing IDF soldiers and Israel of war crimes and his signing of a petition supporting South Africa's case against Israel at the International Court of Justice. According to the Times of Israel, the committee also cited a tweet in which he described Palestinians fighting the IDF in Jenin as \"freedom fighters\". Cassif called the decision nationalist political censorship."
+  },
+  "body": [],
+  "timeline": [
+    {
+      "date": "2024-11-11",
+      "text": {
+        "he": "לפי ynet, החלק המרכזי בהחלטה נגע להתבטאויות המאשימות את חיילי צה\"ל ואת המדינה בפשעי מלחמה ולחתימתו על העצומה התומכת בתביעת דרום אפריקה בהאג; כסיף כינה את ההחלטה \"צנזורה פוליטית-לאומנית\".",
+        "en": "According to ynet, the core of the decision concerned statements accusing IDF soldiers and the state of war crimes and his signing of the petition backing South Africa's ICJ case; Cassif called it \"nationalist political censorship\"."
+      },
+      "sourceIds": [
+        "s2"
+      ]
+    },
+    {
+      "date": "2024-11-11",
+      "text": {
+        "he": "לפי ערוץ 7, זהו העונש החמור ביותר שהוטל על חבר כנסת בתולדות ועדת האתיקה; ההרחקה נכנסה לתוקף למחרת.",
+        "en": "According to Israel National News, it was the heaviest punishment ever imposed on an MK by the Ethics Committee; it took effect the following day."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "type": "news_report",
+      "publisher": "Israel National News",
+      "title": "Longest in history: MK Ofer Cassif to be suspended from the Knesset for six months",
+      "date": "2024-11-11",
+      "url": "https://www.israelnationalnews.com/news/399014"
+    },
+    {
+      "id": "s2",
+      "type": "news_report",
+      "publisher": "ynet",
+      "title": "לאחר שהאשים את צה\"ל בפשעי מלחמה: עופר כסיף הורחק לחצי שנה מהמליאה",
+      "date": "2024-11-11",
+      "url": "https://www.ynet.co.il/news/article/bkuppnyfjg"
+    }
+  ],
+  "response": {
+    "status": "not_yet_requested"
+  },
+  "corrections": [],
+  "editorial": {
+    "state": "draft",
+    "createdBy": "claude"
+  }
+}

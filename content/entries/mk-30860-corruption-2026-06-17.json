@@ -1,0 +1,64 @@
+{
+  "slug": "mk-30860-corruption-2026-06-17",
+  "entity": "mk-30860",
+  "category": "corruption",
+  "status": "indicted",
+  "date": "2026-06-17",
+  "title": {
+    "he": "כתב אישום בגין פרסום זהות איש שב\"כ; הכנסת העניקה חסינות",
+    "en": "Indictment for disclosing a Shin Bet employee's identity; Knesset granted immunity"
+  },
+  "summary": {
+    "he": "לפי כלכליסט, ב-19 במאי 2026 הגישה פרקליטות מחוז מרכז כתב אישום נגד ח\"כ טלי גוטליב לבית משפט השלום בפתח תקווה, בעבירה של גילוי ופרסום מידע חסוי לפי חוק השב\"כ. לפי כתב האישום, היא פרסמה ברשת X את שמו ופרטיו של בן זוגה של שקמה ברסלר כעובד שב\"כ. היועמ\"שית העבירה עותק של כתב האישום לכנסת לפי חוק החסינות. לפי וואלה, ב-17 ביוני 2026 אישרה מליאת הכנסת חסינות לגוטליב, ברוב של 61 מול 48, והיועמ\"שית והפרקליטות יוכלו להגיש את כתב האישום שוב בממשלה הבאה.",
+    "en": "According to Calcalist, on 19 May 2026 the Central District Prosecution filed an indictment against MK Tally Gotliv with the Petah Tikva Magistrate's Court for disclosing and publishing classified information under the Shin Bet Law. According to the indictment, she published on X the name and details of Shikma Bressler's partner as a Shin Bet employee. The Attorney General sent a copy of the indictment to the Knesset under the immunity law. According to Walla, on 17 June 2026 the Knesset plenum granted Gotliv immunity by 61 votes to 48, and the Attorney General and prosecution could file the indictment again under the next government."
+  },
+  "body": [],
+  "timeline": [
+    {
+      "date": "2026-05-19",
+      "text": {
+        "he": "פרקליטות מחוז מרכז הגישה כתב אישום נגד גוטליב, ועותק שלו הועבר ליו\"ר הכנסת.",
+        "en": "The Central District Prosecution filed an indictment against Gotliv, and a copy was sent to the Knesset Speaker."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    },
+    {
+      "date": "2026-06-17",
+      "text": {
+        "he": "מליאת הכנסת אישרה את הצעת ועדת הכנסת להעניק לגוטליב חסינות מפני העמדה לדין פלילי.",
+        "en": "The Knesset plenum approved the House Committee's proposal to grant Gotliv immunity from criminal prosecution."
+      },
+      "sourceIds": [
+        "s2"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "type": "news_report",
+      "publisher": "כלכליסט",
+      "title": "כתב אישום נגד טלי גוטליב: חשפה את בעלה של שקמה ברסלר כאיש שב\"כ",
+      "date": "2026-05-19",
+      "url": "https://www.calcalist.co.il/local_news/article/b1pgfaf1fl"
+    },
+    {
+      "id": "s2",
+      "type": "news_report",
+      "publisher": "וואלה",
+      "title": "הכנסת אישרה סופית: לאחר שחשפה איש שב\"כ - טלי גוטליב חסינה מדין פלילי",
+      "date": "2026-06-17",
+      "url": "https://news.walla.co.il/item/3846457"
+    }
+  ],
+  "response": {
+    "status": "not_yet_requested"
+  },
+  "corrections": [],
+  "editorial": {
+    "state": "draft",
+    "createdBy": "claude"
+  }
+}
