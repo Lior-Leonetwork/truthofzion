@@ -6,6 +6,8 @@
 // published here: each case needs an editor and the member's right of reply.
 //
 //   ANTHROPIC_API_KEY=... npm run cases:draft -- --category corruption|incitement [--max 5]
+//   ... --faction "רע\"ם,חד\"ש-תע\"ל" [--max 3]   research each member of these factions in depth
+//                                                  (--max is then per member)
 import Anthropic from "@anthropic-ai/sdk";
 import fs from "node:fs";
 import path from "node:path";
@@ -15,7 +17,8 @@ import { researchCases } from "../src/lib/agent/case-researcher";
 import { CASE_CATEGORIES, caseEntry, caseSlug, publicationGaps, researchDomains, verifyCandidate, type CaseCategory } from "../src/lib/cases/verify";
 import { readContent } from "../src/lib/content/load";
 import { entityDraft, htmlToText } from "../src/lib/knesset/statements";
-import { readMembers, readStatementSources, writeJson } from "../src/lib/knesset/store";
+import { readFactions, readMembers, readStatementSources, writeJson } from "../src/lib/knesset/store";
+import type { Candidate } from "../src/lib/cases/verify";
 
 function arg(name: string) {
   const i = process.argv.indexOf(`--${name}`);
@@ -49,6 +52,14 @@ async function fetchPage(url: string) {
   }
 }
 
+// What the researcher asked to read from Israel, and how much text came back:
+// official sites that render in the browser return an empty shell.
+async function loggedFetch(url: string) {
+  const text = await fetchPage(url);
+  console.log(`    fetch_page ${url} → ${text === null ? "failed" : `${text.length} chars`}`);
+  return text;
+}
+
 async function main() {
   if (!process.env.ANTHROPIC_API_KEY) {
     console.log("ANTHROPIC_API_KEY not set; skipping case research.");
@@ -65,18 +76,46 @@ async function main() {
     ...Object.entries(checked).map(([slug, c]) => `${slug} | ${c.title} (${c.outcome === "drafted" ? "drafted" : "reviewed, not usable"})`),
   ];
 
-  console.log(`Researching ${category} (up to ${max} cases) among ${Object.keys(members).length} members`);
-  const result = await researchCases(client, category, Object.values(members), covered, researchDomains(newsDomains), max);
-  if (!result.ok) throw new Error(result.errors.join("; "));
-  console.log(`${result.cases.length} candidates`);
+  const domains = researchDomains(newsDomains);
+  const fetchedByModel = new Map<string, string>();
+  const candidates: Candidate[] = [];
+  const factionArg = arg("faction");
+  if (factionArg) {
+    // Deep mode: one research session per member of the named factions.
+    const wanted = factionArg.split(",").map((f) => f.trim()).filter(Boolean);
+    const factions = readFactions().filter((f) => wanted.some((w) => [f.name, f.short.he, f.short.en].includes(w)));
+    if (factions.length === 0) throw new Error(`no faction matches ${factionArg}; see data/knesset/factions.json`);
+    const names = new Set(factions.map((f) => f.name));
+    const roster = Object.values(members).filter((m) => names.has(m.faction));
+    console.log(`Researching ${category} in depth for ${roster.length} members of ${factions.map((f) => f.short.he).join(", ")}`);
+    for (const m of roster) {
+      const r = await researchCases(client, category, [m], covered, domains, max, { fetchPage: loggedFetch, focus: `${m.name}, member of ${m.faction}` }).catch(
+        (e: Error) => ({ ok: false as const, errors: [e.message] }),
+      );
+      if (!r.ok) {
+        console.warn(`  ✗ ${m.name}: ${r.errors.join("; ")}`);
+        continue;
+      }
+      console.log(`  ${m.name}: ${r.cases.length} candidates`);
+      candidates.push(...r.cases.slice(0, max));
+      for (const [u, t] of r.fetched) fetchedByModel.set(u, t);
+    }
+  } else {
+    console.log(`Researching ${category} (up to ${max} cases) among ${Object.keys(members).length} members`);
+    const result = await researchCases(client, category, Object.values(members), covered, domains, max, { fetchPage: loggedFetch });
+    if (!result.ok) throw new Error(result.errors.join("; "));
+    candidates.push(...result.cases.slice(0, max));
+    for (const [u, t] of result.fetched) fetchedByModel.set(u, t);
+  }
+  console.log(`${candidates.length} candidates`);
 
   const report: string[] = [];
-  for (const c of result.cases.slice(0, max)) {
+  for (const c of candidates) {
     const slug = caseSlug(c);
     const texts = new Map<string, string[]>();
     for (const s of c.sources) {
       const ours = await fetchPage(s.url);
-      texts.set(s.url, [result.fetched.get(s.url), ours].filter((t): t is string => Boolean(t)));
+      texts.set(s.url, [fetchedByModel.get(s.url), ours].filter((t): t is string => Boolean(t)));
     }
     const v = verifyCandidate(c, { members, newsDomains, texts, today });
     const name = members[c.mk_id]?.name ?? c.mk_id;

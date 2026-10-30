@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { PageHeader } from "@/components/page-header";
 import { VoteBrowser } from "@/components/vote-browser";
 import { getDict, t, type Locale } from "@/lib/i18n";
@@ -39,6 +40,9 @@ export default async function Knesset({ params }: PageProps<"/[lang]/knesset">) 
   return (
     <>
       <PageHeader eyebrow={d.home.eyebrow} title={k.heading} intro={k.intro}>
+        <Link href={`/${locale}/knesset/parties`} className="inline-block rounded-xl border border-ink-border px-4 py-2 font-semibold hover:bg-ink-2">
+          {d.parties.link} <span className="inline-block rtl:rotate-180">→</span>
+        </Link>
         <dl className="mt-6 grid max-w-3xl grid-cols-2 gap-px overflow-hidden rounded-2xl border border-ink-border bg-ink-border sm:grid-cols-4">
           {stats.map(([label, value]) => (
             <div key={label} className="bg-ink-2/90 p-4">
