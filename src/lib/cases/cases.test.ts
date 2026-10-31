@@ -73,6 +73,7 @@ describe("case drafts", () => {
     expect(verify(candidate({ mk_id: "1" })).errors[0]).toMatch(/roster/);
     expect(verify(candidate({ status: "documented" })).errors.join(" ")).toMatch(/not allowed for corruption/);
     expect(verify(candidate({ date: "2027-01-01" })).errors.join(" ")).toMatch(/bad date/);
+    expect(verify(candidate({ date: "2022-12-31" })).errors.join(" ")).toMatch(/out of scope/);
   });
 
   it("flags a press-only allegation that lacks a second outlet", () => {

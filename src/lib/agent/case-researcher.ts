@@ -26,6 +26,7 @@ Rules:
 - Prefer official sources: the State Attorney and ministries on gov.il, police.gov.il, court.gov.il and its rulings, mevaker.gov.il, knesset.gov.il (Ethics Committee decisions, committee and plenum protocols). Many of these sites block foreign servers: open them with the fetch_page tool, which reads them from Israel. Use web_fetch for news sites. Fetch every page you cite.
 - For each source, copy one quote exactly as it appears on the page (at least a full clause) that states the fact and names the member. Code checks it character for character against the page.
 - Write neutrally and attribute: "according to the indictment", "the court ruled". No adjectives, no motives, no conclusions beyond the sources. Say if a conviction is under appeal or a case was closed, when the sources say so.
+- Only events from 2023 onward. Skip anything whose latest event is before 2023, even if it is still open.
 - Skip cases already covered (listed below). An empty list is a good answer; never include a case you are unsure of.
 
 Finish with only a JSON object, no other text:
