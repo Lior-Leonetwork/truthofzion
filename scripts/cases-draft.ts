@@ -52,6 +52,14 @@ async function fetchPage(url: string) {
   }
 }
 
+// What the researcher asked to read from Israel, and how much text came back:
+// official sites that render in the browser return an empty shell.
+async function loggedFetch(url: string) {
+  const text = await fetchPage(url);
+  console.log(`    fetch_page ${url} → ${text === null ? "failed" : `${text.length} chars`}`);
+  return text;
+}
+
 async function main() {
   if (!process.env.ANTHROPIC_API_KEY) {
     console.log("ANTHROPIC_API_KEY not set; skipping case research.");
@@ -81,7 +89,7 @@ async function main() {
     const roster = Object.values(members).filter((m) => names.has(m.faction));
     console.log(`Researching ${category} in depth for ${roster.length} members of ${factions.map((f) => f.short.he).join(", ")}`);
     for (const m of roster) {
-      const r = await researchCases(client, category, [m], covered, domains, max, { fetchPage, focus: `${m.name}, member of ${m.faction}` }).catch(
+      const r = await researchCases(client, category, [m], covered, domains, max, { fetchPage: loggedFetch, focus: `${m.name}, member of ${m.faction}` }).catch(
         (e: Error) => ({ ok: false as const, errors: [e.message] }),
       );
       if (!r.ok) {
@@ -94,7 +102,7 @@ async function main() {
     }
   } else {
     console.log(`Researching ${category} (up to ${max} cases) among ${Object.keys(members).length} members`);
-    const result = await researchCases(client, category, Object.values(members), covered, domains, max, { fetchPage });
+    const result = await researchCases(client, category, Object.values(members), covered, domains, max, { fetchPage: loggedFetch });
     if (!result.ok) throw new Error(result.errors.join("; "));
     candidates.push(...result.cases.slice(0, max));
     for (const [u, t] of result.fetched) fetchedByModel.set(u, t);

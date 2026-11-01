@@ -64,6 +64,10 @@ export function allowedTypes(url: string, newsDomains: string[]): SourceType[] {
 }
 
 const MIN_QUOTE = 20;
+
+// The editors' scope: cases from 2023 onward. Older matters are out of scope
+// even when still open (a case's date is its latest event).
+export const CASES_FROM = "2023-01-01";
 const isoDate = (s: string) => /^\d{4}-\d{2}-\d{2}$/.test(s);
 
 export type Verified = { candidate: Candidate; sourceIndexes: number[]; errors: string[] };
@@ -79,6 +83,7 @@ export function verifyCandidate(
   if (!member) return { candidate: c, sourceIndexes: [], errors: [`${c.mk_id} is not in the Knesset roster`] };
   if (!(STATUSES_FOR[c.category] as string[]).includes(c.status)) errors.push(`status "${c.status}" is not allowed for ${c.category}`);
   if (!isoDate(c.date) || c.date > today) errors.push(`bad date "${c.date}"`);
+  else if (c.date < CASES_FROM) errors.push(`before ${CASES_FROM.slice(0, 4)}: out of scope`);
   for (const f of [c.title_he, c.title_en, c.summary_he, c.summary_en]) if (!f.trim()) errors.push("missing title or summary");
   const surname = normalize(member.name).split(" ").pop() ?? "";
   const kept: number[] = [];

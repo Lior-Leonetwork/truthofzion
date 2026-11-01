@@ -1,0 +1,54 @@
+name: Election integrity
+
+# Runs the integrity checks whenever an editor commits a new official results
+# file (data/elections/26/raw/expb.csv from votes26.bechirot.gov.il), comparing
+# each ballot box with the 25th Knesset's file on data.gov.il (read through the
+# Israeli VPN), then publishes the findings and redeploys the site.
+on:
+  push:
+    branches: [main]
+    paths: ["data/elections/26/raw/**"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency: elections
+
+jobs:
+  integrity:
+    runs-on: ${{ vars.KNESSET_RUNNER || 'ubuntu-latest' }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - uses: ./.github/actions/israel-vpn
+        with:
+          wireguard: ${{ secrets.KNESSET_WIREGUARD_CONF }}
+          openvpn: ${{ secrets.KNESSET_OPENVPN_CONF }}
+          openvpn-auth: ${{ secrets.KNESSET_OPENVPN_AUTH }}
+      - run: npm ci
+      - run: npm run elections:integrity
+        env:
+          KNESSET_HTTP_PROXY: ${{ secrets.KNESSET_HTTP_PROXY }}
+      - run: npm test
+      - name: Publish
+        id: commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/elections
+          if git diff --cached --quiet; then echo "Nothing new."; exit 0; fi
+          git commit -m "Election integrity checks: $(date -u +%F)"
+          git pull --rebase origin main
+          git push origin HEAD:main
+          echo "pushed=true" >> "$GITHUB_OUTPUT"
+      - name: Redeploy the site
+        if: steps.commit.outputs.pushed == 'true' && env.VERCEL_DEPLOY_HOOK != ''
+        env:
+          VERCEL_DEPLOY_HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK }}
+        run: curl -fsS -X POST "$VERCEL_DEPLOY_HOOK" > /dev/null && echo "Vercel redeploy requested."
