@@ -1,0 +1,54 @@
+{
+  "slug": "mk-30066-incitement-2025-07-14",
+  "entity": "mk-30066",
+  "category": "incitement",
+  "status": "documented",
+  "date": "2025-07-14",
+  "title": {
+    "he": "הליך הדחה מהכנסת בעקבות התבטאות על עסקת החטופים – ההצעה לא זכתה לרוב במליאה",
+    "en": "Knesset impeachment proceeding over statement on hostage deal – motion fell short in plenum"
+  },
+  "summary": {
+    "he": "לפי הדיווחים, הליך ההדחה נגד ח\"כ איימן עודה נפתח לאחר שבינואר 2025 פרסם ברשת X ש\"הוא שמח על שחרור החטופים והאסירים\" ו\"מפה חייבים לשחרר את שני העמים מעול הכיבוש\". יוזם הבקשה, ח\"כ אביחי בוארון, טען שעודה \"תומך טרור\". ב-30 ביוני 2025 אישרה ועדת הכנסת את ההדחה ברוב של 14 מול 2. לפי הדיווח, הייעוץ המשפטי של הכנסת קבע שהדיון יתמקד רק בציוץ מינואר. ב-14 ביולי 2025 הצביעו במליאה 73 חברי כנסת בעד ההדחה, פחות מ-90 הקולות הנדרשים, וההצעה לא התקבלה. עודה כינה את המהלך נגדו \"מביש ופשיסטי\".",
+    "en": "According to the reports, the impeachment proceeding against MK Ayman Odeh began after he posted on X in January 2025 that he was happy about the release of hostages and prisoners and that both peoples must be freed from the yoke of occupation. The MK who started it, Avichay Boaron, called Odeh a \"terror supporter\". On 30 June 2025 the Knesset House Committee approved the impeachment 14-2. According to the reports, the Knesset legal advisers ruled that the proceeding concerned only the January post. On 14 July 2025, 73 MKs voted in favour in the plenum, short of the required 90, so the motion failed. Odeh called the move against him disgraceful and fascistic."
+  },
+  "body": [],
+  "timeline": [
+    {
+      "date": "2025-06-30",
+      "text": {
+        "he": "ועדת הכנסת אישרה את ההדחה ברוב של 14 מול 2 והעבירה אותה למליאה",
+        "en": "The House Committee approved the impeachment 14-2 and sent it to the plenum"
+      },
+      "sourceIds": [
+        "s2"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "type": "news_report",
+      "publisher": "ynet",
+      "title": "הוועדה המליצה להדיח את איימן עודה מהכנסת, המבחן - במליאה",
+      "date": "2025-06-30",
+      "url": "https://www.ynet.co.il/news/article/sjdehp1rgg"
+    },
+    {
+      "id": "s2",
+      "type": "news_report",
+      "publisher": "ישראל היום",
+      "title": "ועדת הכנסת אישרה את הדחת איימן עודה; יו״ר הוועדה אופיר כץ: הוא אמור להרקב בכלא",
+      "date": "2025-06-30",
+      "url": "https://www.israelhayom.co.il/news/politics/article/18310509"
+    }
+  ],
+  "response": {
+    "status": "not_yet_requested"
+  },
+  "corrections": [],
+  "editorial": {
+    "state": "draft",
+    "createdBy": "claude"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "slug": "mk-30719-incitement-2024-02-19",
+  "entity": "mk-30719",
+  "category": "incitement",
+  "status": "documented",
+  "date": "2024-02-19",
+  "title": {
+    "he": "הליך הדחה מהכנסת בעקבות תמיכה בתביעת דרום אפריקה בהאג – ההצעה לא זכתה לרוב במליאה",
+    "en": "Knesset impeachment proceeding over support for South Africa's ICJ case – motion fell short in plenum"
+  },
+  "summary": {
+    "he": "לפי הדיווחים, ח\"כ עופר כסיף חתם על עצומה התומכת בתביעת דרום אפריקה נגד ישראל בבית הדין הבינלאומי לצדק, וח\"כ עודד פורר יזם נגדו הליך הדחה לפי חוק ההדחה. אחת העילות בחוק היא תמיכה במאבק מזוין נגד ישראל. ב-30 בינואר 2024 אישרה ועדת הכנסת את ההדחה ברוב של 14 מול 2. ב-19 בפברואר 2024 הצביעו במליאה 85 חברי כנסת בעד, פחות מ-90 הקולות הנדרשים, וההצעה לא התקבלה. לפי הדיווח, המשנָה ליועמ\"שית והיועצת המשפטית לכנסת קבעו שההאשמות אינן עוברות את הרף הנדרש להדחה. כסיף אמר שהטענה שהוא תומך במאבק המזוין של חמאס היא שקר.",
+    "en": "According to the reports, MK Ofer Cassif signed a petition supporting South Africa's case against Israel at the International Court of Justice, and MK Oded Forer started an impeachment proceeding against him under the suspension law. One of the grounds in that law is support for armed struggle against Israel. On 30 January 2024 the Knesset House Committee approved the impeachment 14-2. On 19 February 2024, 85 MKs voted in favour in the plenum, short of the required 90, so the motion failed. According to the reports, the Deputy Attorney General and the Knesset legal adviser said the charges fell short of the threshold needed for his removal. Cassif said the claim that he supports Hamas's armed struggle is a lie."
+  },
+  "body": [],
+  "timeline": [],
+  "sources": [
+    {
+      "id": "s1",
+      "type": "news_report",
+      "publisher": "ישראל היום",
+      "title": "בתום ההצבעה: ההצעה נפלה - ח\"כ עופר כסיף לא יודח מהכנסת",
+      "date": "2024-02-19",
+      "url": "https://www.israelhayom.co.il/news/politics/article/15290422"
+    },
+    {
+      "id": "s2",
+      "type": "news_report",
+      "publisher": "וואלה",
+      "title": "לא הושג רוב של 90: ההצעה להדחה של ח\"כ עופר כסיף נפסלה",
+      "date": "2024-02-19",
+      "url": "https://www.walla.co.il/news/politics/3644916"
+    }
+  ],
+  "response": {
+    "status": "not_yet_requested"
+  },
+  "corrections": [],
+  "editorial": {
+    "state": "draft",
+    "createdBy": "claude"
+  }
+}

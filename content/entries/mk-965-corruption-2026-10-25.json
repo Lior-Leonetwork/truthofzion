@@ -1,0 +1,46 @@
+{
+  "slug": "mk-965-corruption-2026-10-25",
+  "entity": "mk-965",
+  "category": "corruption",
+  "status": "indicted",
+  "date": "2026-10-25",
+  "title": {
+    "he": "כתב אישום בתיקים 1000, 2000 ו-4000 – המשפט נמשך",
+    "en": "Indictment in Cases 1000, 2000 and 4000 – trial ongoing"
+  },
+  "summary": {
+    "he": "לפי ynet, ב-28 בינואר 2020 הגיש היועץ המשפטי לממשלה אביחי מנדלבליט כתב אישום נגד בנימין נתניהו לבית המשפט המחוזי בירושלים, בתיקים 1000, 2000 ו-4000. זה קרה פחות מארבע שעות אחרי שנתניהו משך את בקשת החסינות שלו. לפי הדיווח, בתיק 2000 הוחלט להאשים אותו בעבירות מרמה והפרת אמונים. לפי ג'רוזלם פוסט, באוקטובר 2026 המשפט עדיין נמשך, ובתיק 1000 נתניהו מואשם במרמה והפרת אמונים ומכחיש כל עבירה.",
+    "en": "According to ynet, on 28 January 2020 Attorney General Avichai Mandelblit filed an indictment against Benjamin Netanyahu with the Jerusalem District Court in Cases 1000, 2000 and 4000. This happened less than four hours after Netanyahu withdrew his request for immunity. According to the report, in Case 2000 the decision was to charge him with fraud and breach of trust. According to The Jerusalem Post, the trial is still under way in October 2026, and in Case 1000 Netanyahu is charged with fraud and breach of trust and denies wrongdoing."
+  },
+  "body": [],
+  "timeline": [
+    {
+      "date": "2020-01-28",
+      "text": {
+        "he": "היועץ המשפטי לממשלה הגיש לבית המשפט המחוזי בירושלים כתב אישום נגד נתניהו, אחרי שזה משך את בקשת החסינות.",
+        "en": "The Attorney General filed the indictment against Netanyahu with the Jerusalem District Court after Netanyahu withdrew his immunity request."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "type": "news_report",
+      "publisher": "ynet",
+      "title": "הוגש כתב האישום נגד ראש הממשלה נתניהו",
+      "date": "2020-01-28",
+      "url": "https://www.ynet.co.il/articles/0,7340,L-5667830,00.html"
+    }
+  ],
+  "response": {
+    "status": "not_yet_requested"
+  },
+  "corrections": [],
+  "editorial": {
+    "state": "draft",
+    "createdBy": "claude"
+  }
+}

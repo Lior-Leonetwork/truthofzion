@@ -1,0 +1,64 @@
+{
+  "slug": "mk-30719-incitement-2023-10-18",
+  "entity": "mk-30719",
+  "category": "incitement",
+  "status": "documented",
+  "date": "2023-10-18",
+  "title": {
+    "he": "ועדת האתיקה הרחיקה אותו ל-45 יום בעקבות אמירתו ש\"ישראל רצתה באלימות הזו\" יומיים אחרי 7 באוקטובר",
+    "en": "Ethics Committee suspended him for 45 days after he said \"Israel wanted this violence\" two days after October 7"
+  },
+  "summary": {
+    "he": "ועדת האתיקה של הכנסת החליטה להרחיק את ח\"כ עופר כסיף מהכנסת ל-45 יום ולשלול את שכרו לשבועיים. לפי הדיווחים, ההחלטה ניתנה בשל אמירתו בריאיון לתקשורת אמריקנית ב-9 באוקטובר כי \"ישראל רצתה באלימות הזו\", ובשל ריאיון שבו קשר בין מדיניות הממשלה במלחמה לביטוי \"הפתרון הסופי\". כסיף מסר בתגובה כי גינה את הטבח, וכי ההחלטה היא \"עוד מסמר בארון הקבורה של חופש הביטוי הפוליטי\".",
+    "en": "The Knesset Ethics Committee decided to suspend MK Ofer Cassif from the Knesset for 45 days and dock two weeks of his pay. According to reports, the decision was over his statement in an interview with American media on October 9 that \"Israel wanted this violence\", and over an interview in which he linked the government's wartime policy to the term \"final solution\". Cassif responded that he had condemned the massacre and called the decision another blow to political free speech."
+  },
+  "body": [],
+  "timeline": [
+    {
+      "date": "2023-10-09",
+      "text": {
+        "he": "לפי ynet, כסיף אמר בריאיון לתקשורת אמריקנית כי \"ישראל רצתה באלימות הזו\".",
+        "en": "According to ynet, Cassif told American media that \"Israel wanted this violence\"."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    },
+    {
+      "date": "2023-10-18",
+      "text": {
+        "he": "ועדת האתיקה החליטה להרחיק את כסיף מהכנסת ל-45 יום ולשלול את שכרו לשבועיים.",
+        "en": "The Ethics Committee decided to suspend Cassif from the Knesset for 45 days and dock two weeks of his pay."
+      },
+      "sourceIds": [
+        "s2"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "type": "news_report",
+      "publisher": "ynet",
+      "title": "אחרי שאמר ש\"ישראל רצתה באלימות הזו\": עופר כסיף הורחק ל-45 יום מהכנסת",
+      "date": "2023-10-18",
+      "url": "https://www.ynet.co.il/news/article/hjtmft611p"
+    },
+    {
+      "id": "s2",
+      "type": "news_report",
+      "publisher": "N12 (mako)",
+      "title": "בשל התבטאויות נגד ישראל: עופר כסיף הורחק מהכנסת ל-45 יום",
+      "date": "2023-10-18",
+      "url": "https://www.mako.co.il/news-politics/2023_q4/Article-d77ef4d6b534b81027.htm"
+    }
+  ],
+  "response": {
+    "status": "not_yet_requested"
+  },
+  "corrections": [],
+  "editorial": {
+    "state": "draft",
+    "createdBy": "claude"
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "slug": "mk-30758-incitement-2023-11-15",
+  "entity": "mk-30758",
+  "category": "incitement",
+  "status": "documented",
+  "date": "2023-11-15",
+  "title": {
+    "he": "ועדת האתיקה הרחיקה אותה מהכנסת לחודש בעקבות דבריה על זוועות 7 באוקטובר",
+    "en": "Ethics Committee suspended her from the Knesset for a month over her remarks about the October 7 atrocities"
+  },
+  "summary": {
+    "he": "ב-5 בנובמבר 2023 אמרה ח\"כ אימאן ח'טיב-יאסין בריאיון לערוץ הכנסת: \"לא שחטו תינוקות, לפחות ממה שהיה בסרט, ולא אנסו נשים\". באותו ערב פרסמה הודעת התנצלות, ובה כתבה שלא הייתה לה כוונה להמעיט בטבח או להכחיש אותו. שני ח\"כים מהליכוד החלו לאסוף חתימות להליך הדחתה מהכנסת. לפי ההליך נדרשות בשלב הראשון 70 חתימות. לפי טיימס אוף ישראל, ההליך לא עבר את השלב הראשון עד 15 בנובמבר. ב-15 בנובמבר 2023 החליטה ועדת האתיקה של הכנסת להרחיק אותה מישיבות הוועדות והמליאה לחודש ולשלול את שכרה לשבועיים, בשל הכחשת הזוועות שביצעו מחבלי חמאס, לפי הדיווחים.",
+    "en": "On 5 November 2023, MK Iman Khatib-Yassin said in an interview with the Knesset Channel that Hamas \"didn't slaughter babies and they didn't rape women, at least not in the footage.\" She issued an apology that evening, saying she had no intention of minimizing or denying the massacre. Two Likud MKs began collecting signatures to remove her from the Knesset. The procedure's first stage requires 70 signatures, and according to the Times of Israel the effort had not passed that stage by 15 November. On 15 November 2023 the Knesset Ethics Committee barred her from committee and plenum sessions for one month and docked two weeks of her pay. According to the reports, the committee found that she had denied atrocities committed by Hamas."
+  },
+  "body": [],
+  "timeline": [
+    {
+      "date": "2023-11-05",
+      "text": {
+        "he": "בריאיון לערוץ הכנסת אמרה: \"לא שחטו תינוקות, לפחות ממה שהיה בסרט, ולא אנסו נשים\". באותו ריאיון הוסיפה: \"אם זה קרה - זה מביש\".",
+        "en": "In an interview with the Knesset Channel she said Hamas did not slaughter babies, \"at least not in the footage,\" and did not rape women. In the same interview she added that if it happened, it was shameful."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    },
+    {
+      "date": "2023-11-05",
+      "text": {
+        "he": "פרסמה הודעת התנצלות: \"טעיתי, אני מצרה על כך ומתנצלת\". לדבריה, לא הייתה לה כוונה להמעיט בטבח של 7 באוקטובר או להכחיש אותו.",
+        "en": "She issued an apology saying she had made a mistake and had no intention of minimizing or denying the October 7 massacre."
+      },
+      "sourceIds": [
+        "s2"
+      ]
+    },
+    {
+      "date": "2023-11-15",
+      "text": {
+        "he": "ועדת האתיקה של הכנסת קבעה שתורחק מהכנסת לחודש ושכרה יישלל לשבועיים, בעקבות הכחשת מעשי הזוועות בריאיון לערוץ הכנסת.",
+        "en": "The Knesset Ethics Committee ruled that she be suspended from the Knesset for one month and lose two weeks' pay over her denial of the atrocities in the Knesset Channel interview."
+      },
+      "sourceIds": [
+        "s3"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "type": "news_report",
+      "publisher": "ynet",
+      "title": "ח\"כית מרע\"מ טענה: \"לא שחטו תינוקות ולא אנסו נשים\" - עבאס דרש שתתפטר",
+      "date": "2023-11-05",
+      "url": "https://www.ynet.co.il/news/article/r1rhqmsxp"
+    },
+    {
+      "id": "s2",
+      "type": "news_report",
+      "publisher": "ynet",
+      "title": "הח\"כית מרע\"מ מתנצלת: \"לא התכוונתי להתכחש למעשים הנוראיים\"",
+      "date": "2023-11-05",
+      "url": "https://www.ynet.co.il/news/article/hj5r8os7a"
+    },
+    {
+      "id": "s3",
+      "type": "news_report",
+      "publisher": "ynet",
+      "title": "ועדת האתיקה של הכנסת הטילה סנקציות על הח\"כיות חטיב יאסין ותומא סלימאן",
+      "date": "2023-11-15",
+      "url": "https://www.ynet.co.il/news/article/sy0ps11mna"
+    }
+  ],
+  "response": {
+    "status": "not_yet_requested"
+  },
+  "corrections": [],
+  "editorial": {
+    "state": "draft",
+    "createdBy": "claude"
+  }
+}

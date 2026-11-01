@@ -1,0 +1,46 @@
+{
+  "slug": "mk-30719-incitement-2025-07-09",
+  "entity": "mk-30719",
+  "category": "incitement",
+  "status": "documented",
+  "date": "2025-07-09",
+  "title": {
+    "he": "ועדת האתיקה הרחיקה אותו לחודשיים ושללה את שכרו לשבועיים בשל התבטאויות נגד חיילי צה\"ל ופנייה לבית הדין הפלילי הבינלאומי",
+    "en": "Ethics Committee suspended him for two months and docked two weeks' pay over statements against IDF soldiers and an appeal to the ICC"
+  },
+  "summary": {
+    "he": "לפי הדיווחים, ועדת האתיקה של הכנסת הרחיקה את ח\"כ עופר כסיף מישיבות המליאה והוועדות לחודשיים ושללה את שכרו לשבועיים, בעקבות 12 קובלנות שרובן עוסקות בהתבטאויותיו נגד חיילי צה\"ל. לפי טיימס אוף ישראל, הקובלנות כללו גם את פנייתו לבית הדין הפלילי הבינלאומי בבקשה לחקור את ראש הממשלה בחשד לפשעי מלחמה, וההרחקה נקבעה ל-19 באוקטובר עד 19 בדצמבר. כסיף אמר בתגובה שההחלטה היא ניסיון לחסל את הייצוג הערבי בכנסת.",
+    "en": "According to reports, the Knesset Ethics Committee barred MK Ofer Cassif from plenum and committee sessions for two months and docked two weeks of his pay, following 12 complaints. Most of the complaints were about his statements against IDF soldiers. According to The Times of Israel, the complaints also included his request that the International Criminal Court investigate the prime minister for war crimes, and the suspension was set for October 19 to December 19. Cassif responded that the decision was an attempt to eliminate Arab representation in the Knesset."
+  },
+  "body": [],
+  "timeline": [
+    {
+      "date": "2025-07-09",
+      "text": {
+        "he": "ועדת האתיקה החליטה להרחיק את כסיף מהמליאה ומהוועדות לחודשיים ולשלול את שכרו לשבועיים.",
+        "en": "The Ethics Committee decided to bar Cassif from the plenum and committees for two months and dock two weeks of his pay."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "type": "news_report",
+      "publisher": "ynet",
+      "title": "עופר כסיף הורחק מהמליאה לחודשיים ושכרו נשלל לשבועיים; אלמוג כהן ננזף",
+      "date": "2025-07-09",
+      "url": "https://www.ynet.co.il/news/article/hkdwynjsel"
+    }
+  ],
+  "response": {
+    "status": "not_yet_requested"
+  },
+  "corrections": [],
+  "editorial": {
+    "state": "draft",
+    "createdBy": "claude"
+  }
+}
