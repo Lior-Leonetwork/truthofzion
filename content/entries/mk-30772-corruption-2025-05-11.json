@@ -1,0 +1,46 @@
+{
+  "slug": "mk-30772-corruption-2025-05-11",
+  "entity": "mk-30772",
+  "category": "corruption",
+  "status": "under_investigation",
+  "date": "2025-05-11",
+  "title": {
+    "he": "היועמ\"שית אישרה לחקור אותו באזהרה בחשד לפריצה לבסיס שדה תימן",
+    "en": "AG approved questioning him under caution on suspicion of breaking into the Sde Teiman base"
+  },
+  "summary": {
+    "he": "במרץ 2025 אישרו היועצת המשפטית לממשלה ופרקליט המדינה לחקור באזהרה את ח\"כ ניסים ואטורי, את השר עמיחי אליהו ואת ח\"כ צבי סוכות. החשד הוא להסתערות ופריצה לבסיס שדה תימן ביולי 2024. במאי 2025 זומנו השלושה לחקירה. לפי טיימס אוף ישראל, ואטורי הודיע שלא יתייצב לחקירה וטען לחסינות פרלמנטרית.",
+    "en": "In March 2025 the Attorney General and the State Attorney approved questioning MK Nissim Vaturi, Minister Amichai Eliyahu and MK Zvi Sukkot under caution. The suspicion is that they stormed and broke into the Sde Teiman base in July 2024. In May 2025 the three were summoned for questioning. According to The Times of Israel, Vaturi said he would not appear for questioning, citing parliamentary immunity."
+  },
+  "body": [],
+  "timeline": [
+    {
+      "date": "2025-03-26",
+      "text": {
+        "he": "היועמ\"שית ופרקליט המדינה אישרו לחקור באזהרה את ואטורי, אליהו וסוכות",
+        "en": "The AG and State Attorney approved questioning Vaturi, Eliyahu and Sukkot under caution"
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "type": "news_report",
+      "publisher": "ynet",
+      "title": "היועמ\"שית אישרה: השר אליהו והח\"כים ואטורי וסוכות ייחקרו בעניין הפריצה לשדה תימן",
+      "date": "2025-03-26",
+      "url": "https://www.ynet.co.il/news/article/rkvdx0ztkl"
+    }
+  ],
+  "response": {
+    "status": "not_yet_requested"
+  },
+  "corrections": [],
+  "editorial": {
+    "state": "draft",
+    "createdBy": "claude"
+  }
+}

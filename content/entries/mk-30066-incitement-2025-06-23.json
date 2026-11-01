@@ -1,0 +1,62 @@
+{
+  "slug": "mk-30066-incitement-2025-06-23",
+  "entity": "mk-30066",
+  "category": "incitement",
+  "status": "documented",
+  "date": "2025-06-23",
+  "title": {
+    "he": "ועדת האתיקה הרחיקה אותו לשבועיים ושללה את שכרו בעקבות אמירות שהצבא מבצע רצח וטבח",
+    "en": "Ethics Committee suspended him for two weeks without pay over statements that the army was committing murder and a massacre"
+  },
+  "summary": {
+    "he": "ועדת האתיקה של הכנסת הרחיקה את ח\"כ איימן עודה מהמליאה ומהוועדות לשבועיים ושללה את שכרו לתקופה זו. לפי ynet, ההחלטה ניתנה בין היתר בעקבות אמירותיו ש\"מה שהצבא עושה זה רצח וטבח\". לפי ערוץ 7 ו-N12, הוועדה התייחסה גם לטענתו שהצבא מבצע טבח והרעבה של ילדים.",
+    "en": "The Knesset Ethics Committee barred MK Ayman Odeh from the plenum and committees for two weeks without pay. According to ynet, the decision followed, among other things, his statements that \"what the army is doing is murder and a massacre\". According to Arutz 7 and N12, the committee also addressed his claim that the army was committing a massacre and starving children."
+  },
+  "body": [],
+  "timeline": [
+    {
+      "date": "2025-06-23",
+      "text": {
+        "he": "ועדת האתיקה החליטה להרחיק את עודה מדיוני הכנסת והוועדות לשבועיים ללא שכר.",
+        "en": "The Ethics Committee decided to bar Odeh from Knesset and committee sessions for two weeks without pay."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "type": "news_report",
+      "publisher": "ynet",
+      "title": "שלילת שכר, הרחקה מהמליאה: העונשים לח\"כים שכינו את חיילי צה\"ל \"רוצחים\"",
+      "date": "2025-06-23",
+      "url": "https://www.ynet.co.il/news/article/syp6whinxe"
+    },
+    {
+      "id": "s2",
+      "type": "news_report",
+      "publisher": "ערוץ 7",
+      "title": "ועדת האתיקה הענישה: ח\"כ עודה יושעה לשבועיים ללא שכר",
+      "date": "2025-06-23",
+      "url": "https://www.inn.co.il/news/672248"
+    },
+    {
+      "id": "s3",
+      "type": "news_report",
+      "publisher": "N12 (mako)",
+      "title": "שורת הצעדים נגד חברי הכנסת שהתבטאו בצורה חריגה כלפי כוחות הביטחון",
+      "date": "2025-06-23",
+      "url": "https://www.mako.co.il/news-politics/2025_q2/Article-81caa1d53fc9791027.htm"
+    }
+  ],
+  "response": {
+    "status": "not_yet_requested"
+  },
+  "corrections": [],
+  "editorial": {
+    "state": "draft",
+    "createdBy": "claude"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "slug": "mk-30067-incitement-2023-11-15",
+  "entity": "mk-30067",
+  "category": "incitement",
+  "status": "documented",
+  "date": "2023-11-15",
+  "title": {
+    "he": "ועדת האתיקה הרחיקה אותה לחודשיים ושללה את שכרה לשבועיים בעקבות האשמת צה\"ל בתקיפת בתי חולים בעזה",
+    "en": "Ethics Committee suspended her for two months and docked two weeks' pay after she accused the IDF of attacking hospitals in Gaza"
+  },
+  "summary": {
+    "he": "ועדת האתיקה של הכנסת קבעה כי ח\"כ עאידה תומא סלימאן תורחק מהכנסת לחודשיים ושכרה יישלל לשבועיים. לפי ynet, ההחלטה ניתנה לאחר שהאשימה את צה\"ל בתקיפות בבתי חולים ברצועה ובירי על עקורים במסדרונות ההומניטריים. לפי ערוץ 7, ההאשמות כללו שימוש בפצצות זרחן נגד בית החולים שיפא. תומא סלימאן מסרה בתגובה כי ההחלטה היא השתקה שלה ושל הציבור שהיא מייצגת.",
+    "en": "The Knesset Ethics Committee ruled that MK Aida Touma-Sliman would be suspended from the Knesset for two months and lose two weeks' pay. According to ynet, the decision came after she accused the IDF of attacking hospitals in the Gaza Strip and firing on displaced people in the humanitarian corridors. According to Arutz 7, the accusations included the use of white phosphorus bombs against al-Shifa hospital. Touma-Sliman responded that the decision silenced her and the public she represents."
+  },
+  "body": [],
+  "timeline": [
+    {
+      "date": "2023-11-15",
+      "text": {
+        "he": "ועדת האתיקה החליטה להרחיק את תומא סלימאן מהכנסת לחודשיים ולשלול את שכרה לשבועיים.",
+        "en": "The Ethics Committee decided to suspend Touma-Sliman from the Knesset for two months and dock two weeks of her pay."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "type": "news_report",
+      "publisher": "ynet",
+      "title": "ועדת האתיקה של הכנסת הטילה סנקציות על הח\"כיות חטיב יאסין ותומא סלימאן",
+      "date": "2023-11-15",
+      "url": "https://www.ynet.co.il/news/article/sy0ps11mna"
+    }
+  ],
+  "response": {
+    "status": "not_yet_requested"
+  },
+  "corrections": [],
+  "editorial": {
+    "state": "draft",
+    "createdBy": "claude"
+  }
+}

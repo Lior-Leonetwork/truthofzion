@@ -1,0 +1,72 @@
+{
+  "slug": "mk-30867-corruption-2026-10-18",
+  "entity": "mk-30867",
+  "category": "corruption",
+  "status": "under_investigation",
+  "date": "2026-10-18",
+  "title": {
+    "he": "היועמ\"שית ופרקליט המדינה אישרו לחקור אותו באזהרה בחשד לתקיפת שוטר במצפה יריחו",
+    "en": "AG and State Attorney approved questioning him under caution on suspicion of assaulting a police officer in Mitzpe Yeriho"
+  },
+  "summary": {
+    "he": "היועצת המשפטית לממשלה ופרקליט המדינה החליטו כי ח\"כ יצחק קרויזר ייחקר באזהרה בחשד לתקיפת שוטר בנסיבות מחמירות, בעקבות תקרית במצפה יריחו ב-1 באוקטובר 2026. לפי הדיווחים, המשטרה טוענת כי קרויזר תקף שוטר. קרויזר מכחיש, טוען כי השוטרים הם שתקפו אותו, והגיש נגדם תלונה במח\"ש. לפי גלובס, ב-18 באוקטובר 2026 היה אמור להתייצב לחקירה בלהב 433.",
+    "en": "The Attorney General and the State Attorney decided that MK Yitzhak Kroizer would be questioned under caution on suspicion of assaulting a police officer under aggravating circumstances, after an incident in Mitzpe Yeriho on October 1, 2026. According to the reports, police allege that Kroizer assaulted an officer. Kroizer denies this, says the officers assaulted him, and filed a complaint against them with the police investigations department. According to Globes, he was due to appear for questioning at Lahav 433 on October 18, 2026."
+  },
+  "body": [],
+  "timeline": [
+    {
+      "date": "2026-10-12",
+      "text": {
+        "he": "היועמ\"שית ופרקליט המדינה החליטו שקרויזר ייחקר באזהרה בחשד לתקיפת שוטר",
+        "en": "The AG and State Attorney decided that Kroizer would be questioned under caution on suspicion of assaulting an officer"
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    },
+    {
+      "date": "2026-10-18",
+      "text": {
+        "he": "לפי גלובס, קרויזר היה אמור להתייצב לחקירה בלהב 433",
+        "en": "According to Globes, Kroizer was due to appear for questioning at Lahav 433"
+      },
+      "sourceIds": [
+        "s3"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "type": "news_report",
+      "publisher": "ישראל היום",
+      "title": "היועמ\"שית החליטה: ח\"כ קרויזר ייחקר בחשד לתקיפת שוטר",
+      "date": "2026-10-12",
+      "url": "https://www.israelhayom.co.il/news/politics/article/21605675"
+    },
+    {
+      "id": "s2",
+      "type": "news_report",
+      "publisher": "ערוץ 7",
+      "title": "בפרקליטות החליטו: קרויזר ייחקר באזהרה בחשד לתקיפת שוטר",
+      "date": "2026-10-12",
+      "url": "https://www.inn.co.il/news/708281"
+    },
+    {
+      "id": "s3",
+      "type": "news_report",
+      "publisher": "גלובס",
+      "title": "ח\"כ יצחק קרויזר ייחקר היום בלהב 433 בחשד לתקיפת שוטר",
+      "date": "2026-10-18",
+      "url": "https://www.globes.co.il/news/article.aspx?did=1001559839"
+    }
+  ],
+  "response": {
+    "status": "not_yet_requested"
+  },
+  "corrections": [],
+  "editorial": {
+    "state": "draft",
+    "createdBy": "claude"
+  }
+}
