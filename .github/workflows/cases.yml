@@ -5,8 +5,7 @@ name: Case research
 # as DRAFT case files in a pull request. Nothing is published automatically:
 # each case names a person and needs an editor and the right of reply.
 on:
-  schedule:
-    - cron: "23 4 * * 0" # Sundays, 07:23 Israel time
+  # Automatic runs stopped at the editor's request; run manually from Actions.
   workflow_dispatch:
     inputs:
       max_corruption:

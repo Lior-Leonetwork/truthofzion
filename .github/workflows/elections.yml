@@ -5,9 +5,7 @@ name: Election integrity
 # each ballot box with the 25th Knesset's file on data.gov.il (read through the
 # Israeli VPN), then publishes the findings and redeploys the site.
 on:
-  push:
-    branches: [main]
-    paths: ["data/elections/26/raw/**"]
+  # Automatic runs stopped at the editor's request; run manually from Actions.
   workflow_dispatch:
 
 permissions:
