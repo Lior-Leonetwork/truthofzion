@@ -4,8 +4,9 @@ name: Publish reviewed drafts
 # drafts in the name of the editor who merged it. A merger who isn't listed in
 # content/editors.json publishes nothing, and the job fails.
 on:
-  # Automatic runs stopped at the editor's request; run manually from Actions.
-  workflow_dispatch:
+  pull_request:
+    types: [closed]
+    branches: [main]
 
 permissions:
   contents: write

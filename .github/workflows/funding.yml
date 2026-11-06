@@ -5,7 +5,8 @@ name: Foreign funding
 # the reports as filed, and redeploy the site. No model is involved: these are
 # the NGOs' own official filings, shown verbatim.
 on:
-  # Automatic runs stopped at the editor's request; run manually from Actions.
+  schedule:
+    - cron: "47 2 * * *" # 05:47 Israel time
   workflow_dispatch:
 
 permissions:
