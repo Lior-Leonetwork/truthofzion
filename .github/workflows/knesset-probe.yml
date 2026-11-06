@@ -24,6 +24,4 @@ jobs:
           openvpn: ${{ secrets.KNESSET_OPENVPN_CONF }}
           openvpn-auth: ${{ secrets.KNESSET_OPENVPN_AUTH }}
       - run: npm ci
-      - run: npm run knesset:probe
-        env:
-          KNESSET_HTTP_PROXY: ${{ secrets.KNESSET_HTTP_PROXY }}
+      - run: npx tsx scripts/probe-mevaker.ts
