@@ -4,6 +4,7 @@
 import { fetch as undiciFetch } from "undici";
 
 const URLS = [
+  "https://www.mevaker.gov.il/",
   "https://www.mevaker.gov.il/state-audit/elections/donations",
   "https://www.mevaker.gov.il/state-audit/elections/applications",
 ];
@@ -22,7 +23,8 @@ async function main() {
       console.log(`\n### ${u} → ${res.status} ${res.headers.get("content-type")} ${html.length}b\ntitle: ${title}\ntext: ${text.slice(0, 1200)}`);
       for (const r of refs) console.log(`  ref: ${r}`);
     } catch (e) {
-      console.log(`\n### ${u} failed: ${e instanceof Error ? e.message : e}`);
+      const cause = e instanceof Error ? (e as Error & { cause?: { code?: string; message?: string } }).cause : undefined;
+      console.log(`\n### ${u} failed: ${e instanceof Error ? e.message : e} | cause: ${cause?.code ?? ""} ${cause?.message ?? ""}`);
     }
   }
 }
