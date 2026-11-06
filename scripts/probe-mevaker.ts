@@ -4,9 +4,8 @@
 import { fetch as undiciFetch } from "undici";
 
 const URLS = [
-  "https://www.mevaker.gov.il/he/mimun/donation/Pages/default.aspx",
-  "https://www.mevaker.gov.il/he/mimun/donation/Pages/donationsPrime.aspx",
-  "https://www.mevaker.gov.il/he/mimun/donation/Pages/TrumotandArvuyot.aspx",
+  "https://www.mevaker.gov.il/state-audit/elections/donations",
+  "https://www.mevaker.gov.il/state-audit/elections/applications",
 ];
 
 async function main() {
@@ -16,7 +15,10 @@ async function main() {
       const html = await res.text();
       const title = /<title[^>]*>([\s\S]*?)<\/title>/i.exec(html)?.[1]?.replace(/\s+/g, " ").trim() ?? "";
       const text = html.replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>/gi, " ").replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
-      const refs = [...new Set([...html.matchAll(/(?:href|src|action)="([^"#]+)"/gi)].map((m) => m[1]).filter((h) => /mimun|donat|trum|tormim|xls|csv|json|api|asmx|svc|app|statements|iframe/i.test(h)))].slice(0, 40);
+      const refs = [...new Set([...html.matchAll(/(?:href|src|action)=\\?"([^"#\\]+)/gi), ...html.matchAll(/(https?:\/\/[a-z0-9.-]+\.[a-z]{2,}[^"'\s\\<>)]*)/gi)].map((m) => m[1]).filter((h) => !/_next\/static|fonts|google|facebook|twitter|youtube|instagram|linkedin|tiktok/i.test(h)))].slice(0, 80);
+      const main = /<main[\s\S]*?<\/main>/i.exec(html)?.[0] ?? "";
+      const mainText = main.replace(/<script[\s\S]*?<\/script>/gi, " ").replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
+      console.log(`main: ${mainText.slice(0, 2500)}`);
       console.log(`\n### ${u} → ${res.status} ${res.headers.get("content-type")} ${html.length}b\ntitle: ${title}\ntext: ${text.slice(0, 1200)}`);
       for (const r of refs) console.log(`  ref: ${r}`);
     } catch (e) {
