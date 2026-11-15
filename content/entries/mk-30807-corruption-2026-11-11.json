@@ -1,0 +1,82 @@
+{
+  "slug": "mk-30807-corruption-2026-11-11",
+  "entity": "mk-30807",
+  "category": "corruption",
+  "status": "under_investigation",
+  "date": "2026-11-11",
+  "title": {
+    "he": "נחקר באזהרה בחשד להדלפת פרוטוקול מסווג מוועדת החוץ והביטחון – לפי דיווח הוחלט לסגור את התיק",
+    "en": "Questioned under caution on suspicion of leaking a classified Foreign Affairs and Defense Committee protocol – case reportedly to be closed"
+  },
+  "summary": {
+    "he": "בינואר 2025 הודיעה המדינה לבג\"ץ כי מתבצעת בדיקה מקדימה בחשד שח\"כ גלעד קריב הדליף פרוטוקול מסווג מדיון בוועדת החוץ והביטחון. באפריל 2025 נחקר באזהרה ביאח\"ה בלהב 433, והמשטרה מסרה כי החקירה בעניינו נמשכת; קריב הכחיש וטען כי הציטוטים שפורסמו אושרו בצנזורה וכי מקור החקירה בתלונה פוליטית של יו\"ר הכנסת. ביולי 2025 הועבר תיק החקירה לפרקליטות להחלטה. לפי דיווח של i24NEWS מנובמבר 2026, התקבלה החלטה סופית לסגור את התיק, אך היא טרם פורסמה רשמית.",
+    "en": "In January 2025 the state told the High Court that a preliminary examination was under way into suspicions that MK Gilad Kariv leaked a classified protocol from a Foreign Affairs and Defense Committee session. In April 2025 he was questioned under caution by Lahav 433's fraud unit, and police said the investigation was continuing; Kariv denied the allegations, saying the published quotes were cleared by the censor and that the probe stemmed from a political complaint by the Knesset speaker. In July 2025 the file was transferred to the State Attorney's Office for a decision. According to an i24NEWS report in November 2026, a final decision was made to close the case, but it has not yet been officially announced."
+  },
+  "body": [],
+  "timeline": [
+    {
+      "date": "2025-04-07",
+      "text": {
+        "he": "קריב נחקר באזהרה בלהב 433; המשטרה מסרה כי החקירה נמשכת",
+        "en": "Kariv was questioned under caution at Lahav 433; police said the investigation was continuing"
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    },
+    {
+      "date": "2025-04-07",
+      "text": {
+        "he": "קריב מסר כי הציטוטים שפורסמו אושרו בצנזורה וכי החקירה נובעת מתלונה פוליטית",
+        "en": "Kariv said the published quotes were cleared by the censor and that the probe stemmed from a political complaint"
+      },
+      "sourceIds": [
+        "s2"
+      ]
+    },
+    {
+      "date": "2025-07-09",
+      "text": {
+        "he": "יאח\"ה סיימה את החקירה והתיק הועבר למחלקה הכלכלית בפרקליטות להחלטה",
+        "en": "The fraud unit completed the investigation and the file was sent to the State Attorney's economic department for a decision"
+      },
+      "sourceIds": [
+        "s3"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "type": "news_report",
+      "publisher": "ישראל היום",
+      "title": "ח\"כ גלעד קריב נחקר בלהב 433 - ולא שיתף פעולה",
+      "date": "2025-04-07",
+      "url": "https://www.israelhayom.co.il/news/crime/article/17700440"
+    },
+    {
+      "id": "s2",
+      "type": "news_report",
+      "publisher": "ynet",
+      "title": "ח\"כ קריב נחקר בלהב 433, החשד: הדלפת פרוטוקולים מדיון חסוי",
+      "date": "2025-04-07",
+      "url": "https://www.ynet.co.il/news/article/s1xnejwryx"
+    },
+    {
+      "id": "s3",
+      "type": "news_report",
+      "publisher": "ערוץ 7",
+      "title": "החשד להדלפה מדיון חסוי: תיק חקירת ח\"כ קריב הועבר להחלטת הפרקליטות",
+      "date": "2025-07-09",
+      "url": "https://www.inn.co.il/news/673594"
+    }
+  ],
+  "response": {
+    "status": "not_yet_requested"
+  },
+  "corrections": [],
+  "editorial": {
+    "state": "draft",
+    "createdBy": "claude"
+  }
+}

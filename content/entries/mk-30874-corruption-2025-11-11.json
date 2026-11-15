@@ -1,0 +1,64 @@
+{
+  "slug": "mk-30874-corruption-2025-11-11",
+  "entity": "mk-30874",
+  "category": "corruption",
+  "status": "under_investigation",
+  "date": "2025-11-11",
+  "title": {
+    "he": "היועמ\"שית ופרקליט המדינה אישרו לחקור אותו באזהרה בחשד למעורבות בפריצה לבסיס שדה תימן",
+    "en": "AG and State Attorney approved questioning him under caution over the Sde Teiman base break-in"
+  },
+  "summary": {
+    "he": "במרץ 2025 אישרו היועצת המשפטית לממשלה ופרקליט המדינה לחקור באזהרה את ח\"כ צבי סוכות, יחד עם השר עמיחי אליהו וח\"כ ניסים ואטורי, בעקבות הפריצה לבסיס שדה תימן ביולי 2024. בנובמבר 2025 נחקר סוכות באזהרה ביחידת ההונאה במחוז דרום בחשד למעורבות בפריצה. סוכות טען כי כחבר כנסת מותר לו להיכנס לבסיס, וכי לא היה עושה זאת אילו ידע שאזרחים ייכנסו, וכינה את החקירה פוליטית.",
+    "en": "In March 2025 the Attorney General and State Attorney approved questioning MK Zvi Sukkot under caution, together with Minister Amichai Eliyahu and MK Nissim Vaturi, over the July 2024 break-in at the Sde Teiman base. In November 2025 Sukkot was questioned under caution by the Southern District fraud unit on suspicion of involvement in the break-in. Sukkot said that as an MK he is permitted to enter the base, that he would not have done so had he known civilians would enter, and called the investigation political."
+  },
+  "body": [],
+  "timeline": [
+    {
+      "date": "2025-03-26",
+      "text": {
+        "he": "היועמ\"שית ופרקליט המדינה אישרו לחקור את סוכות באזהרה",
+        "en": "The Attorney General and State Attorney approved questioning Sukkot under caution"
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    },
+    {
+      "date": "2025-11-11",
+      "text": {
+        "he": "סוכות נחקר באזהרה ביחידת ההונאה במחוז דרום",
+        "en": "Sukkot was questioned under caution by the Southern District fraud unit"
+      },
+      "sourceIds": [
+        "s2"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "type": "news_report",
+      "publisher": "מעריב",
+      "title": "היועמ\"שית אישרה לחקור באזהרה את הח\"כים שפרצו לבסיס שדה תימן",
+      "date": "2025-03-26",
+      "url": "https://www.maariv.co.il/news/law/article-1183499"
+    },
+    {
+      "id": "s2",
+      "type": "news_report",
+      "publisher": "ynet",
+      "title": "צבי סוכות נחקר באזהרה על הפריצה לשדה תימן",
+      "date": "2025-11-11",
+      "url": "https://www.ynet.co.il/news/article/sjqodcxg11x"
+    }
+  ],
+  "response": {
+    "status": "not_yet_requested"
+  },
+  "corrections": [],
+  "editorial": {
+    "state": "draft",
+    "createdBy": "claude"
+  }
+}
