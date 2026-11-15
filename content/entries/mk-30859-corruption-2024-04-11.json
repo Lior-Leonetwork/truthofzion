@@ -1,0 +1,82 @@
+{
+  "slug": "mk-30859-corruption-2024-04-11",
+  "entity": "mk-30859",
+  "category": "corruption",
+  "status": "under_investigation",
+  "date": "2024-04-11",
+  "title": {
+    "he": "נחקר בחשד להסתה בעקבות התבטאותו על חווארה – הפרקליטות סגרה את התיק",
+    "en": "Investigated on suspicion of incitement over his Huwara remarks – prosecution closed the case"
+  },
+  "summary": {
+    "he": "במרץ 2023 אישרה היועמ\"שית לחקור את ח\"כ צביקה פוגל בחשד להסתה, לאחר שאמר בעקבות ההתפרעות בחווארה כי \"חווארה סגורה ושרופה, זה מה שאני רוצה לראות\". לפי ynet, החקירה נוהלה ביאח\"ה בלהב 433 בחשד להסתה לטרור. באפריל 2024 הודיעה לו פרקליטות מחוז מרכז כי היא סוגרת את התיק.",
+    "en": "In March 2023 the Attorney General approved investigating MK Zvika Fogel on suspicion of incitement after he said, following the riot in Huwara, that he wanted to see Huwara closed and burned. According to ynet, the investigation was conducted by Lahav 433's fraud unit on suspicion of incitement to terrorism. In April 2024 the Central District Prosecution informed him that it was closing the case."
+  },
+  "body": [],
+  "timeline": [
+    {
+      "date": "2023-03-01",
+      "text": {
+        "he": "היועמ\"שית אישרה לחקור את פוגל בחשד להסתה",
+        "en": "The Attorney General approved investigating Fogel on suspicion of incitement"
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    },
+    {
+      "date": "2024-04-11",
+      "text": {
+        "he": "פרקליטות מחוז מרכז הודיעה לפוגל כי היא סוגרת את התיק",
+        "en": "The Central District Prosecution informed Fogel it was closing the case"
+      },
+      "sourceIds": [
+        "s2"
+      ]
+    },
+    {
+      "date": "2024-04-11",
+      "text": {
+        "he": "דיווח נוסף על סגירת תיק החקירה",
+        "en": "A second report on the closure of the investigation"
+      },
+      "sourceIds": [
+        "s3"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "type": "news_report",
+      "publisher": "ynet",
+      "title": "היועמ\"שית הורתה: הח\"כ שאמר \"רוצה לראות חווארה שרופה\" ייחקר בחשד להסתה",
+      "date": "2023-03-01",
+      "url": "https://www.ynet.co.il/news/article/hyo2i52aj"
+    },
+    {
+      "id": "s2",
+      "type": "news_report",
+      "publisher": "ynet",
+      "title": "אחרי יותר משנה: נסגר התיק נגד הח\"כ שאמר \"חווארה שרופה, זה מה שאני רוצה לראות\"",
+      "date": "2024-04-11",
+      "url": "https://www.ynet.co.il/news/article/hjlmcislc"
+    },
+    {
+      "id": "s3",
+      "type": "news_report",
+      "publisher": "מעריב",
+      "title": "לאחר מעל לשנה: נסגר תיק החקירה נגד צביקה פוגל",
+      "date": "2024-04-11",
+      "url": "https://www.maariv.co.il/news/law/article-1091174"
+    }
+  ],
+  "response": {
+    "status": "not_yet_requested"
+  },
+  "corrections": [],
+  "editorial": {
+    "state": "draft",
+    "createdBy": "claude"
+  }
+}

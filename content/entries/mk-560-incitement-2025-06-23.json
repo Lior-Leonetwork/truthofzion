@@ -1,0 +1,82 @@
+{
+  "slug": "mk-560-incitement-2025-06-23",
+  "entity": "mk-560",
+  "category": "incitement",
+  "status": "allegation",
+  "date": "2025-06-23",
+  "title": {
+    "he": "ועדת האתיקה סנקציה בעקבות כינוי חיילי צה״ל \"רוצחים במדים\" – לפי הדיווחים נזיפה חמורה",
+    "en": "Ethics Committee sanction after calling IDF soldiers \"murderers in uniform\" – reported as a severe reprimand"
+  },
+  "summary": {
+    "he": "לפי דיווחי N12 וערוץ 7, ועדת האתיקה של הכנסת הטילה ב-23 ביוני 2025 נזיפה חמורה על ח״כ אחמד טיבי בשל שורת התבטאויות, בהן כינוי חיילי צה״ל \"רוצחים במדים\" ו\"קלגסים\". לפי N12, הוועדה גינתה במיוחד ביטוי מיום 21.8.23 שבו כינה טיבי חייל צה״ל \"רוצח\", וראתה בו הכפשה אישית חמורה. ynet דיווח לעומת זאת כי טיבי הורחק מהמליאה לשלושה ימים. נוסח ההחלטה הרשמית לא אומת.",
+    "en": "According to N12 and Arutz Sheva, on 23 June 2025 the Knesset Ethics Committee imposed a severe reprimand on MK Ahmad Tibi over a series of statements, including calling IDF soldiers \"murderers in uniform\" and \"thugs\". According to N12, the committee specifically condemned a statement of 21.8.23 in which Tibi called an IDF soldier a \"murderer\", describing it as a serious personal smear. Ynet, by contrast, reported that Tibi was suspended from the plenum for three days. The official decision text was not verified."
+  },
+  "body": [],
+  "timeline": [
+    {
+      "date": "2023-08-21",
+      "text": {
+        "he": "לפי החלטת ועדת האתיקה כפי שדווחה ב-N12, טיבי כינה חייל צה״ל \"רוצח\".",
+        "en": "According to the Ethics Committee decision as reported by N12, Tibi called an IDF soldier a \"murderer\"."
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    },
+    {
+      "date": "2025-06-23",
+      "text": {
+        "he": "ועדת האתיקה פרסמה את החלטותיה; לפי N12 וערוץ 7 הוטלה על טיבי נזיפה חמורה.",
+        "en": "The Ethics Committee published its decisions; according to N12 and Arutz Sheva, Tibi received a severe reprimand."
+      },
+      "sourceIds": [
+        "s2"
+      ]
+    },
+    {
+      "date": "2025-06-23",
+      "text": {
+        "he": "ynet דיווח כי טיבי ותומא סלימאן הורחקו לשלושה ימים כל אחד.",
+        "en": "Ynet reported that Tibi and Touma-Sliman were each suspended for three days."
+      },
+      "sourceIds": [
+        "s3"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "type": "news_report",
+      "publisher": "N12 (mako)",
+      "title": "שורת הצעדים נגד חברי הכנסת שהתבטאו בצורה חריגה כלפי כוחות הביטחון",
+      "date": "2025-06-23",
+      "url": "https://www.mako.co.il/news-politics/2025_q2/Article-81caa1d53fc9791027.htm"
+    },
+    {
+      "id": "s2",
+      "type": "news_report",
+      "publisher": "ערוץ 7",
+      "title": "ועדת האתיקה הענישה: ח\"כ עודה יושעה לשבועיים ללא שכר",
+      "date": "2025-06-23",
+      "url": "https://www.inn.co.il/news/672248"
+    },
+    {
+      "id": "s3",
+      "type": "news_report",
+      "publisher": "ynet",
+      "title": "שלילת שכר, הרחקה מהמליאה: העונשים לח\"כים שכינו את חיילי צה\"ל \"רוצחים\"",
+      "date": "2025-06-23",
+      "url": "https://www.ynet.co.il/news/article/syp6whinxe"
+    }
+  ],
+  "response": {
+    "status": "not_yet_requested"
+  },
+  "corrections": [],
+  "editorial": {
+    "state": "draft",
+    "createdBy": "claude"
+  }
+}

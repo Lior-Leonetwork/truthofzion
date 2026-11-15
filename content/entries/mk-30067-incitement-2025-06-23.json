@@ -1,0 +1,35 @@
+{
+  "slug": "mk-30067-incitement-2025-06-23",
+  "entity": "mk-30067",
+  "category": "incitement",
+  "status": "documented",
+  "date": "2025-06-23",
+  "title": {
+    "he": "ועדת האתיקה הרחיקה אותה לשלושה ימים בעקבות פוסטים שבהם האשימה את ישראל בטבח",
+    "en": "Ethics Committee suspended her for three days over posts accusing Israel of a massacre"
+  },
+  "summary": {
+    "he": "ועדת האתיקה של הכנסת הרחיקה את ח\"כ עאידה תומא סלימאן לשלושה ימי דיונים. לפי ערוץ 7, ההחלטה ניתנה בעקבות פוסטים ברשתות החברתיות שבהם האשימה את מדינת ישראל בביצוע טבח ונתנה לגיטימציה לפעולות טרור כ\"תגובה לכיבוש\". לפי N12, ההרחקה ניתנה לאחר שהאשימה את צה\"ל בטבח.",
+    "en": "The Knesset Ethics Committee suspended MK Aida Touma-Sliman for three days of sessions. According to Arutz 7, the decision followed social media posts in which she accused the State of Israel of a massacre and presented acts of terror as legitimate, calling them a \"response to the occupation\". According to N12, she was suspended after accusing the IDF of a massacre."
+  },
+  "body": [],
+  "timeline": [],
+  "sources": [
+    {
+      "id": "s1",
+      "type": "news_report",
+      "publisher": "N12 (mako)",
+      "title": "שורת הצעדים נגד חברי הכנסת שהתבטאו בצורה חריגה כלפי כוחות הביטחון",
+      "date": "2025-06-23",
+      "url": "https://www.mako.co.il/news-politics/2025_q2/Article-81caa1d53fc9791027.htm"
+    }
+  ],
+  "response": {
+    "status": "not_yet_requested"
+  },
+  "corrections": [],
+  "editorial": {
+    "state": "draft",
+    "createdBy": "claude"
+  }
+}

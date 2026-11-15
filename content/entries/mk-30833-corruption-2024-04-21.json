@@ -1,0 +1,82 @@
+{
+  "slug": "mk-30833-corruption-2024-04-21",
+  "entity": "mk-30833",
+  "category": "corruption",
+  "status": "under_investigation",
+  "date": "2024-04-21",
+  "title": {
+    "he": "נחקר באזהרה בחשד לתקיפה בנסיבות מחמירות בעת ששירת כשוטר יס\"מ ב-2013 – התיק נסגר",
+    "en": "Questioned under caution on suspicion of aggravated assault while serving as a riot police officer in 2013 – case closed"
+  },
+  "summary": {
+    "he": "בינואר 2024 נחקר ח\"כ אלמוג כהן באזהרה בלהב 433, לאחר שהיועמ\"שית ופרקליט המדינה אישרו לחקור אותו בחשד לתקיפה הגורמת חבלה של ממש בנסיבות מחמירות באירוע ב-2013 בחורה, בזמן ששירת כשוטר יס\"מ. בחקירה אמר כי פעל לפי הוראות מפקדיו. באפריל 2024 הודיעה לו פרקליטות מחוז דרום כי היועמ\"שית החליטה לסגור את התיק משום שחומר הראיות לא ביסס את העמדתו לדין.",
+    "en": "In January 2024 MK Almog Cohen was questioned under caution at Lahav 433 after the Attorney General and State Attorney approved investigating him on suspicion of assault causing actual bodily harm under aggravated circumstances, in a 2013 incident in Hura while he served as a riot police officer. During questioning he said he acted on his commanders' orders. In April 2024 the Southern District Prosecution informed him that the Attorney General had decided to close the case because the evidence did not support prosecution."
+  },
+  "body": [],
+  "timeline": [
+    {
+      "date": "2024-01-18",
+      "text": {
+        "he": "כהן נחקר באזהרה בלהב 433 באישור היועמ\"שית ופרקליט המדינה",
+        "en": "Cohen was questioned under caution at Lahav 433 with the approval of the Attorney General and State Attorney"
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    },
+    {
+      "date": "2024-04-21",
+      "text": {
+        "he": "היועמ\"שית החליטה לסגור את התיק משום שחומר הראיות לא ביסס העמדה לדין",
+        "en": "The Attorney General closed the case because the evidence did not support prosecution"
+      },
+      "sourceIds": [
+        "s2"
+      ]
+    },
+    {
+      "date": "2024-04-21",
+      "text": {
+        "he": "דיווח נוסף על סגירת התיק",
+        "en": "A second report on the case closure"
+      },
+      "sourceIds": [
+        "s3"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "type": "news_report",
+      "publisher": "ynet",
+      "title": "ח\"כ אלמוג כהן נחקר באזהרה. החשד: גרם לחבלה בנסיבות מחמירות, לפני 11 שנה",
+      "date": "2024-01-18",
+      "url": "https://www.ynet.co.il/news/article/by114p008ft"
+    },
+    {
+      "id": "s2",
+      "type": "news_report",
+      "publisher": "ynet",
+      "title": "היועמ\"שית סגרה את החקירה נגד ח\"כ אלמוג כהן",
+      "date": "2024-04-21",
+      "url": "https://www.ynet.co.il/news/article/sy7cksz11a"
+    },
+    {
+      "id": "s3",
+      "type": "news_report",
+      "publisher": "וואלה",
+      "title": "נסגר תיק החקירה נגד ח\"כ אלמוג כהן",
+      "date": "2024-04-21",
+      "url": "https://news.walla.co.il/item/3659655"
+    }
+  ],
+  "response": {
+    "status": "not_yet_requested"
+  },
+  "corrections": [],
+  "editorial": {
+    "state": "draft",
+    "createdBy": "claude"
+  }
+}

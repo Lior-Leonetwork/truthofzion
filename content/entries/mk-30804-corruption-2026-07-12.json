@@ -1,0 +1,64 @@
+{
+  "slug": "mk-30804-corruption-2026-07-12",
+  "entity": "mk-30804",
+  "category": "corruption",
+  "status": "under_investigation",
+  "date": "2026-07-12",
+  "title": {
+    "he": "נחקר באזהרה בחשד שכספי ציבור שיועדו לחינוך מימנו מוסף ילדים בביטאון ש\"ס",
+    "en": "Questioned under caution on suspicion that public education funds financed a children's supplement in the Shas newspaper"
+  },
+  "summary": {
+    "he": "לפי המשטרה, יאח\"ה בלהב 433 חוקרת חשד לקבלת דבר במרמה, מרמה והפרת אמונים, רישום כוזב במסמכי תאגיד והלבנת הון. החשד הוא שכספי ציבור שיועדו לחינוך מימנו מוסף לילדים בעיתון \"הדרך\", בתקופה שבה ח\"כ חיים ביטון היה מנכ\"ל רשת \"מעיין החינוך התורני\". לפי טיימס אוף ישראל, היועמ\"שית אישרה את החקירה באוקטובר 2024. ביטון עוכב לחקירה במרץ 2025, כשכיהן כשר, ונחקר בפעם השנייה ביולי 2026.",
+    "en": "According to police, the Lahav 433 fraud unit is investigating suspected obtaining by fraud, fraud and breach of trust, false entries in corporate documents and money laundering. The suspicion is that public funds meant for education paid for a children's supplement in the HaDerech newspaper while MK Haim Biton headed the Ma'ayan Hachinuch Hatorani school network. According to The Times of Israel, the Attorney General approved the probe in October 2024. Biton was detained for questioning in March 2025, while serving as a minister, and was questioned a second time in July 2026."
+  },
+  "body": [],
+  "timeline": [
+    {
+      "date": "2025-03-18",
+      "text": {
+        "he": "החקירה הפכה לגלויה; ארבעה מעורבים עוכבו, בהם השר חיים ביטון",
+        "en": "The investigation became overt; four people were detained, among them then-minister Haim Biton"
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    },
+    {
+      "date": "2026-07-12",
+      "text": {
+        "he": "ביטון נחקר בפעם השנייה במסגרת השלמות חקירה",
+        "en": "Biton was questioned a second time as part of additional investigative steps"
+      },
+      "sourceIds": [
+        "s2"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "type": "news_report",
+      "publisher": "ynet",
+      "title": "שר זומן לחקירה. החשד: כספי ציבור שימשו למימון עיתון מפלגתי של ש\"ס",
+      "date": "2025-03-18",
+      "url": "https://www.ynet.co.il/news/article/syvexqlnke"
+    },
+    {
+      "id": "s2",
+      "type": "news_report",
+      "publisher": "ynet",
+      "title": "ח\"כ חיים ביטון נחקר בפעם השנייה: החשד - כספי ציבור שימשו לביטאון ש\"ס לילדים",
+      "date": "2026-07-13",
+      "url": "https://www.ynet.co.il/news/article/bkq26zmnmg"
+    }
+  ],
+  "response": {
+    "status": "not_yet_requested"
+  },
+  "corrections": [],
+  "editorial": {
+    "state": "draft",
+    "createdBy": "claude"
+  }
+}

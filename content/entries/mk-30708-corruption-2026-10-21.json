@@ -1,0 +1,64 @@
+{
+  "slug": "mk-30708-corruption-2026-10-21",
+  "entity": "mk-30708",
+  "category": "corruption",
+  "status": "under_investigation",
+  "date": "2026-10-21",
+  "title": {
+    "he": "חקירה פלילית בחשד לשוחד, מרמה והפרת אמונים – התיק בפרקליטות להחלטה",
+    "en": "Criminal investigation on suspicion of bribery, fraud and breach of trust – file with prosecutors for decision"
+  },
+  "summary": {
+    "he": "לפי הודעת המשטרה, יאח\"ה בלהב 433 חקרה את השרה מאי גולן ומקורבים לה בחשד לעבירות ובהן שוחד, מרמה והפרת אמונים, קבלת דבר במרמה בנסיבות מחמירות ושיבוש מהלכי משפט. החקירה הפכה לגלויה בספטמבר 2025 באישור היועצת המשפטית לממשלה. ביוני 2026 הודיעה המשטרה על סיום החקירה והעברת התיק לפרקליטות, ובאוקטובר 2026 נחקרה גולן באזהרה במסגרת השלמות חקירה. גולן דוחה את החשדות.",
+    "en": "According to a police announcement, the Lahav 433 fraud unit investigated Minister May Golan and people close to her on suspicion of offences including bribery, fraud and breach of trust, obtaining by fraud under aggravating circumstances, and obstruction of justice. The investigation became overt in September 2025 with the Attorney General's approval. In June 2026 police announced that the investigation was complete and the file had gone to prosecutors. In October 2026 Golan was questioned under caution as part of additional investigative steps. Golan denies the suspicions."
+  },
+  "body": [],
+  "timeline": [
+    {
+      "date": "2026-06-10",
+      "text": {
+        "he": "יאח\"ה בלהב 433 הודיעה כי סיימה את החקירה בעניינה של השרה גולן; החומרים הועברו לפרקליטות",
+        "en": "Lahav 433 fraud unit announced it had completed the investigation into Minister Golan; the materials were sent to prosecutors"
+      },
+      "sourceIds": [
+        "s1"
+      ]
+    },
+    {
+      "date": "2026-10-21",
+      "text": {
+        "he": "גולן נחקרה באזהרה בלהב 433 במשך יותר מעשר שעות במסגרת השלמות חקירה שביקשה הפרקליטות",
+        "en": "Golan was questioned under caution at Lahav 433 for more than ten hours, as part of additional investigative steps requested by prosecutors"
+      },
+      "sourceIds": [
+        "s2"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "type": "news_report",
+      "publisher": "ישראל היום",
+      "title": "הסתיימה חקירת מאי גולן: גובשה תשתית ראייתית להגשת כתב אישום",
+      "date": "2026-06-10",
+      "url": "https://www.israelhayom.co.il/news/crime/article/20730780"
+    },
+    {
+      "id": "s2",
+      "type": "news_report",
+      "publisher": "ynet",
+      "title": "השלמות בתיק השוחד: השרה מאי גולן נחקרה במשך יותר מ-10 שעות בלהב 433",
+      "date": "2026-10-21",
+      "url": "https://www.ynet.co.il/news/article/sk11bytrhzx"
+    }
+  ],
+  "response": {
+    "status": "not_yet_requested"
+  },
+  "corrections": [],
+  "editorial": {
+    "state": "draft",
+    "createdBy": "claude"
+  }
+}
